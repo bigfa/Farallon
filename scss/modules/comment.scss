@@ -1,0 +1,29 @@
+.comment-form {
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    input,
+    textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    .submit {
+        background-color: #000;
+        color: #fff;
+        border: 0;
+        font-size: 14px;
+        cursor: pointer;
+        padding: 8px 30px;
+        border-radius: 5px;
+    }
+}
+
+.commentlist {
+    list-style: none;
+    .comment {
+        padding: 15px 0;
+    }
+}
