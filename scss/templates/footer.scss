@@ -1,7 +1,25 @@
 .site--footer {
-    text-align: right;
+    display: flex;
+    align-items: center;
     font-size: 14px;
     padding: 20px 80px;
     border-top: 1px dotted #eee;
     color: rgba(0, 0, 0, 0.67);
+    .copyright {
+        margin-left: auto;
+    }
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-right: 10px;
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }

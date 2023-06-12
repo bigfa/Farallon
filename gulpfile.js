@@ -15,6 +15,10 @@ function fonts() {
     return gulp.src('./fonts/*').pipe(gulp.dest('./build/fonts/'));
 }
 
+function images() {
+    return gulp.src('./images/*.{png,jpg,gif,svg}').pipe(gulp.dest('./build/images/'));
+}
+
 function css() {
     return gulp
         .src('./scss/app.scss')
@@ -84,7 +88,7 @@ function watchFiles() {
 // define complex tasks
 const js = gulp.series(scripts);
 const watch = gulp.parallel(watchFiles);
-const build = gulp.parallel(watch, gulp.parallel(css, fonts, js));
+const build = gulp.parallel(watch, gulp.parallel(css, fonts, js, images));
 
 exports.css = css;
 exports.js = js;

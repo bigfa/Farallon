@@ -4,5 +4,13 @@
     margin-right: auto;
     &__title {
         font-size: 32px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    &__meta {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
     }
 }

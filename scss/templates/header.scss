@@ -8,4 +8,28 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
         border-radius: 100%;
     }
+    position: relative;
+    nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20px;
+        ul {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 999rem;
+            padding: 5px 30px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            li {
+                padding: 0 20px;
+                a {
+                    &:hover {
+                        color: var(--text-main-color);
+                    }
+                }
+            }
+        }
+    }
 }
