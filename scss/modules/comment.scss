@@ -31,7 +31,8 @@
     p {
         margin-bottom: 15px;
     }
-    .comment-notes {
+    .comment-notes,
+    .logged-in-as {
         font-size: 12px;
         color: rgba(0, 0, 0, 0.6);
     }
@@ -47,9 +48,20 @@
     }
 }
 
+.comment {
+    &:last-child {
+        & > .comment-body {
+            border-bottom: 0;
+        }
+    }
+}
+
 .comment-body {
     padding: 25px 0;
     border-bottom: 1px solid #eee;
+    .parent > & {
+        border-bottom: 0;
+    }
 }
 
 .comment-author {
@@ -103,4 +115,8 @@
     margin-top: 30px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.comment-respond {
+    padding-top: 30px;
 }

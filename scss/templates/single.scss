@@ -14,3 +14,43 @@
         color: rgba(0, 0, 0, 0.6);
     }
 }
+
+.author--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+    .avatar {
+        border-radius: 100%;
+    }
+    .author--name {
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .author--description {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+.tag--list {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    a {
+        margin-right: 10px;
+        background-color: #f0f0f0;
+        font-size: 14px;
+        padding: 2px 12px;
+        border-radius: 5px;
+        color: rgba(0, 0, 0, 0.6);
+        &:hover {
+            background-color: #e0e0e0;
+        }
+    }
+}
