@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.0.1');
+define('FARALLON_VERSION', '0.0.2');
 
 include_once('modules/base.php');
 

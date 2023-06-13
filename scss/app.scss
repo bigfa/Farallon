@@ -147,3 +147,16 @@ textarea {
 @import 'modules/graph.scss';
 
 @import 'modules/comment.scss';
+
+.archive-header {
+    text-align: center;
+    padding-top: 30px;
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .taxonomy-description {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+}
