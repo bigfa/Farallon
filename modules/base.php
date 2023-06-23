@@ -12,6 +12,8 @@ class farallonBase
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ));
         add_theme_support('title-tag');
+        register_nav_menu('farallon', 'farallon');
+        register_nav_menu('farallon_footer', 'farallon_footer');
     }
 
 

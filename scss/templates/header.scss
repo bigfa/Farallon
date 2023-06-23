@@ -4,7 +4,7 @@
     .avatar {
         height: 48px;
         width: 48px;
-        border-radius: 3px #fff solid;
+        border: 3px #fff solid;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
         border-radius: 100%;
     }
@@ -31,5 +31,39 @@
                 }
             }
         }
+    }
+}
+
+.site--url {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    .avatar {
+        margin-right: 10px;
+    }
+}
+
+.u-xs-show {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .site--header {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        padding-bottom: 0;
+        nav {
+            display: none;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+        }
+        //display: none;
+    }
+
+    .u-xs-show {
+        display: inline;
     }
 }

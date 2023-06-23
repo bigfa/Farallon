@@ -13,8 +13,20 @@
         font-size: 14px;
         color: rgba(0, 0, 0, 0.6);
     }
+
+    &__copyright {
+        color: rgba(0, 0, 0, 0.6);
+    }
 }
 
+@media (max-width: 768px) {
+    .post--single {
+        &__title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+    }
+}
 .author--card {
     display: flex;
     flex-direction: column;

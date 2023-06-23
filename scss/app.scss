@@ -136,6 +136,12 @@ textarea {
     padding: 80px;
 }
 
+@media (max-width: 768px) {
+    .site--main {
+        padding: 3.5%;
+    }
+}
+
 @import 'templates/footer.scss';
 
 @import 'templates/header.scss';
