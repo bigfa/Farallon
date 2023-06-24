@@ -79,7 +79,7 @@ function scripts() {
 
 // Watch files
 function watchFiles() {
-    gulp.watch(['./js/modules/*', './js/ts.js'], gulp.series(scripts));
+    gulp.watch(['./js/modules/*', './js/app.ts'], gulp.series(scripts));
     gulp.watch(['./scss/*', './scss/modules/*', './scss/templates/*'], gulp.series(css));
     //gulp.watch(['./js/setting.js'], gulp.series(setting));
 }

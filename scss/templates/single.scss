@@ -66,3 +66,27 @@
         }
     }
 }
+
+.button--like {
+    border: 0;
+    background-color: #fff;
+    cursor: pointer;
+    &.is-active {
+        svg {
+            fill: var(--text-main-color);
+        }
+        .icon--active {
+            display: block;
+        }
+        .icon--default {
+            display: none;
+        }
+    }
+    .icon--active {
+        display: none;
+    }
+
+    .icon--block {
+        display: none;
+    }
+}
