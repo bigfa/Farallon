@@ -1,0 +1,3 @@
+class farallonComment {}
+
+new farallonComment();

@@ -72,7 +72,8 @@ function scripts() {
             //.pipe(babel({
             //presets: ['@babel/preset-env']
             // }))
-            // .pipe(uglify())
+            .pipe(uglify())
+            .pipe(rename({ suffix: '.min' }))
             .pipe(gulp.dest('./build/js/'))
     );
 }

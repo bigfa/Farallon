@@ -78,3 +78,9 @@ function link_to_menu_editor($args)
 
     return $output;
 }
+
+
+function farallon_post_view()
+{
+    return 100;
+}

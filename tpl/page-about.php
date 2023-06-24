@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Douban
+Template Name: About
 Template Post Type: page
 */
 get_header();

@@ -35,7 +35,7 @@ class farallonBase
 
     function enqueue_scripts()
     {
-        wp_enqueue_script('farallon-script', get_template_directory_uri() . '/build/js/app.js', [], FARALLON_VERSION, true);
+        wp_enqueue_script('farallon-script', get_template_directory_uri() . '/build/js/app.min.js', [], FARALLON_VERSION, true);
         wp_localize_script(
             'farallon-script',
             'obvInit',
