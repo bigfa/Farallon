@@ -136,6 +136,12 @@ textarea {
     padding: 80px;
 }
 
+@media (max-width: 820px) {
+    .site--main {
+        padding: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     .site--main {
         padding: 3.5%;

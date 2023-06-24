@@ -87,6 +87,12 @@
     }
 }
 
+@media (max-width: 820px) {
+    .post--item {
+        padding: 15px 25px;
+    }
+}
+
 @media (max-width: 768px) {
     .post--item {
         padding: 15px 0;

@@ -16,7 +16,7 @@ function fonts() {
 }
 
 function images() {
-    return gulp.src('./images/*.{png,jpg,gif,svg}').pipe(gulp.dest('./build/images/'));
+    return gulp.src('./images/*.{png,jpg,jpeg,gif,svg}').pipe(gulp.dest('./build/images/'));
 }
 
 function css() {

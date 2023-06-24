@@ -9,6 +9,8 @@
         border-radius: 100%;
     }
     position: relative;
+    display: flex;
+    align-items: center;
     nav {
         position: absolute;
         left: 50%;
@@ -46,6 +48,29 @@
 
 .u-xs-show {
     display: none;
+}
+
+@media (max-width: 820px) {
+    .site--header {
+        padding-left: 40px;
+        padding-right: 40px;
+        nav {
+            position: relative;
+            margin-left: auto;
+            ul {
+                box-shadow: none;
+                border: 0;
+                padding: 0;
+                li {
+                    padding: 10px;
+                }
+            }
+            top: 0;
+            right: 0px;
+            left: auto;
+            transform: translateX(0%);
+        }
+    }
 }
 
 @media (max-width: 768px) {
