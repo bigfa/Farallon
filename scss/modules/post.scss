@@ -35,6 +35,7 @@
         color: rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         margin-top: 2px;
         time {
             display: flex;
@@ -82,6 +83,37 @@
             font-size: 20px;
             font-weight: bold;
             cursor: not-allowed;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .post--item {
+        padding: 15px 0;
+        &:hover {
+            background-color: transparent;
+        }
+        .description {
+            min-height: 2.6em;
+            line-height: 1.3em;
+            font-size: 14px;
+            letter-spacing: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        .cover {
+            width: 75px;
+            height: 75px;
+        }
+        .post--title {
+            font-size: 18px;
+        }
+
+        .meta {
+            font-size: 12px;
         }
     }
 }

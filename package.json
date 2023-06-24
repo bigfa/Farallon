@@ -24,6 +24,7 @@
         "gulp-postcss": "^8.0.0",
         "gulp-rename": "^1.4.0",
         "gulp-sass": "^5.1.0",
+        "gulp-typescript": "^6.0.0-alpha.1",
         "gulp-uglify": "^3.0.2",
         "normalize.scss": "^0.1.0",
         "vinyl-buffer": "^1.0.1",

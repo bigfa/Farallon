@@ -10,7 +10,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
-
+const ts = require('gulp-typescript');
 function fonts() {
     return gulp.src('./fonts/*').pipe(gulp.dest('./build/fonts/'));
 }
@@ -57,16 +57,15 @@ function css() {
 function scripts() {
     return (
         gulp
-            .src(['./js/app.js', './js/modules/*'])
-            .pipe(plumber())
+            .src(['./js/app.ts', './js/modules/*'])
             //.pipe(webpackstream(webpackconfig, webpack))
-            .pipe(concat('all.bundle.js'))
             .pipe(
-                babel({
-                    presets: ['@babel/preset-env'],
+                ts({
+                    noImplicitAny: true,
+                    outFile: 'app.js',
                 })
             )
-            .pipe(uglify())
+            //.pipe(uglify())
             //.pipe(plumber())
             //.pipe(webpackstream(webpackconfig, webpack))
             //.pipe(concat('all.js'))
@@ -80,7 +79,7 @@ function scripts() {
 
 // Watch files
 function watchFiles() {
-    gulp.watch(['./js/modules/*', './js/app.js'], gulp.series(scripts));
+    gulp.watch(['./js/modules/*', './js/ts.js'], gulp.series(scripts));
     gulp.watch(['./scss/*', './scss/modules/*', './scss/templates/*'], gulp.series(css));
     //gulp.watch(['./js/setting.js'], gulp.series(setting));
 }
