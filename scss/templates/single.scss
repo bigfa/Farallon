@@ -17,6 +17,11 @@
     &__copyright {
         color: rgba(0, 0, 0, 0.6);
     }
+
+    &__action {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -47,6 +52,11 @@
     .author--description {
         font-size: 14px;
         color: rgba(0, 0, 0, 0.6);
+    }
+
+    .author--sns {
+        margin-top: 10px;
+        cursor: pointer;
     }
 }
 

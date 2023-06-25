@@ -38,5 +38,5 @@ class farallonDate {
 }
 
 new farallonDate({
-    selector: 'time',
+    selector: '.humane--time',
 });

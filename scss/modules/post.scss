@@ -123,3 +123,48 @@
         }
     }
 }
+
+.post-navigation {
+    position: fixed;
+    bottom: 100px;
+    right: 10px;
+    transform: translate3d(120%, 0, 0);
+    transition: 0.5s;
+    line-height: 1.5;
+    &.is-active {
+        transform: translate3d(0, 0, 0);
+    }
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-previous,
+    .nav-next {
+        padding: 15px;
+        background-color: #fff;
+        width: 220px;
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+    .meta-nav {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    .post-title {
+        font-size: 14px;
+        min-height: 3em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        &:hover {
+            color: var(--jl-hover-color);
+        }
+    }
+}

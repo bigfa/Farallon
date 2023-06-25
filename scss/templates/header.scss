@@ -7,6 +7,15 @@
         border: 3px #fff solid;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
         border-radius: 100%;
+        transition: 0.5s ease-in-out;
+    }
+    &.is-active {
+        .avatar {
+            height: 40px;
+            width: 40px;
+            position: fixed;
+            top: 20px;
+        }
     }
     position: relative;
     display: flex;
