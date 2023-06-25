@@ -4,6 +4,9 @@ class farallonDate {
     constructor(config: any) {
         this.selector = config.selector;
         this.init();
+        setTimeout(() => {
+            this.refresh();
+        }, 1000 * 5);
     }
 
     init() {
@@ -27,7 +30,11 @@ class farallonDate {
         }
     }
 
-    refresh() {}
+    refresh() {
+        this.doms.forEach((dom: any) => {
+            dom.innerText = this.humanize_time_ago(dom.attributes['datetime'].value);
+        });
+    }
 }
 
 new farallonDate({
