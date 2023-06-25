@@ -14,6 +14,7 @@ class farallonBase
         add_theme_support('title-tag');
         register_nav_menu('farallon', 'farallon');
         register_nav_menu('farallon_footer', 'farallon_footer');
+        add_theme_support('post-formats', array('status'));
     }
 
 
