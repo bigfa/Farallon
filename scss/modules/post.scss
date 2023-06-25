@@ -5,6 +5,32 @@
     &:hover {
         background-color: #fafafa;
     }
+    &__status {
+        .avatar {
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            time {
+                color: rgba(0, 0, 0, 0.6);
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                svg {
+                    margin-right: 5px;
+                    fill: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        background-color: #fafafa;
+        border-radius: 5px;
+        & + .post--item {
+            margin-top: 20px;
+        }
+    }
     .post--title {
         font-size: 20px;
         font-weight: bold;
