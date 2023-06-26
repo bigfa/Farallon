@@ -66,13 +66,14 @@
     padding: 15px 0;
     a {
         margin-right: 10px;
-        background-color: #f0f0f0;
+        background: linear-gradient(rgba(255, 79, 0, 0.1) 0%, rgba(255, 79, 0, 0) 100%);
         font-size: 14px;
         padding: 2px 12px;
         border-radius: 5px;
-        color: rgba(0, 0, 0, 0.6);
+        color: rgb(255, 79, 0);
+        border: 1px solid rgba(255, 79, 0, 0.2);
         &:hover {
-            background-color: #e0e0e0;
+            //background-color: #e0e0e0;
         }
     }
 }

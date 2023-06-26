@@ -40,11 +40,23 @@
 .comment-reply-title {
     font-weight: bold;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    small {
+        margin-left: auto;
+        font-weight: normal;
+        font-size: 14px;
+    }
 }
 .commentlist {
     list-style: none;
     .comment {
         padding: 0px 0;
+    }
+    .comment-respond {
+        padding: 20px;
+        background-color: #fafafa;
+        border-radius: 5px;
     }
 }
 

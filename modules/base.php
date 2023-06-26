@@ -45,6 +45,8 @@ class farallonBase
                 'post_id' => get_the_ID(),
             ]
         );
+
+        if (is_singular()) wp_enqueue_script("comment-reply");
     }
 }
 
