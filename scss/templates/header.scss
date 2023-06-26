@@ -25,19 +25,25 @@
         left: 50%;
         transform: translateX(-50%);
         top: 20px;
+        z-index: 1;
         ul {
             display: flex;
             align-items: center;
-            background-color: #fff;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            //background-color: #fff;
+            //  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
             border-radius: 999rem;
             padding: 5px 30px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            //border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: #ffffff 0 0, rgba(244, 244, 245, 0.1) 0 0 0 1px,
+                rgba(39, 39, 42, 5%) 0 10px 15px -3px, rgba(39, 39, 42, 5%) 0 4px 6px -4px;
+            backdrop-filter: blur(12px);
+            background-color: rgb(255 255 255/0.5);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             li {
                 padding: 0 20px;
                 a {
                     &:hover {
-                        color: var(--text-main-color);
+                        color: var(--jl-hover-color);
                     }
                 }
             }

@@ -124,3 +124,21 @@ textarea {
         margin-right: 10px;
     }
 }
+
+.main {
+    position: relative;
+    &::after {
+        aspect-ratio: 1/3;
+        background-image: linear-gradient(to right, #007cf0, #00dfd8);
+        border: 0 solid #e5e5e5;
+        border-radius: 9999px;
+        bottom: calc(100% - 100px);
+        filter: blur(44px);
+        opacity: 0.2;
+        position: absolute;
+        right: 0;
+        left: 0;
+        //z-index: -50;
+        content: '';
+    }
+}
