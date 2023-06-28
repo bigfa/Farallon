@@ -16,12 +16,18 @@ class farallonAction extends farallonBase {
         if (this.getCookie('like_' + this.post_id)) {
             return;
         }
-        const url = '/api/post' + this.post_id + '/like';
-        fetch(url);
+        // @ts-ignore
+        const url = obvInit.restfulBase + 'farallon/v1/post/view';
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                id: this.post_id,
+            }),
+        });
         this.like_btn.classList.add('is-active');
     }
 
     refresh() {}
 }
 
-new farallonAction();
+// new farallonAction();

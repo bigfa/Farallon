@@ -62,13 +62,18 @@
 
     blockquote {
         color: var(--text-gray-medium);
-        margin-left: -50px;
-        margin-right: -50px;
+        border-color: rgba(0, 0, 0, 0.02);
+        margin-left: -3.5%;
+        margin-right: -3.5%;
         margin-bottom: 35px;
-        background-image: url(../images/b.svg);
-        background-repeat: no-repeat;
-        background-position: left 30px top 0px;
-        padding-top: 30px;
+        background-color: #fafafa;
+        background: linear-gradient(
+            89.99999999999999deg,
+            rgba(255, 233, 244, 0.3) 0%,
+            rgba(234, 243, 255, 0.5) 100%
+        );
+        padding: 30px;
+        border-radius: 10px;
         p {
             &:last-child {
                 margin-bottom: 0;

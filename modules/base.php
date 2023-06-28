@@ -43,6 +43,8 @@ class farallonBase
             [
                 'is_single' => is_singular(),
                 'post_id' => get_the_ID(),
+                'restfulBase' => esc_url_raw(rest_url()),
+                'nonce' => wp_create_nonce('wp_rest'),
             ]
         );
 

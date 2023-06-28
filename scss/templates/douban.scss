@@ -1,3 +1,21 @@
 .template--douban {
-    padding-top: 20px;
+    padding: 50px 75px;
+    .hero--title {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #007cf0, #00dfd8);
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+    }
+}
+
+.doulist-item {
+    background: linear-gradient(
+        89.99999999999999deg,
+        rgba(255, 233, 244, 0.3) 0%,
+        rgba(234, 243, 255, 0.5) 100%
+    );
+    border-color: rgba(0, 0, 0, 0.02);
 }

@@ -41,7 +41,15 @@ class farallonBase {
     trackPostView() {
         //@ts-ignore
         const id = obvInit.post_id;
-        fetch(`/api/single/${id}`);
+        //@ts-ignore
+
+        const url = obvInit.restfulBase + 'farallon/v1/post/view';
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                id,
+            }),
+        });
     }
 
     trackArchiveView() {

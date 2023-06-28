@@ -63,6 +63,7 @@ function scripts() {
                 ts({
                     noImplicitAny: true,
                     outFile: 'app.js',
+                    target: 'es5',
                 })
             )
             //.pipe(uglify())

@@ -1,6 +1,12 @@
 .site--header {
     //text-align: center;
     padding: 20px 80px;
+    .svgIcon {
+        margin-left: auto;
+        fill: rgba(0, 0, 0, 0.54);
+        position: relative;
+        cursor: pointer;
+    }
     .avatar {
         height: 48px;
         width: 48px;
@@ -24,7 +30,7 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        top: 20px;
+        top: 25px;
         z-index: 1;
         ul {
             display: flex;
