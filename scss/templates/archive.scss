@@ -1,3 +1,67 @@
+.archive-header {
+    padding-top: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .taxonomy-description {
+        font-size: 18px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    & + .site--main {
+        padding-top: 30px;
+    }
+
+    &__search {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        .search-form {
+            border: 1px solid #eee;
+            border-radius: 999rem;
+            padding: 5px;
+            .search-field {
+                border: 0;
+                background-color: rgba(0, 0, 0, 0);
+                padding: 0 15px;
+                font-size: 14px;
+                width: 250px;
+            }
+            .search-submit {
+                border-radius: 999rem;
+                border: 0;
+                background: gredient(to right, #007cf0, #00dfd8);
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.6);
+                padding: 8px 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .archive-header {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        h1 {
+            font-size: 20px;
+        }
+
+        .taxonomy-description {
+            font-size: 16px;
+        }
+
+        & + .site--main {
+            padding-top: 20px;
+        }
+    }
+}
+
 .page--archive {
     padding-top: 20px;
 }
