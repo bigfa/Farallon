@@ -23,3 +23,20 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .site--footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 3.5%;
+        padding-left: 3.5%;
+        .copyright {
+            margin-left: 0;
+        }
+
+        nav {
+            margin-bottom: 10px;
+        }
+    }
+}

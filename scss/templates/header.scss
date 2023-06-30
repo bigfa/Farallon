@@ -17,10 +17,9 @@
     }
     &.is-active {
         .avatar {
-            height: 40px;
-            width: 40px;
-            position: fixed;
-            top: 20px;
+            //height: 40px;
+            //width: 40px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
         }
     }
     position: relative;
@@ -106,21 +105,34 @@
     .site--header {
         padding-left: 40px;
         padding-right: 40px;
-        nav {
-            position: relative;
-            margin-left: auto;
+        padding-top: 59px;
+
+        &__center {
+            left: 0;
+            right: 0;
+            transform: translate3d(0, 0, 0);
+            border-radius: 0;
+            top: 0;
+            box-shadow: 0 0 #fff, 0 0 0 1px hsla(240, 5%, 96%, 0.1),
+                3px -8px 15px -3px rgba(39, 39, 42, 0.05), 0 4px 6px -4px rgba(39, 39, 42, 0.05);
+
             ul {
-                box-shadow: none;
-                border: 0;
-                padding: 0;
+                overflow-x: auto;
                 li {
-                    padding: 10px;
+                    flex: 0 0 auto;
+                }
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+
+            .inner {
+                .search--area {
+                    width: 100%;
+                    .search-field {
+                        width: 100%;
+                    }
                 }
             }
-            top: 0;
-            right: 0px;
-            left: auto;
-            transform: translateX(0%);
         }
     }
 }
@@ -130,17 +142,34 @@
         padding-left: 3.5%;
         padding-right: 3.5%;
         padding-bottom: 0;
-        nav {
-            display: none;
-        }
+
         .avatar {
             width: 40px;
             height: 40px;
         }
+
+        &__center {
+            ul {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
         //display: none;
     }
 
     .u-xs-show {
         display: inline;
+    }
+}
+
+@media (max-width: 414px) {
+    .site--header {
+        &__center {
+            ul {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
     }
 }

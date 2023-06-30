@@ -37,6 +37,9 @@
         border-radius: 5px;
         margin-top: 10px;
         margin-bottom: 10px;
+        .description {
+            margin-bottom: 0;
+        }
     }
     .post--title {
         font-size: 20px;
@@ -148,19 +151,31 @@
 @media (max-width: 768px) {
     .post--item {
         padding: 15px 0;
+        &__status {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .avatar {
+                width: 32px;
+                height: 32px;
+            }
+        }
         &:hover {
             background-color: transparent;
         }
-        .description {
-            min-height: 2.6em;
-            line-height: 1.3em;
-            font-size: 14px;
-            letter-spacing: 0;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            margin-bottom: 5px;
+        &:not(&__status) {
+            .description {
+                min-height: 2.6em;
+                line-height: 1.3em;
+                font-size: 14px;
+                letter-spacing: 0;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                margin-bottom: 5px;
+            }
         }
         .cover {
             width: 75px;
@@ -305,5 +320,16 @@
                 text-decoration: underline;
             }
         }
+    }
+}
+
+@media (max-width: 414px) {
+    .post--cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .post--card {
+        padding: 15px;
     }
 }
