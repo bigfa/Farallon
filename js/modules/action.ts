@@ -10,6 +10,12 @@ class farallonAction extends farallonBase {
             });
         }
         console.log('init');
+
+        document.querySelector('[data-action="show-search"]')!.addEventListener('click', () => {
+            document
+                .querySelector('.site--header__center .inner')!
+                .classList.toggle('search--active');
+        });
     }
 
     handleLike() {
@@ -30,4 +36,4 @@ class farallonAction extends farallonBase {
     refresh() {}
 }
 
-// new farallonAction();
+new farallonAction();
