@@ -8,6 +8,7 @@ class farallonBase
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_filter('excerpt_length', array($this, 'excerpt_length'));
         add_filter('excerpt_more', array($this, 'excerpt_more'));
+        add_filter("the_excerpt", array($this, 'custom_excerpt_length'), 999);
         add_theme_support('html5', array(
             'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
         ));
@@ -15,8 +16,16 @@ class farallonBase
         register_nav_menu('farallon', 'farallon');
         register_nav_menu('farallon_footer', 'farallon_footer');
         add_theme_support('post-formats', array('status'));
+        add_filter('pre_option_link_manager_enabled', '__return_true');
     }
 
+    function custom_excerpt_length($excerpt)
+    {
+        if (has_excerpt()) {
+            $excerpt = wp_trim_words(get_the_excerpt(), apply_filters("excerpt_length", 80));
+        }
+        return $excerpt;
+    }
 
     function excerpt_more($more)
     {

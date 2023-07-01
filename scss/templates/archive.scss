@@ -64,4 +64,69 @@
 
 .page--archive {
     padding-top: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.archive--title__year {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.archive--list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    .archive--item {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        padding: 15px;
+        border-radius: 10px;
+        .archive--title {
+            line-height: 1.4;
+            font-size: 14px;
+        }
+        .archive--meta {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        &:hover {
+            background-color: #fafafa;
+            background: linear-gradient(
+                89.99999999999999deg,
+                rgba(255, 233, 244, 0.3) 0%,
+                rgba(234, 243, 255, 0.5) 100%
+            );
+            .archive--title {
+                color: var(--jl-hover-color);
+            }
+        }
+    }
+    padding: 20px 0;
+}
+
+@media (max-width: 820px) {
+    .page--archive {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .archive--list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page--archive {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+    }
+}
+
+@media (max-width: 414px) {
+    .page--archive {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+    }
+    .archive--list {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
