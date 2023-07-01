@@ -25,6 +25,7 @@
                 <?php the_tags('', '') ?>
             </div>
             <?php get_template_part('template-parts/author', 'card'); ?>
+            <?php get_template_part('template-parts/single', 'related'); ?>
             <div class="post--ingle__comments">
                 <?php
                 if (comments_open() || get_comments_number()) :

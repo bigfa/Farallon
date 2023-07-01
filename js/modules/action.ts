@@ -16,6 +16,13 @@ class farallonAction extends farallonBase {
                 .querySelector('.site--header__center .inner')!
                 .classList.toggle('search--active');
         });
+
+        document.querySelectorAll('.fixed--theme span').forEach((item) => {
+            item.addEventListener('click', () => {
+                document.querySelector('body')!.classList.toggle('dark--theme');
+                item.classList.toggle('is-active');
+            });
+        });
     }
 
     handleLike() {

@@ -35,6 +35,35 @@
             }
         }
     }
+
+    &__related {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        &__item {
+            padding: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            .cover {
+                border-radius: 8px;
+            }
+            &__title {
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1.4;
+            }
+            &:hover {
+                background-color: #fafafa;
+                background: linear-gradient(
+                    89.99999999999999deg,
+                    rgba(255, 233, 244, 0.3) 0%,
+                    rgba(234, 243, 255, 0.5) 100%
+                );
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {

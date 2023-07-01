@@ -3,3 +3,57 @@
     padding-left: 80px;
     padding-right: 80px;
 }
+
+.about--list {
+    padding: 30px 0;
+    .about--item {
+        .date {
+            padding-left: 0;
+            padding-right: 3rem;
+            text-align: right;
+            width: 25%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 38px;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #eee;
+                content: '';
+                right: -8px;
+            }
+
+            &::after {
+                position: absolute;
+                top: 40px;
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+                background-color: #fff;
+                content: '';
+                right: -6px;
+            }
+        }
+
+        &__content {
+            padding-left: 30px;
+            padding-top: 30px;
+            border-left: 1px solid #eee;
+            .title {
+                font-size: 16px;
+                font-weight: bold;
+            }
+
+            p {
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+
+        display: flex;
+    }
+}

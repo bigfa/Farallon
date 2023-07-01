@@ -1,9 +1,9 @@
 <article class="post--card" itemtype="http://schema.org/Article" itemscope="itemscope">
     <?php if (aladdin_is_has_image(get_the_ID())) : ?>
-        <img src="<?php echo aladdin_get_background_image(get_the_ID()); ?>!/both/600x360" class="cover" />
+        <img src="<?php echo aladdin_get_background_image(get_the_ID()); ?>!/both/600x360" class="cover" alt="<?php the_title(); ?>" />
     <?php endif; ?>
     <div class="content">
-        <h2 class="post--title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="post--title" itemprop="headline"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
         <?php if (get_the_excerpt()) : ?>
             <div class="description" itemprop="about"><?php the_excerpt(); ?></div>
         <?php endif; ?>
