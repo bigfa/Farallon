@@ -53,6 +53,7 @@
                 font-size: 14px;
                 font-weight: bold;
                 line-height: 1.4;
+                margin-bottom: 5px;
             }
             &:hover {
                 background-color: #fafafa;
@@ -61,6 +62,11 @@
                     rgba(255, 233, 244, 0.3) 0%,
                     rgba(234, 243, 255, 0.5) 100%
                 );
+            }
+            .meta {
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.6);
+                line-height: 1;
             }
         }
     }

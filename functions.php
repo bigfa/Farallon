@@ -1,6 +1,6 @@
 <?php
 define('FARALLON_VERSION', '0.0.8');
-
+define('FARALLO_SETTING_KEY', 'pure_setting');
 include_once('modules/base.php');
 
 function aladdin_get_background_image($post_id, $width = null, $height = null)
@@ -137,3 +137,4 @@ function get_link_items()
 
 
 include_once('modules/comment.php');
+include_once('modules/setting.php');

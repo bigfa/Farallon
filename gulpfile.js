@@ -29,29 +29,40 @@ function css() {
         .pipe(gulp.dest('./build/css/'));
 }
 
-// function setting() {
-//     return (
-//         gulp
-//             .src(['./js/setting.js'])
-//             .pipe(plumber())
-//             //.pipe(webpackstream(webpackconfig, webpack))
-//             //.pipe(concat("setting.js"))
-//             .pipe(
-//                 babel({
-//                     presets: ['@babel/preset-env'],
-//                 })
-//             )
-//             .pipe(uglify())
-//             //.pipe(plumber())
-//             //.pipe(webpackstream(webpackconfig, webpack))
-//             //.pipe(concat('all.js'))
-//             //.pipe(babel({
-//             //presets: ['@babel/preset-env']
-//             // }))
-//             // .pipe(uglify())
-//             .pipe(gulp.dest('./build/js/'))
-//     );
-// }
+function settingCss() {
+    return gulp
+        .src('./scss/setting.scss')
+        .pipe(plumber())
+        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(postcss([autoprefixer(), cssnano()]))
+        .pipe(gulp.dest('./build/css/'));
+}
+
+function setting() {
+    return (
+        gulp
+            .src(['./js/setting.ts'])
+            .pipe(plumber())
+            .pipe(
+                ts({
+                    noImplicitAny: true,
+                    outFile: 'setting.js',
+                    target: 'es5',
+                })
+            )
+            .pipe(uglify())
+            .pipe(rename({ suffix: '.min' }))
+            //.pipe(plumber())
+            //.pipe(webpackstream(webpackconfig, webpack))
+            //.pipe(concat('all.js'))
+            //.pipe(babel({
+            //presets: ['@babel/preset-env']
+            // }))
+            // .pipe(uglify())
+            .pipe(gulp.dest('./build/js/'))
+    );
+}
 
 // Transpile, concatenate and minify scripts
 function scripts() {
@@ -82,14 +93,18 @@ function scripts() {
 // Watch files
 function watchFiles() {
     gulp.watch(['./js/modules/*', './js/app.ts'], gulp.series(scripts));
-    gulp.watch(['./scss/*', './scss/modules/*', './scss/templates/*'], gulp.series(css));
-    //gulp.watch(['./js/setting.js'], gulp.series(setting));
+    gulp.watch(['./scss/app.scss', './scss/modules/*', './scss/templates/*'], gulp.series(css));
+    gulp.watch(
+        ['./scss/setting.scss', './scss/modules/*', './scss/templates/*'],
+        gulp.series(settingCss)
+    );
+    gulp.watch(['./js/setting.ts'], gulp.series(setting));
 }
 
 // define complex tasks
 const js = gulp.series(scripts);
 const watch = gulp.parallel(watchFiles);
-const build = gulp.parallel(watch, gulp.parallel(css, fonts, js, images));
+const build = gulp.parallel(watch, gulp.parallel(css, fonts, js, images, settingCss, setting));
 
 exports.css = css;
 exports.js = js;

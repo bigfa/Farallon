@@ -1,3 +1,4 @@
+<h3 class="related--posts__title">Related Posts</h3>
 <div class="post--single__related">
     <?php $the_query = new WP_Query(array(
         'post_type' => 'post',
@@ -15,6 +16,9 @@
                 </div>
                 <div class="post--single__related__item__title">
                     <?php the_title(); ?>
+                </div>
+                <div class="meta">
+                    <?php echo get_the_date(); ?>
                 </div>
             </a>
         </div>

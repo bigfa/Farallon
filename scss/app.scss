@@ -89,7 +89,7 @@ textarea {
 }
 
 .site--main {
-    padding: 80px;
+    padding: 50px 80px;
 }
 
 @media (max-width: 820px) {
@@ -125,3 +125,5 @@ textarea {
 @import 'templates/douban.scss';
 
 @import 'templates/404.scss';
+
+@import 'modules/related.scss';

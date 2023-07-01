@@ -1,3 +1,8 @@
 .related--posts {
     font-size: 14px;
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 }
