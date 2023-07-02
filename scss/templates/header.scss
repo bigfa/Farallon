@@ -173,3 +173,20 @@
         }
     }
 }
+
+.top--bar {
+    padding: 0 40px;
+    .widget-card-content {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .widget-card-description {
+        color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    padding-bottom: 50px;
+}

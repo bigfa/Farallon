@@ -17,6 +17,21 @@ class farallonBase
         register_nav_menu('farallon_footer', 'farallon_footer');
         add_theme_support('post-formats', array('status'));
         add_filter('pre_option_link_manager_enabled', '__return_true');
+        add_action('widgets_init', array($this, 'widgets_init'));
+    }
+
+    function widgets_init()
+    {
+
+        register_sidebar(array(
+            'name'          => '首页顶部',
+            'id'            => 'topbar',
+            'description'   => '首页',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="heading-title">',
+            'after_title'   => '</h3>',
+        ));
     }
 
     function custom_excerpt_length($excerpt)

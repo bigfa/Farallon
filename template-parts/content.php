@@ -1,6 +1,10 @@
 <article class="post--item" itemtype="http://schema.org/Article" itemscope="itemscope">
     <div class="content">
-        <h2 class="post--title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+        <h2 class="post--title" itemprop="headline"><a href="<?php the_permalink(); ?>"><?php the_title(); ?>
+                <?php if (is_sticky()) : ?>
+                    <span class="sticky--post">置顶</span>
+                <?php endif; ?>
+            </a></h2>
         <div class="description" itemprop="about"><?php echo wp_trim_words(get_the_content(), 80, '...'); ?></div>
         <div class="meta">
             <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>" class="humane--time"><svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">

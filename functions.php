@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.0.8');
+define('FARALLON_VERSION', '0.0.9');
 define('FARALLO_SETTING_KEY', 'pure_setting');
 include_once('modules/base.php');
 
@@ -138,3 +138,4 @@ function get_link_items()
 
 include_once('modules/comment.php');
 include_once('modules/setting.php');
+include_once('modules/widget.php');
