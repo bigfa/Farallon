@@ -1,4 +1,20 @@
 :root {
+    --farallon-main-color: #4370f5;
+    --farallon-hover-color: #3a5f9a;
+    --farallon-text-color: rgba(0, 0, 0, 0.84);
+    --farallon-text-light: rgba(0, 0, 0, 0.68);
+    --farallon-text-gray: rgba(0, 0, 0, 0.6);
+    --farallon-text-gray-lightest: rgba(0, 0, 0, 0.5);
+
+    --farallon-background-white: rgba(255, 255, 255, 1);
+    --farallon-background-gray: rgba(250, 250, 250, 1);
+
+    --farallon-griedent-start: #007cf0;
+    --farallon-griedent-end: #00dfd8;
+
+    --farallon-border-color: rgba(0, 0, 0, 0.1);
+    --farallon-border-color-light: rgba(0, 0, 0, 0.05);
+
     --jl-main-color: #4370f5;
     --jl-hover-color: #3a5f9a;
     --fl-text-color: rgba(0, 0, 0, 0.84);
