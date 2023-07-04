@@ -33,10 +33,7 @@
                 endif;
                 ?>
             </div>
-            <?php the_post_navigation(array(
-                'next_text' => '<span class="meta-nav">Next</span><span class="post-title">%title<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none"><path stroke="#1D1D1F" stroke-linecap="round" stroke-linejoin="round" d="M4.667 12.667 13.333 4m0 0v8.32m0-8.32h-8.32"/></svg></span>',
-                'prev_text' => '<span class="meta-nav">Previous</span><span class="post-title">%title<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none"><path stroke="#1D1D1F" stroke-linecap="round" stroke-linejoin="round" d="M4.667 12.667 13.333 4m0 0v8.32m0-8.32h-8.32"/></svg></span>',
-            )); ?>
+            <?php get_template_part('template-parts/post', 'navigation'); ?>
         </article>
 
     <?php endwhile; ?>
