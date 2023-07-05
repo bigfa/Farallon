@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.0.11');
+define('FARALLON_VERSION', '0.0.12');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 include_once('modules/base.php');
 

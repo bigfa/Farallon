@@ -9,12 +9,40 @@ class farallonSetting
         $this->config = $config;
         add_action('admin_menu', [$this, 'setting_menu']);
         add_action('admin_enqueue_scripts', [$this, 'setting_scripts']);
+        add_action('wp_ajax_farallon_setting', array($this, 'setting_callback'));
+        //add_action('wp_ajax_nopriv_farallon_setting', array($this, 'setting_callback'));
+    }
+
+
+    function setting_callback()
+    {
+        $data = $_POST[FARALLO_SETTING_KEY];
+
+
+        $this->update_setting($data);
+
+        return wp_send_json([
+            'code' => 200,
+            'message' => '保存成功',
+            'data' => $this->get_setting()
+        ]);
     }
 
     function setting_scripts()
     {
         wp_enqueue_style('farallon-setting', get_template_directory_uri() . '/build/css/setting.min.css', array(), FARALLON_VERSION, 'all');
-        wp_enqueue_script('farallon-setting', get_template_directory_uri() . '/build/js/setting.min.js', [], FARALLON_VERSION, true);
+        wp_enqueue_script('farallon-setting', get_template_directory_uri() . '/build/js/setting.min.js', ['jquery'], FARALLON_VERSION, true);
+        wp_localize_script(
+            'farallon-setting',
+            'obvInit',
+            [
+                'is_single' => is_singular(),
+                'post_id' => get_the_ID(),
+                'restfulBase' => esc_url_raw(rest_url()),
+                'nonce' => wp_create_nonce('wp_rest'),
+                'ajaxurl' => admin_url('admin-ajax.php'),
+            ]
+        );
     }
 
     function setting_menu()
@@ -85,6 +113,7 @@ class farallonSetting
         if (!$setting) {
             return false;
         }
+
 
         if ($key) {
             if (array_key_exists($key, $setting)) {
