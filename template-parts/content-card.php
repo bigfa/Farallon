@@ -3,6 +3,9 @@
         <img src="<?php echo aladdin_get_background_image(get_the_ID()); ?>!/both/600x360" class="cover" alt="<?php the_title(); ?>" />
     <?php endif; ?>
     <div class="content">
+        <div class="date">
+            <?php echo get_the_date('d'); ?>
+        </div>
         <h2 class="post--title" itemprop="headline"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
         <?php if (get_the_excerpt()) : ?>
             <div class="description" itemprop="about"><?php the_excerpt(); ?></div>

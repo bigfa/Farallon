@@ -300,6 +300,26 @@
         }
     }
 
+    .content {
+        position: relative;
+        .date {
+            height: 36px;
+            width: 36px;
+            background-color: #fff;
+            border-radius: 100%;
+            position: absolute;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.6);
+            right: 15px;
+            top: -30px;
+            box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
+        }
+    }
+
     .description {
         font-size: 15px;
         color: rgba(0, 0, 0, 0.65);

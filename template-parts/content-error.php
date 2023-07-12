@@ -17,5 +17,4 @@
             <?php endif; ?>
         </div>
     </div>
-
 </article>
