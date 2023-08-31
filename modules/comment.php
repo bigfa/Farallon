@@ -56,10 +56,21 @@ class farallonComment
         do_action('set_comment_cookies', $comment, $user);
         $GLOBALS['comment'] = $comment;
 
+        //$comment['author_avatar_urls'] = get_avatar_url($comment->comment_author_email, array('size' => 64));
+
         return [
             'code' => 200,
             'message' => '评论成功',
-            'data' => $comment
+            'data' =>  [
+                'author_avatar_urls' => get_avatar_url($comment->comment_author_email, array('size' => 64)),
+                'comment_author' => $comment->comment_author,
+                'comment_author_email' => $comment->comment_author_email,
+                'comment_author_url' => $comment->comment_author_url,
+                'comment_content' => $comment->comment_content,
+                'comment_date' => $comment->comment_date,
+                'comment_date_gmt' => $comment->comment_date_gmt,
+                'comment_ID' => $comment->comment_ID,
+            ]
         ];
     }
 }
