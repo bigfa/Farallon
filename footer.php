@@ -8,13 +8,14 @@
         © <?php echo date('Y'); ?> . All rights reserved.
     </div>
 </footer>
-<div class="fixed--theme">
+<div class="fixed--theme u-hide">
     <span class="is-active">
         <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color: currentcolor; width: 16px; height: 16px;">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
         </svg>
     </span>
-    <span><svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color: currentcolor; width: 16px; height: 16px;">
+    <span>
+        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color: currentcolor; width: 16px; height: 16px;">
             <circle cx="12" cy="12" r="5"></circle>
             <path d="M12 1v2"></path>
             <path d="M12 21v2"></path>
@@ -26,7 +27,8 @@
             <path d="M18.36 5.64l1.42-1.42"></path>
         </svg>
     </span>
-    <span><svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color: currentcolor; width: 16px; height: 16px;">
+    <span>
+        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24" style="color: currentcolor; width: 16px; height: 16px;">
             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
             <path d="M8 21h8"></path>
             <path d="M12 17v4"></path>

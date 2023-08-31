@@ -9,10 +9,9 @@
             while (have_posts()) : the_post();
                 get_template_part('template-parts/content', 'card');
             endwhile;
-        endif;
-        ?>
+            get_template_part('template-parts/pagination');
+        endif; ?>
     </div>
-    <?php get_template_part('template-parts/pagination'); ?>
 </main>
 
 <?php get_footer(); ?>

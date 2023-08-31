@@ -25,11 +25,11 @@ class farallonScroll {
                 document.querySelector('.site--header')?.classList.remove('is-active');
             }
 
-            if (window.scrollY > endScrollTop - windowHeight) {
-                document.querySelector('.post-navigation')?.classList.add('is-active');
-            } else {
-                document.querySelector('.post-navigation')?.classList.remove('is-active');
-            }
+            // if (window.scrollY > endScrollTop - windowHeight) {
+            //     document.querySelector('.post-navigation')?.classList.add('is-active');
+            // } else {
+            //     document.querySelector('.post-navigation')?.classList.remove('is-active');
+            // }
         });
     }
 }

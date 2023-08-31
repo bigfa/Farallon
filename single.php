@@ -18,9 +18,6 @@
                     </svg>
                 </button>
             </div>
-            <div class="post__single__copyright">
-                本文内容和图片均为原创，未经允许不得任何形式的转载。
-            </div>
             <div class="tag--list">
                 <?php the_tags('', '') ?>
             </div>
@@ -33,7 +30,8 @@
                 endif;
                 ?>
             </div>
-            <?php get_template_part('template-parts/post', 'navigation'); ?>
+            <?php //get_template_part('template-parts/post', 'navigation'); 
+            ?>
         </article>
 
     <?php endwhile; ?>
