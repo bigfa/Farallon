@@ -29,7 +29,8 @@ get_header();
             'title' => get_the_title(),
             'link' => get_permalink(),
             'commentnum' => get_comments_number(),
-            'views' => farallon_post_view($post->ID)
+            'views' => farallon_post_view($post->ID),
+            'date' => get_the_time('m-d'),
         ];
 
     endwhile;
@@ -40,7 +41,7 @@ get_header();
         foreach ($year_post as $month => $month_post) {
             $output .=  '<ul class="archive--list" data-year="' . $year . ' - ' . $month  . '">';
             foreach ($month_post as $value) {
-                $output .= '<li class="archive--item"><div class="archive--title"><a href="' . $value['link'] . '">' . $value['title'] . '</a></div><div class="archive--meta">' . $value['views'] . ' reads</li>';
+                $output .= '<li class="archive--item"><div class="archive--title"><a href="' . $value['link'] . '">' . $value['title'] . '</a></div><div class="archive--meta">' . $value['date'] . '</div></li>';
             }
             $output .= '</ul>';
         }
@@ -48,6 +49,5 @@ get_header();
     }
     echo $output;
     ?>
-    </div>
 </main>
 <?php get_footer(); ?>

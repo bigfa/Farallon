@@ -1,3 +1,4 @@
+<?php global $farallonSetting; ?>
 <footer class="site--footer">
     <nav>
         <nav>
@@ -5,7 +6,11 @@
         </nav>
     </nav>
     <div class="copyright">
-        © <?php echo date('Y'); ?> . All rights reserved.
+        <?php if ($farallonSetting->get_setting('copyright')) : ?>
+            <?php echo $farallonSetting->get_setting('copyright'); ?>
+        <?php else : ?>
+            © <?php echo date('Y'); ?> . All rights reserved.
+        <?php endif; ?>
     </div>
 </footer>
 <div class="fixed--theme u-hide">

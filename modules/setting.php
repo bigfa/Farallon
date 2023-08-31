@@ -184,8 +184,8 @@ class farallonSetting
         </tr>
 <?php }
 }
-
-new farallonSetting(
+global $farallonSetting;
+$farallonSetting = new farallonSetting(
     [
         "header" => [
             [
@@ -277,6 +277,19 @@ new farallonSetting(
                         'label' => '格式化时间',
                         'description' => '时间多久以前显示为几天前，几小时前，几分钟前，几秒前'
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_cat',
+                        'label' => '分类信息',
+                        'description' => '首页分类信息展示'
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_author',
+                        'label' => '作者信息',
+                        'description' => '首页作者信息展示'
+                    ],
+
                 ]
             ],
 

@@ -29,7 +29,7 @@ document.querySelector('#pure-save')?.addEventListener('click', (event) => {
 });
 +(function ($) {
     let $switch = $('.pure-setting-switch');
-    $switch.click(function (event) {
+    $switch.click(function () {
         var $this = $(this),
             $input = $('#' + $this.attr('data-id'));
 
