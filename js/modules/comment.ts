@@ -1,6 +1,7 @@
-class farallonComment {
+class farallonComment extends farallonBase {
     loading = false;
     constructor() {
+        super();
         this.init();
     }
 
@@ -33,7 +34,7 @@ class farallonComment {
                     .then((data) => {
                         this.loading = false;
                         if (data.code != 200) {
-                            return;
+                            return this.showNotice(data.message, 'error');
                         }
                         let a = document.getElementById('cancel-comment-reply-link'),
                             i = document.getElementById('respond'),
@@ -85,6 +86,7 @@ class farallonComment {
                                 ?.insertAdjacentHTML('beforeend', html);
                             console.log(2);
                         }
+                        this.showNotice('评论成功');
                     });
             });
         }

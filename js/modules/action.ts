@@ -17,6 +17,9 @@ class farallonAction extends farallonBase {
             this.like_btn.addEventListener('click', () => {
                 this.handleLike();
             });
+            if (this.getCookie('like_' + this.post_id)) {
+                this.like_btn.classList.add('is-active');
+            }
         }
         console.log('init');
 
@@ -74,7 +77,7 @@ class farallonAction extends farallonBase {
     handleLike() {
         // @ts-ignore
         if (this.getCookie('like_' + this.post_id)) {
-            return;
+            return this.showNotice('You have already liked this post');
         }
         // @ts-ignore
         const url = obvInit.restfulBase + 'farallon/v1/like';
@@ -95,6 +98,8 @@ class farallonAction extends farallonBase {
             })
             .then((data) => {
                 console.log(data);
+                // @ts-ignore
+                this.setCookie('like_' + this.post_id, '1', 1);
             });
         this.like_btn.classList.add('is-active');
     }

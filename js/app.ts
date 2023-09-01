@@ -29,6 +29,16 @@ class farallonBase {
         var i = 'expires=' + o.toUTCString();
         document.cookie = t + '=' + e + ';' + i + ';path=/';
     }
+
+    showNotice(message: any, type: any = 'success') {
+        const html = `<div class="notice--wrapper">${message}</div>`;
+
+        document.querySelector('body')!.insertAdjacentHTML('beforeend', html);
+        document.querySelector('.notice--wrapper')!.classList.add('is-active');
+        setTimeout(() => {
+            document.querySelector('.notice--wrapper')!.remove();
+        }, 3000);
+    }
 }
 
 new farallonBase();
