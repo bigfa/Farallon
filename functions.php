@@ -1,6 +1,9 @@
 <?php
-define('FARALLON_VERSION', '0.1.0');
+define('FARALLON_VERSION', '0.1.1');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
+define('FARALLON_POST_LIKE_KEY', '_postlike');
+define('FARALLON_POST_VIEW_KEY', 'views');
+
 include_once('modules/base.php');
 
 function aladdin_get_background_image($post_id, $width = null, $height = null)

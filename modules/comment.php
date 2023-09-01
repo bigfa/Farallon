@@ -16,22 +16,41 @@ class farallonComment
             'permission_callback' => '__return_true',
         ));
 
-        register_rest_route('farallon/v1', '/post/view', array(
+        register_rest_route('farallon/v1', '/view', array(
+            'methods' => 'get',
+            'callback' => array($this, 'handle_post_view'),
+            'permission_callback' => '__return_true',
+        ));
+
+        register_rest_route('farallon/v1', '/like', array(
             'methods' => 'POST',
-            'callback' => array($this, 'hanle_post_view'),
+            'callback' => array($this, 'handle_post_like'),
             'permission_callback' => '__return_true',
         ));
     }
 
-    function hanle_post_view($data)
+    function handle_post_view($data)
     {
         $post_id = $data['id'];
-        $post_views = (int)get_post_meta($post_id, 'views', true);
+        $post_views = (int)get_post_meta($post_id, FARALLON_POST_VIEW_KEY, true);
         $post_views++;
-        update_post_meta($post_id, 'views', $post_views);
+        update_post_meta($post_id, FARALLON_POST_VIEW_KEY, $post_views);
         return [
             'code' => 200,
             'message' => '浏览成功',
+            'data' => $post_views
+        ];
+    }
+
+    function handle_post_like($request)
+    {
+        $post_id = $request['id'];
+        $post_views = (int)get_post_meta($post_id, FARALLON_POST_LIKE_KEY, true);
+        $post_views++;
+        update_post_meta($post_id, FARALLON_POST_LIKE_KEY, $post_views);
+        return [
+            'code' => 200,
+            'message' => '成功',
             'data' => $post_views
         ];
     }

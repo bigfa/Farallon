@@ -9,14 +9,6 @@ class farallonBase {
         this.post_id = obvInit.post_id;
         //@ts-ignore
         this.is_archive = obvInit.is_archive;
-
-        if (this.is_single) {
-            this.trackPostView();
-        }
-
-        if (this.is_archive) {
-            this.trackArchiveView();
-        }
     }
 
     getCookie(t: any) {
@@ -36,28 +28,6 @@ class farallonBase {
         o.setTime(o.getTime() + 24 * n * 60 * 60 * 1e3);
         var i = 'expires=' + o.toUTCString();
         document.cookie = t + '=' + e + ';' + i + ';path=/';
-    }
-
-    trackPostView() {
-        //@ts-ignore
-        const id = obvInit.post_id;
-        //@ts-ignore
-
-        const url = obvInit.restfulBase + 'farallon/v1/post/view';
-        fetch(url, {
-            method: 'POST',
-            body: JSON.stringify({
-                id,
-            }),
-        });
-    }
-
-    trackArchiveView() {
-        if (document.querySelector('.archive-header')) {
-            const self: any = document.querySelector('.archive-header');
-            const id = self.dataset.id;
-            fetch(`/api/archive/${id}`);
-        }
     }
 }
 
