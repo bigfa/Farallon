@@ -80,12 +80,37 @@
     }
 }
 
-.comment-author {
+.comment--avatar {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    display: flex;
+}
+
+.comment--author {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    .comment-reply-link {
+        margin-left: auto;
+    }
+}
+
+.comment--meta {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.comment--time {
+    margin-left: 10px;
+}
+
+.comment-meta {
     display: flex;
     align-items: center;
     .avatar {
         border-radius: 100%;
-        margin-right: 10px;
+        // margin-right: 10px;
     }
     .fn {
         font-style: normal;

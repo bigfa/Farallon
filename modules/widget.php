@@ -1,5 +1,5 @@
 <?php
-class pure_widget3 extends WP_Widget
+class Farallon_Widget extends WP_Widget
 
 {
 
@@ -54,8 +54,8 @@ class pure_widget3 extends WP_Widget
 <?php
     }
 }
-add_action('widgets_init', 'pure_widget3_init');
-function pure_widget3_init()
+add_action('widgets_init', 'farallon_widget_init');
+function farallon_widget_init()
 {
-    register_widget('pure_widget3');
+    register_widget('Farallon_Widget');
 }

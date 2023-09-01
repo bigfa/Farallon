@@ -18,6 +18,9 @@
                     </svg>
                 </button>
             </div>
+            <div class="share--action">
+                复制本文链接 <span><?php the_permalink(); ?></span>
+            </div>
             <div class="tag--list">
                 <?php the_tags('', '') ?>
             </div>

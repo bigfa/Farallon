@@ -8,7 +8,7 @@ if (post_password_required()) {
     <meta content="UserComments:<?php echo number_format_i18n(get_comments_number()); ?>" itemprop="interactionCount">
     <ol class="commentlist sulliComment--list">
         <?php if (have_comments()) {
-            wp_list_comments(array('style' => 'ol', 'avatar_size' => 48));
+            wp_list_comments(array('style' => 'ol', 'avatar_size' => 48, 'callback' => 'farallon_comment'));
         } else {
         ?>
             <li class="no--comment"><svg viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6686" width="128" height="128">

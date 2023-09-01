@@ -157,3 +157,13 @@ textarea {
         //  transform: translateY(0);
     }
 }
+
+.share--action {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.67);
+    span {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
