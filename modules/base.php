@@ -64,6 +64,7 @@ class farallonBase
 
     function enqueue_scripts()
     {
+        global $farallonSetting;
         wp_enqueue_script('farallon-script', get_template_directory_uri() . '/build/js/app.min.js', [], FARALLON_VERSION, true);
         wp_localize_script(
             'farallon-script',
@@ -75,6 +76,9 @@ class farallonBase
                 'nonce' => wp_create_nonce('wp_rest'),
             ]
         );
+        if ($farallonSetting->get_setting('javascript')) {
+            wp_add_inline_script('farallon-script', $farallonSetting->get_setting('javascript'));
+        }
         if (is_singular()) wp_enqueue_script("comment-reply");
     }
 }

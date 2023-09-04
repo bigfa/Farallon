@@ -13,10 +13,10 @@ class farallonScroll {
         //     speedAsDuration: true
         // });
 
-        const endScroll = document.querySelector('.author--card') as HTMLElement;
-        const endScrollTop = endScroll.offsetTop;
+        // const endScroll = document.querySelector('.author--card') as HTMLElement;
+        //const endScrollTop = endScroll.offsetTop;
 
-        const windowHeight = window.innerHeight;
+        //   const windowHeight = window.innerHeight;
 
         window.addEventListener('scroll', function () {
             if (window.scrollY > 10) {

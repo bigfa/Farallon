@@ -370,13 +370,13 @@ $farallonSetting = new farallonSetting(
                         'type' => 'textarea',
                         'name' => 'javascript',
                         'label' => 'JS 模块',
-                        'description' => '危险'
+                        'description' => '自定义JS脚本'
                     ],
                     [
                         'type' => 'textarea',
                         'name' => 'copyright',
                         'label' => '版权信息',
-                        'description' => '危险'
+                        'description' => '修改版权信息'
                     ],
                 ]
             ],
