@@ -250,9 +250,21 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
-                        'name' => 'cdn',
-                        'label' => '图片云服务商',
-                        'description' => '确保所有图片均已上传至服务商，否则缩略图可能无法正常显示。'
+                        'name' => 'upyun',
+                        'label' => '又拍云',
+                        'description' => '确保所有图片均已上传至又拍云，否则缩略图可能无法正常显示。'
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'oss',
+                        'label' => '阿里云OSS',
+                        'description' => '确保所有图片均已上传至阿里云OSS，否则缩略图可能无法正常显示。'
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'qiniu',
+                        'label' => '七牛云',
+                        'description' => '确保所有图片均已上传至阿里云七牛云，否则缩略图可能无法正常显示。'
                     ],
                     [
                         'type' => 'switch',
@@ -284,7 +296,12 @@ $farallonSetting = new farallonSetting(
                         'label' => '作者信息',
                         'description' => '首页作者信息展示'
                     ],
-
+                    [
+                        'type' => 'switch',
+                        'name' => 'hide_home_cover',
+                        'label' => '缩略图',
+                        'description' => '不展示首页缩略图'
+                    ],
                 ]
             ],
 

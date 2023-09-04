@@ -1,13 +1,17 @@
 <?php
-define('FARALLON_VERSION', '0.1.2');
+define('FARALLON_VERSION', '0.1.3');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
 
 include_once('modules/base.php');
+include_once('modules/comment.php');
+include_once('modules/setting.php');
+include_once('modules/widget.php');
 
-function aladdin_get_background_image($post_id, $width = null, $height = null)
+function farallon_get_background_image($post_id, $width = null, $height = null)
 {
+    global $farallonSetting;
     if (has_post_thumbnail($post_id)) {
         $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full');
         $output = $timthumb_src[0];
@@ -25,17 +29,24 @@ function aladdin_get_background_image($post_id, $width = null, $height = null)
         }
     }
     if ($height && $width) {
-        $result = $output . "!/both/{$width}x{$height}";
-    } else {
+        if ($farallonSetting->get_setting('upyun')) {
+            $output = $output . "!/both/{$width}x{$height}";
+        }
 
-        $result = $output;
+        if ($farallonSetting->get_setting('oss')) {
+            $output = $output . "?x-oss-process=image/crop,w_{$width},h_{$height}";
+        }
+
+        if ($farallonSetting->get_setting('qiniu')) {
+            $output = $output . "?imageView2/1/w/{$width}/h/{$height}";
+        }
     }
 
-    return  $result;
+    return $output;
 }
 
 
-function aladdin_is_has_image($post_id)
+function farallon_is_has_image($post_id)
 {
     static $has_image;
     if (has_post_thumbnail($post_id)) {
@@ -91,7 +102,7 @@ function farallon_post_view()
 /**
  * Get link items by categroy id
  *
- * @since Puma 2.1.0
+ * @since Farallon 0.1.0
  *
  * @param term id
  * @return link item list
@@ -116,7 +127,7 @@ function get_the_link_items($id = null)
 /**
  * Get link items
  *
- * @since Puma 2.1.0
+ * @since Farallon 0.1.0
  *
  * @return link iterms
  */
@@ -170,8 +181,3 @@ function farallon_comment($comment, $args, $depth)
             break;
     endswitch;
 }
-
-
-include_once('modules/comment.php');
-include_once('modules/setting.php');
-include_once('modules/widget.php');

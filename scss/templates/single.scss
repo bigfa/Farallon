@@ -48,6 +48,8 @@
             flex-direction: column;
             .cover {
                 border-radius: 8px;
+                aspect-ratio: 2/1;
+                object-fit: cover;
             }
             &__title {
                 font-size: 14px;

@@ -15,7 +15,7 @@
                 <?php echo get_the_date('Y-m-d'); ?>
             </time>
             <?php if ($farallonSetting->get_setting('home_author')) : ?>
-                <svg t="1686568589439" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7391" width="16" height="16">
+                <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                     <path d="M669.013333 596.21181l194.389334 226.791619A77.433905 77.433905 0 0 1 804.59581 950.857143H212.016762a77.433905 77.433905 0 0 1-58.782476-127.853714l194.413714-226.791619c22.918095 13.897143 47.737905 24.941714 74.044952 32.597333l-209.67619 244.614095h592.579048l-209.676191-244.614095a308.102095 308.102095 0 0 0 74.069333-32.597333zM508.294095 73.142857c142.57981 0 258.145524 115.565714 258.145524 258.145524 0 142.57981-115.565714 258.145524-258.145524 258.145524-142.57981 0-258.145524-115.565714-258.145524-258.145524C250.148571 188.732952 365.714286 73.142857 508.318476 73.142857z m0 77.433905a180.711619 180.711619 0 1 0 0 361.423238 180.711619 180.711619 0 0 0 0-361.423238z"></path>
                 </svg><a href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author(); ?></a>
             <?php endif; ?>
@@ -27,7 +27,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <?php if (aladdin_is_has_image(get_the_ID())) : ?>
-        <img src="<?php echo aladdin_get_background_image(get_the_ID()); ?>!/both/300x200" class="cover" />
+    <?php if (farallon_is_has_image(get_the_ID()) && !$farallonSetting->get_setting('hide_home_cover')) : ?>
+        <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="cover" />
     <?php endif; ?>
 </article>

@@ -111,6 +111,7 @@
         border-radius: 5px;
         margin-left: 20px;
         flex: 0 0 auto;
+        aspect-ratio: 150/100;
     }
     display: flex;
     align-items: center;
@@ -286,6 +287,8 @@
     .cover {
         border-radius: 10px;
         margin-bottom: 12px;
+        object-fit: cover;
+        aspect-ratio: 60/36;
     }
     .post--title {
         font-size: 20px;

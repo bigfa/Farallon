@@ -10,15 +10,15 @@
         <div class="post--single__related__item">
             <a href="<?php the_permalink(); ?>">
                 <div class="post--single__related__item__img">
-                    <?php if (aladdin_is_has_image(get_the_ID())) : ?>
-                        <img src="<?php echo aladdin_get_background_image(get_the_ID()); ?>!/both/400x200" class="cover" />
+                    <?php if (farallon_is_has_image(get_the_ID())) : ?>
+                        <img src="<?php echo farallon_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" />
                     <?php endif; ?>
                 </div>
                 <div class="post--single__related__item__title">
                     <?php the_title(); ?>
                 </div>
                 <div class="meta">
-                    <?php echo get_the_date(); ?>
+                    <?php echo get_the_date('Y-m-d'); ?>
                 </div>
             </a>
         </div>
