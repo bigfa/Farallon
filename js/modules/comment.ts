@@ -40,25 +40,26 @@ class farallonComment extends farallonBase {
                             i = document.getElementById('respond'),
                             n = document.getElementById('wp-temp-form-div');
                         const comment = data.data;
-                        const html = `<li class="comment byuser comment-author-bigfa bypostauthor odd alt thread-even depth-1">
-                    <article class="comment-body">
-                        <footer class="comment-meta">
-                            <div class="comment-author vcard">
-                                <img alt="" src="${comment.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" />						<b class="fn">${comment.comment_author}</b><span class="says">说道：</span>					</div><!-- .comment-author -->
-        
-                            <div class="comment-metadata">
-                               <time>${comment.comment_date}</time></div><!-- .comment-metadata -->
-        
-                                            </footer><!-- .comment-meta -->
-        
-                        <div class="comment-content">
-                            ${comment.comment_content}
-                        </div><!-- .comment-content -->
-        
-                        </article><!-- .comment-body -->
-                </li>`; // @ts-ignore
+                        const html = `<li class="comment">
+                        <div class="comment-body">
+                            <footer class="comment-meta">
+                                <div class="comment--avatar">
+                                    <img alt="" src="${comment.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" />
+                                </div>
+            
+                                <div class="comment--meta">
+                                    <div class="comment--author">${comment.comment_author}
+                                    <time>${comment.comment_date}</time>
+                                    </div>
+                                </div>
+                            </footer>
+                            <div class="comment-content">
+                                ${comment.comment_content}
+                            </div>
+                        </div>
+                    </li>`; // @ts-ignore
                         const parent_id = document.querySelector('#comment_parent')?.value;
-                        console.log(!parent_id);
+                        console.log(!!parent_id);
                         // @ts-ignore
                         (a.style.display = 'none'), // @ts-ignore
                             (a.onclick = null), // @ts-ignore
@@ -69,7 +70,7 @@ class farallonComment extends farallonBase {
                         // @ts-ignore
                         document.getElementById('comment').value = '';
                         // @ts-ignore
-                        if (parent_id) {
+                        if (parent_id != '0') {
                             document
                                 .querySelector(
                                     // @ts-ignore

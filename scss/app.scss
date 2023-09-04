@@ -167,3 +167,15 @@ textarea {
         cursor: pointer;
     }
 }
+
+.u-cursorPointer {
+    cursor: pointer;
+}
+
+#cancel-comment-reply-link {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.67);
+    &:hover {
+        color: var(--farallon-text-color);
+    }
+}
