@@ -97,6 +97,18 @@
     align-items: center;
     .comment-reply-link {
         margin-left: auto;
+        &:hover {
+            svg {
+                fill: var(--farallon-hover-color);
+            }
+        }
+    }
+    a {
+        color: var(--farallon-main-color);
+        &:hover {
+            color: var(--farallon-hover-color);
+            text-decoration: underline;
+        }
     }
 }
 
@@ -120,6 +132,14 @@
     }
 }
 
+.comment-content {
+    a {
+        text-decoration: underline;
+        &:hover {
+            color: var(--farallon-hover-color);
+        }
+    }
+}
 .children {
     margin-left: 50px;
     padding-bottom: 10px;

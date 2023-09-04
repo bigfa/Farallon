@@ -54,8 +54,12 @@ class farallonBase
 
     function enqueue_styles()
     {
+        global $farallonSetting;
         wp_dequeue_style('global-styles');
         wp_enqueue_style('farallon-style', get_template_directory_uri() . '/build/css/app.min.css', array(), FARALLON_VERSION, 'all');
+        if ($farallonSetting->get_setting('css')) {
+            wp_add_inline_style('farallon-style', $farallonSetting->get_setting('css'));
+        }
     }
 
     function enqueue_scripts()

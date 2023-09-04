@@ -59,7 +59,7 @@
             vertical-align: middle;
         }
         &:hover {
-            color: var(--jl-hover-color);
+            color: var(--farallon-hover-color);
         }
         & + .meta {
             margin-top: 10px;
@@ -126,7 +126,7 @@
         //border-radius: 999rem;
         padding: 20px;
         &:hover {
-            color: var(--jl-hover-color);
+            color: var(--farallon-hover-color);
         }
         // border: 1px solid #eee;
         &.current {
@@ -255,7 +255,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         &:hover {
-            color: var(--jl-hover-color);
+            color: var(--farallon-hover-color);
         }
     }
 }
