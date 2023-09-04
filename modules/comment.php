@@ -74,9 +74,6 @@ class farallonComment
         $user = wp_get_current_user();
         do_action('set_comment_cookies', $comment, $user);
         $GLOBALS['comment'] = $comment;
-
-        //$comment['author_avatar_urls'] = get_avatar_url($comment->comment_author_email, array('size' => 64));
-
         return [
             'code' => 200,
             'message' => '评论成功',

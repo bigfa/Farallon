@@ -1,9 +1,7 @@
 <?php global $farallonSetting; ?>
 <footer class="site--footer">
     <nav>
-        <nav>
-            <?php wp_nav_menu(array('theme_location' => 'farallon_footer', 'menu_class' => 'footer--nav', 'container' => 'ul', 'fallback_cb' => 'link_to_menu_editor')); ?>
-        </nav>
+        <?php wp_nav_menu(array('theme_location' => 'farallon_footer', 'menu_class' => 'footer--nav', 'container' => 'ul', 'fallback_cb' => 'link_to_menu_editor')); ?>
     </nav>
     <div class="copyright">
         <?php if ($farallonSetting->get_setting('copyright')) : ?>

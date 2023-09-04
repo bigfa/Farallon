@@ -3,7 +3,6 @@
 <main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
         <article class="post--single">
-            <div class="post--single__meta"><?php the_time(); ?></div>
             <h2 class="post--single__title"><?php the_title(); ?></h2>
             <div class="post__single__content graph">
                 <?php the_content(); ?>
