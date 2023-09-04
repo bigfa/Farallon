@@ -71,7 +71,6 @@ class farallonBase
                 'nonce' => wp_create_nonce('wp_rest'),
             ]
         );
-
         if (is_singular()) wp_enqueue_script("comment-reply");
     }
 }

@@ -17,10 +17,7 @@ class farallonSetting
     function setting_callback()
     {
         $data = $_POST[FARALLO_SETTING_KEY];
-
-
         $this->update_setting($data);
-
         return wp_send_json([
             'code' => 200,
             'message' => '保存成功',
@@ -30,19 +27,21 @@ class farallonSetting
 
     function setting_scripts()
     {
-        wp_enqueue_style('farallon-setting', get_template_directory_uri() . '/build/css/setting.min.css', array(), FARALLON_VERSION, 'all');
-        wp_enqueue_script('farallon-setting', get_template_directory_uri() . '/build/js/setting.min.js', ['jquery'], FARALLON_VERSION, true);
-        wp_localize_script(
-            'farallon-setting',
-            'obvInit',
-            [
-                'is_single' => is_singular(),
-                'post_id' => get_the_ID(),
-                'restfulBase' => esc_url_raw(rest_url()),
-                'nonce' => wp_create_nonce('wp_rest'),
-                'ajaxurl' => admin_url('admin-ajax.php'),
-            ]
-        );
+        if (isset($_GET['page']) && $_GET['page'] == 'farallon') {
+            wp_enqueue_style('farallon-setting', get_template_directory_uri() . '/build/css/setting.min.css', array(), FARALLON_VERSION, 'all');
+            wp_enqueue_script('farallon-setting', get_template_directory_uri() . '/build/js/setting.min.js', ['jquery'], FARALLON_VERSION, true);
+            wp_localize_script(
+                'farallon-setting',
+                'obvInit',
+                [
+                    'is_single' => is_singular(),
+                    'post_id' => get_the_ID(),
+                    'restfulBase' => esc_url_raw(rest_url()),
+                    'nonce' => wp_create_nonce('wp_rest'),
+                    'ajaxurl' => admin_url('admin-ajax.php'),
+                ]
+            );
+        }
     }
 
     function setting_menu()
@@ -51,11 +50,9 @@ class farallonSetting
     }
 
     function setting_page()
-    {
-
-?>
+    { ?>
         <div class="wrap">
-            <h2>主题设置</h2><br>
+            <h2>主题设置</h2>
             <div class="pure-wrap">
                 <div class="leftpanel">
                     <ul class="nav">
@@ -70,7 +67,6 @@ class farallonSetting
                 </div>
                 <form id="pure-form" method="POST" action="options.php">
                     <?php
-
                     foreach ($this->config['body'] as $val) {
                         $id = $val['id'];
                         $class = $id == "basic" ? "div-tab" : "div-tab hidden";
@@ -113,7 +109,6 @@ class farallonSetting
         if (!$setting) {
             return false;
         }
-
 
         if ($key) {
             if (array_key_exists($key, $setting)) {
