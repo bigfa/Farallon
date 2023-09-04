@@ -3,7 +3,7 @@
     .error--text {
         font-size: 120px;
         text-align: center;
-        color: rgba(0, 0, 0, 0.6);
+        color: var(--farallon-text-gray);
     }
 }
 
@@ -25,7 +25,7 @@
     }
     .meta {
         font-size: 12px;
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--farallon-text-gray-lightest);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -36,7 +36,7 @@
         }
         svg {
             margin-right: 4px;
-            fill: rgba(0, 0, 0, 0.5);
+            fill: var(--farallon-text-gray-lightest);
             margin-left: 10px;
             &:first-child {
                 margin-left: 0;

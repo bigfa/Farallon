@@ -4,7 +4,7 @@
     pre {
         word-break: break-all;
         white-space: break-spaces;
-        background-color: var(--background-gray);
+        background-color: var(--farallon-background-gray);
         padding: 10px;
         border-radius: 5px;
         font-size: 14px;
@@ -83,7 +83,7 @@
 
     a {
         text-decoration: none;
-        box-shadow: inset 0 -3px 0 var(--main-bg-color);
+        box-shadow: inset 0 -3px 0 var(--farallon-main-color);
         transition: 0.2s;
         &[href*='jpeg'],
         &[href*='JPEG'],
@@ -99,7 +99,7 @@
         }
         &:hover {
             //color: var(--main-hover-color);
-            box-shadow: inset 0 -5px 0 var(--main-hover-color);
+            box-shadow: inset 0 -5px 0 var(--farallon-hover-color);
         }
     }
 
@@ -258,7 +258,7 @@
         &--mixtapeEmbed {
             margin-bottom: 25px;
             padding: 15px 0;
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--farallon-border-color);
             border-radius: 4px;
             .mixtapeImage {
                 display: none;
@@ -269,7 +269,7 @@
                     font-style: normal;
                     font-size: 12px;
                     line-height: 1.4;
-                    color: var(--text-gray-light);
+                    color: var(--farallon-text-gray);
                 }
                 .markup--strong {
                     line-height: 1.3;

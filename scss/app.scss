@@ -152,16 +152,16 @@ textarea {
     transform: translateX(-50%);
     //transform: translateY(-100px);
     transition: 0.5s transform;
-    &.is-active {
-        //transform: translateX(-50%);
-        //  transform: translateY(0);
-    }
+    //  &.is-active {
+    //transform: translateX(-50%);
+    //  transform: translateY(0);
+    // }
 }
 
 .share--action {
     text-align: center;
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.67);
+    color: var(--farallon-text-light);
     span {
         text-decoration: underline;
         cursor: pointer;
@@ -174,7 +174,7 @@ textarea {
 
 #cancel-comment-reply-link {
     font-size: 12px;
-    color: rgba(0, 0, 0, 0.67);
+    color: var(--farallon-text-light);
     &:hover {
         color: var(--farallon-text-color);
     }

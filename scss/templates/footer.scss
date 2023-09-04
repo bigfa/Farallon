@@ -3,8 +3,8 @@
     align-items: center;
     font-size: 14px;
     padding: 20px 80px;
-    border-top: 1px dotted #eee;
-    color: rgba(0, 0, 0, 0.67);
+    border-top: 1px dotted var(--farallon-border-color);
+    color: var(--farallon-text-light);
     .copyright {
         margin-left: auto;
     }
@@ -64,17 +64,17 @@
         svg {
             //fill: rgba(0, 0, 0, 0.67);
         }
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--farallon-text-gray-lightest);
 
         &:hover {
-            color: rgba(0, 0, 0, 0.87);
+            color: var(--farallon-text-color);
             svg {
                 // fill: rgba(0, 0, 0, 0.87);
             }
         }
 
         &.is-active {
-            color: rgba(0, 0, 0, 0.87);
+            color: var(--farallon-text-color);
             background-color: #f2f2f2;
         }
 
