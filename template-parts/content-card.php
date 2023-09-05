@@ -1,6 +1,8 @@
 <article class="post--card" itemtype="http://schema.org/Article" itemscope="itemscope">
     <?php if (farallon_is_has_image(get_the_ID())) : ?>
-        <img src="<?php echo farallon_get_background_image(get_the_ID(), 600, 360); ?>" class="cover" alt="<?php the_title(); ?>" />
+        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" aria-label="<?php the_title(); ?>" class="cover--link">
+            <img src="<?php echo farallon_get_background_image(get_the_ID(), 600, 360); ?>" class="cover" alt="<?php the_title(); ?>" />
+        </a>
     <?php endif; ?>
     <div class="content">
         <div class="date">

@@ -183,10 +183,23 @@
     }
 
     .widget-card-description {
-        color: rgba(0, 0, 0, 0.6);
-        margin-bottom: 15px;
+        color: var(--farallon-text-gray);
+        // margin-bottom: 15px;
         font-size: 18px;
     }
 
-    padding-bottom: 50px;
+    padding-bottom: 30px;
+}
+
+@media (max-width: 414px) {
+    .top--bar {
+        padding: 0 0px;
+        .widget-card-content {
+            font-size: 18px;
+        }
+
+        .widget-card-description {
+            font-size: 14px;
+        }
+    }
 }

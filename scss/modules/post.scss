@@ -28,7 +28,7 @@
                 }
             }
         }
-        background-color: #fafafa;
+        //background-color: #fafafa;
         border-radius: 5px;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -98,14 +98,28 @@
         }
     }
 
+    .cover--link {
+        width: 150px;
+        flex: 0 0 auto;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        height: 100px;
+        overflow: hidden;
+        &:hover {
+            .cover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
     .cover {
         width: 150px;
         height: 100px;
         object-fit: cover;
         border-radius: 5px;
-        margin-left: 20px;
-        flex: 0 0 auto;
         aspect-ratio: 150/100;
+        transition: 0.5s;
     }
     display: flex;
     align-items: center;
@@ -184,9 +198,15 @@
                 margin-bottom: 5px;
             }
         }
+        .cover--link {
+            width: 75px;
+            height: 75px;
+            margin-left: 10px;
+        }
         .cover {
             width: 75px;
             height: 75px;
+            aspect-ratio: 1/1;
         }
         .post--title {
             font-size: 18px;
@@ -277,6 +297,10 @@
         border-radius: 18px;
         transform: none;
         transform-origin: 50% 50% 0px;
+    }
+    .cover--link {
+        display: flex;
+        align-items: center;
     }
     .cover {
         border-radius: 10px;

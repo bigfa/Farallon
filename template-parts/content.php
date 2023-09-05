@@ -33,6 +33,8 @@
         </div>
     </div>
     <?php if (farallon_is_has_image(get_the_ID()) && !$farallonSetting->get_setting('hide_home_cover')) : ?>
-        <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
+        <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" class="cover--link">
+            <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
+        </a>
     <?php endif; ?>
 </article>
