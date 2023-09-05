@@ -70,6 +70,7 @@ function farallon_is_has_image($post_id)
 function link_to_menu_editor($args)
 {
     if (!current_user_can('manage_options')) {
+        echo '<ul></ul>';
         return;
     }
 
@@ -169,8 +170,10 @@ function farallon_comment($comment, $args, $depth)
                             <img height=42 width=42 alt="<?php echo $comment->comment_author; ?>的头像" aria-label="<?php echo $comment->comment_author; ?>的头像" src="<?php echo get_avatar_url($comment, array('size' => 96)); ?>" class="avatar avatar--lazy" />
                         </div>
                         <div class="comment--meta">
-                            <div class="comment--author" itemprop="author"><?php echo get_comment_author_link(); ?><div class="comment--time " itemprop="datePublished" datetime="<?php echo get_comment_date('c'); ?>"><?php echo get_comment_date('Y-m-d'); ?></div>
-                                <?php echo '<span class="comment-reply-link u-cursorPointer " onclick="return addComment.moveForm(\'comment-' . $comment->comment_ID . '\', \'' . $comment->comment_ID . '\', \'respond\', \'' . $post->ID . '\')"><svg width="18" height="18" viewBox="0 0 24 24" aria-label="responses" class=""><path d="M18 16.8a7.14 7.14 0 0 0 2.24-5.32c0-4.12-3.53-7.48-8.05-7.48C7.67 4 4 7.36 4 11.48c0 4.13 3.67 7.48 8.2 7.48a8.9 8.9 0 0 0 2.38-.32c.23.2.48.39.75.56 1.06.69 2.2 1.04 3.4 1.04.22 0 .4-.11.48-.29a.5.5 0 0 0-.04-.52 6.4 6.4 0 0 1-1.16-2.65v.02zm-3.12 1.06l-.06-.22-.32.1a8 8 0 0 1-2.3.33c-4.03 0-7.3-2.96-7.3-6.59S8.17 4.9 12.2 4.9c4 0 7.1 2.96 7.1 6.6 0 1.8-.6 3.47-2.02 4.72l-.2.16v.26l.02.3a6.74 6.74 0 0 0 .88 2.4 5.27 5.27 0 0 1-2.17-.86c-.28-.17-.72-.38-.94-.59l.01-.02z"></path></svg></span>'; ?></div>
+                            <div class="comment--author" itemprop="author"><?php echo get_comment_author_link(); ?><span class="dot"></span>
+                                <div class="comment--time humane--time" itemprop="datePublished" datetime="<?php echo get_comment_date('c'); ?>"><?php echo get_comment_date('Y-m-d'); ?></div>
+                                <?php echo '<span class="comment-reply-link u-cursorPointer " onclick="return addComment.moveForm(\'comment-' . $comment->comment_ID . '\', \'' . $comment->comment_ID . '\', \'respond\', \'' . $post->ID . '\')"><svg width="18" height="18" viewBox="0 0 24 24" aria-label="responses" class=""><path d="M18 16.8a7.14 7.14 0 0 0 2.24-5.32c0-4.12-3.53-7.48-8.05-7.48C7.67 4 4 7.36 4 11.48c0 4.13 3.67 7.48 8.2 7.48a8.9 8.9 0 0 0 2.38-.32c.23.2.48.39.75.56 1.06.69 2.2 1.04 3.4 1.04.22 0 .4-.11.48-.29a.5.5 0 0 0-.04-.52 6.4 6.4 0 0 1-1.16-2.65v.02zm-3.12 1.06l-.06-.22-.32.1a8 8 0 0 1-2.3.33c-4.03 0-7.3-2.96-7.3-6.59S8.17 4.9 12.2 4.9c4 0 7.1 2.96 7.1 6.6 0 1.8-.6 3.47-2.02 4.72l-.2.16v.26l.02.3a6.74 6.74 0 0 0 .88 2.4 5.27 5.27 0 0 1-2.17-.86c-.28-.17-.72-.38-.94-.59l.01-.02z"></path></svg></span>'; ?>
+                            </div>
                         </div>
                     </div>
                     <div class="comment-content" itemprop="description">

@@ -18,7 +18,9 @@
                     <?php the_title(); ?>
                 </div>
                 <div class="meta">
-                    <?php echo get_the_date('Y-m-d'); ?>
+                    <time datetime="<?php echo get_the_date('c'); ?>" class="humane--time">
+                        <?php echo get_the_date('Y-m-d'); ?>
+                    </time>
                 </div>
             </a>
         </div>

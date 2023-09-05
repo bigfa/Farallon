@@ -179,3 +179,17 @@ textarea {
         color: var(--farallon-text-color);
     }
 }
+
+.screen-reader-text {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+.dot {
+    &::before {
+        content: '·';
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}

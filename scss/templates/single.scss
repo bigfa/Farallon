@@ -88,7 +88,7 @@
     justify-content: center;
     align-items: center;
     padding: 30px 0;
-    border-top: 1px solid var(--farallon-border-color);
+    border-top: 1px solid var(--farallon-border-color-light);
     margin-top: 20px;
     .avatar {
         border-radius: 100%;
@@ -116,15 +116,14 @@
     padding: 15px 0;
     a {
         margin-right: 10px;
-        background: linear-gradient(rgba(255, 79, 0, 0.1) 0%, rgba(255, 79, 0, 0) 100%);
+        background: #f0f0f0;
         font-size: 14px;
         padding: 2px 12px;
         border-radius: 5px;
-        color: rgb(255, 79, 0);
-        border: 1px solid rgba(255, 79, 0, 0.2);
-        // &:hover {
-        //     //background-color: #e0e0e0;
-        // }
+        color: var(--farallon-text-gray);
+        &:hover {
+            background-color: #e0e0e0;
+        }
     }
 }
 
