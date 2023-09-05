@@ -10,7 +10,9 @@
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" aria-label="<?php the_title(); ?>"><?php the_title(); ?></a>
         </h2>
         <?php if (get_the_excerpt()) : ?>
-            <div class="description" itemprop="about"><?php the_excerpt(); ?></div>
+            <div class="description" itemprop="about">
+                <?php echo mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 90, "..."); ?>
+            </div>
         <?php endif; ?>
         <div class="meta">
             <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">

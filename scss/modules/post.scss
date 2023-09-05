@@ -4,11 +4,6 @@
     border-radius: 5px;
     &:hover {
         background-color: rgba(234, 243, 255, 0.5);
-        // background: linear-gradient(
-        //     89.99999999999999deg,
-        //     rgba(255, 233, 244, 0.3) 0%,
-        //     rgba(234, 243, 255, 0.5) 100%
-        // );
         background-image: linear-gradient(12deg, #fff 50%, hsla(0, 0%, 100%, 0));
         border-radius: 18px;
         transform: none;
@@ -23,14 +18,13 @@
             display: flex;
             align-items: center;
             margin-bottom: 10px;
-            time {
+            a {
                 color: var(--farallon-text-gray);
                 display: flex;
                 align-items: center;
                 font-size: 14px;
-                svg {
-                    margin-right: 5px;
-                    fill: var(--farallon-text-gray-lightest);
+                &:hover {
+                    color: var(--farallon-hover-color);
                 }
             }
         }
