@@ -25,9 +25,18 @@ document.querySelector('#pure-save')?.addEventListener('click', (event) => {
         url: obvInit.ajaxurl,
         data: data + '&action=farallon_setting',
         type: 'POST',
+        success: function () {
+            const html = `<div id="farallon-settings_updated" class="notice notice-success settings-error is-dismissible"> 
+            <p><strong>设置已保存。</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">忽略此通知。</span></button></div>`;
+            //@ts-ignore
+            jQuery('.pure-wrap').before(html);
+        },
     });
 });
 +(function ($) {
+    $(document).on('click', '#farallon-settings_updated .notice-dismiss', function () {
+        $('#farallon-settings_updated').remove();
+    });
     let $switch = $('.pure-setting-switch');
     $switch.click(function () {
         var $this = $(this),

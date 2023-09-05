@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
@@ -10,7 +11,7 @@
 <body <?php body_class(); ?>>
     <div class="main">
         <header class="site--header">
-            <a href="/" class="site--url"><img src="<?php echo get_template_directory_uri(); ?>/build/images/avatar.jpeg" class="avatar" />
+            <a href="/" class="site--url" aria-label="<?php bloginfo('sitename'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/build/images/avatar.jpeg" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
                 <span class="u-xs-show"><?php bloginfo('sitename'); ?></span>
             </a>
             <div class="site--header__center">

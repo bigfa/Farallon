@@ -208,11 +208,6 @@ $farallonSetting = new farallonSetting(
                 'id' => 'custom',
                 'title' => '自定义',
                 'icon' => 'social-contact'
-            ],
-            [
-                'id' => 'seo',
-                'title' => 'SEO',
-                'icon' => 'save'
             ]
         ],
         "body" => [
@@ -244,12 +239,6 @@ $farallonSetting = new farallonSetting(
                 'content' => [
                     [
                         'type' => 'switch',
-                        'name' => 'pagination',
-                        'label' => '分页模式',
-                        'description' => '传统分页'
-                    ],
-                    [
-                        'type' => 'switch',
                         'name' => 'upyun',
                         'label' => '又拍云',
                         'description' => '确保所有图片均已上传至又拍云，否则缩略图可能无法正常显示。'
@@ -266,24 +255,24 @@ $farallonSetting = new farallonSetting(
                         'label' => '七牛云',
                         'description' => '确保所有图片均已上传至阿里云七牛云，否则缩略图可能无法正常显示。'
                     ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'darkmode',
-                        'label' => '暗黑模式',
-                        'description' => '暗黑模式'
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'darkmode',
+                    //     'label' => '暗黑模式',
+                    //     'description' => '暗黑模式'
+                    // ],
                     [
                         'type' => 'input',
                         'name' => 'hot_num',
                         'label' => '热门浏览量',
                         'description' => '当浏览量超过该值时，文章将会显示热门标签，如未设置则不显示'
                     ],
-                    [
-                        'type' => 'input',
-                        'name' => 'format_time',
-                        'label' => '格式化时间',
-                        'description' => '时间多久以前显示为几天前，几小时前，几分钟前，几秒前'
-                    ],
+                    // [
+                    //     'type' => 'input',
+                    //     'name' => 'format_time',
+                    //     'label' => '格式化时间',
+                    //     'description' => '时间多久以前显示为几天前，几小时前，几分钟前，几秒前'
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'home_cat',
@@ -377,17 +366,6 @@ $farallonSetting = new farallonSetting(
                         'name' => 'copyright',
                         'label' => '版权信息',
                         'description' => '修改版权信息'
-                    ],
-                ]
-            ],
-            [
-                'id' => 'seo',
-                'content' => [
-                    [
-                        'type' => 'switch',
-                        'name' => 'twitter',
-                        'label' => 'twitter卡片',
-                        'description' => 'twitter卡片'
                     ],
                 ]
             ],

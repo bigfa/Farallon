@@ -8,7 +8,7 @@
     }
     .taxonomy-description {
         font-size: 18px;
-        color: rgba(0, 0, 0, 0.6);
+        color: var(--farallon-text-gray);
     }
 
     & + .site--main {
@@ -22,7 +22,7 @@
         justify-content: center;
         padding-bottom: 20px;
         .search-form {
-            border: 1px solid #eee;
+            border: 1px solid var(--farallon-border-color);
             border-radius: 999rem;
             padding: 5px;
             .search-field {
@@ -37,7 +37,7 @@
                 border: 0;
                 background: gredient(to right, #007cf0, #00dfd8);
                 font-size: 14px;
-                color: rgba(0, 0, 0, 0.6);
+                color: var(--farallon-text-gray);
                 padding: 8px 18px;
             }
         }
@@ -79,7 +79,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     .archive--item {
-        border: 1px solid rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--farallon-border-color-light);
         padding: 15px;
         border-radius: 10px;
         .archive--title {
@@ -88,7 +88,7 @@
         }
         .archive--meta {
             font-size: 12px;
-            color: rgba(0, 0, 0, 0.6);
+            color: var(--farallon-text-gray);
         }
         &:hover {
             background-color: #fafafa;

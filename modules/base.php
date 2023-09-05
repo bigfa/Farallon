@@ -18,6 +18,42 @@ class farallonBase
         add_theme_support('post-formats', array('status'));
         add_filter('pre_option_link_manager_enabled', '__return_true');
         add_action('widgets_init', array($this, 'widgets_init'));
+        add_action('wp_head', array($this, 'head_output'), 11);
+    }
+
+    function head_output()
+    {
+        global $wp, $s, $post, $farallonSetting;
+
+        //echo '<link type="image/vnd.microsoft.icon" href="/favicon.png" rel="shortcut icon">';
+
+        $description = '';
+        $blog_name = get_bloginfo('name');
+        if (is_singular()) {
+            $ID = $post->ID;
+            $author = $post->post_author;
+            if (get_post_meta($ID, "_desription", true)) {
+                $description = get_post_meta($ID, "_desription", true);
+                echo '<meta name="description" content="' . $description . '">';
+            } else {
+                $description = $post->post_title . '，作者:' . get_the_author_meta('nickname', $author) . '，发布于' . get_the_date('Y-m-d');
+                echo '<meta name="description" content="' . $description . '">';
+            }
+        } else {
+            if (is_home()) {
+                $description = $farallonSetting->get_setting('description');
+            } elseif (is_category()) {
+                $description = single_cat_title('', false) . " - " . trim(strip_tags(category_description()));
+            } elseif (is_tag()) {
+                $description = trim(strip_tags(tag_description()));
+            } elseif (is_search()) {
+                $description = $blog_name . ": '" . esc_html($s, 1) . "' 的搜索結果";
+            } else {
+                $description = $farallonSetting->get_setting('description');
+            }
+            $description = mb_substr($description, 0, 220, 'utf-8');
+            echo '<meta name="description" content="' . $description . '">';
+        }
     }
 
     function widgets_init()
@@ -60,6 +96,10 @@ class farallonBase
         if ($farallonSetting->get_setting('css')) {
             wp_add_inline_style('farallon-style', $farallonSetting->get_setting('css'));
         }
+
+        wp_dequeue_style('wp-block-library');
+        wp_dequeue_style('wp-block-library-theme');
+        wp_dequeue_style('wc-blocks-style');
     }
 
     function enqueue_scripts()

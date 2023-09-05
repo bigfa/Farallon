@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.1.3');
+define('FARALLON_VERSION', '0.1.4');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
@@ -82,9 +82,9 @@ function link_to_menu_editor($args)
     }
 
     $output = sprintf($items_wrap, $menu_id, $menu_class, $link);
-    if (!empty($container)) {
-        $output  = "<$container class='$container_class' id='$container_id'>$output</$container>";
-    }
+    // if (!empty($container)) {
+    //     $output  = "<$container class='$container_class' id='$container_id'>$output</$container>";
+    // }
 
     if ($echo) {
         echo $output;

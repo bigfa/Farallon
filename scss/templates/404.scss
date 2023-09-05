@@ -14,7 +14,7 @@
 }
 
 .post--error {
-    border: 1px solid #eee;
+    border: 1px solid var(--farallon-border-color);
     padding: 15px;
     border-radius: 10px;
     .post--title {

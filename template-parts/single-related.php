@@ -8,10 +8,10 @@
     )); ?>
     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div class="post--single__related__item">
-            <a href="<?php the_permalink(); ?>">
+            <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                 <div class="post--single__related__item__img">
                     <?php if (farallon_is_has_image(get_the_ID())) : ?>
-                        <img src="<?php echo farallon_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" />
+                        <img src="<?php echo farallon_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
                     <?php endif; ?>
                 </div>
                 <div class="post--single__related__item__title">

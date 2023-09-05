@@ -41,7 +41,7 @@
         &__content {
             padding-left: 30px;
             padding-top: 30px;
-            border-left: 1px solid #eee;
+            border-left: 1px solid var(--farallon-border-color);
             .title {
                 font-size: 16px;
                 font-weight: bold;
@@ -50,7 +50,7 @@
             p {
                 margin-bottom: 10px;
                 font-size: 14px;
-                color: rgba(0, 0, 0, 0.6);
+                color: var(--farallon-text-gray);
             }
         }
 

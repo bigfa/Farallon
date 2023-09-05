@@ -44,13 +44,13 @@
     padding: 15px;
     .sitename {
         font-size: 12px;
-        color: rgba(0, 0, 0, 0.6);
+        color: var(--farallon-text-gray);
         display: flex;
         flex-direction: column;
         line-height: 1.5;
         strong {
             font-size: 16px;
-            color: rgba(0, 0, 0, 0.8);
+            color: var(--farallon-text-color);
             margin-bottom: 10px;
         }
     }

@@ -24,13 +24,13 @@
             align-items: center;
             margin-bottom: 10px;
             time {
-                color: rgba(0, 0, 0, 0.6);
+                color: var(--farallon-text-gray);
                 display: flex;
                 align-items: center;
                 font-size: 14px;
                 svg {
                     margin-right: 5px;
-                    fill: rgba(0, 0, 0, 0.5);
+                    fill: var(--farallon-text-gray-lightest);
                 }
             }
         }
@@ -73,14 +73,14 @@
     }
     .description {
         font-size: 15px;
-        color: rgba(0, 0, 0, 0.65);
+        color: var(--farallon-text-light);
         line-height: 1.6;
         //letter-spacing: 0.2px;
         // text-align: justify;
     }
     .meta {
         font-size: 14px;
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--farallon-text-gray-lightest);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -91,7 +91,7 @@
         }
         svg {
             margin-right: 4px;
-            fill: rgba(0, 0, 0, 0.5);
+            fill: var(--farallon-text-gray-lightest);
             margin-left: 10px;
             &:first-child {
                 margin-left: 0;
@@ -149,7 +149,7 @@
         }
 
         &.dots {
-            color: rgba(0, 0, 0, 0.6);
+            color: var(--farallon-text-gray);
         }
         position: relative;
     }
@@ -244,7 +244,7 @@
     .meta-nav {
         font-size: 12px;
         text-transform: uppercase;
-        color: rgba(0, 0, 0, 0.6);
+        color: var(--farallon-text-gray);
     }
 
     .post-title {
@@ -268,7 +268,7 @@
 }
 
 .post--card {
-    border: 1px solid #eee;
+    border: 1px solid var(--farallon-border-color);
     padding: 20px;
     border-radius: 18px;
     display: flex;
@@ -316,7 +316,7 @@
             font-size: 24px;
             line-height: 36px;
             text-align: center;
-            color: rgba(0, 0, 0, 0.6);
+            color: var(--farallon-text-gray);
             right: 15px;
             top: -30px;
             box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
@@ -325,7 +325,7 @@
 
     .description {
         font-size: 15px;
-        color: rgba(0, 0, 0, 0.65);
+        color: var(--farallon-text-light);
         line-height: 1.6;
         //padding: 5px;
         // letter-spacing: 0.2px;
@@ -333,7 +333,7 @@
     }
     .meta {
         font-size: 14px;
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--farallon-text-gray-lightest);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -344,7 +344,7 @@
         }
         svg {
             margin-right: 4px;
-            fill: rgba(0, 0, 0, 0.5);
+            fill: var(--farallon-text-gray-lightest);
             margin-left: 10px;
             &:first-child {
                 margin-left: 0;
