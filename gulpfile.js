@@ -1,9 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
-const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -40,54 +38,35 @@ function settingCss() {
 }
 
 function setting() {
-    return (
-        gulp
-            .src(['./js/setting.ts'])
-            .pipe(plumber())
-            .pipe(
-                ts({
-                    noImplicitAny: true,
-                    outFile: 'setting.js',
-                    target: 'es5',
-                })
-            )
-            .pipe(uglify())
-            .pipe(rename({ suffix: '.min' }))
-            //.pipe(plumber())
-            //.pipe(webpackstream(webpackconfig, webpack))
-            //.pipe(concat('all.js'))
-            //.pipe(babel({
-            //presets: ['@babel/preset-env']
-            // }))
-            // .pipe(uglify())
-            .pipe(gulp.dest('./build/js/'))
-    );
+    return gulp
+        .src(['./js/setting.ts'])
+        .pipe(plumber())
+        .pipe(
+            ts({
+                noImplicitAny: true,
+                outFile: 'setting.js',
+                target: 'es5',
+            })
+        )
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./build/js/'));
 }
 
 // Transpile, concatenate and minify scripts
 function scripts() {
-    return (
-        gulp
-            .src(['./js/app.ts', './js/modules/*'])
-            //.pipe(webpackstream(webpackconfig, webpack))
-            .pipe(
-                ts({
-                    noImplicitAny: true,
-                    outFile: 'app.js',
-                    target: 'es5',
-                })
-            )
-            //.pipe(uglify())
-            //.pipe(plumber())
-            //.pipe(webpackstream(webpackconfig, webpack))
-            //.pipe(concat('all.js'))
-            //.pipe(babel({
-            //presets: ['@babel/preset-env']
-            // }))
-            .pipe(uglify())
-            .pipe(rename({ suffix: '.min' }))
-            .pipe(gulp.dest('./build/js/'))
-    );
+    return gulp
+        .src(['./js/app.ts', './js/modules/*'])
+        .pipe(
+            ts({
+                noImplicitAny: true,
+                outFile: 'app.js',
+                target: 'es5',
+            })
+        )
+        .pipe(uglify())
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('./build/js/'));
 }
 
 // Watch files
@@ -108,7 +87,6 @@ const build = gulp.parallel(watch, gulp.parallel(css, fonts, js, images, setting
 
 exports.css = css;
 exports.js = js;
-//exports.setting = setting;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;

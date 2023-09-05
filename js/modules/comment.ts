@@ -46,10 +46,9 @@ class farallonComment extends farallonBase {
                                 <div class="comment--avatar">
                                     <img alt="" src="${comment.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" />
                                 </div>
-            
                                 <div class="comment--meta">
-                                    <div class="comment--author">${comment.comment_author}
-                                    <time>${comment.comment_date}</time>
+                                    <div class="comment--author">${comment.comment_author}<span class="dot"></span>
+                                    <time>刚刚</time>
                                     </div>
                                 </div>
                             </footer>
@@ -59,7 +58,6 @@ class farallonComment extends farallonBase {
                         </div>
                     </li>`; // @ts-ignore
                         const parent_id = document.querySelector('#comment_parent')?.value;
-                        console.log(!!parent_id);
                         // @ts-ignore
                         (a.style.display = 'none'), // @ts-ignore
                             (a.onclick = null), // @ts-ignore
@@ -82,10 +80,12 @@ class farallonComment extends farallonBase {
                                 );
                             console.log(parent_id);
                         } else {
+                            if (document.querySelector('.no--comment')) {
+                                document.querySelector('.no--comment')?.remove();
+                            }
                             document
                                 .querySelector('.commentlist')
                                 ?.insertAdjacentHTML('beforeend', html);
-                            console.log(2);
                         }
                         this.showNotice('评论成功');
                     });
