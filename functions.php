@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.1.5');
+define('FARALLON_VERSION', '0.1.6');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
@@ -19,7 +19,7 @@ function farallon_get_background_image($post_id, $width = null, $height = null)
         $output = get_post_meta($post_id, '_banner', true);
     } else {
         $content = get_post_field('post_content', $post_id);
-        $defaltthubmnail = '//static.fatesinger.com/2018/05/q3wyes7va2ehq59y.JPG';
+        $defaltthubmnail = $farallonSetting->get_setting('default_thumbnail');
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
         $n = count($strResult[1]);
         if ($n > 0) {

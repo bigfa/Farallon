@@ -263,9 +263,9 @@ $farallonSetting = new farallonSetting(
                     // ],
                     [
                         'type' => 'input',
-                        'name' => 'hot_num',
-                        'label' => '热门浏览量',
-                        'description' => '当浏览量超过该值时，文章将会显示热门标签，如未设置则不显示'
+                        'name' => 'default_thumbnail',
+                        'label' => '默认缩略图',
+                        'description' => '文章没有图片时的默认缩略图'
                     ],
                     // [
                     //     'type' => 'input',
@@ -308,6 +308,12 @@ $farallonSetting = new farallonSetting(
                         'name' => 'related',
                         'label' => '相关文章',
                         'description' => '文章内容尾部相关文章展示'
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'postlike',
+                        'label' => '文章点赞',
+                        'description' => '文章内容尾部文章点赞按钮展示'
                     ],
                 ]
             ],
