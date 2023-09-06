@@ -99,6 +99,14 @@ textarea {
 
 .site--main {
     padding: 50px 80px;
+    &__map {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .markerPro--posts {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
 }
 
 @media (max-width: 820px) {
