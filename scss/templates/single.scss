@@ -2,6 +2,21 @@
     max-width: 678px;
     margin-left: auto;
     margin-right: auto;
+
+    &__douban {
+        .db--nav {
+            padding-top: 10px;
+        }
+        .db--list {
+            .db--item {
+                margin-right: 12px;
+            }
+        }
+        .post--single__title {
+            text-align: center;
+        }
+    }
+
     &__title {
         font-size: 32px;
         font-weight: bold;
