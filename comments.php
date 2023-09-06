@@ -14,6 +14,12 @@ if (post_password_required()) {
             <li class="no--comment">no comments.</li>
         <?php } ?>
     </ol>
+    <nav class="nav-links nav-links__comment">
+        <?php paginate_comments_links([
+            'prev_next' => false
+        ]); // check for comment navigation 
+        ?>
+    </nav>
     <?php if (comments_open()) :
         comment_form();
     endif; ?>

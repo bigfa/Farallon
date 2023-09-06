@@ -130,6 +130,7 @@
     align-items: center;
     justify-content: center;
     //mask-image: linear-gradient(90deg, transparent, #fff 90px, #fff calc(100% - 90px), transparent);
+
     .page-numbers {
         //border-radius: 999rem;
         padding: 20px;
@@ -160,6 +161,29 @@
             color: var(--farallon-text-gray);
         }
         position: relative;
+    }
+
+    &__comment {
+        .page-numbers {
+            padding: 10px;
+            line-height: 1;
+            font-size: 14px;
+            &.current {
+                font-size: 16px;
+                &:after {
+                    border: 6px solid transparent;
+                    background-clip: padding-box;
+                    content: '';
+                    filter: blur(10px);
+                    height: 50%;
+                    opacity: 0.8;
+                    position: absolute;
+                    width: 50%;
+                    background-image: linear-gradient(165deg, #007cf0, #00dfd8);
+                    left: 0;
+                }
+            }
+        }
     }
 }
 

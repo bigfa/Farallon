@@ -140,7 +140,7 @@
     }
 }
 .children {
-    margin-left: 50px;
+    margin-left: 0px;
     padding-bottom: 10px;
     .avatar {
         width: 32px;
@@ -153,6 +153,10 @@
     .comment-content {
         font-size: 14px;
     }
+}
+
+.parent > .children {
+    margin-left: 50px;
 }
 
 .comment-meta {
