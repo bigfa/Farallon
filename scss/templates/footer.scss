@@ -7,6 +7,10 @@
     color: var(--farallon-text-light);
     .copyright {
         margin-left: auto;
+        &::after {
+            content: 'a bigfa theme';
+            margin-left: 3px;
+        }
     }
     nav {
         ul {

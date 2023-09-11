@@ -23,7 +23,7 @@ class farallonBase
 
     function head_output()
     {
-        global $wp, $s, $post, $farallonSetting;
+        global $s, $post, $farallonSetting;
 
         //echo '<link type="image/vnd.microsoft.icon" href="/favicon.png" rel="shortcut icon">';
 
@@ -96,10 +96,11 @@ class farallonBase
         if ($farallonSetting->get_setting('css')) {
             wp_add_inline_style('farallon-style', $farallonSetting->get_setting('css'));
         }
-
-        wp_dequeue_style('wp-block-library');
-        wp_dequeue_style('wp-block-library-theme');
-        wp_dequeue_style('wc-blocks-style');
+        if ($farallonSetting->get_setting('disable_block_css')) {
+            wp_dequeue_style('wp-block-library');
+            wp_dequeue_style('wp-block-library-theme');
+            wp_dequeue_style('wc-blocks-style');
+        }
     }
 
     function enqueue_scripts()

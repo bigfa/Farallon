@@ -44,7 +44,7 @@ class farallonComment extends farallonBase {
                         <div class="comment-body comment-body__fresh">
                             <footer class="comment-meta">
                                 <div class="comment--avatar">
-                                    <img alt="" src="${comment.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" />
+                                    <img alt="" src="${comment.author_avatar_urls}" class="avatar" height="42" width="42" />
                                 </div>
                                 <div class="comment--meta">
                                     <div class="comment--author">${comment.comment_author}<span class="dot"></span>

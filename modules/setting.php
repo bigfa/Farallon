@@ -231,7 +231,13 @@ $farallonSetting = new farallonSetting(
                         'name' => 'title_sep',
                         'label' => '标题分隔符',
                         'description' => '一经输入请勿修改，默认为<code>-</code>'
-                    ]
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'disable_block_css',
+                        'label' => '禁用区块样式',
+                        'description' => '不加载区块样式文件'
+                    ],
                 ]
             ],
             [
@@ -349,6 +355,12 @@ $farallonSetting = new farallonSetting(
                         'name' => 'twitter',
                         'label' => 'twitter',
                         'description' => 'twitter'
+                    ],
+                    [
+                        'type' => 'input',
+                        'name' => 'rss',
+                        'label' => 'RSS地址',
+                        'description' => 'RSS地址'
                     ],
                 ]
             ],
