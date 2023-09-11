@@ -128,9 +128,11 @@
 .tag--list {
     display: flex;
     align-items: center;
-    padding: 15px 0;
+    flex-wrap: wrap;
+    padding: 15px 0 5px;
     a {
         margin-right: 10px;
+        margin-bottom: 10px;
         background: #f0f0f0;
         font-size: 14px;
         padding: 2px 12px;
