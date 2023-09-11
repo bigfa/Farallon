@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.1.6');
+define('FARALLON_VERSION', '0.1.7');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
@@ -163,8 +163,8 @@ function farallon_comment($comment, $args, $depth)
         default:
             global $post;
             ?>
-            <li class="comment<?php if (!$comment->comment_parent) echo ' parent'; ?>" itemtype="http://schema.org/Comment" data-id="<?php comment_ID() ?>" itemscope="" itemprop="comment">
-                <div id="comment-<?php comment_ID() ?>" class="comment-body">
+            <li class="comment<?php if (!$comment->comment_parent) echo ' parent'; ?>" itemtype="http://schema.org/Comment" data-id="<?php comment_ID() ?>" itemscope="" itemprop="comment" id="comment-<?php comment_ID() ?>">
+                <div class="comment-body">
                     <div class="comment-meta">
                         <div class="comment--avatar<?php if ($comment->user_id) echo ' is-author'; ?>">
                             <img height=42 width=42 alt="<?php echo $comment->comment_author; ?>的头像" aria-label="<?php echo $comment->comment_author; ?>的头像" src="<?php echo get_avatar_url($comment, array('size' => 96)); ?>" class="avatar avatar--lazy" />

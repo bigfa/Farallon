@@ -67,6 +67,15 @@
     }
 }
 
+@keyframes comment--fresh {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: rgba(255, 254, 224);
+    }
+}
+
 .comment {
     &:last-child {
         & > .comment-body {
@@ -83,6 +92,10 @@
 
 .comment-body {
     padding: 25px 0;
+    &__fresh {
+        animation: comment--fresh 1.5s ease-in-out infinite alternate;
+        border-radius: 5px;
+    }
 }
 
 .comment--avatar {

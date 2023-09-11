@@ -40,8 +40,8 @@ class farallonComment extends farallonBase {
                             i = document.getElementById('respond'),
                             n = document.getElementById('wp-temp-form-div');
                         const comment = data.data;
-                        const html = `<li class="comment">
-                        <div class="comment-body">
+                        const html = `<li class="comment" id="comment-${comment.comment_ID}">
+                        <div class="comment-body comment-body__fresh">
                             <footer class="comment-meta">
                                 <div class="comment--avatar">
                                     <img alt="" src="${comment.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" />
@@ -87,6 +87,15 @@ class farallonComment extends farallonBase {
                                 .querySelector('.commentlist')
                                 ?.insertAdjacentHTML('beforeend', html);
                         }
+
+                        const newComment = document.querySelector(
+                            `#comment-${comment.comment_ID}`
+                        ) as HTMLElement;
+
+                        if (newComment) {
+                            newComment.scrollIntoView({ behavior: 'smooth' });
+                        }
+
                         this.showNotice('评论成功');
                     });
             });
