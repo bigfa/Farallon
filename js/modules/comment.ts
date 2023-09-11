@@ -6,7 +6,6 @@ class farallonComment extends farallonBase {
     }
 
     private init() {
-        console.log('farallonComment');
         if (document.querySelector('.comment-form')) {
             document.querySelector('.comment-form')?.addEventListener('submit', (e) => {
                 e.preventDefault();

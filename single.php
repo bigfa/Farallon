@@ -10,6 +10,12 @@ global $farallonSetting;
             <div class="post--single__content graph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
+            <?php wp_link_pages(array(
+                'before'      => '<div class="nav-links nav-links__comment">',
+                'after'       => '</div>',
+                'pagelink'    => '%',
+                'separator'   => '<span class="screen-reader-text">, </span>',
+            )); ?>
             <?php if ($farallonSetting->get_setting('postlike')) : ?>
                 <div class="post--single__action">
                     <button class="button--like like-btn" aria-label="like the post">
@@ -34,7 +40,7 @@ global $farallonSetting;
                 endif;
                 ?>
             </div>
-            <?php //get_template_part('template-parts/post', 'navigation'); 
+            <?php if ($farallonSetting->get_setting('post_navigation')) get_template_part('template-parts/post', 'navigation');
             ?>
         </article>
 

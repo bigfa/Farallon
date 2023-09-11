@@ -131,7 +131,8 @@
     justify-content: center;
     //mask-image: linear-gradient(90deg, transparent, #fff 90px, #fff calc(100% - 90px), transparent);
 
-    .page-numbers {
+    .page-numbers,
+    .post-page-numbers {
         //border-radius: 999rem;
         padding: 20px;
         &:hover {
@@ -164,7 +165,8 @@
     }
 
     &__comment {
-        .page-numbers {
+        .page-numbers,
+        .post-page-numbers {
             padding: 10px;
             line-height: 1;
             font-size: 14px;
@@ -243,41 +245,62 @@
 }
 
 .post-navigation {
-    position: fixed;
-    bottom: 100px;
-    right: 10px;
-    transform: translate3d(120%, 0, 0);
-    transition: 0.5s;
-    line-height: 1.5;
+    // position: fixed;
+    // bottom: 100px;
+    // right: 10px;
+    // transform: translate3d(120%, 0, 0);
+    // transition: 0.5s;
+    // line-height: 1.5;
     &.is-active {
-        transform: translate3d(0, 0, 0);
+        .nav-links {
+            transform: translate3d(0, 0, 0);
+        }
     }
+    overflow: hidden;
+    padding-top: 20px;
     .nav-links {
+        position: relative;
+        transform: translate3d(0, 150%, 0);
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        transition: 0.5s;
+        & > div {
+            &:only-child {
+                text-align: center !important;
+                width: 100%;
+            }
+        }
     }
     .nav-previous,
     .nav-next {
         padding: 15px;
         background-color: #fff;
-        width: 220px;
+        //background-color: #f8f8f8;
+        width: 48%;
+        box-sizing: border-box;
+        //width: 220px;
         a {
             display: flex;
             flex-direction: column;
         }
-        margin-bottom: 10px;
-        border-radius: 5px;
-        background-image: linear-gradient(#fff, #fff),
-            linear-gradient(
-                calc(-0.8954254633948191rad),
-                #8a63d2 0,
-                #f81ce5 20%,
-                rgba(121, 40, 202, 0) 80%
-            );
+        // margin-bottom: 10px;
+        //border-radius: 5px;
+        text-align: right;
+        // background-image: linear-gradient(#fff, #fff),
+        //     linear-gradient(
+        //         calc(-0.8954254633948191rad),
+        //         #8a63d2 0,
+        //         #f81ce5 20%,
+        //         rgba(121, 40, 202, 0) 80%
+        //     );
         background-origin: border-box;
         background-clip: padding-box, border-box;
         border: 1px solid transparent;
-        box-shadow: 0 -3px 5px -1px #ebebeb;
+        //box-shadow: 0 -3px 5px -1px #ebebeb;
+    }
+
+    .nav-previous {
+        text-align: left;
     }
     .meta-nav {
         font-size: 12px;

@@ -1,5 +1,8 @@
 class farallonScroll {
+    is_single: boolean = false;
     constructor() {
+        //@ts-ignore
+        this.is_single = obvInit.is_single;
         this.init();
     }
 
@@ -8,28 +11,24 @@ class farallonScroll {
     }
 
     scroll() {
-        // let scroll = new SmoothScroll('a[href*="#"]', {
-        //     speed: 500,
-        //     speedAsDuration: true
-        // });
+        const endScroll = document.querySelector('.post-navigation') as HTMLElement;
+        const endScrollTop: any = endScroll ? endScroll.offsetTop : 0;
 
-        // const endScroll = document.querySelector('.author--card') as HTMLElement;
-        //const endScrollTop = endScroll.offsetTop;
+        const windowHeight = window.innerHeight;
 
-        //   const windowHeight = window.innerHeight;
-
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 10) {
                 document.querySelector('.site--header')?.classList.add('is-active');
             } else {
                 document.querySelector('.site--header')?.classList.remove('is-active');
             }
-
-            // if (window.scrollY > endScrollTop - windowHeight) {
-            //     document.querySelector('.post-navigation')?.classList.add('is-active');
-            // } else {
-            //     document.querySelector('.post-navigation')?.classList.remove('is-active');
-            // }
+            if (this.is_single) {
+                if (window.scrollY > endScrollTop - windowHeight) {
+                    document.querySelector('.post-navigation')?.classList.add('is-active');
+                } else {
+                    document.querySelector('.post-navigation')?.classList.remove('is-active');
+                }
+            }
         });
     }
 }

@@ -321,6 +321,12 @@ $farallonSetting = new farallonSetting(
                         'label' => '文章点赞',
                         'description' => '文章内容尾部文章点赞按钮展示'
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'post_navigation',
+                        'label' => '上下文导航',
+                        'description' => '展示前一篇后一篇文章'
+                    ],
                 ]
             ],
             [

@@ -21,7 +21,6 @@ class farallonAction extends farallonBase {
                 this.like_btn.classList.add('is-active');
             }
         }
-        console.log('init');
 
         document.querySelector('[data-action="show-search"]')!.addEventListener('click', () => {
             document
@@ -43,6 +42,8 @@ class farallonAction extends farallonBase {
         if (this.is_archive) {
             this.trackArchiveView();
         }
+
+        console.log(`theme version: ${this.VERSION} init success!`);
     }
 
     trackPostView() {
