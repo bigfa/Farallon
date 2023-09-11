@@ -43,7 +43,6 @@ global $farallonSetting;
             <?php if ($farallonSetting->get_setting('post_navigation')) get_template_part('template-parts/post', 'navigation');
             ?>
         </article>
-
     <?php endwhile; ?>
 </main>
 

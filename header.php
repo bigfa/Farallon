@@ -11,7 +11,7 @@
 <body <?php body_class(); ?>>
     <div class="main">
         <header class="site--header">
-            <a href="/" class="site--url" aria-label="<?php bloginfo('sitename'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/build/images/avatar.jpeg" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
+            <a href="<?php echo home_url(); ?>" class="site--url" aria-label="<?php bloginfo('sitename'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/build/images/avatar.jpeg" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
                 <span class="u-xs-show"><?php bloginfo('sitename'); ?></span>
             </a>
             <div class="site--header__center">

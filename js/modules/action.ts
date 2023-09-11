@@ -40,7 +40,7 @@ class farallonAction extends farallonBase {
         }
 
         if (this.is_archive) {
-            this.trackArchiveView();
+            //this.trackArchiveView();
         }
 
         console.log(`theme version: ${this.VERSION} init success!`);
@@ -98,7 +98,7 @@ class farallonAction extends farallonBase {
                 return response.json();
             })
             .then((data) => {
-                console.log(data);
+                this.showNotice('Thanks for your like');
                 // @ts-ignore
                 this.setCookie('like_' + this.post_id, '1', 1);
             });
