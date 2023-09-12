@@ -96,6 +96,14 @@
         animation: comment--fresh 1.5s ease-in-out infinite alternate;
         border-radius: 5px;
     }
+    .avatar {
+        transition: 0.5s box-shadow;
+    }
+    &:hover {
+        .avatar {
+            box-shadow: 0 0 3px 0px var(--farallon-hover-color);
+        }
+    }
 }
 
 .comment--avatar {
@@ -151,6 +159,7 @@
             color: var(--farallon-hover-color);
         }
     }
+    color: var(--farallon-text-light);
 }
 .children {
     margin-left: 0px;

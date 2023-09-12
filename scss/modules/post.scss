@@ -99,17 +99,24 @@
     }
 
     .cover--link {
+        position: relative;
         width: 150px;
         flex: 0 0 auto;
         margin-left: 20px;
         display: flex;
         align-items: center;
         height: 100px;
+        border-radius: 5px;
         overflow: hidden;
         &:hover {
             .cover {
                 transform: scale(1.1);
             }
+        }
+        .marker--tips {
+            left: auto;
+            right: 8px;
+            top: 8px;
         }
     }
 

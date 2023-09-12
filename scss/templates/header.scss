@@ -51,7 +51,8 @@
             //border: 1px solid rgba(0, 0, 0, 0.05);
 
             li {
-                padding: 0 20px;
+                padding: 0 15px;
+                flex: 0 0 auto;
                 a {
                     &:hover {
                         color: var(--farallon-hover-color);
