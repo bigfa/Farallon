@@ -118,6 +118,11 @@
     align-items: center;
     .comment-reply-link {
         margin-left: auto;
+        svg {
+            fill: var(--farallon-text-gray);
+            width: 15px;
+            height: 15px;
+        }
         &:hover {
             svg {
                 fill: var(--farallon-hover-color);
@@ -205,6 +210,15 @@
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        position: relative;
+        transform: translate3d(0, 1px, 0);
+    }
 }
 
 .comment-respond {
@@ -243,5 +257,26 @@
             margin: 2px;
             width: 12px;
         }
+    }
+}
+
+.post--share {
+    svg {
+        height: 16px;
+        width: 16px;
+        fill: var(--farallon-text-gray);
+        margin-right: 4px;
+    }
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0 15px;
+    font-size: 14px;
+    color: var(--farallon-text-gray);
+    line-height: 1.2;
+    .link {
+        margin-left: 4px;
+        border-bottom: 1px dotted var(--farallon-hover-color);
     }
 }

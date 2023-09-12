@@ -2,7 +2,7 @@ class farallonBase {
     is_single: boolean = false;
     post_id: number = 0;
     is_archive: boolean = false;
-    VERSION: string = '0.1.8';
+    VERSION: string = '0.1.9';
     constructor() {
         //@ts-ignore
         this.is_single = obvInit.is_single;
@@ -41,5 +41,3 @@ class farallonBase {
         }, 3000);
     }
 }
-
-//new farallonBase();

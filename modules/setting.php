@@ -327,6 +327,12 @@ $farallonSetting = new farallonSetting(
                         'label' => '上下文导航',
                         'description' => '展示前一篇后一篇文章'
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'show_copylink',
+                        'label' => '分享链接',
+                        'description' => '是否展示复制链接分享'
+                    ],
                 ]
             ],
             [

@@ -22,6 +22,14 @@ class farallonAction extends farallonBase {
             }
         }
 
+        if (document.querySelector('.post--share')) {
+            document.querySelector('.post--share')!.addEventListener('click', () => {
+                navigator.clipboard.writeText(document.location.href).then(() => {
+                    this.showNotice('复制成功');
+                });
+            });
+        }
+
         document.querySelector('[data-action="show-search"]')!.addEventListener('click', () => {
             document
                 .querySelector('.site--header__center .inner')!
