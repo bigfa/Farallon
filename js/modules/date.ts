@@ -24,9 +24,9 @@ class farallonDate {
         } else if (between < 86400) {
             return `${Math.ceil(between / 3600)} 小时前`;
         } else if (between < 86400 * 30) {
-            return `${Math.ceil(between / (86400 * 30))} 天前`;
+            return `${Math.ceil(between / 86400)} 天前`;
         } else if (between < 86400 * 30 * 12) {
-            return `${Math.ceil(between / (86400 * 12 * 30))} 月前`;
+            return `${Math.ceil(between / (86400 * 30))} 月前`;
         } else {
             return time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate();
         }
