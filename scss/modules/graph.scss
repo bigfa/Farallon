@@ -228,11 +228,11 @@
     }
 
     ol {
-        counter-reset: post;
+        counter-reset: item;
         & > li:before {
             content: counter(item);
             counter-increment: item;
-            font-size: 11.4px;
+            font-size: 12px;
             font-weight: 700;
             align-items: center;
             background-color: rgba(195, 218, 254, 0.43);
@@ -243,11 +243,12 @@
             display: inline-flex;
             height: 19px;
             justify-content: center;
-            margin-left: -44px !important;
-            margin-right: 14px;
+            margin-left: -24px !important;
+            margin-right: 10px;
             margin-top: 4px;
             transform: translateY(-1px);
             width: 30px;
+            padding: 0;
         }
     }
 }
