@@ -293,6 +293,18 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
+                        'name' => 'home_cat',
+                        'label' => '分类信息',
+                        'description' => '首页分类信息展示'
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'home_like',
+                        'label' => '文章点赞',
+                        'description' => '首页文章点赞信息展示'
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'hide_home_cover',
                         'label' => '缩略图',
                         'description' => '不展示首页缩略图'
