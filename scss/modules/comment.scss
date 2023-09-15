@@ -34,6 +34,9 @@
     }
     p {
         margin-bottom: 15px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
     .comment-notes,
     .logged-in-as {
@@ -278,5 +281,15 @@
     .link {
         margin-left: 4px;
         border-bottom: 1px dotted var(--farallon-hover-color);
+    }
+}
+
+.comment--parent__link {
+    margin-right: 5px;
+    color: var(--farallon-main-color);
+    text-decoration: none !important;
+    &:hover {
+        color: var(--farallon-hover-color);
+        text-decoration: underline;
     }
 }

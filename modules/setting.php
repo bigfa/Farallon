@@ -345,6 +345,13 @@ $farallonSetting = new farallonSetting(
                         'label' => '分享链接',
                         'description' => '是否展示复制链接分享'
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'show_parent',
+                        'label' => '父级评论',
+                        'description' => '评论内容中展示回复的父级评论'
+                    ],
+
                 ]
             ],
             [

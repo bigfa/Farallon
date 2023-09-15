@@ -1,12 +1,11 @@
 <?php
-define('FARALLON_VERSION', '0.1.10');
+define('FARALLON_VERSION', '0.1.11');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
-
+include_once('modules/setting.php');
 include_once('modules/base.php');
 include_once('modules/comment.php');
-include_once('modules/setting.php');
 include_once('modules/widget.php');
 
 function farallon_get_background_image($post_id, $width = null, $height = null)

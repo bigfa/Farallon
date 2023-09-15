@@ -64,6 +64,10 @@ class farallonComment extends farallonBase {
                             n && // @ts-ignore
                                 i && // @ts-ignore
                                 (n.parentNode.insertBefore(i, n), n.parentNode.removeChild(n));
+                        if (document.querySelector('.comment-body__fresh'))
+                            document
+                                .querySelector('.comment-body__fresh')
+                                ?.classList.remove('comment-body__fresh');
                         // @ts-ignore
                         document.getElementById('comment').value = '';
                         // @ts-ignore

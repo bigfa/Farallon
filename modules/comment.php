@@ -5,7 +5,10 @@ class farallonComment
 
     public function __construct()
     {
+        global $farallonSetting;
         add_action('rest_api_init', array($this, 'register_routes'));
+        if ($farallonSetting->get_setting('show_parent'))
+            add_filter('get_comment_text',  array($this, 'hack_get_comment_text'), 0, 2);
     }
 
     function register_routes()
@@ -27,6 +30,23 @@ class farallonComment
             'callback' => array($this, 'handle_post_like'),
             'permission_callback' => '__return_true',
         ));
+    }
+
+
+    function hack_get_comment_text($comment_text, $comment)
+    {
+        if (!is_comment_feed() && $comment->comment_parent) {
+            $parent = get_comment($comment->comment_parent);
+            if ($parent) {
+                $parent_link = esc_url(get_comment_link($parent));
+                $name        = get_comment_author($parent);
+
+                $comment_text =
+                    '<a href="' . $parent_link . '" class="comment--parent__link">@' . $name . '</a>'
+                    . $comment_text;
+            }
+        }
+        return $comment_text;
     }
 
     function handle_post_view($data)
@@ -82,7 +102,7 @@ class farallonComment
                 'comment_author' => $comment->comment_author,
                 'comment_author_email' => $comment->comment_author_email,
                 'comment_author_url' => $comment->comment_author_url,
-                'comment_content' => $comment->comment_content,
+                'comment_content' => get_comment_text($comment->comment_ID),
                 'comment_date' => date('Y-m-d', strtotime($comment->comment_date)),
                 'comment_date_gmt' => $comment->comment_date_gmt,
                 'comment_ID' => $comment->comment_ID,
