@@ -1,12 +1,38 @@
 .site--footer {
-    display: flex;
-    align-items: center;
     font-size: 14px;
     padding: 20px 80px;
     border-top: 1px dotted var(--farallon-border-color);
     color: var(--farallon-text-light);
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+    &__info {
+        display: none;
+        text-align: center;
+        color: var(--farallon-text-light);
+        a {
+            text-decoration: underline;
+            &:hover {
+                color: var(--farallon-hover-color);
+            }
+        }
+        &.active {
+            display: block;
+        }
+    }
     .copyright {
         margin-left: auto;
+        display: flex;
+        align-items: center;
+        svg {
+            fill: var(--farallon-text-light);
+            margin-left: 8px;
+            cursor: pointer;
+            &:hover {
+                fill: var(--farallon-hover-color);
+            }
+        }
         // &::after {
         //     content: 'a bigfa theme';
         //     margin-left: 3px;

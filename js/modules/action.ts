@@ -52,6 +52,16 @@ class farallonAction extends farallonBase {
         }
 
         console.log(`theme version: ${this.VERSION} init success!`);
+
+        const copyright = `<div class="site--footer__info">
+        Theme <a href="https://fatesinger.com/101971" target="_blank">farallon</a> by bigfa / version ${this.VERSION}
+    </div>`;
+
+        document.querySelector('.site--footer__content')!.insertAdjacentHTML('afterend', copyright);
+
+        document.querySelector('.icon--copryrights')!.addEventListener('click', () => {
+            document.querySelector('.site--footer__info')!.classList.toggle('active');
+        });
     }
 
     trackPostView() {
