@@ -228,6 +228,18 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'input',
+                        'name' => 'logo',
+                        'label' => 'logo',
+                        'description' => 'logo 地址，最好是正方形'
+                    ],
+                    [
+                        'type' => 'input',
+                        'name' => 'favicon',
+                        'label' => 'favicon',
+                        'description' => 'favicon 地址'
+                    ],
+                    [
+                        'type' => 'input',
                         'name' => 'title_sep',
                         'label' => '标题分隔符',
                         'description' => '一经输入请勿修改，默认为<code>-</code>'
@@ -261,12 +273,12 @@ $farallonSetting = new farallonSetting(
                         'label' => '七牛云',
                         'description' => '确保所有图片均已上传至阿里云七牛云，否则缩略图可能无法正常显示。'
                     ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'darkmode',
-                    //     'label' => '暗黑模式',
-                    //     'description' => '暗黑模式'
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'darkmode',
+                        'label' => '暗黑模式',
+                        'description' => '暗黑模式开关'
+                    ],
                     [
                         'type' => 'input',
                         'name' => 'default_thumbnail',
@@ -279,12 +291,12 @@ $farallonSetting = new farallonSetting(
                     //     'label' => '格式化时间',
                     //     'description' => '时间多久以前显示为几天前，几小时前，几分钟前，几秒前'
                     // ],
-                    [
-                        'type' => 'switch',
-                        'name' => 'home_cat',
-                        'label' => '分类信息',
-                        'description' => '首页分类信息展示'
-                    ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'home_cat',
+                    //     'label' => '分类信息',
+                    //     'description' => '首页分类信息展示'
+                    // ],
                     [
                         'type' => 'switch',
                         'name' => 'home_author',
@@ -361,31 +373,31 @@ $farallonSetting = new farallonSetting(
                         'type' => 'input',
                         'name' => 'telegram',
                         'label' => 'telegram',
-                        'description' => 'telegram链接'
+                        'description' => 'telegram 链接'
                     ],
                     [
                         'type' => 'input',
                         'name' => 'telegram_group',
                         'label' => 'telegram 组群',
-                        'description' => 'telegram链接'
+                        'description' => 'telegram 组群链接'
                     ],
                     [
                         'type' => 'input',
                         'name' => 'telegram_channel',
                         'label' => 'telegram 频道',
-                        'description' => 'telegram链接'
+                        'description' => 'telegram 频道链接'
                     ],
                     [
                         'type' => 'input',
                         'name' => 'instagram',
                         'label' => 'instagram',
-                        'description' => 'instagram'
+                        'description' => 'instagram 链接'
                     ],
                     [
                         'type' => 'input',
                         'name' => 'twitter',
                         'label' => 'twitter',
-                        'description' => 'twitter'
+                        'description' => 'twitter 链接'
                     ],
                     [
                         'type' => 'input',

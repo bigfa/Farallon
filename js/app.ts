@@ -2,7 +2,8 @@ class farallonBase {
     is_single: boolean = false;
     post_id: number = 0;
     is_archive: boolean = false;
-    VERSION: string = '0.1.11';
+    darkmode: any = false;
+    VERSION: string;
     constructor() {
         //@ts-ignore
         this.is_single = obvInit.is_single;
@@ -10,6 +11,10 @@ class farallonBase {
         this.post_id = obvInit.post_id;
         //@ts-ignore
         this.is_archive = obvInit.is_archive;
+        //@ts-ignore
+        this.darkmode = obvInit.darkmode;
+        //@ts-ignore
+        this.VERSION = obvInit.version;
     }
 
     getCookie(t: any) {

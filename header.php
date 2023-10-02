@@ -1,17 +1,32 @@
 <!DOCTYPE html>
+<?php global $farallonSetting; ?>
 <html <?php language_attributes(); ?>>
 
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width">
     <?php wp_head(); ?>
-    <link type="image/vnd.microsoft.icon" href="<?php echo get_template_directory_uri(); ?>/build/images/favicon.png" rel="shortcut icon">
+    <link type="image/vnd.microsoft.icon" href="<?php echo ($farallonSetting->get_setting('favicon') ? $farallonSetting->get_setting('favicon') :  get_template_directory_uri() . '/build/images/favicon.png'); ?>" rel="shortcut icon">
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(''); ?>>
+    <?php if ($farallonSetting->get_setting('darkmode')) : ?>
+        <script>
+            window.DEFAULT_THEME = "auto";
+            if (localStorage.getItem("theme") == null) {
+                localStorage.setItem("theme", window.DEFAULT_THEME);
+            }
+            if (localStorage.getItem("theme") == "dark") {
+                document.querySelector("body").classList.add("dark");
+            }
+            if (localStorage.getItem("theme") == "auto") {
+                document.querySelector("body").classList.add("auto");
+            }
+        </script>
+    <?php endif; ?>
     <div class="main">
         <header class="site--header">
-            <a href="<?php echo home_url(); ?>" class="site--url" aria-label="<?php bloginfo('sitename'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/build/images/avatar.jpeg" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
+            <a href="<?php echo home_url(); ?>" class="site--url" aria-label="<?php bloginfo('sitename'); ?>"><img src="<?php echo ($farallonSetting->get_setting('logo') ? $farallonSetting->get_setting('logo') : get_template_directory_uri() . '/build/images/avatar.jpeg'); ?>" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
                 <span class="u-xs-show"><?php bloginfo('sitename'); ?></span>
             </a>
             <div class="site--header__center">

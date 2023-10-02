@@ -2,9 +2,9 @@
 
 <main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
-        <article class="post--single">
-            <h2 class="post--single__title"><?php the_title(); ?></h2>
-            <div class="post__single__content graph">
+        <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
+            <div class="post__single__content graph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
             <?php wp_link_pages(array(
