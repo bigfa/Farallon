@@ -117,6 +117,8 @@ class farallonBase
                 'nonce' => wp_create_nonce('wp_rest'),
                 'darkmode' => !!$farallonSetting->get_setting('darkmode'),
                 'version' => FARALLON_VERSION,
+                'is_archive' => is_archive(),
+                'archive_id' => get_queried_object_id(),
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {

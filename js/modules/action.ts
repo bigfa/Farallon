@@ -110,7 +110,7 @@ class farallonAction extends farallonBase {
         }
 
         if (this.is_archive) {
-            //this.trackArchiveView();
+            this.trackArchiveView();
         }
 
         console.log(`theme version: ${this.VERSION} init success!`);
@@ -149,9 +149,29 @@ class farallonAction extends farallonBase {
 
     trackArchiveView() {
         if (document.querySelector('.archive-header')) {
-            const self: any = document.querySelector('.archive-header');
-            const id = self.dataset.id;
-            fetch(`/api/archive/${id}`);
+            // @ts-ignore
+            const id = obvInit.archive_id;
+            // @ts-ignore
+            fetch(`${obvInit.restfulBase}farallon/v1/archive/${id}`, {
+                method: 'POST',
+                // body: JSON.stringify({
+                //     // @ts-ignore
+                //     id: this.post_id,
+                // }),
+                headers: {
+                    // @ts-ignore
+                    'X-WP-Nonce': obvInit.nonce,
+                    'Content-Type': 'application/json',
+                },
+            })
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    //this.showNotice('Thanks for your like');
+                    // @ts-ignore
+                    //this.setCookie('like_' + this.post_id, '1', 1);
+                });
         }
     }
 
