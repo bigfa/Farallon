@@ -1,5 +1,5 @@
 <?php
-define('FARALLON_VERSION', '0.1.11');
+define('FARALLON_VERSION', '0.2.0');
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');

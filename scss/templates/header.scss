@@ -3,15 +3,15 @@
     padding: 20px 80px;
     .svgIcon {
         margin-left: auto;
-        fill: rgba(0, 0, 0, 0.54);
+        fill: var(--farallon-text-gray-lightest);
         position: relative;
         cursor: pointer;
     }
     .avatar {
         height: 48px;
         width: 48px;
-        border: 3px #fff solid;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+        border: 3px var(--farallon-background-white) solid;
+        box-shadow: 0 2px 4px 0 var(--farallon-border-color);
         border-radius: 100%;
         transition: 0.5s ease-in-out;
     }
@@ -19,7 +19,7 @@
         .avatar {
             //height: 40px;
             //width: 40px;
-            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 4px 0 var(--farallon-border-color);
         }
     }
     position: relative;

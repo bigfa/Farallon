@@ -281,7 +281,7 @@
     .nav-previous,
     .nav-next {
         padding: 15px;
-        background-color: #fff;
+        background-color: var(--farallon-background-white);
         //background-color: #f8f8f8;
         width: 48%;
         box-sizing: border-box;
@@ -380,7 +380,7 @@
         .date {
             height: 36px;
             width: 36px;
-            background-color: #fff;
+            background-color: var(--farallon-background-white);
             border-radius: 100%;
             position: absolute;
             text-align: center;
@@ -391,7 +391,7 @@
             color: var(--farallon-text-gray);
             right: 15px;
             top: -30px;
-            box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 0 0 5px var(--farallon-border-color-light);
         }
     }
 

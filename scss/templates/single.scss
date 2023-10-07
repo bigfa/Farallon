@@ -57,7 +57,7 @@
         grid-gap: 20px;
         &__item {
             padding: 10px;
-            border: 1px solid var(--farallon-border-color-light);
+            border: 1px solid var(--farallon-border-color);
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -146,7 +146,7 @@
 
 .button--like {
     border: 0;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
     &.is-active {
         svg {

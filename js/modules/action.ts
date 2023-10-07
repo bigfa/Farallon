@@ -22,6 +22,75 @@ class farallonAction extends farallonBase {
             }
         }
 
+        const theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'auto';
+        const html = `<div class="fixed--theme">
+        <span class="${theme == 'dark' ? 'is-active' : ''}" data-action-value="dark">
+            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"
+                style="color: currentcolor; width: 16px; height: 16px;">
+                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            </svg>
+        </span>
+        <span class="${theme == 'light' ? 'is-active' : ''}" data-action-value="light">
+            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"
+                style="color: currentcolor; width: 16px; height: 16px;">
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2"></path>
+                <path d="M12 21v2"></path>
+                <path d="M4.22 4.22l1.42 1.42"></path>
+                <path d="M18.36 18.36l1.42 1.42"></path>
+                <path d="M1 12h2"></path>
+                <path d="M21 12h2"></path>
+                <path d="M4.22 19.78l1.42-1.42"></path>
+                <path d="M18.36 5.64l1.42-1.42"></path>
+            </svg>
+        </span>
+        <span class="${theme == 'auto' ? 'is-active' : ''}"  data-action-value="auto">
+            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"
+                style="color: currentcolor; width: 16px; height: 16px;">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M8 21h8"></path>
+                <path d="M12 17v4"></path>
+            </svg>
+        </span>
+    </div>`;
+        if (this.darkmode) {
+            document.querySelector('body')!.insertAdjacentHTML('beforeend', html);
+        }
+
+        document.querySelectorAll('.fixed--theme span').forEach((item) => {
+            item.addEventListener('click', () => {
+                if (item.classList.contains('is-active')) return;
+                document.querySelectorAll('.fixed--theme span').forEach((item) => {
+                    item.classList.remove('is-active');
+                });
+                // @ts-ignore
+                if (item.dataset.actionValue == 'dark') {
+                    localStorage.setItem('theme', 'dark');
+                    document.querySelector('body')!.classList.remove('auto');
+                    document.querySelector('body')!.classList.add('dark');
+                    item.classList.add('is-active');
+                    //this.showNotice('夜间模式已开启');
+                    // @ts-ignore
+                } else if (item.dataset.actionValue == 'light') {
+                    localStorage.setItem('theme', 'light');
+                    document.querySelector('body')!.classList.remove('auto');
+                    document.querySelector('body')!.classList.remove('dark');
+                    item.classList.add('is-active');
+                    //this.showNotice('夜间模式已关闭');
+                    // @ts-ignore
+                } else if (item.dataset.actionValue == 'auto') {
+                    localStorage.setItem('theme', 'auto');
+                    document.querySelector('body')!.classList.remove('dark');
+                    document.querySelector('body')!.classList.add('auto');
+                    item.classList.add('is-active');
+                    //this.showNotice('夜间模式已关闭');
+                }
+            });
+        });
+
         if (document.querySelector('.post--share')) {
             document.querySelector('.post--share')!.addEventListener('click', () => {
                 navigator.clipboard.writeText(document.location.href).then(() => {
@@ -34,13 +103,6 @@ class farallonAction extends farallonBase {
             document
                 .querySelector('.site--header__center .inner')!
                 .classList.toggle('search--active');
-        });
-
-        document.querySelectorAll('.fixed--theme span').forEach((item) => {
-            item.addEventListener('click', () => {
-                document.querySelector('body')!.classList.toggle('dark--theme');
-                item.classList.toggle('is-active');
-            });
         });
 
         if (this.is_single) {
