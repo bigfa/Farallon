@@ -1,8 +1,10 @@
 <?php
-define('FARALLON_VERSION', '0.2.0');
+define('FARALLON_VERSION', wp_get_theme()->get('Version'));
 define('FARALLO_SETTING_KEY', 'farallon_setting');
 define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
+define('FARALLON_ARCHIVE_VIEW_KEY', 'views');
+
 include_once('modules/setting.php');
 include_once('modules/base.php');
 include_once('modules/comment.php');

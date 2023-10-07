@@ -30,6 +30,31 @@ class farallonComment
             'callback' => array($this, 'handle_post_like'),
             'permission_callback' => '__return_true',
         ));
+
+        register_rest_route('farallon/v1', '/archive/(?P<id>\d+)', array(
+            'methods' => 'POST',
+            'callback' => array($this, 'handle_archive_view'),
+            'permission_callback' => '__return_true',
+        ));
+    }
+
+    function handle_archive_view($request)
+    {
+        $term = get_term($request['id']);
+        if (is_wp_error($term)) {
+            return [
+                'code' => 500,
+                'message' => $term->get_error_message()
+            ];
+        }
+        $views = (int)get_term_meta($request['id'], FARALLON_ARCHIVE_VIEW_KEY, true);
+        $views++;
+        update_term_meta($request['id'], FARALLON_ARCHIVE_VIEW_KEY, $views);
+        return [
+            'code' => 200,
+            'message' => '成功',
+            'data' => $views
+        ];
     }
 
 

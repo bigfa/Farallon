@@ -13,6 +13,8 @@ class farallonBase {
         this.is_archive = obvInit.is_archive;
         //@ts-ignore
         this.darkmode = obvInit.darkmode;
+        //@ts-ignore
+        this.VERSION = obvInit.version;
     }
 
     getCookie(t: any) {

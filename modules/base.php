@@ -115,7 +115,10 @@ class farallonBase
                 'post_id' => get_the_ID(),
                 'restfulBase' => esc_url_raw(rest_url()),
                 'nonce' => wp_create_nonce('wp_rest'),
-                'darkmode' => !!$farallonSetting->get_setting('darkmode')
+                'darkmode' => !!$farallonSetting->get_setting('darkmode'),
+                'version' => FARALLON_VERSION,
+                'is_archive' => is_archive(),
+                'archive_id' => get_queried_object_id(),
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {
