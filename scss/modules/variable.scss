@@ -79,6 +79,12 @@
                 background: linear-gradient(180deg, #1e1e1e, #121212);
             }
         }
+
+        .graph blockquote,
+        .graph ol li::before {
+            background: linear-gradient(180deg, #1e1e1e, #121212);
+        }
+
         .post--single__related__item,
         .post--item,
         .link-item,
@@ -183,7 +189,8 @@
         }
     }
 
-    .graph blockquote {
+    .graph blockquote,
+    .graph ol li::before {
         background: linear-gradient(180deg, #1e1e1e, #121212);
     }
     .post--single__related__item,
