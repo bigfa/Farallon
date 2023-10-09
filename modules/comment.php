@@ -36,6 +36,54 @@ class farallonComment
             'callback' => array($this, 'handle_archive_view'),
             'permission_callback' => '__return_true',
         ));
+
+        register_rest_route('farallon/v1', '/posts', array(
+            'methods' => 'get',
+            'callback' => array($this, 'handle_posts_request'),
+            'permission_callback' => '__return_true',
+        ));
+    }
+
+    function handle_posts_request($request)
+    {
+        $page = $request['page'];
+        $query_args = array(
+            'post_type' => 'post',
+            'post_status' => 'publish',
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'paged' => $page,
+            'posts_per_page' => get_option('posts_per_page'),
+        );
+        $the_query = new WP_Query($query_args);
+        $data = [];
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+            global $post;
+            $data[] = [
+                'id' => get_the_ID(),
+                'post_title' => get_the_title(),
+                'date' => get_the_date(),
+                'excerpt' => mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 150, "..."),
+                'author' => get_the_author(),
+                'author_avatar_urls' => get_avatar_url(get_the_author_meta('ID'), array('size' => 64)),
+                'comment_count' => get_comments_number(),
+                'view_count' => (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true),
+                'like_count' => (int)get_post_meta(get_the_ID(), FARALLON_POST_LIKE_KEY, true),
+                'thumbnail' => farallon_get_background_image(get_the_ID(), 300, 200),
+                'permalink' => get_permalink(),
+                'categories' => get_the_category(),
+                'tags' => get_the_tags(),
+                'has_image' => farallon_is_has_image(get_the_ID()),
+            ];
+        }
+
+
+        return [
+            'code' => 200,
+            'message' => '成功',
+            'data' => $data
+        ];
     }
 
     function handle_archive_view($request)

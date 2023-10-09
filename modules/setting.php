@@ -291,12 +291,12 @@ $farallonSetting = new farallonSetting(
                     //     'label' => '格式化时间',
                     //     'description' => '时间多久以前显示为几天前，几小时前，几分钟前，几秒前'
                     // ],
-                    // [
-                    //     'type' => 'switch',
-                    //     'name' => 'home_cat',
-                    //     'label' => '分类信息',
-                    //     'description' => '首页分类信息展示'
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'loadmore',
+                        'label' => '无限加载',
+                        'description' => '关闭分页菜单，使用js加载更多'
+                    ],
                     [
                         'type' => 'switch',
                         'name' => 'home_author',

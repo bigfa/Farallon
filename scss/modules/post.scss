@@ -137,7 +137,19 @@
     align-items: center;
     justify-content: center;
     //mask-image: linear-gradient(90deg, transparent, #fff 90px, #fff calc(100% - 90px), transparent);
-
+    .loadmore {
+        border: 1px solid var(--farallon-border-color);
+        cursor: pointer;
+        position: relative;
+        padding: 5px 30px;
+        border-radius: 8px;
+        font-size: 14px;
+        color: var(--farallon-text-gray);
+        &:hover {
+            border-color: var(--farallon-hover-color);
+            color: var(--farallon-hover-color);
+        }
+    }
     .page-numbers,
     .post-page-numbers {
         //border-radius: 999rem;
