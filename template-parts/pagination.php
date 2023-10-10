@@ -1,7 +1,7 @@
 <?php
 global $farallonSetting;
 global $wp_query;
-if (!$farallonSetting->get_setting('loadmore')) {
+if ($farallonSetting->get_setting('loadmore')) {
     if ($wp_query->max_num_pages <= 1) {
         return;
     } else {
