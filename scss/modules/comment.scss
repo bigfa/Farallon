@@ -248,6 +248,7 @@
             vertical-align: middle;
             width: 16px;
             content: '';
+            flex: 0 0 auto;
         }
     }
     input:checked + label {
@@ -260,6 +261,7 @@
             height: 12px;
             margin: 2px;
             width: 12px;
+            flex: 0 0 auto;
         }
     }
 }

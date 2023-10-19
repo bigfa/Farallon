@@ -285,12 +285,12 @@ $farallonSetting = new farallonSetting(
                         'label' => '默认缩略图',
                         'description' => '文章没有图片时的默认缩略图'
                     ],
-                    // [
-                    //     'type' => 'input',
-                    //     'name' => 'format_time',
-                    //     'label' => '格式化时间',
-                    //     'description' => '时间多久以前显示为几天前，几小时前，几分钟前，几秒前'
-                    // ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'back2top',
+                        'label' => '返回顶部',
+                        'description' => '展示返回顶部按钮'
+                    ],
                     [
                         'type' => 'switch',
                         'name' => 'loadmore',

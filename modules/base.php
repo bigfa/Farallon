@@ -62,7 +62,27 @@ class farallonBase
         register_sidebar(array(
             'name'          => '首页顶部',
             'id'            => 'topbar',
-            'description'   => '首页',
+            'description'   => '首页顶部',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="heading-title">',
+            'after_title'   => '</h3>',
+        ));
+
+        register_sidebar(array(
+            'name'          => '首页底部',
+            'id'            => 'footerbar',
+            'description'   => '首页底部',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="heading-title">',
+            'after_title'   => '</h3>',
+        ));
+
+        register_sidebar(array(
+            'name'          => '文章底部',
+            'id'            => 'singlefooterbar',
+            'description'   => '文章底部',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="heading-title">',

@@ -54,6 +54,11 @@ global $farallonSetting;
             ?>
         </article>
     <?php endwhile; ?>
+    <?php if (is_active_sidebar('singlefooterbar')) : ?>
+        <section class="footer--bar">
+            <?php dynamic_sidebar('singlefooterbar'); ?>
+        </section>
+    <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

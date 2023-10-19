@@ -16,6 +16,11 @@
         get_template_part('template-parts/pagination');
     endif;
     ?>
+    <?php if (is_active_sidebar('footerbar')) : ?>
+        <section class="footer--bar">
+            <?php dynamic_sidebar('footerbar'); ?>
+        </section>
+    <?php endif; ?>
 </main>
 
 <?php get_footer(); ?>

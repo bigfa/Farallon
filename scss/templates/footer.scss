@@ -116,6 +116,93 @@
 
     .fixed--theme {
         top: auto;
-        bottom: 30px;
+        bottom: 100px;
+    }
+}
+@keyframes toTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+.backToTop {
+    .svgIcon {
+        width: 17px;
+        height: 17px;
+        fill: var(--farallon-main-color);
+        animation: toTop 1s ease-in infinite alternate;
+    }
+    &:hover {
+        .svgIcon {
+            fill: var(--farallon-hover-color);
+            animation-play-state: paused;
+        }
+    }
+    position: fixed;
+    bottom: 25px;
+    right: -25px;
+    cursor: pointer;
+    &.is-active {
+        right: 25px;
+    }
+    background-color: var(--border-color);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.footer--bar {
+    padding: 0 40px;
+    .widget-card-content {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+    }
+
+    .widget-card-description {
+        color: var(--farallon-text-gray);
+        // margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+    padding-top: 30px;
+}
+
+@media (max-width: 414px) {
+    .footer--bar {
+        padding: 0 0px;
+        .widget-card-content {
+            font-size: 18px;
+        }
+
+        .widget-card-description {
+            font-size: 14px;
+        }
+    }
+}
+
+.heading-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.widget_links {
+    font-size: 14px;
+    color: var(--farallon-text-light);
+    .blogroll {
+        padding: 5px 0;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            margin-right: 15px;
+            margin-bottom: 15px;
+            a {
+                &:hover {
+                    color: var(--farallon-hover-color);
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }
