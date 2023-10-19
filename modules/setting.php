@@ -13,10 +13,15 @@ class farallonSetting
         //add_action('wp_ajax_nopriv_farallon_setting', array($this, 'setting_callback'));
     }
 
+    function clean_options(&$value)
+    {
+        $value = stripslashes($value);
+    }
 
     function setting_callback()
     {
         $data = $_POST[FARALLO_SETTING_KEY];
+        array_walk_recursive($data,  array($this, 'clean_options'));
         $this->update_setting($data);
         return wp_send_json([
             'code' => 200,
