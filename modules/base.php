@@ -4,6 +4,7 @@ class farallonBase
 
     public function __construct()
     {
+        global $farallonSetting;
         add_action('wp_enqueue_scripts', array($this, 'enqueue_styles'));
         add_action('wp_enqueue_scripts', array($this, 'enqueue_scripts'));
         add_filter('excerpt_length', array($this, 'excerpt_length'));
@@ -19,6 +20,44 @@ class farallonBase
         add_filter('pre_option_link_manager_enabled', '__return_true');
         add_action('widgets_init', array($this, 'widgets_init'));
         add_action('wp_head', array($this, 'head_output'), 11);
+        if ($farallonSetting->get_setting('toc'))
+            add_filter('the_content', array($this, 'farallon_toc'));
+    }
+
+    function farallon_toc($content)
+    {
+        preg_match_all('/<h([3-6]).*?>(.*?)<\/h[2-6]>/i', $content, $matches, PREG_SET_ORDER);
+
+        if ($matches) {
+            $toc = '<ul>';
+            $previous_level = 3;
+            $count = 1;
+
+            foreach ($matches as $match) {
+                $level = $match[1];
+                $title = $match[2];
+                if ($level > $previous_level) {
+                    $toc .= '<ul>';
+                } elseif ($level < $previous_level) {
+                    $toc .= str_repeat('</ul></li>', $previous_level - $level);
+                } else {
+                    $toc .= '</li>';
+                }
+
+                $toc .= sprintf('<li><a href="#toc-%s">%s</a>', $count, $title);
+                $content = str_replace($match[0], sprintf('<h%s id="toc-%s">%s</h%s>', $level, $count, $title, $level), $content);
+
+                $previous_level = $level;
+                $count++;
+            }
+
+            $toc .= str_repeat('</li></ul>', $previous_level - 2);
+            $toc .= '</ul>';
+
+            $content = '<div id="toc" class="farallon--toc">' . $toc . '</div>' . $content;
+        }
+
+        return $content;
     }
 
     function head_output()
@@ -148,5 +187,5 @@ class farallonBase
         if (is_singular()) wp_enqueue_script("comment-reply");
     }
 }
-
-new farallonBase();
+global $farallonBase;
+$farallonBase = new farallonBase();

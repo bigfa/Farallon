@@ -368,6 +368,12 @@ $farallonSetting = new farallonSetting(
                         'label' => '父级评论',
                         'description' => '评论内容中展示回复的父级评论'
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'toc',
+                        'label' => '文章目录',
+                        'description' => '根据h标题生成文字目录'
+                    ],
 
                 ]
             ],

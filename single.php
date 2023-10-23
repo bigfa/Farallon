@@ -1,5 +1,6 @@
 <?php get_header();
 global $farallonSetting;
+global $farallonBase;
 ?>
 
 <main class="site--main">

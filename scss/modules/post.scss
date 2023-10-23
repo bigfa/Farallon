@@ -452,3 +452,26 @@
         padding: 15px;
     }
 }
+
+.farallon--toc {
+    background-color: var(--farallon-background-gray);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--farallon-text-light);
+    ul {
+        margin-bottom: 0 !important;
+        li {
+            margin-bottom: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+    line-height: 1.4 !important;
+    a {
+        box-shadow: none !important;
+        &:hover {
+            color: var(--farallon-hover-color);
+        }
+    }
+}
