@@ -10,6 +10,10 @@ latest version : `0.3.0`
 
 ## Changelog
 
+### 0.3.1
+
+- fixed next post permalink error
+
 ### 0.3.0
 
 - Added table of contents functionality.

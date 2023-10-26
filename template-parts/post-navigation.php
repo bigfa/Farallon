@@ -16,7 +16,7 @@ $next_post = get_next_post();
         <?php endif ?>
         <?php if ($next_post) : ?>
             <div class="nav-next">
-                <a href="<?php echo get_permalink($next_post) ?>2" rel="next">
+                <a href="<?php echo get_permalink($next_post) ?>" rel="next">
                     <span class="meta-nav">Next</span>
                     <span class="post-title">
                         <?php echo get_the_title($next_post) ?>
