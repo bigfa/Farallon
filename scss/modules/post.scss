@@ -455,16 +455,22 @@
 
 .farallon--toc {
     background-color: var(--farallon-background-gray);
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 10px;
     font-size: 14px;
     margin-bottom: 15px;
     color: var(--farallon-text-light);
+    summary {
+        cursor: pointer;
+    }
     ul {
         margin-bottom: 0 !important;
         li {
             margin-bottom: 0 !important;
-            margin-left: 15px !important;
+            margin-left: 20px !important;
+            &::before {
+                padding-right: 6px !important;
+            }
         }
     }
     line-height: 1.4 !important;

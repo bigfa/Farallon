@@ -54,7 +54,7 @@ class farallonBase
             $toc .= str_repeat('</li></ul>', $previous_level - 2);
             $toc .= '</ul>';
 
-            $content = '<div id="toc" class="farallon--toc">' . $toc . '</div>' . $content;
+            $content = '<details class="farallon--toc" open><summary>目录</summary>' . $toc . '</details>' . $content;
         }
 
         return $content;
