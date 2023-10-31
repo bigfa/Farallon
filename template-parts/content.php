@@ -5,7 +5,7 @@
             <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                 <?php the_title(); ?>
                 <?php if (is_sticky()) : ?>
-                    <span class="sticky--post">置顶</span>
+                    <span class="sticky--post"><?php _e('Sticky', 'Farallon'); ?></span>
                 <?php endif; ?>
             </a>
         </h2>

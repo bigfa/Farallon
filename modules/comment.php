@@ -81,7 +81,7 @@ class farallonComment
 
         return [
             'code' => 200,
-            'message' => '成功',
+            'message' => __('Success', 'Farallon'),
             'data' => $data
         ];
     }
@@ -100,7 +100,7 @@ class farallonComment
         update_term_meta($request['id'], FARALLON_ARCHIVE_VIEW_KEY, $views);
         return [
             'code' => 200,
-            'message' => '成功',
+            'message' => __('Success', 'Farallon'),
             'data' => $views
         ];
     }
@@ -130,7 +130,7 @@ class farallonComment
         update_post_meta($post_id, FARALLON_POST_VIEW_KEY, $post_views);
         return [
             'code' => 200,
-            'message' => '浏览成功',
+            'message' => __('Success', 'Farallon'),
             'data' => $post_views
         ];
     }
@@ -143,7 +143,7 @@ class farallonComment
         update_post_meta($post_id, FARALLON_POST_LIKE_KEY, $post_views);
         return [
             'code' => 200,
-            'message' => '成功',
+            'message' => __('Success', 'Farallon'),
             'data' => $post_views
         ];
     }
@@ -169,7 +169,7 @@ class farallonComment
         $GLOBALS['comment'] = $comment;
         return [
             'code' => 200,
-            'message' => '评论成功',
+            'message' => __('Success', 'Farallon'),
             'data' =>  [
                 'author_avatar_urls' => get_avatar_url($comment->comment_author_email, array('size' => 64)),
                 'comment_author' => $comment->comment_author,

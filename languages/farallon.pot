@@ -1,0 +1,422 @@
+# Copyright (C) 2023 bigfa
+# This file is distributed under the .
+msgid ""
+msgstr ""
+"Project-Id-Version: Farallon 0.3.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-10-31T10:07:28+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: Farallon\n"
+
+#. Theme Name of the theme
+msgid "Farallon"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://fatesinger.com/101971"
+msgstr ""
+
+#. Description of the theme
+msgid "theme 2024"
+msgstr ""
+
+#. Author of the theme
+msgid "bigfa"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://fatesinger.com"
+msgstr ""
+
+#: functions.php:80
+msgid "Add a menu"
+msgstr ""
+
+#: functions.php:124
+msgid "No links yet"
+msgstr ""
+
+#: modules/base.php:57
+#: modules/setting.php:374
+msgid "Table of content"
+msgstr ""
+
+#: modules/base.php:78
+msgid "author"
+msgstr ""
+
+#: modules/base.php:78
+msgid "published on"
+msgstr ""
+
+#: modules/base.php:100
+#: modules/base.php:102
+msgid "Homepage Top"
+msgstr ""
+
+#: modules/base.php:110
+#: modules/base.php:112
+msgid "Homepage Bottom"
+msgstr ""
+
+#: modules/base.php:120
+#: modules/base.php:122
+msgid "Single Pgae Bottom"
+msgstr ""
+
+#: modules/comment.php:84
+#: modules/comment.php:103
+#: modules/comment.php:133
+#: modules/comment.php:146
+#: modules/comment.php:172
+#: modules/setting.php:28
+msgid "Success"
+msgstr ""
+
+#: modules/setting.php:54
+#: modules/setting.php:60
+msgid "Theme Setting"
+msgstr ""
+
+#: modules/setting.php:104
+msgid "Save"
+msgstr ""
+
+#: modules/setting.php:193
+msgid "Basic Setting"
+msgstr ""
+
+#: modules/setting.php:198
+msgid "Feature Setting"
+msgstr ""
+
+#: modules/setting.php:204
+msgid "Singluar Setting"
+msgstr ""
+
+#: modules/setting.php:209
+msgid "SNS Setting"
+msgstr ""
+
+#: modules/setting.php:214
+msgid "Custom Setting"
+msgstr ""
+
+#: modules/setting.php:225
+msgid "Description"
+msgstr ""
+
+#: modules/setting.php:226
+msgid "Site description"
+msgstr ""
+
+#: modules/setting.php:231
+msgid "Headcode"
+msgstr ""
+
+#: modules/setting.php:232
+msgid "You can add content to the head tag, such as site verification tags, and so on."
+msgstr ""
+
+#: modules/setting.php:237
+msgid "Logo"
+msgstr ""
+
+#: modules/setting.php:238
+msgid "Logo address, preferably in a square shape."
+msgstr ""
+
+#: modules/setting.php:243
+msgid "Favicon"
+msgstr ""
+
+#: modules/setting.php:244
+msgid "Favicon address"
+msgstr ""
+
+#: modules/setting.php:249
+msgid "Title sep"
+msgstr ""
+
+#: modules/setting.php:250
+msgid "Default is"
+msgstr ""
+
+#: modules/setting.php:255
+msgid "Disable block css"
+msgstr ""
+
+#: modules/setting.php:256
+msgid "Do not load block-style files."
+msgstr ""
+
+#: modules/setting.php:266
+msgid "Upyun CDN"
+msgstr ""
+
+#: modules/setting.php:267
+msgid "Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly."
+msgstr ""
+
+#: modules/setting.php:272
+msgid "Aliyun OSS CDN"
+msgstr ""
+
+#: modules/setting.php:273
+msgid "Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display properly."
+msgstr ""
+
+#: modules/setting.php:278
+msgid "Qiniu OSS CDN"
+msgstr ""
+
+#: modules/setting.php:279
+msgid "Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display properly."
+msgstr ""
+
+#: modules/setting.php:284
+msgid "Dark Mode"
+msgstr ""
+
+#: modules/setting.php:285
+msgid "Enable dark mode"
+msgstr ""
+
+#: modules/setting.php:290
+msgid "Default thumbnail"
+msgstr ""
+
+#: modules/setting.php:291
+msgid "Default thumbnail address"
+msgstr ""
+
+#: modules/setting.php:296
+msgid "Back to top"
+msgstr ""
+
+#: modules/setting.php:297
+msgid "Enable back to top"
+msgstr ""
+
+#: modules/setting.php:302
+msgid "Load more"
+msgstr ""
+
+#: modules/setting.php:303
+msgid "Enable load more"
+msgstr ""
+
+#: modules/setting.php:308
+msgid "Author info"
+msgstr ""
+
+#: modules/setting.php:309
+msgid "Enable author info in homepage"
+msgstr ""
+
+#: modules/setting.php:314
+msgid "Category info"
+msgstr ""
+
+#: modules/setting.php:315
+msgid "Enable category info in homepage"
+msgstr ""
+
+#: modules/setting.php:320
+msgid "Like info"
+msgstr ""
+
+#: modules/setting.php:321
+msgid "Enable like info in homepage"
+msgstr ""
+
+#: modules/setting.php:326
+#: modules/setting.php:327
+msgid "Hide home cover"
+msgstr ""
+
+#: modules/setting.php:338
+msgid "Author bio"
+msgstr ""
+
+#: modules/setting.php:339
+msgid "Enable author bio"
+msgstr ""
+
+#: modules/setting.php:344
+msgid "Related posts"
+msgstr ""
+
+#: modules/setting.php:345
+msgid "Enable related posts"
+msgstr ""
+
+#: modules/setting.php:350
+msgid "Post like"
+msgstr ""
+
+#: modules/setting.php:351
+msgid "Enable post like"
+msgstr ""
+
+#: modules/setting.php:356
+msgid "Post navigation"
+msgstr ""
+
+#: modules/setting.php:357
+msgid "Enable post navigation"
+msgstr ""
+
+#: modules/setting.php:362
+msgid "Copy link"
+msgstr ""
+
+#: modules/setting.php:363
+msgid "Enable copy link"
+msgstr ""
+
+#: modules/setting.php:368
+msgid "Show parent comment"
+msgstr ""
+
+#: modules/setting.php:369
+msgid "Enable show parent comment"
+msgstr ""
+
+#: modules/setting.php:375
+msgid "Enable table of content"
+msgstr ""
+
+#: modules/setting.php:386
+msgid "Telegram"
+msgstr ""
+
+#: modules/setting.php:387
+msgid "Telegram link"
+msgstr ""
+
+#: modules/setting.php:392
+msgid "Telegram group"
+msgstr ""
+
+#: modules/setting.php:393
+msgid "Telegram group link"
+msgstr ""
+
+#: modules/setting.php:398
+msgid "Telegram channel"
+msgstr ""
+
+#: modules/setting.php:399
+msgid "Telegram channel link"
+msgstr ""
+
+#: modules/setting.php:404
+msgid "Instagram"
+msgstr ""
+
+#: modules/setting.php:405
+msgid "Instagram link"
+msgstr ""
+
+#: modules/setting.php:410
+msgid "Twitter"
+msgstr ""
+
+#: modules/setting.php:411
+msgid "Twitter link"
+msgstr ""
+
+#: modules/setting.php:416
+msgid "RSS"
+msgstr ""
+
+#: modules/setting.php:417
+msgid "RSS link"
+msgstr ""
+
+#: modules/setting.php:427
+msgid "CSS"
+msgstr ""
+
+#: modules/setting.php:428
+msgid "Custom CSS"
+msgstr ""
+
+#: modules/setting.php:433
+msgid "Javascript"
+msgstr ""
+
+#: modules/setting.php:434
+msgid "Custom Javascript"
+msgstr ""
+
+#: modules/setting.php:439
+msgid "Copyright"
+msgstr ""
+
+#: modules/setting.php:440
+msgid "Custom footer content"
+msgstr ""
+
+#: modules/widget.php:7
+msgid "show auhor info"
+msgstr ""
+
+#: modules/widget.php:8
+msgid "About"
+msgstr ""
+
+#: single.php:9
+msgid " views"
+msgstr ""
+
+#: single.php:39
+msgid "Copy link."
+msgstr ""
+
+#: template-parts/content.php:8
+msgid "Sticky"
+msgstr ""
+
+#: template-parts/pagination.php:9
+msgid "loadmore"
+msgstr ""
+
+#: template-parts/post-navigation.php:5
+msgid "Post"
+msgstr ""
+
+#: template-parts/post-navigation.php:10
+msgid "Previous"
+msgstr ""
+
+#: template-parts/post-navigation.php:20
+msgid "Next"
+msgstr ""
+
+#: template-parts/single-related.php:1
+msgid "Related Posts"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Archive"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Douban"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Links"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Map"
+msgstr ""

@@ -4,8 +4,8 @@ class Farallon_Widget extends WP_Widget
 {
     function __construct()
     {
-        $widget_ops = array('description' => '关于站长小工具');
-        parent::__construct('about', '关于站长', $widget_ops);
+        $widget_ops = array('description' => __('show auhor info', 'Farallon'));
+        parent::__construct('about', __('About', 'Farallon'), $widget_ops);
     }
 
     function widget($args, $instance)

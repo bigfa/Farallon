@@ -6,7 +6,7 @@ if ($farallonSetting->get_setting('loadmore')) {
         return;
     } else {
         echo '<div class="nav-links">
-        <span class="loadmore">加载更多</span>
+        <span class="loadmore">' . __('loadmore', 'Farallon') . '</span>
         </div>';
     }
 } else {

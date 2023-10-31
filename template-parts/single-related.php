@@ -1,4 +1,4 @@
-<h3 class="related--posts__title">Related Posts</h3>
+<h3 class="related--posts__title"><?php _e('Related Posts', 'Farallon'); ?></h3>
 <div class="post--single__related">
     <?php $the_query = new WP_Query(array(
         'post_type' => 'post',

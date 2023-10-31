@@ -25,7 +25,7 @@ class farallonSetting
         $this->update_setting($data);
         return wp_send_json([
             'code' => 200,
-            'message' => '保存成功',
+            'message' => __('Success', 'Farallon'),
             'data' => $this->get_setting()
         ]);
     }
@@ -51,19 +51,19 @@ class farallonSetting
 
     function setting_menu()
     {
-        add_menu_page('主题设置', '主题设置', 'manage_options', 'farallon', [$this, 'setting_page'], '', 59);
+        add_menu_page(__('Theme Setting', 'Farallon'), __('Theme Setting', 'Farallon'), 'manage_options', 'farallon', [$this, 'setting_page'], '', 59);
     }
 
     function setting_page()
     { ?>
         <div class="wrap">
-            <h2>主题设置</h2>
+            <h2><?php _e('Theme Setting', 'Farallon') ?></h2>
             <div class="pure-wrap">
                 <div class="leftpanel">
                     <ul class="nav">
                         <?php foreach ($this->config['header'] as $val) {
                             $id = $val['id'];
-                            $title = $val['title'];
+                            $title = __($val['title'], 'Farallon');
                             $icon = $val['icon'];
                             $class = ($id == "basic") ? "active" : "";
                             echo "<li class=\"$class\"><span id=\"tab-title-$id\"><i class=\"dashicons-before dashicons-$icon\"></i>$title</span></li>";
@@ -101,7 +101,7 @@ class farallonSetting
                             </table>
                         </div>
                     <?php } ?>
-                    <div class="pure-save"><span id="pure-save" class="button--save">保存设置</span></div>
+                    <div class="pure-save"><span id="pure-save" class="button--save"><?php _e('Save', 'Farallon') ?></span></div>
                 </form>
             </div>
         </div>
@@ -142,11 +142,11 @@ class farallonSetting
     ?>
         <tr>
             <th scope="row">
-                <label for="pure-setting-<?php echo $params['name']; ?>"><?php echo $params['label']; ?></label>
+                <label for="pure-setting-<?php echo $params['name']; ?>"><?php echo __($params['label'], 'Farallon'); ?></label>
             </th>
             <td>
                 <input type="text" id="pure-setting-<?php echo $params['name']; ?>" name="<?php printf('%s[%s]', FARALLO_SETTING_KEY, $params['name']); ?>" value="<?php echo $default; ?>" class="regular-text">
-                <?php printf('<br /><br />%s', $params['description']); ?>
+                <?php printf('<br /><br />%s', __($params['description'], 'Farallon')); ?>
             </td>
         </tr>
     <?php }
@@ -155,11 +155,11 @@ class farallonSetting
     { ?>
         <tr>
             <th scope="row">
-                <label for="pure-setting-<?php echo $params['name']; ?>"><?php echo $params['label']; ?></label>
+                <label for="pure-setting-<?php echo $params['name']; ?>"><?php echo __($params['label'], 'Farallon'); ?></label>
             </th>
             <td>
                 <textarea name="<?php printf('%s[%s]', FARALLO_SETTING_KEY, $params['name']); ?>" id="pure-setting-<?php echo $params['name']; ?>" class="large-text code" rows="5" cols="50"><?php echo $this->get_setting($params['name']); ?></textarea>
-                <?php printf('<br />%s', $params['description']); ?>
+                <?php printf('<br />%s', __($params['description'], 'Farallon')); ?>
             </td>
         </tr>
     <?php }
@@ -171,7 +171,7 @@ class farallonSetting
     ?>
         <tr>
             <th scope="row">
-                <label for="pure-setting-<?php echo $params['name']; ?>"><?php echo $params['label']; ?></label>
+                <label for="pure-setting-<?php echo $params['name']; ?>"><?php echo __($params['label'], 'Farallon'); ?></label>
             </th>
             <td>
                 <a class="pure-setting-switch<?php if ($val) echo ' active'; ?>" href="javascript:;" data-id="pure-setting-<?php echo $params['name']; ?>">
@@ -179,7 +179,7 @@ class farallonSetting
                 </a>
                 <br />
                 <input type="hidden" id="pure-setting-<?php echo $params['name']; ?>" name="<?php printf('%s[%s]', FARALLO_SETTING_KEY, $params['name']); ?>" value="<?php echo $val; ?>" class="regular-text">
-                <?php printf('<br />%s', $params['description']); ?>
+                <?php printf('<br />%s', __($params['description'], 'Farallon')); ?>
             </td>
         </tr>
 <?php }
@@ -190,28 +190,28 @@ $farallonSetting = new farallonSetting(
         "header" => [
             [
                 'id' => 'basic',
-                'title' => '基础设置',
+                'title' => __('Basic Setting', 'Farallon'),
                 'icon' => 'basic'
             ],
             [
                 'id' => 'feature',
-                'title' => '功能设置',
+                'title' => __('Feature Setting', 'Farallon'),
                 'icon' => 'slider'
 
             ],
             [
                 'id' => 'singluar',
-                'title' => '单页设置',
+                'title' => __('Singluar Setting', 'Farallon'),
                 'icon' => 'feature'
             ],
             [
                 'id' => 'meta',
-                'title' => '个人信息',
+                'title' => __('SNS Setting', 'Farallon'),
                 'icon' => 'interface'
             ],
             [
                 'id' => 'custom',
-                'title' => '自定义',
+                'title' => __('Custom Setting', 'Farallon'),
                 'icon' => 'social-contact'
             ]
         ],
@@ -222,38 +222,38 @@ $farallonSetting = new farallonSetting(
                     [
                         'type' => 'textarea',
                         'name' => 'description',
-                        'label' => '网站描述',
-                        'description' => '用简洁凝练的话对你的网站进行描述'
+                        'label' => __('Description', 'Farallon'),
+                        'description' => __('Site description', 'Farallon'),
                     ],
                     [
                         'type' => 'textarea',
                         'name' => 'headcode',
-                        'label' => '头部代码',
-                        'description' => '可以向head标签中加入内容，如站点验证标签等'
+                        'label' => __('Headcode', 'Farallon'),
+                        'description' => __('You can add content to the head tag, such as site verification tags, and so on.', 'Farallon'),
                     ],
                     [
                         'type' => 'input',
                         'name' => 'logo',
-                        'label' => 'logo',
-                        'description' => 'logo 地址，最好是正方形'
+                        'label' => __('Logo', 'Farallon'),
+                        'description' => __('Logo address, preferably in a square shape.', 'Farallon'),
                     ],
                     [
                         'type' => 'input',
                         'name' => 'favicon',
-                        'label' => 'favicon',
-                        'description' => 'favicon 地址'
+                        'label' => __('Favicon', 'Farallon'),
+                        'description' => __('Favicon address', 'Farallon'),
                     ],
                     [
                         'type' => 'input',
                         'name' => 'title_sep',
-                        'label' => '标题分隔符',
-                        'description' => '一经输入请勿修改，默认为<code>-</code>'
+                        'label' => __('Title sep', 'Farallon'),
+                        'description' => __('Default is', 'Farallon') . '<code>-</code>',
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'disable_block_css',
-                        'label' => '禁用区块样式',
-                        'description' => '不加载区块样式文件'
+                        'label' => __('Disable block css', 'Farallon'),
+                        'description' => __('Do not load block-style files.', 'Farallon')
                     ],
                 ]
             ],
@@ -263,68 +263,68 @@ $farallonSetting = new farallonSetting(
                     [
                         'type' => 'switch',
                         'name' => 'upyun',
-                        'label' => '又拍云',
-                        'description' => '确保所有图片均已上传至又拍云，否则缩略图可能无法正常显示。'
+                        'label' => __('Upyun CDN', 'Farallon'),
+                        'description' => __('Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly.', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'oss',
-                        'label' => '阿里云OSS',
-                        'description' => '确保所有图片均已上传至阿里云OSS，否则缩略图可能无法正常显示。'
+                        'label' => __('Aliyun OSS CDN', 'Farallon'),
+                        'description' => __('Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display properly.', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'qiniu',
-                        'label' => '七牛云',
-                        'description' => '确保所有图片均已上传至阿里云七牛云，否则缩略图可能无法正常显示。'
+                        'label' => __('Qiniu OSS CDN', 'Farallon'),
+                        'description' => __('Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display properly.', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'darkmode',
-                        'label' => '暗黑模式',
-                        'description' => '暗黑模式开关'
+                        'label' => __('Dark Mode', 'Farallon'),
+                        'description' => __('Enable dark mode', 'Farallon')
                     ],
                     [
                         'type' => 'input',
                         'name' => 'default_thumbnail',
-                        'label' => '默认缩略图',
-                        'description' => '文章没有图片时的默认缩略图'
+                        'label' => __('Default thumbnail', 'Farallon'),
+                        'description' => __('Default thumbnail address', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'back2top',
-                        'label' => '返回顶部',
-                        'description' => '展示返回顶部按钮'
+                        'label' => __('Back to top', 'Farallon'),
+                        'description' => __('Enable back to top', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'loadmore',
-                        'label' => '无限加载',
-                        'description' => '关闭分页菜单，使用js加载更多'
+                        'label' => __('Load more', 'Farallon'),
+                        'description' => __('Enable load more', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'home_author',
-                        'label' => '作者信息',
-                        'description' => '首页作者信息展示'
+                        'label' => __('Author info', 'Farallon'),
+                        'description' => __('Enable author info in homepage', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'home_cat',
-                        'label' => '分类信息',
-                        'description' => '首页分类信息展示'
+                        'label' => __('Category info', 'Farallon'),
+                        'description' => __('Enable category info in homepage', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'home_like',
-                        'label' => '文章点赞',
-                        'description' => '首页文章点赞信息展示'
+                        'label' => __('Like info', 'Farallon'),
+                        'description' => __('Enable like info in homepage', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'hide_home_cover',
-                        'label' => '缩略图',
-                        'description' => '不展示首页缩略图'
+                        'label' => __('Hide home cover', 'Farallon'),
+                        'description' => __('Hide home cover', 'Farallon')
                     ],
                 ]
             ],
@@ -335,44 +335,44 @@ $farallonSetting = new farallonSetting(
                     [
                         'type' => 'switch',
                         'name' => 'bio',
-                        'label' => '作者信息',
-                        'description' => '侧边栏作者信息展示'
+                        'label' => __('Author bio', 'Farallon'),
+                        'description' => __('Enable author bio', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'related',
-                        'label' => '相关文章',
-                        'description' => '文章内容尾部相关文章展示'
+                        'label' => __('Related posts', 'Farallon'),
+                        'description' => __('Enable related posts', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'postlike',
-                        'label' => '文章点赞',
-                        'description' => '文章内容尾部文章点赞按钮展示'
+                        'label' => __('Post like', 'Farallon'),
+                        'description' => __('Enable post like', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'post_navigation',
-                        'label' => '上下文导航',
-                        'description' => '展示前一篇后一篇文章'
+                        'label' => __('Post navigation', 'Farallon'),
+                        'description' => __('Enable post navigation', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'show_copylink',
-                        'label' => '分享链接',
-                        'description' => '是否展示复制链接分享'
+                        'label' => __('Copy link', 'Farallon'),
+                        'description' => __('Enable copy link', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'show_parent',
-                        'label' => '父级评论',
-                        'description' => '评论内容中展示回复的父级评论'
+                        'label' => __('Show parent comment', 'Farallon'),
+                        'description' => __('Enable show parent comment', 'Farallon')
                     ],
                     [
                         'type' => 'switch',
                         'name' => 'toc',
-                        'label' => '文章目录',
-                        'description' => '根据h标题生成文字目录'
+                        'label' => __('Table of content', 'Farallon'),
+                        'description' => __('Enable table of content', 'Farallon')
                     ],
 
                 ]
@@ -383,38 +383,38 @@ $farallonSetting = new farallonSetting(
                     [
                         'type' => 'input',
                         'name' => 'telegram',
-                        'label' => 'telegram',
-                        'description' => 'telegram 链接'
+                        'label' => __('Telegram', 'Farallon'),
+                        'description' => __('Telegram link', 'Farallon')
                     ],
                     [
                         'type' => 'input',
                         'name' => 'telegram_group',
-                        'label' => 'telegram 组群',
-                        'description' => 'telegram 组群链接'
+                        'label' => __('Telegram group', 'Farallon'),
+                        'description' => __('Telegram group link', 'Farallon')
                     ],
                     [
                         'type' => 'input',
                         'name' => 'telegram_channel',
-                        'label' => 'telegram 频道',
-                        'description' => 'telegram 频道链接'
+                        'label' => __('Telegram channel', 'Farallon'),
+                        'description' => __('Telegram channel link', 'Farallon')
                     ],
                     [
                         'type' => 'input',
                         'name' => 'instagram',
-                        'label' => 'instagram',
-                        'description' => 'instagram 链接'
+                        'label' => __('Instagram', 'Farallon'),
+                        'description' => __('Instagram link', 'Farallon')
                     ],
                     [
                         'type' => 'input',
                         'name' => 'twitter',
-                        'label' => 'twitter',
-                        'description' => 'twitter 链接'
+                        'label' => __('Twitter', 'Farallon'),
+                        'description' => __('Twitter link', 'Farallon')
                     ],
                     [
                         'type' => 'input',
                         'name' => 'rss',
-                        'label' => 'RSS地址',
-                        'description' => 'RSS地址'
+                        'label' => __('RSS', 'Farallon'),
+                        'description' => __('RSS link', 'Farallon')
                     ],
                 ]
             ],
@@ -424,20 +424,20 @@ $farallonSetting = new farallonSetting(
                     [
                         'type' => 'textarea',
                         'name' => 'css',
-                        'label' => 'CSS变量',
-                        'description' => 'CSS变量'
+                        'label' => __('CSS', 'Farallon'),
+                        'description' => __('Custom CSS', 'Farallon')
                     ],
                     [
                         'type' => 'textarea',
                         'name' => 'javascript',
-                        'label' => 'JS 模块',
-                        'description' => '自定义JS脚本'
+                        'label' => __('Javascript', 'Farallon'),
+                        'description' => __('Custom Javascript', 'Farallon')
                     ],
                     [
                         'type' => 'textarea',
                         'name' => 'copyright',
-                        'label' => '版权信息',
-                        'description' => '修改版权信息'
+                        'label' => __('Copyright', 'Farallon'),
+                        'description' => __('Custom footer content', 'Farallon')
                     ],
                 ]
             ],

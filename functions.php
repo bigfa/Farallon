@@ -5,6 +5,14 @@ define('FARALLON_POST_LIKE_KEY', '_postlike');
 define('FARALLON_POST_VIEW_KEY', 'views');
 define('FARALLON_ARCHIVE_VIEW_KEY', 'views');
 
+function farallon_setup()
+{
+    load_theme_textdomain('Farallon', get_template_directory() . '/languages');
+}
+
+
+add_action('after_setup_theme', 'farallon_setup');
+
 include_once('modules/setting.php');
 include_once('modules/base.php');
 include_once('modules/comment.php');
@@ -77,7 +85,7 @@ function link_to_menu_editor($args)
 
     extract($args);
 
-    $link = $link_before . '<a href="' . admin_url('nav-menus.php') . '">' . $before . 'Add a menu' . $after . '</a>' . $link_after;
+    $link = $link_before . '<a href="' . admin_url('nav-menus.php') . '">' . $before .  __('Add a menu', 'Farallon') . $after . '</a>' . $link_after;
 
     if (FALSE !== stripos($items_wrap, '<ul') or FALSE !== stripos($items_wrap, '<ol')) {
         $link = "<li>$link</li>";
@@ -121,7 +129,7 @@ function get_the_link_items($id = null)
         }
         $output .= '</ul>';
     } else {
-        $output = '暂无链接。';
+        $output = __('No links yet', 'Farallon');
     }
     return $output;
 }
@@ -168,7 +176,7 @@ function farallon_comment($comment, $args, $depth)
                 <div class="comment-body">
                     <div class="comment-meta">
                         <div class="comment--avatar">
-                            <img height=42 width=42 alt="<?php echo $comment->comment_author; ?>的头像" aria-label="<?php echo $comment->comment_author; ?>的头像" src="<?php echo get_avatar_url($comment, array('size' => 96)); ?>" class="avatar avatar--lazy" />
+                            <img height=42 width=42 alt="<?php echo $comment->comment_author; ?>" aria-label="<?php echo $comment->comment_author; ?>" src="<?php echo get_avatar_url($comment, array('size' => 96)); ?>" class="avatar avatar--lazy" />
                         </div>
                         <div class="comment--meta">
                             <div class="comment--author" itemprop="author"><?php echo get_comment_author_link(); ?><span class="dot"></span>

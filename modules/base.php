@@ -54,7 +54,7 @@ class farallonBase
             $toc .= str_repeat('</li></ul>', $previous_level - 2);
             $toc .= '</ul>';
 
-            $content = '<details class="farallon--toc" open><summary>目录</summary>' . $toc . '</details>' . $content;
+            $content = '<details class="farallon--toc" open><summary>' . __('Table of content', 'Farallon') . '</summary>' . $toc . '</details>' . $content;
         }
 
         return $content;
@@ -75,7 +75,7 @@ class farallonBase
                 $description = get_post_meta($ID, "_desription", true);
                 echo '<meta name="description" content="' . $description . '">';
             } else {
-                $description = $post->post_title . '，作者:' . get_the_author_meta('nickname', $author) . '，发布于' . get_the_date('Y-m-d');
+                $description = $post->post_title . '，' . __('author', 'Farallon') . ':' . get_the_author_meta('nickname', $author) . '，' . __('published on', 'Farallon') . get_the_date('Y-m-d');
                 echo '<meta name="description" content="' . $description . '">';
             }
         } else {
@@ -85,8 +85,6 @@ class farallonBase
                 $description = single_cat_title('', false) . " - " . trim(strip_tags(category_description()));
             } elseif (is_tag()) {
                 $description = trim(strip_tags(tag_description()));
-            } elseif (is_search()) {
-                $description = $blog_name . ": '" . esc_html($s, 1) . "' 的搜索結果";
             } else {
                 $description = $farallonSetting->get_setting('description');
             }
@@ -99,9 +97,9 @@ class farallonBase
     {
 
         register_sidebar(array(
-            'name'          => '首页顶部',
+            'name'          => __('Homepage Top', 'Farallon'),
             'id'            => 'topbar',
-            'description'   => '首页顶部',
+            'description'   => __('Homepage Top', 'Farallon'),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="heading-title">',
@@ -109,9 +107,9 @@ class farallonBase
         ));
 
         register_sidebar(array(
-            'name'          => '首页底部',
+            'name'          => __('Homepage Bottom', 'Farallon'),
             'id'            => 'footerbar',
-            'description'   => '首页底部',
+            'description'   => __('Homepage Bottom', 'Farallon'),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="heading-title">',
@@ -119,9 +117,9 @@ class farallonBase
         ));
 
         register_sidebar(array(
-            'name'          => '文章底部',
+            'name'          => __('Single Pgae Bottom', 'Farallon'),
             'id'            => 'singlefooterbar',
-            'description'   => '文章底部',
+            'description'   => __('Single Pgae Bottom', 'Farallon'),
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="heading-title">',

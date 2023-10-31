@@ -6,7 +6,7 @@ global $farallonBase;
 <main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
         <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="post--single__meta"><time class="humane--time" itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y-m-d'); ?></time> / <?php the_category(',') ?> / <?php echo (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true); ?> 浏览</div>
+            <div class="post--single__meta"><time class="humane--time" itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y-m-d'); ?></time> / <?php the_category(',') ?> / <?php echo (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true) . __(' views', 'Farallon'); ?></div>
             <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
             <div class="post--single__content graph" itemprop="articleBody">
                 <?php the_content(); ?>
@@ -36,7 +36,7 @@ global $farallonBase;
                             <path d="M18.36 5.64c-1.95-1.96-5.11-1.96-7.07 0L9.88 7.05 8.46 5.64l1.42-1.42c2.73-2.73 7.16-2.73 9.9 0 2.73 2.74 2.73 7.17 0 9.9l-1.42 1.42-1.41-1.42 1.41-1.41c1.96-1.96 1.96-5.12 0-7.07zm-2.12 3.53l-7.07 7.07-1.41-1.41 7.07-7.07 1.41 1.41zm-12.02.71l1.42-1.42 1.41 1.42-1.41 1.41c-1.96 1.96-1.96 5.12 0 7.07 1.95 1.96 5.11 1.96 7.07 0l1.41-1.41 1.42 1.41-1.42 1.42c-2.73 2.73-7.16 2.73-9.9 0-2.73-2.74-2.73-7.17 0-9.9z"></path>
                         </g>
                     </svg>
-                    复制本文链接 <span class="link"><?php the_permalink(); ?></span>
+                    <?php _e('Copy link.', 'Farallon') ?> <span class="link"><?php the_permalink(); ?></span>
                 </div>
             <?php endif; ?>
             <div class="tag--list">
