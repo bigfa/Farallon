@@ -44,6 +44,7 @@ class farallonSetting
                     'restfulBase' => esc_url_raw(rest_url()),
                     'nonce' => wp_create_nonce('wp_rest'),
                     'ajaxurl' => admin_url('admin-ajax.php'),
+                    'success_message' => __('Setting saved success!', 'Farallon'),
                 ]
             );
         }

@@ -26,8 +26,8 @@ document.querySelector('#pure-save')?.addEventListener('click', (event) => {
         data: data + '&action=farallon_setting',
         type: 'POST',
         success: function () {
-            const html = `<div id="farallon-settings_updated" class="notice notice-success settings-error is-dismissible"> 
-            <p><strong>设置已保存。</strong></p><button type="button" class="notice-dismiss"><span class="screen-reader-text">忽略此通知。</span></button></div>`;
+            //@ts-ignore
+            const html = `<div id="farallon-settings_updated" class="notice notice-success settings-error is-dismissible"><p><strong>${obvInit.success_message}</strong></p><button type="button" class="notice-dismiss"></button></div>`;
             //@ts-ignore
             jQuery('.pure-wrap').before(html);
         },
