@@ -220,7 +220,7 @@
     ul,
     ol {
         margin-bottom: 25px;
-        padding-left: 5px;
+        padding-left: 15px;
         li {
             margin-left: 25px;
             margin-bottom: 5px;
@@ -250,7 +250,7 @@
             border: 0 solid #999;
             border-radius: 9999px;
             box-sizing: border-box;
-            color: rgba(85, 134, 210, 0.8);
+            color: var(--farallon-hover-color);
             display: inline-flex;
             height: 19px;
             justify-content: center;
