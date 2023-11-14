@@ -20,6 +20,7 @@ class farallonBase
         add_filter('pre_option_link_manager_enabled', '__return_true');
         add_action('widgets_init', array($this, 'widgets_init'));
         add_action('wp_head', array($this, 'head_output'), 11);
+        add_theme_support('post-thumbnails');
         if ($farallonSetting->get_setting('toc'))
             add_filter('the_content', array($this, 'farallon_toc'));
     }
