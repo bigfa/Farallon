@@ -23,6 +23,15 @@ class farallonBase
         add_theme_support('post-thumbnails');
         if ($farallonSetting->get_setting('toc'))
             add_filter('the_content', array($this, 'farallon_toc'));
+        if ($farallonSetting->get_setting('gravatar_proxy'))
+            add_filter('get_avatar_url', array($this, 'gravatar_proxy'), 10, 3);
+    }
+
+    function gravatar_proxy($url, $id_or_email, $args)
+    {
+        global $farallonSetting;
+        $url = str_replace(array("www.gravatar.com", "cn.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com", "secure.gravatar.com"), $farallonSetting->get_setting('gravatar_proxy'), $url);
+        return $url;
     }
 
     function farallon_toc($content)

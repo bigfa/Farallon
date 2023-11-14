@@ -256,6 +256,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Disable block css', 'Farallon'),
                         'description' => __('Do not load block-style files.', 'Farallon')
                     ],
+                    [
+                        'type' => 'input',
+                        'name' => 'gravatar_proxy',
+                        'label' => __('Gravatar proxy', 'Farallon'),
+                        'description' => __('Gravatar proxy domain,like <code>cravatar.cn</code>', 'Farallon'),
+                    ],
                 ]
             ],
             [
