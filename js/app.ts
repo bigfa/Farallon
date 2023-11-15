@@ -4,6 +4,7 @@ class farallonBase {
     is_archive: boolean = false;
     darkmode: any = false;
     VERSION: string;
+
     constructor() {
         //@ts-ignore
         this.is_single = obvInit.is_single;
