@@ -121,7 +121,19 @@
 
     .author--sns {
         margin-top: 10px;
-        cursor: pointer;
+        display: flex;
+        align-items: center;
+        a {
+            margin: 0 5px;
+        }
+        svg {
+            fill: var(--farallon-text-color);
+            &:hover {
+                fill: var(--farallon-hover-color);
+            }
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
