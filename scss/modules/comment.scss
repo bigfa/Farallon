@@ -119,6 +119,15 @@
     flex: 1 1 auto;
     display: flex;
     align-items: center;
+    &__tip {
+        margin-left: 5px;
+        font-size: 12px;
+        color: var(--farallon-background-white);
+        background-color: var(--farallon-main-color);
+        line-height: 1.1;
+        padding: 2px 5px;
+        border-radius: 3px;
+    }
     .comment-reply-link {
         margin-left: auto;
         svg {

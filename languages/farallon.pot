@@ -1,15 +1,15 @@
-# Copyright (C) 2023 bigfa
+# Copyright (C) 2024 bigfa
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.3.4\n"
+"Project-Id-Version: Farallon 0.3.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
+"POT-Creation-Date: 2024-01-30T07:31:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: Farallon\n"
@@ -31,7 +31,11 @@ msgid "bigfa"
 msgstr ""
 
 #. Author URI of the theme
-msgid "https://fatesinger.com"
+msgid "https://github.com/bigfa"
+msgstr ""
+
+#: comments.php:21
+msgid "This post has no comment yet"
 msgstr ""
 
 #: functions.php:88
@@ -126,11 +130,15 @@ msgstr ""
 msgid "years ago"
 msgstr ""
 
-#: modules/comment.php:84
-#: modules/comment.php:103
-#: modules/comment.php:133
-#: modules/comment.php:146
-#: modules/comment.php:172
+#: modules/comment.php:53
+msgid "Author"
+msgstr ""
+
+#: modules/comment.php:95
+#: modules/comment.php:114
+#: modules/comment.php:144
+#: modules/comment.php:157
+#: modules/comment.php:183
 #: modules/setting.php:28
 msgid "Success"
 msgstr ""
@@ -361,75 +369,83 @@ msgstr ""
 msgid "Enable table of content"
 msgstr ""
 
-#: modules/setting.php:393
+#: modules/setting.php:387
+msgid "Post Author"
+msgstr ""
+
+#: modules/setting.php:388
+msgid "Show post author tip in comment"
+msgstr ""
+
+#: modules/setting.php:398
 msgid "Telegram"
 msgstr ""
 
-#: modules/setting.php:394
+#: modules/setting.php:399
 msgid "Telegram link"
 msgstr ""
 
-#: modules/setting.php:399
+#: modules/setting.php:404
 msgid "Telegram group"
 msgstr ""
 
-#: modules/setting.php:400
+#: modules/setting.php:405
 msgid "Telegram group link"
 msgstr ""
 
-#: modules/setting.php:405
+#: modules/setting.php:410
 msgid "Telegram channel"
 msgstr ""
 
-#: modules/setting.php:406
+#: modules/setting.php:411
 msgid "Telegram channel link"
 msgstr ""
 
-#: modules/setting.php:411
+#: modules/setting.php:416
 msgid "Instagram"
 msgstr ""
 
-#: modules/setting.php:412
+#: modules/setting.php:417
 msgid "Instagram link"
 msgstr ""
 
-#: modules/setting.php:417
+#: modules/setting.php:422
 msgid "Twitter"
 msgstr ""
 
-#: modules/setting.php:418
+#: modules/setting.php:423
 msgid "Twitter link"
 msgstr ""
 
-#: modules/setting.php:423
+#: modules/setting.php:428
 msgid "RSS"
 msgstr ""
 
-#: modules/setting.php:424
+#: modules/setting.php:429
 msgid "RSS link"
 msgstr ""
 
-#: modules/setting.php:434
+#: modules/setting.php:439
 msgid "CSS"
 msgstr ""
 
-#: modules/setting.php:435
+#: modules/setting.php:440
 msgid "Custom CSS"
 msgstr ""
 
-#: modules/setting.php:440
+#: modules/setting.php:445
 msgid "Javascript"
 msgstr ""
 
-#: modules/setting.php:441
+#: modules/setting.php:446
 msgid "Custom Javascript"
 msgstr ""
 
-#: modules/setting.php:446
+#: modules/setting.php:451
 msgid "Copyright"
 msgstr ""
 
-#: modules/setting.php:447
+#: modules/setting.php:452
 msgid "Custom footer content"
 msgstr ""
 

@@ -381,7 +381,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Table of content', 'Farallon'),
                         'description' => __('Enable table of content', 'Farallon')
                     ],
-
+                    [
+                        'type' => 'switch',
+                        'name' => 'show_author',
+                        'label' => __('Post Author', 'Farallon'),
+                        'description' => __('Show post author tip in comment', 'Farallon')
+                    ]
                 ]
             ],
             [

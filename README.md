@@ -4,11 +4,16 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.3.7`
+latest version : `0.3.8`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.3.8
+
+- add post author tip in comment item
+- hack douban list style in dark mode
 
 ### 0.3.7
 

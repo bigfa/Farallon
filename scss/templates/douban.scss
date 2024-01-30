@@ -17,7 +17,8 @@
         rgba(255, 233, 244, 0.3) 0%,
         rgba(234, 243, 255, 0.5) 100%
     );
-    border-color: rgba(0, 0, 0, 0.02);
+    border-color: var(--farallon-border-color);
+    color: var(--farallon-text-gray);
 }
 
 .u-hide {
