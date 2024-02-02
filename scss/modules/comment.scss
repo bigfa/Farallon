@@ -282,6 +282,10 @@
         width: 16px;
         fill: var(--farallon-text-gray);
         margin-right: 4px;
+        flex: 0 0 auto;
+    }
+    .text {
+        flex: 0 0 auto;
     }
     cursor: pointer;
     display: flex;
@@ -292,8 +296,11 @@
     color: var(--farallon-text-gray);
     line-height: 1.2;
     .link {
-        margin-left: 4px;
+        margin-left: 5px;
         border-bottom: 1px dotted var(--farallon-hover-color);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
