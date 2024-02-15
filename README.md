@@ -4,11 +4,17 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.3.9`
+latest version : `0.4.0`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.4.0
+
+- add category cover config
+- add category list template
+- add post status format archive template(memes)
 
 ### 0.3.9
 

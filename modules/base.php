@@ -20,11 +20,40 @@ class farallonBase
         add_filter('pre_option_link_manager_enabled', '__return_true');
         add_action('widgets_init', array($this, 'widgets_init'));
         add_action('wp_head', array($this, 'head_output'), 11);
+        add_action('edit_category_form_fields', array($this, 'add_category_cover_form_item'));
+        add_action('edited_terms', array($this, 'update_my_category_fields'));
         add_theme_support('post-thumbnails');
         if ($farallonSetting->get_setting('toc'))
             add_filter('the_content', array($this, 'farallon_toc'));
         if ($farallonSetting->get_setting('gravatar_proxy'))
             add_filter('get_avatar_url', array($this, 'gravatar_proxy'), 10, 3);
+    }
+
+    function update_my_category_fields($term_id)
+    {
+        if ($_POST['taxonomy'] == 'category') :
+            if ($_POST['_category_cover']) {
+                update_term_meta($term_id, '_thumb', $_POST['_category_cover']);
+            } else {
+                delete_term_meta($term_id, '_thumb');
+            }
+        endif;
+    }
+
+    //Adds the custom title box to the category editor
+    function add_category_cover_form_item($category)
+    {
+        $cover  = get_term_meta($category->term_id, '_thumb', true);
+?>
+        <table class="form-table">
+            <tr class="form-field">
+                <th scope="row" valign="top"><label for="_ce4-categoryTitle">Covor</label></th>
+                <td><input name="_category_cover" id="_ce4-categoryTitle" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" />
+                    <p class="description">The title is optional but will be used in place of the name on the home page category index.</p>
+                </td>
+            </tr>
+        </table>
+<?php
     }
 
     function gravatar_proxy($url, $id_or_email, $args)

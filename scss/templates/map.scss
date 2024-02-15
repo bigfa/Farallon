@@ -68,3 +68,65 @@
     padding-top: 30px;
     padding-bottom: 30px;
 }
+
+.template--terms {
+    padding: 50px 80px;
+    .page--header {
+        padding: 0px 0 40px;
+        text-align: center;
+    }
+}
+
+.collectionCard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+    &--item {
+        transition: 0.5s;
+    }
+
+    &--image {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+        border: 1px solid var(--farallon-border-color);
+    }
+
+    &--meta {
+        padding-top: 5px;
+    }
+
+    &--title {
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: 8px;
+    }
+
+    &--description {
+        font-size: 14px;
+        color: var(--farallon-text-gray);
+        line-height: 1.5;
+    }
+
+    &--count {
+        font-size: 12px;
+        color: var(--farallon-text-gray);
+    }
+}
+
+@media (max-width: 920px) {
+    .template--terms {
+        padding: 50px 20px;
+    }
+    .collectionCard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .collectionCard {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
