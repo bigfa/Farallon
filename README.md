@@ -4,11 +4,19 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.4.0`
+latest version : `0.4.2`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.4.2
+
+- improve `Marker Pro` support
+
+### 0.4.1
+
+- term list style change
 
 ### 0.4.0
 

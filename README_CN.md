@@ -2,13 +2,21 @@
 
 ![Wordpress 主题 Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
-最新版本: `0.4.0`
+最新版本: `0.4.2`
 
 本主题禁止各种修改作者链接打包重新发布的行为。
 
 [简单的使用文档](https://fatesinger.com/101971)
 
 ## 更新日志
+
+### 0.4.2
+
+- Marker Pro 兼容增强
+
+### 0.4.1
+
+- 分类列表样式调整
 
 ### 0.4.0
 
