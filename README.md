@@ -12,7 +12,7 @@ latest version : `0.4.2`
 
 ### 0.4.2
 
-- improve `Marker Pro` support
+- fixed related post cover size error when img does not have enough width
 
 ### 0.4.1
 
