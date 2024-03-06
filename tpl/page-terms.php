@@ -19,18 +19,15 @@ get_header(); ?>
             foreach ($categories as $category) {
                 $link = get_term_link($category, 'category')
             ?>
-                <div class="collectionCard--item">
+                <a class="collectionCard--item" title="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" href="<?php echo $link; ?>" data-count="<?php echo $category->count; ?>">
                     <?php if (get_term_meta($category->term_id, '_thumb', true)) : ?>
                         <img class="collectionCard--image" alt="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" src="<?php echo get_term_meta($category->term_id, '_thumb', true); ?>">
                     <?php endif ?>
                     <div class="collectionCard--meta">
-                        <div class="collectionCard--title"><a title="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" href="<?php echo $link; ?>"><?php echo $category->name; ?></a>
-                        </div>
+                        <div class="collectionCard--title"><?php echo $category->name; ?></div>
                         <div class="collectionCard--description"><?php echo $category->description; ?></div>
-
                     </div>
-                    <!-- <div class="collectionCard--count"><?php echo $category->count; ?></div> -->
-                </div>
+                </a>
             <?php } ?>
         </div>
     <?php endwhile; ?>

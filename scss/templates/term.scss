@@ -9,22 +9,44 @@
 .collectionCard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    grid-gap: 15px;
 
     &--item {
         transition: 0.5s;
+        padding: 8px;
+        border: 1px solid var(--farallon-border-color);
+        border-radius: 5px;
+        &:hover {
+            .collectionCard--title {
+                color: var(--farallon-hover-color);
+                text-decoration: underline;
+            }
+        }
+        overflow: hidden;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: attr(data-count);
+            opacity: 0.15;
+            bottom: -8px;
+            right: -5px;
+            color: var(--farallon-text-gray-lightest);
+            font-size: 60px;
+            font-style: italic;
+            font-weight: bold;
+            line-height: 1;
+        }
     }
 
     &--image {
         height: 150px;
         width: 100%;
         object-fit: cover;
-        border-radius: 5px;
-        border: 1px solid var(--farallon-border-color);
+        border-radius: 3px;
     }
 
     &--meta {
-        padding-top: 5px;
+        padding: 5px;
     }
 
     &--title {
@@ -34,9 +56,9 @@
     }
 
     &--description {
-        font-size: 14px;
+        font-size: 12px;
         color: var(--farallon-text-gray);
-        line-height: 1.5;
+        line-height: 1.2;
     }
 
     &--count {
