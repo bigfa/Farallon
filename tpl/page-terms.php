@@ -12,9 +12,9 @@ get_header(); ?>
             <?php $categories = get_terms([
                 'taxonomy' => 'category',
                 'hide_empty' => false,
-                'orderby' => 'meta_value_num',
+                // 'orderby' => 'meta_value_num',
                 'order' => 'DESC',
-                'meta_key' => '_views',
+                // 'meta_key' => '_views',
             ]);
             foreach ($categories as $category) {
                 $link = get_term_link($category, 'category')
