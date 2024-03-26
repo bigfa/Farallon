@@ -346,3 +346,11 @@
         }
     }
 }
+
+.wp-caption {
+    &-text {
+        text-align: center;
+        font-size: 12px;
+        color: var(--farallon-text-light);
+    }
+}
