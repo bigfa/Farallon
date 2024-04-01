@@ -30,6 +30,7 @@ document.querySelector('#pure-save')?.addEventListener('click', (event) => {
             const html = `<div id="farallon-settings_updated" class="notice notice-success settings-error is-dismissible"><p><strong>${obvInit.success_message}</strong></p><button type="button" class="notice-dismiss"></button></div>`;
             //@ts-ignore
             jQuery('.pure-wrap').before(html);
+            window.scrollTo(0, 0);
         },
     });
 });

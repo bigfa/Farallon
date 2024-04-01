@@ -11,6 +11,13 @@ class farallonComment
             add_filter('get_comment_author', array($this, 'get_comment_author_hack'), 10, 3);
         if ($farallonSetting->get_setting('show_parent'))
             add_filter('get_comment_text',  array($this, 'hack_get_comment_text'), 0, 2);
+        if ($farallonSetting->get_setting('disable_comment_link'))
+            add_filter('get_comment_author_link', array($this, 'get_comment_author_link_hack'), 10, 3);
+    }
+
+    function get_comment_author_link_hack($comment_author_link, $comment_author, $comment_id)
+    {
+        return $comment_author;
     }
 
     function register_routes()

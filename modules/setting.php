@@ -386,6 +386,12 @@ $farallonSetting = new farallonSetting(
                         'name' => 'show_author',
                         'label' => __('Post Author', 'Farallon'),
                         'description' => __('Show post author tip in comment', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'disable_comment_link',
+                        'label' => __('Disable comment link', 'Farallon'),
+                        'description' => __('Disable comment author url', 'Farallon')
                     ]
                 ]
             ],
