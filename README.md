@@ -4,11 +4,16 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.4.5`
+latest version : `0.4.6`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.4.6
+
+- fixed some style error
+- show category image in archive template
 
 ### 0.4.5
 
