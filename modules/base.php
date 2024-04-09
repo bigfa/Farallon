@@ -23,6 +23,7 @@ class farallonBase
         add_action('edit_category_form_fields', array($this, 'add_category_cover_form_item'));
         add_action('edited_terms', array($this, 'update_my_category_fields'));
         add_theme_support('post-thumbnails');
+        add_filter('template_include', array($this, 'category_card_template'), 1);
         if ($farallonSetting->get_setting('toc'))
             add_filter('the_content', array($this, 'farallon_toc'));
         if ($farallonSetting->get_setting('gravatar_proxy'))
@@ -37,19 +38,51 @@ class farallonBase
             } else {
                 delete_term_meta($term_id, '_thumb');
             }
+
+            if ($_POST['_category_card']) {
+                update_term_meta($term_id, '_card', 1);
+            } else {
+                delete_term_meta($term_id, '_card');
+            }
+
         endif;
+    }
+
+    function category_card_template($template_path)
+    {
+        global $wp_query;
+        if (is_category()) {
+            $category_id = get_queried_object_id();
+            $card = get_term_meta($category_id, '_card', true);
+            if ($card) {
+                $template_path = get_template_directory() . '/category-travel.php';
+            }
+        }
+        return $template_path;
     }
 
     //Adds the custom title box to the category editor
     function add_category_cover_form_item($category)
     {
         $cover  = get_term_meta($category->term_id, '_thumb', true);
+        $card  = get_term_meta($category->term_id, '_card', true);
 ?>
         <table class="form-table">
             <tr class="form-field">
-                <th scope="row" valign="top"><label for="_ce4-categoryTitle">Covor</label></th>
-                <td><input name="_category_cover" id="_ce4-categoryTitle" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" />
+                <th scope="row" valign="top"><label for="_category_cover">Covor</label></th>
+                <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" />
                     <p class="description">The title is optional but will be used in place of the name on the home page category index.</p>
+                </td>
+            </tr>
+            <tr class="form-field">
+                <th scope="row">卡片模版</th>
+                <td>
+                    <fieldset>
+                        <legend class="screen-reader-text"><span>
+                                卡片模版</span></legend><label for="_category_card">
+                            <input name="_category_card" type="checkbox" id="_category_card" value="1" <?php if ($card) echo 'checked' ?>>
+                            使用卡片模版</label>
+                    </fieldset>
                 </td>
             </tr>
         </table>
