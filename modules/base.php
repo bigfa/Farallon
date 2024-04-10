@@ -32,7 +32,7 @@ class farallonBase
 
     function update_my_category_fields($term_id)
     {
-        if ($_POST['taxonomy'] == 'category') :
+        if (isset($_POST['taxonomy']) && $_POST['taxonomy'] == 'category') :
             if ($_POST['_category_cover']) {
                 update_term_meta($term_id, '_thumb', $_POST['_category_cover']);
             } else {
@@ -69,19 +69,19 @@ class farallonBase
 ?>
         <table class="form-table">
             <tr class="form-field">
-                <th scope="row" valign="top"><label for="_category_cover">Covor</label></th>
+                <th scope="row" valign="top"><label for="_category_cover"><?php _e('Cover', 'Farallon'); ?></label></th>
                 <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" />
-                    <p class="description">The title is optional but will be used in place of the name on the home page category index.</p>
+                    <p class="description"><?php _e('The title is optional but will be used in place of the name on the home page category index.', 'Farallon'); ?></p>
                 </td>
             </tr>
             <tr class="form-field">
-                <th scope="row">卡片模版</th>
+                <th scope="row"><?php _e('Card Template', 'Farallon'); ?></th>
                 <td>
                     <fieldset>
                         <legend class="screen-reader-text"><span>
-                                卡片模版</span></legend><label for="_category_card">
+                                <?php _e('Card Template', 'Farallon'); ?></span></legend><label for="_category_card">
                             <input name="_category_card" type="checkbox" id="_category_card" value="1" <?php if ($card) echo 'checked' ?>>
-                            使用卡片模版</label>
+                            <?php _e('Use Card Template', 'Farallon'); ?></label>
                     </fieldset>
                 </td>
             </tr>

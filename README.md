@@ -4,11 +4,15 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.4.7`
+latest version : `0.4.8`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.4.8
+
+- fixed some style error
 
 ### 0.4.7
 
