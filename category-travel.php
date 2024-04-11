@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <header class="archive-header">
     <?php if (get_term_meta(get_queried_object_id(), '_thumb', true)) : ?>
         <img src="<?php echo get_term_meta(get_queried_object_id(), '_thumb', true); ?>" alt="<?php single_term_title('', true); ?>" class="archive-header-image">

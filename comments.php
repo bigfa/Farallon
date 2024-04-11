@@ -16,16 +16,14 @@ if (post_password_required()) {
     <ol class="commentlist sulliComment--list">
         <?php if (have_comments()) {
             wp_list_comments(array('style' => 'ol', 'avatar_size' => 48, 'callback' => 'farallon_comment'));
-        } else {
-        ?>
+        } else { ?>
             <li class="no--comment"><?php _e('This post has no comment yet', 'Farallon'); ?></li>
         <?php } ?>
     </ol>
     <nav class="nav-links nav-links__comment">
         <?php paginate_comments_links([
             'prev_next' => false
-        ]); // check for comment navigation 
-        ?>
+        ]); ?>
     </nav>
     <?php if (comments_open()) :
         comment_form();

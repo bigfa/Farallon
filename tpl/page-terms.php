@@ -3,6 +3,7 @@
 Template Name: Terms
 */
 get_header(); ?>
+
 <div class="template--terms">
     <?php while (have_posts()) : the_post(); ?>
         <article class="post--single__douban">
@@ -32,4 +33,5 @@ get_header(); ?>
         </article>
     <?php endwhile; ?>
 </div>
+
 <?php get_footer(); ?>

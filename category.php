@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <header class="archive-header">
     <?php if (get_term_meta(get_queried_object_id(), '_thumb', true)) : ?>
         <img src="<?php echo get_term_meta(get_queried_object_id(), '_thumb', true); ?>" alt="<?php single_term_title('', true); ?>" class="archive-header-image">
@@ -9,14 +10,12 @@
     </div>
 </header>
 <main class="site--main">
-    <?php
-    if (have_posts()) :
+    <?php if (have_posts()) :
         while (have_posts()) : the_post();
             get_template_part('template-parts/content', get_post_format());
         endwhile;
         get_template_part('template-parts/pagination');
-    endif;
-    ?>
+    endif; ?>
 </main>
 
 <?php get_footer(); ?>

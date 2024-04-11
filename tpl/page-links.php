@@ -5,6 +5,7 @@ Template Post Type: page
 */
 get_header();
 ?>
+
 <div class="template--links">
     <?php while (have_posts()) : the_post(); ?>
         <h2 class="hero--title"><?php the_title(); ?></h2>
@@ -13,4 +14,5 @@ get_header();
         </div>
     <?php endwhile; ?>
 </div>
+
 <?php get_footer(); ?>

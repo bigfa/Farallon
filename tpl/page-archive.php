@@ -5,6 +5,7 @@ Template Post Type: page
 */
 get_header();
 ?>
+
 <main class="page--archive">
     <?php
     $args = [
@@ -50,4 +51,5 @@ get_header();
     echo $output;
     ?>
 </main>
+
 <?php get_footer(); ?>

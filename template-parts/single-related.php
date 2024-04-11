@@ -5,8 +5,8 @@
         'post__not_in' => array(get_the_ID()),
         'posts_per_page' => 6,
         'category__in' => wp_get_post_categories(get_the_ID())
-    )); ?>
-    <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+    ));
+    while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <div class="post--single__related__item">
             <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                 <div class="post--single__related__item__img">
@@ -25,6 +25,5 @@
             </a>
         </div>
     <?php endwhile;
-    wp_reset_postdata();
-    ?>
+    wp_reset_postdata(); ?>
 </div>

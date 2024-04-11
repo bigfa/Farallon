@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <main class="site--main">
-    <?php while (have_posts()) : the_post(); ?>
-        <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article">
+        <?php while (have_posts()) : the_post(); ?>
             <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
             <div class="post__single__content graph" itemprop="articleBody">
                 <?php the_content(); ?>
@@ -22,8 +22,8 @@
                 endif;
                 ?>
             </div>
-        </article>
-    <?php endwhile; ?>
+        <?php endwhile; ?>
+    </article>
 </main>
 
 <?php get_footer(); ?>

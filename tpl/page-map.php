@@ -13,11 +13,9 @@ get_header(); ?>
                 <?php the_content(); ?>
             </div>
             <div class="post__single__comments">
-                <?php
-                if (comments_open() || get_comments_number()) :
+                <?php if (comments_open() || get_comments_number()) :
                     comments_template();
-                endif;
-                ?>
+                endif; ?>
             </div>
         </article>
     <?php endwhile; ?>

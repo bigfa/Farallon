@@ -65,8 +65,7 @@ class farallonBase
     function add_category_cover_form_item($category)
     {
         $cover  = get_term_meta($category->term_id, '_thumb', true);
-        $card  = get_term_meta($category->term_id, '_card', true);
-?>
+        $card  = get_term_meta($category->term_id, '_card', true); ?>
         <table class="form-table">
             <tr class="form-field">
                 <th scope="row" valign="top"><label for="_category_cover"><?php _e('Cover', 'Farallon'); ?></label></th>
@@ -86,8 +85,7 @@ class farallonBase
                 </td>
             </tr>
         </table>
-<?php
-    }
+<?php }
 
     function gravatar_proxy($url, $id_or_email, $args)
     {
