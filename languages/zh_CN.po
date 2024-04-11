@@ -43,6 +43,23 @@ msgstr "增加菜单"
 msgid "No links yet"
 msgstr "尚无链接"
 
+#: modules/base.php:72
+msgid "Cover"
+msgstr "封面缩略图"
+
+#: modules/base.php:74
+msgid "Category cover url."
+msgstr "分类封面缩略图地址"
+
+#: modules/base.php:78
+#: modules/base.php:82
+msgid "Card Template"
+msgstr "卡片模版"
+
+#: modules/base.php:84
+msgid "Use Card Template"
+msgstr "使用卡片模版"
+
 #: modules/base.php:67 modules/setting.php:381
 msgid "Table of content"
 msgstr "文章目录"

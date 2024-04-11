@@ -4,11 +4,16 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.4.8`
+latest version : `0.4.9`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.4.9
+
+- disable toc in homepage
+- fixed translation error
 
 ### 0.4.8
 

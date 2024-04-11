@@ -2,35 +2,40 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.3.8\n"
+"Project-Id-Version: Farallon 0.4.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-01-30T07:31:45+00:00\n"
+"POT-Creation-Date: 2024-04-11T04:03:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.9.0\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: Farallon\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "Farallon"
 msgstr ""
 
 #. Theme URI of the theme
-msgid "https://fatesinger.com/101971"
+#: style.css
+msgid "https://github.com/bigfa/Farallon"
 msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid "theme 2024"
 msgstr ""
 
 #. Author of the theme
+#: style.css
 msgid "bigfa"
 msgstr ""
 
 #. Author URI of the theme
+#: style.css
 msgid "https://github.com/bigfa"
 msgstr ""
 
@@ -46,99 +51,116 @@ msgstr ""
 msgid "No links yet"
 msgstr ""
 
-#: modules/base.php:67
+#: modules/base.php:72
+msgid "Cover"
+msgstr ""
+
+#: modules/base.php:74
+msgid "Category cover url."
+msgstr ""
+
+#: modules/base.php:78
+#: modules/base.php:82
+msgid "Card Template"
+msgstr ""
+
+#: modules/base.php:84
+msgid "Use Card Template"
+msgstr ""
+
+#: modules/base.php:129
 #: modules/setting.php:381
 msgid "Table of content"
 msgstr ""
 
-#: modules/base.php:88
+#: modules/base.php:150
 msgid "author"
 msgstr ""
 
-#: modules/base.php:88
+#: modules/base.php:150
 msgid "published on"
 msgstr ""
 
-#: modules/base.php:110
-#: modules/base.php:112
+#: modules/base.php:172
+#: modules/base.php:174
 msgid "Homepage Top"
 msgstr ""
 
-#: modules/base.php:120
-#: modules/base.php:122
+#: modules/base.php:182
+#: modules/base.php:184
 msgid "Homepage Bottom"
 msgstr ""
 
-#: modules/base.php:130
-#: modules/base.php:132
+#: modules/base.php:192
+#: modules/base.php:194
 msgid "Single Pgae Bottom"
 msgstr ""
 
-#: modules/base.php:191
+#: modules/base.php:253
 msgid "second ago"
 msgstr ""
 
-#: modules/base.php:192
+#: modules/base.php:254
 msgid "seconds ago"
 msgstr ""
 
-#: modules/base.php:193
+#: modules/base.php:255
 msgid "minute ago"
 msgstr ""
 
-#: modules/base.php:194
+#: modules/base.php:256
 msgid "minutes ago"
 msgstr ""
 
-#: modules/base.php:195
+#: modules/base.php:257
 msgid "hour ago"
 msgstr ""
 
-#: modules/base.php:196
+#: modules/base.php:258
 msgid "hours ago"
 msgstr ""
 
-#: modules/base.php:197
+#: modules/base.php:259
 msgid "day ago"
 msgstr ""
 
-#: modules/base.php:198
+#: modules/base.php:260
 msgid "days ago"
 msgstr ""
 
-#: modules/base.php:199
+#: modules/base.php:261
 msgid "week ago"
 msgstr ""
 
-#: modules/base.php:200
+#: modules/base.php:262
 msgid "weeks ago"
 msgstr ""
 
-#: modules/base.php:201
+#: modules/base.php:263
 msgid "month ago"
 msgstr ""
 
-#: modules/base.php:202
+#: modules/base.php:264
 msgid "months ago"
 msgstr ""
 
-#: modules/base.php:203
+#: modules/base.php:265
 msgid "year ago"
 msgstr ""
 
-#: modules/base.php:204
+#: modules/base.php:266
 msgid "years ago"
 msgstr ""
 
-#: modules/comment.php:53
+#: modules/comment.php:60
 msgid "Author"
 msgstr ""
 
-#: modules/comment.php:95
-#: modules/comment.php:114
-#: modules/comment.php:144
-#: modules/comment.php:157
-#: modules/comment.php:183
+#: modules/comment.php:102
+#: modules/comment.php:121
+#: modules/comment.php:151
+#: modules/comment.php:164
+#: modules/comment.php:190
 #: modules/setting.php:28
 msgid "Success"
 msgstr ""
@@ -377,75 +399,83 @@ msgstr ""
 msgid "Show post author tip in comment"
 msgstr ""
 
-#: modules/setting.php:398
-msgid "Telegram"
+#: modules/setting.php:393
+msgid "Disable comment link"
 msgstr ""
 
-#: modules/setting.php:399
-msgid "Telegram link"
+#: modules/setting.php:394
+msgid "Disable comment author url"
 msgstr ""
 
 #: modules/setting.php:404
-msgid "Telegram group"
+msgid "Telegram"
 msgstr ""
 
 #: modules/setting.php:405
-msgid "Telegram group link"
+msgid "Telegram link"
 msgstr ""
 
 #: modules/setting.php:410
-msgid "Telegram channel"
+msgid "Telegram group"
 msgstr ""
 
 #: modules/setting.php:411
-msgid "Telegram channel link"
+msgid "Telegram group link"
 msgstr ""
 
 #: modules/setting.php:416
-msgid "Instagram"
+msgid "Telegram channel"
 msgstr ""
 
 #: modules/setting.php:417
-msgid "Instagram link"
+msgid "Telegram channel link"
 msgstr ""
 
 #: modules/setting.php:422
-msgid "Twitter"
+msgid "Instagram"
 msgstr ""
 
 #: modules/setting.php:423
-msgid "Twitter link"
+msgid "Instagram link"
 msgstr ""
 
 #: modules/setting.php:428
-msgid "RSS"
+msgid "Twitter"
 msgstr ""
 
 #: modules/setting.php:429
+msgid "Twitter link"
+msgstr ""
+
+#: modules/setting.php:434
+msgid "RSS"
+msgstr ""
+
+#: modules/setting.php:435
 msgid "RSS link"
 msgstr ""
 
-#: modules/setting.php:439
+#: modules/setting.php:445
 msgid "CSS"
 msgstr ""
 
-#: modules/setting.php:440
+#: modules/setting.php:446
 msgid "Custom CSS"
 msgstr ""
 
-#: modules/setting.php:445
+#: modules/setting.php:451
 msgid "Javascript"
 msgstr ""
 
-#: modules/setting.php:446
+#: modules/setting.php:452
 msgid "Custom Javascript"
 msgstr ""
 
-#: modules/setting.php:451
+#: modules/setting.php:457
 msgid "Copyright"
 msgstr ""
 
-#: modules/setting.php:452
+#: modules/setting.php:458
 msgid "Custom footer content"
 msgstr ""
 
@@ -455,6 +485,14 @@ msgstr ""
 
 #: modules/widget.php:8
 msgid "About"
+msgstr ""
+
+#: modules/widget.php:32
+msgid "show your category card"
+msgstr ""
+
+#: modules/widget.php:33
+msgid "Categories"
 msgstr ""
 
 #: single.php:9
@@ -503,4 +541,8 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Map"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Terms"
 msgstr ""

@@ -71,7 +71,7 @@ class farallonBase
             <tr class="form-field">
                 <th scope="row" valign="top"><label for="_category_cover"><?php _e('Cover', 'Farallon'); ?></label></th>
                 <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" />
-                    <p class="description"><?php _e('The title is optional but will be used in place of the name on the home page category index.', 'Farallon'); ?></p>
+                    <p class="description"><?php _e('Category cover url.', 'Farallon'); ?></p>
                 </td>
             </tr>
             <tr class="form-field">
@@ -98,9 +98,9 @@ class farallonBase
 
     function farallon_toc($content)
     {
-        preg_match_all('/<h([3-6]).*?>(.*?)<\/h[2-6]>/i', $content, $matches, PREG_SET_ORDER);
+        preg_match_all('/<h([3-6]).*?>(.*?)<\/h[3-6]>/i', $content, $matches, PREG_SET_ORDER);
 
-        if ($matches) {
+        if ($matches && is_singular()) {
             $toc = '<ul>';
             $previous_level = 3;
             $count = 1;
