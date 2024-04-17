@@ -17,6 +17,8 @@ include_once('modules/setting.php');
 include_once('modules/base.php');
 include_once('modules/comment.php');
 include_once('modules/widget.php');
+include_once('modules/shortcode.php');
+
 
 function farallon_get_background_image($post_id, $width = null, $height = null)
 {

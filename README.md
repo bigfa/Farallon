@@ -4,11 +4,17 @@
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.4.10`
+latest version : `0.5.0`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.5.0
+
+- add now template
+
+> it's a pre release
 
 ### 0.4.10
 
