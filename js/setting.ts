@@ -11,6 +11,27 @@ document.querySelectorAll('.leftpanel li').forEach((element, index) => {
     });
 });
 
+document.querySelector('#upload-categoryCover')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    //@ts-ignore
+    const image = wp
+        .media({
+            //@ts-ignore
+            title: obvInit.upload_title,
+            multiple: false,
+            button: {
+                //@ts-ignore
+                text: obvInit.upload_button,
+            },
+        })
+        .open()
+        .on('select', function () {
+            const uploaded_image = image.state().get('selection').first();
+            const image_url = uploaded_image.toJSON().url;
+            document.querySelector('#_category_cover')?.setAttribute('value', image_url);
+        });
+});
+
 document.querySelector('#pure-save')?.addEventListener('click', (event) => {
     event.preventDefault();
     const form = document.querySelector('#pure-form') as HTMLFormElement;

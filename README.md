@@ -2,13 +2,19 @@
 
 ![Wordpress Theme Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
+Farallon is a simple single column wordpress theme with perfect performace and elegance design.
+
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.5.0`
+latest version : `0.5.1`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.5.1
+
+- use wp media to set category cover
 
 ### 0.5.0
 

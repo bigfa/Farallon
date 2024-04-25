@@ -45,6 +45,7 @@ class farallonSetting
                     'nonce' => wp_create_nonce('wp_rest'),
                     'ajaxurl' => admin_url('admin-ajax.php'),
                     'success_message' => __('Setting saved success!', 'Farallon'),
+                    'upload_title' => __('Upload Image', 'Farallon'),
                 ]
             );
         }

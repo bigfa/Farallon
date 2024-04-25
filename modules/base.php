@@ -28,6 +28,8 @@ class farallonBase
             add_filter('the_content', array($this, 'farallon_toc'));
         if ($farallonSetting->get_setting('gravatar_proxy'))
             add_filter('get_avatar_url', array($this, 'gravatar_proxy'), 10, 3);
+
+        add_action('admin_enqueue_scripts', array($this, 'admin_enquenue_scripts'));
     }
 
     function update_my_category_fields($term_id)
@@ -69,7 +71,8 @@ class farallonBase
         <table class="form-table">
             <tr class="form-field">
                 <th scope="row" valign="top"><label for="_category_cover"><?php _e('Cover', 'Farallon'); ?></label></th>
-                <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" />
+                <td><input name="_category_cover" id="_category_cover" type="text" size="40" aria-required="false" value="<?php echo $cover; ?>" class="regular-text ltr" />
+                    <p class="description"><button id="upload-categoryCover" class="button"><?php _e('Upload', 'Farallon'); ?></button></p>
                     <p class="description"><?php _e('Category cover url.', 'Farallon'); ?></p>
                 </td>
             </tr>
@@ -213,6 +216,29 @@ class farallonBase
     function excerpt_length($length)
     {
         return 80;
+    }
+
+    function admin_enquenue_scripts()
+    {
+        // check if is category edit page and enquenue wp media
+        if (isset($_GET['taxonomy']) && $_GET['taxonomy'] == 'category') {
+            wp_enqueue_media();
+            wp_enqueue_script('farallon-setting', get_template_directory_uri() . '/build/js/setting.min.js', ['jquery'], FARALLON_VERSION, true);
+            wp_localize_script(
+                'farallon-setting',
+                'obvInit',
+                [
+                    'is_single' => is_singular(),
+                    'post_id' => get_the_ID(),
+                    'restfulBase' => esc_url_raw(rest_url()),
+                    'nonce' => wp_create_nonce('wp_rest'),
+                    'ajaxurl' => admin_url('admin-ajax.php'),
+                    'success_message' => __('Setting saved success!', 'Farallon'),
+                    'upload_title' => __('Upload Image', 'Farallon'),
+                    'upload_button' => __('Set Category Image', 'Farallon'),
+                ]
+            );
+        }
     }
 
     function enqueue_styles()
