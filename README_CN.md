@@ -2,13 +2,20 @@
 
 ![Wordpress 主题 Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
-最新版本: `0.5.1`
+最新版本: `0.5.2`
 
 本主题禁止各种修改作者链接打包重新发布的行为。
 
 [简单的使用文档](https://fatesinger.com/101971)
 
 ## 更新日志
+
+### 0.5.2
+
+- 底部展示 SNS 图标
+- 自动获取 rss 地址
+- 增加了邮箱地址设置
+- 移除了 Telegram 组群和频道设置
 
 ### 0.5.1
 

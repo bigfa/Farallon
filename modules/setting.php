@@ -400,6 +400,12 @@ $farallonSetting = new farallonSetting(
                 'id' => 'meta',
                 'content' => [
                     [
+                        'type' => 'switch',
+                        'name' => 'footer_sns',
+                        'label' => __('Footer SNS Icons', 'Farallon'),
+                        'description' => __('Show sns icons in footer, if this setting is on, the footer menu won\',t be displayed.', 'Farallon')
+                    ],
+                    [
                         'type' => 'input',
                         'name' => 'telegram',
                         'label' => __('Telegram', 'Farallon'),
@@ -407,15 +413,9 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'input',
-                        'name' => 'telegram_group',
-                        'label' => __('Telegram group', 'Farallon'),
-                        'description' => __('Telegram group link', 'Farallon')
-                    ],
-                    [
-                        'type' => 'input',
-                        'name' => 'telegram_channel',
-                        'label' => __('Telegram channel', 'Farallon'),
-                        'description' => __('Telegram channel link', 'Farallon')
+                        'name' => 'email',
+                        'label' => __('Email', 'Farallon'),
+                        'description' => __('Your email address', 'Farallon')
                     ],
                     [
                         'type' => 'input',
@@ -430,7 +430,7 @@ $farallonSetting = new farallonSetting(
                         'description' => __('Twitter link', 'Farallon')
                     ],
                     [
-                        'type' => 'input',
+                        'type' => 'switch',
                         'name' => 'rss',
                         'label' => __('RSS', 'Farallon'),
                         'description' => __('RSS link', 'Farallon')

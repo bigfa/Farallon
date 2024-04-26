@@ -122,11 +122,14 @@
     }
 
     .author--sns {
-        margin-top: 10px;
+        margin-top: 12px;
         display: flex;
         align-items: center;
         a {
-            margin: 0 5px;
+            margin: 0 10px 0 0;
+            &:last-child {
+                margin-right: 0;
+            }
         }
         svg {
             fill: var(--farallon-text-color);
@@ -135,6 +138,10 @@
             }
             width: 24px;
             height: 24px;
+            &.sns {
+                fill: none;
+                stroke: var(--farallon-text-color);
+            }
         }
     }
 }

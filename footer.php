@@ -1,9 +1,15 @@
 <?php global $farallonSetting; ?>
 <footer class="site--footer">
     <div class="site--footer__content">
-        <nav>
-            <?php wp_nav_menu(array('theme_location' => 'farallon_footer', 'menu_class' => 'footer--nav', 'container' => 'ul', 'fallback_cb' => 'link_to_menu_editor')); ?>
-        </nav>
+        <?php if ($farallonSetting->get_setting('footer_sns')) : ?>
+            <div class=site--footer__sns>
+                <?php get_template_part('template-parts/sns'); ?>
+            </div>
+        <?php else : ?>
+            <nav>
+                <?php wp_nav_menu(array('theme_location' => 'farallon_footer', 'menu_class' => 'footer--nav', 'container' => 'ul', 'fallback_cb' => 'link_to_menu_editor')); ?>
+            </nav>
+        <?php endif; ?>
         <div class="copyright">
             <?php if ($farallonSetting->get_setting('copyright')) : ?>
                 <?php echo $farallonSetting->get_setting('copyright'); ?>

@@ -52,6 +52,27 @@
             }
         }
     }
+
+    &__sns {
+        display: flex;
+        align-items: center;
+        a {
+            margin: 0 12px 0 0;
+            display: flex;
+        }
+        svg {
+            fill: var(--farallon-text-color);
+            &:hover {
+                fill: var(--farallon-hover-color);
+            }
+            width: 18px;
+            height: 18px;
+            &.sns {
+                fill: none;
+                stroke: var(--farallon-text-color);
+            }
+        }
+    }
 }
 
 .fixed--theme {
