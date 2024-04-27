@@ -348,6 +348,12 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
+                        'name' => 'author_sns',
+                        'label' => __('Author sns icons', 'Farallon'),
+                        'description' => __('Show author sns icons, will not show when author bio is off.', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'related',
                         'label' => __('Related posts', 'Farallon'),
                         'description' => __('Enable related posts', 'Farallon')
