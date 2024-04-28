@@ -209,12 +209,12 @@ $farallonSetting = new farallonSetting(
             [
                 'id' => 'meta',
                 'title' => __('SNS Setting', 'Farallon'),
-                'icon' => 'interface'
+                'icon' => 'social-contact'
             ],
             [
                 'id' => 'custom',
                 'title' => __('Custom Setting', 'Farallon'),
-                'icon' => 'social-contact'
+                'icon' => 'interface'
             ]
         ],
         "body" => [

@@ -333,6 +333,15 @@ msgstr "隐藏首页缩略图"
 msgid "Author bio"
 msgstr "作者信息"
 
+
+#: modules/setting.php:345
+msgid "Author sns icons"
+msgstr "作者SNS图标"
+
+#: modules/setting.php:345
+msgid "Show author sns icons, will not show when author bio is off."
+msgstr "展示作者SNS图标，作者信息关闭时不会展示。"
+
 #: modules/setting.php:346
 msgid "Enable author bio"
 msgstr "开启作者信息"
@@ -383,11 +392,29 @@ msgstr "开启文章目录"
 
 #: modules/setting.php:387
 msgid "Post Author"
-msgstr ""
+msgstr "文章作者"
+
+#: modules/setting.php:387
+msgid "Disable comment link"
+msgstr "禁用评论链接"
+
+#: modules/setting.php:387
+msgid "Disable comment author url"
+msgstr "禁用评论者的网站链接"
+
 
 #: modules/setting.php:388
 msgid "Show post author tip in comment"
-msgstr ""
+msgstr "在评论中展示文章作者表示"
+
+#: modules/setting.php:411
+msgid "Footer SNS Icons"
+msgstr "底部SNS图标"
+
+#: modules/setting.php:411
+msgid "Show sns icons in footer, if this setting is on, the footer menu won\',t be displayed."
+msgstr "在底部展示SNS图标，开始时底部菜单不会展示"
+
 
 #: modules/setting.php:393
 msgid "Telegram"
@@ -405,13 +432,13 @@ msgstr "电报组群"
 msgid "Telegram group link"
 msgstr "电报组群链接"
 
-#: modules/setting.php:405
-msgid "Telegram channel"
-msgstr "电报频道"
+#: modules/setting.php:423
+msgid "Email"
+msgstr "电子邮箱"
 
 #: modules/setting.php:406
-msgid "Telegram channel link"
-msgstr "电报频道链接"
+msgid "Your email address"
+msgstr "你的电子邮箱地址"
 
 #: modules/setting.php:411
 msgid "Instagram"
