@@ -39,7 +39,7 @@ function settingCss() {
 
 function setting() {
     return gulp
-        .src(['./js/setting.ts'])
+        .src(['./js/extensions/*', './js/setting.ts'])
         .pipe(plumber())
         .pipe(
             ts({
@@ -56,7 +56,7 @@ function setting() {
 // Transpile, concatenate and minify scripts
 function scripts() {
     return gulp
-        .src(['./js/app.ts', './js/modules/*'])
+        .src(['./js/extensions/*', './js/app.ts', './js/modules/*'])
         .pipe(
             ts({
                 noImplicitAny: true,

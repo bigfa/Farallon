@@ -2,6 +2,7 @@
 if (post_password_required()) {
     return;
 }
+global $farallonSetting;
 ?>
 <div id="comments" class="responsesWrapper">
     <h3 class="comments--title">
@@ -17,7 +18,13 @@ if (post_password_required()) {
         <?php if (have_comments()) {
             wp_list_comments(array('style' => 'ol', 'avatar_size' => 48, 'callback' => 'farallon_comment'));
         } else { ?>
-            <li class="no--comment"><?php _e('This post has no comment yet', 'Farallon'); ?></li>
+            <li class="no--comment">
+                <?php if ($farallonSetting->get_setting('no_reply_text')) {
+                    echo $farallonSetting->get_setting('no_reply_text');
+                } else {
+                    _e('This post has no comment yet', 'Farallon');
+                } ?>
+            </li>
         <?php } ?>
     </ol>
     <nav class="nav-links nav-links__comment">

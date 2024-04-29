@@ -43,6 +43,7 @@ global $farallonBase;
                 <?php the_tags('', '') ?>
             </div>
             <?php if ($farallonSetting->get_setting('bio')) get_template_part('template-parts/author', 'card'); ?>
+            <?php if ($farallonSetting->get_setting('category_card')) get_template_part('template-parts/category', 'card'); ?>
             <?php if ($farallonSetting->get_setting('related')) get_template_part('template-parts/single', 'related'); ?>
             <div class="post--ingle__comments">
                 <?php

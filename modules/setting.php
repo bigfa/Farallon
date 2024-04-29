@@ -378,6 +378,12 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
+                        'name' => 'category_card',
+                        'label' => __('Category card', 'Farallon'),
+                        'description' => __('Show post category info after post.', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'show_parent',
                         'label' => __('Show parent comment', 'Farallon'),
                         'description' => __('Enable show parent comment', 'Farallon')
@@ -399,7 +405,13 @@ $farallonSetting = new farallonSetting(
                         'name' => 'disable_comment_link',
                         'label' => __('Disable comment link', 'Farallon'),
                         'description' => __('Disable comment author url', 'Farallon')
-                    ]
+                    ],
+                    [
+                        'type' => 'input',
+                        'name' => 'no_reply_text',
+                        'label' => __('No reply text', 'Farallon'),
+                        'description' => __('Text display when no comment in current post.', 'Farallon')
+                    ],
                 ]
             ],
             [
@@ -440,6 +452,12 @@ $farallonSetting = new farallonSetting(
                         'name' => 'rss',
                         'label' => __('RSS', 'Farallon'),
                         'description' => __('RSS link', 'Farallon')
+                    ],
+                    [
+                        'type' => 'input',
+                        'name' => 'github',
+                        'label' => __('Github', 'Farallon'),
+                        'description' => __('Github link', 'Farallon')
                     ],
                 ]
             ],

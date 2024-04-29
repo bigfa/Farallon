@@ -2,13 +2,20 @@
 
 ![Wordpress 主题 Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
-最新版本: `0.5.4`
+最新版本: `0.5.5`
 
 本主题禁止各种修改作者链接打包重新发布的行为。
 
 [简单的使用文档](https://fatesinger.com/101971)
 
 ## 更新日志
+
+### 0.5.5
+
+- 增加 Github 图标设置
+- 增加一些校验规格
+- 增加无评论文案设置
+- 增加文章分类卡片设置
 
 ### 0.5.4
 
