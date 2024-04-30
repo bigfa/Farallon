@@ -412,6 +412,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('No reply text', 'Farallon'),
                         'description' => __('Text display when no comment in current post.', 'Farallon')
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'friend_icon',
+                        'label' => __('Friend icon', 'Farallon'),
+                        'description' => __('Show icon when comment author url is in blogroll.', 'Farallon')
+                    ],
                 ]
             ],
             [

@@ -40,11 +40,11 @@ document.querySelector('#pure-save')?.addEventListener('click', (event) => {
     // @ts-ignore
     const data = new URLSearchParams(formData);
 
-    const emailElement = document.querySelector('#pure-setting-email');
-    const email = emailElement?.getAttribute('value');
-    if (email && !isEmailValid(email)) {
-        return alert('Email is not valid');
-    }
+    // const emailElement = document.querySelector('#pure-setting-email');
+    // const email = emailElement?.getAttribute('value');
+    // if (email && !isEmailValid(email)) {
+    //     return alert('Email is not valid');
+    // }
 
     //@ts-ignore
     jQuery.ajax({

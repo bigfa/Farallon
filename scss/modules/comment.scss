@@ -119,6 +119,17 @@
     flex: 1 1 auto;
     display: flex;
     align-items: center;
+    .url {
+        display: flex;
+        align-items: center;
+    }
+    .friend--icon {
+        margin-left: 5px;
+
+        // fill: var(--farallon-main-color);
+        width: 16px;
+        height: 16px;
+    }
     &__tip {
         margin-left: 5px;
         font-size: 12px;
