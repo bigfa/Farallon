@@ -378,6 +378,14 @@ msgstr "复制文章链接"
 msgid "Enable copy link"
 msgstr "开启复制文章链接"
 
+#: modules/setting.php:382
+msgid "Category card"
+msgstr "分类卡片"
+
+#: modules/setting.php:383
+msgid "Show post category info after post."
+msgstr "在文章结尾展示卡片信息"
+
 #: modules/setting.php:375
 msgid "Show parent comment"
 msgstr "展示父级评论"
@@ -402,6 +410,21 @@ msgstr "禁用评论链接"
 msgid "Disable comment author url"
 msgstr "禁用评论者的网站链接"
 
+#: modules/setting.php:387
+msgid "No reply text"
+msgstr "无评论文案"
+
+#: modules/setting.php:387
+msgid "Text display when no comment in current post."
+msgstr "当文章没有评论时评论区展示的我文案"
+
+#: modules/setting.php:387
+msgid "Friend icon"
+msgstr "友情链接标识"
+	
+#: modules/setting.php:387
+msgid "Show icon when comment author url is in blogroll."
+msgstr "当评论者链接是友情链接时展示标识"
 
 #: modules/setting.php:388
 msgid "Show post author tip in comment"
@@ -463,6 +486,10 @@ msgstr "RSS"
 #: modules/setting.php:424
 msgid "RSS link"
 msgstr "RSS 地址"
+
+#: modules/setting.php:424
+msgid "Github link"
+msgstr "Github 地址"
 
 #: modules/setting.php:434
 msgid "CSS"
