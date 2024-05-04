@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
-
+    padding-top: 20px;
     &--item {
         transition: 0.5s;
         padding: 8px;

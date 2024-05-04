@@ -7,7 +7,9 @@ get_header(); ?>
 <div class="template--terms">
     <?php while (have_posts()) : the_post(); ?>
         <article class="post--single__douban">
-            <h2 class="post--single__title"><?php the_title(); ?></h2>
+            <header class="u-textAlignCenter">
+                <h2 class="post--single__title"><?php the_title(); ?></h2>
+            </header>
             <div class="collectionCard">
                 <?php $categories = get_terms([
                     'taxonomy' => 'category',

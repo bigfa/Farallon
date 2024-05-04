@@ -8,7 +8,9 @@ get_header(); ?>
 <main class="site--main">
     <article class="post--single template--now" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
-            <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
+            <header class="u-textAlignCenter">
+                <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
+            </header>
             <div class="post__single__content graph" itemprop="articleBody">
                 <?php the_content(); ?>
                 <div class="last--update">

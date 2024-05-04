@@ -8,7 +8,9 @@ get_header(); ?>
 <main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
         <article class="post--single__douban">
-            <h2 class="post--single__title"><?php the_title(); ?></h2>
+            <header class="u-textAlignCenter">
+                <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
+            </header>
             <div class="post__single__content">
                 <?php the_content(); ?>
             </div>
