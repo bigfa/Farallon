@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.5.6\n"
+"Project-Id-Version: Farallon 0.5.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-02T05:00:56+00:00\n"
+"POT-Creation-Date: 2024-05-04T12:51:45+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: Farallon\n"
@@ -509,27 +509,43 @@ msgstr ""
 msgid "Github link"
 msgstr ""
 
-#: modules/setting.php:476
-msgid "CSS"
+#: modules/setting.php:471
+msgid "Discord"
+msgstr ""
+
+#: modules/setting.php:472
+msgid "Discord link"
 msgstr ""
 
 #: modules/setting.php:477
-msgid "Custom CSS"
+msgid "Mastodon"
 msgstr ""
 
-#: modules/setting.php:482
-msgid "Javascript"
-msgstr ""
-
-#: modules/setting.php:483
-msgid "Custom Javascript"
+#: modules/setting.php:478
+msgid "Mastodon link"
 msgstr ""
 
 #: modules/setting.php:488
-msgid "Copyright"
+msgid "CSS"
 msgstr ""
 
 #: modules/setting.php:489
+msgid "Custom CSS"
+msgstr ""
+
+#: modules/setting.php:494
+msgid "Javascript"
+msgstr ""
+
+#: modules/setting.php:495
+msgid "Custom Javascript"
+msgstr ""
+
+#: modules/setting.php:500
+msgid "Copyright"
+msgstr ""
+
+#: modules/setting.php:501
 msgid "Custom footer content"
 msgstr ""
 

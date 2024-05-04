@@ -491,6 +491,22 @@ msgstr "RSS 地址"
 msgid "Github link"
 msgstr "Github 地址"
 
+#: modules/setting.php:471
+msgid "Discord"
+msgstr "Discord"
+
+#: modules/setting.php:472
+msgid "Discord link"
+msgstr "Discord 地址"
+
+#: modules/setting.php:477
+msgid "Mastodon"
+msgstr "长毛象"
+
+#: modules/setting.php:478
+msgid "Mastodon link"
+msgstr "长毛象地址"
+
 #: modules/setting.php:434
 msgid "CSS"
 msgstr "CSS"
