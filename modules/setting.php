@@ -465,6 +465,18 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Github', 'Farallon'),
                         'description' => __('Github link', 'Farallon')
                     ],
+                    [
+                        'type' => 'input',
+                        'name' => 'discord',
+                        'label' => __('Discord', 'Farallon'),
+                        'description' => __('Discord link', 'Farallon')
+                    ],
+                    [
+                        'type' => 'input',
+                        'name' => 'mastodon',
+                        'label' => __('Mastodon', 'Farallon'),
+                        'description' => __('Mastodon link', 'Farallon')
+                    ],
                 ]
             ],
             [
