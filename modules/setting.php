@@ -270,6 +270,12 @@ $farallonSetting = new farallonSetting(
                 'content' => [
                     [
                         'type' => 'switch',
+                        'name' => 'auto_update',
+                        'label' => __('Update notice', 'Farallon'),
+                        'description' => __('Get theme update notice.', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'upyun',
                         'label' => __('Upyun CDN', 'Farallon'),
                         'description' => __('Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly.', 'Farallon')

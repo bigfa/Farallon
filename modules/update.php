@@ -1,6 +1,6 @@
 <?php
-
-function puma_is_get_new()
+global $farallonSetting;
+function farallon_is_get_new()
 {
     if (get_transient('farallon_latest')) {
         $latest = get_transient('farallon_latest');
@@ -19,17 +19,17 @@ function puma_is_get_new()
     return version_compare(FARALLON_VERSION, $latest, '<');
 }
 
-function puma_update_notice()
+function farallon_update_notice()
 {
     add_thickbox();
     echo '<div class="updated">
-    <p>主题最新版为 ' . get_transient('farallon_latest') . '，当前版本 ' . FARALLON_VERSION . '。请备份好所有文件，主题升级过程中会删掉原有文件。<a class="thickbox" href="' . admin_url() . 'admin-ajax.php?action=puma_theme_update&TB_iframe=true&width=772&height=312">确认升级</a>
+    <p>主题最新版为 ' . get_transient('farallon_latest') . '，当前版本 ' . FARALLON_VERSION . '。请备份好所有文件，主题升级过程中会删掉原有文件。<a class="thickbox" href="' . admin_url() . 'admin-ajax.php?action=farallon_theme_update&TB_iframe=true&width=772&height=312">确认升级</a>
     </p></div>';
 }
-if (puma_is_get_new()) add_action('admin_notices', 'puma_update_notice');
+if ($farallonSetting->get_setting('auto_update') && farallon_is_get_new()) add_action('admin_notices', 'farallon_update_notice');
 
-add_action('wp_ajax_puma_theme_update', 'puma_theme_update_callback');
-function puma_theme_update_callback()
+add_action('wp_ajax_farallon_theme_update', 'farallon_theme_update_callback');
+function farallon_theme_update_callback()
 {
 
     include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
@@ -40,8 +40,8 @@ function puma_theme_update_callback()
     );
 
     $name          = "Farallon";
-    $slug          = "Puma";
-    $version       = $Farallon['theme_version'];
+    $slug          = "Farallon";
+    $version       = $update_data['theme_version'];
     $download_link = $update_data['update_link'];
 
     delete_site_transient('update_themes');
