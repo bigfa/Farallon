@@ -30,6 +30,23 @@ class farallonBase
             add_filter('get_avatar_url', array($this, 'gravatar_proxy'), 10, 3);
 
         add_action('admin_enqueue_scripts', array($this, 'admin_enquenue_scripts'));
+
+        if ($farallonSetting->get_setting('exclude_status'))
+            add_filter('pre_get_posts', array($this, 'exclude_post_format'));
+    }
+
+    function exclude_post_format($query)
+    {
+        if ($query->is_home() && $query->is_main_query()) {
+            $query->set('tax_query', array(
+                array(
+                    'taxonomy' => 'post_format',
+                    'field' => 'slug',
+                    'terms' => array('post-format-status'),
+                    'operator' => 'NOT IN'
+                )
+            ));
+        }
     }
 
     function update_my_category_fields($term_id)

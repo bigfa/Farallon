@@ -340,6 +340,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Hide home cover', 'Farallon'),
                         'description' => __('Hide home cover', 'Farallon')
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'exclude_status',
+                        'label' => __('Exclude status', 'Farallon'),
+                        'description' => __('Exclude post type status in homepage', 'Farallon')
+                    ],
                 ]
             ],
 
