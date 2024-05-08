@@ -157,6 +157,10 @@ msgstr "设置保存成功"
 msgid "Theme Setting"
 msgstr "主题设置"
 
+#: modules/setting.php:63
+msgid "Documentation"
+msgstr "文档"
+
 #: modules/setting.php:105
 msgid "Save"
 msgstr "保存"
@@ -238,6 +242,14 @@ msgstr "头像代理"
 #: modules/setting.php:263
 msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
 msgstr "头像代理域名，比如<code>cravatar.cn</code>"
+
+#: modules/setting.php:274
+msgid "Update notice"
+msgstr "更新提示"
+
+#: modules/setting.php:275
+msgid "Get theme update notice."
+msgstr "自动获取主题更新"
 
 #: modules/setting.php:273
 msgid "Upyun CDN"
@@ -328,6 +340,15 @@ msgstr "首页展示文章点赞数量"
 #: modules/setting.php:333 modules/setting.php:334
 msgid "Hide home cover"
 msgstr "隐藏首页缩略图"
+
+
+#: modules/setting.php:346
+msgid "Exclude status"
+msgstr "排除状态"
+
+#: modules/setting.php:347
+msgid "Exclude post type status in homepage"
+msgstr "首页不显示状态格式的文章"
 
 #: modules/setting.php:345
 msgid "Author bio"

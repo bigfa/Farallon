@@ -59,7 +59,9 @@ class farallonSetting
     function setting_page()
     { ?>
         <div class="wrap">
-            <h2><?php _e('Theme Setting', 'Farallon') ?></h2>
+            <h2><?php _e('Theme Setting', 'Farallon') ?>
+                <a href="https://docs.wpista.com/" target="_blank" class="page-title-action"><?php _e('Documentation', 'Farallon') ?></a>
+            </h2>
             <div class="pure-wrap">
                 <div class="leftpanel">
                     <ul class="nav">

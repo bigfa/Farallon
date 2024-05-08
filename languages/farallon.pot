@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.5.10\n"
+"Project-Id-Version: Farallon 0.6.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-04T12:51:45+00:00\n"
+"POT-Creation-Date: 2024-05-08T07:06:12+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: Farallon\n"
@@ -43,130 +43,130 @@ msgstr ""
 msgid "This post has no comment yet"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:91
 msgid "Add a menu"
 msgstr ""
 
-#: functions.php:134
+#: functions.php:135
 msgid "No links yet"
 msgstr ""
 
-#: modules/base.php:73
+#: modules/base.php:90
 msgid "Cover"
 msgstr ""
 
-#: modules/base.php:75
+#: modules/base.php:92
 msgid "Upload"
 msgstr ""
 
-#: modules/base.php:76
+#: modules/base.php:93
 msgid "Category cover url."
 msgstr ""
 
-#: modules/base.php:80
-#: modules/base.php:84
+#: modules/base.php:97
+#: modules/base.php:101
 msgid "Card Template"
 msgstr ""
 
-#: modules/base.php:86
+#: modules/base.php:103
 msgid "Use Card Template"
 msgstr ""
 
-#: modules/base.php:130
-#: modules/setting.php:394
+#: modules/base.php:147
+#: modules/setting.php:408
 msgid "Table of content"
 msgstr ""
 
-#: modules/base.php:151
+#: modules/base.php:168
 msgid "author"
 msgstr ""
 
-#: modules/base.php:151
+#: modules/base.php:168
 msgid "published on"
 msgstr ""
 
-#: modules/base.php:173
-#: modules/base.php:175
+#: modules/base.php:190
+#: modules/base.php:192
 msgid "Homepage Top"
 msgstr ""
 
-#: modules/base.php:183
-#: modules/base.php:185
+#: modules/base.php:200
+#: modules/base.php:202
 msgid "Homepage Bottom"
 msgstr ""
 
-#: modules/base.php:193
-#: modules/base.php:195
+#: modules/base.php:210
+#: modules/base.php:212
 msgid "Single Pgae Bottom"
 msgstr ""
 
-#: modules/base.php:236
+#: modules/base.php:253
 #: modules/setting.php:47
 msgid "Setting saved success!"
 msgstr ""
 
-#: modules/base.php:237
+#: modules/base.php:254
 #: modules/setting.php:48
 msgid "Upload Image"
 msgstr ""
 
-#: modules/base.php:238
+#: modules/base.php:255
 msgid "Set Category Image"
 msgstr ""
 
-#: modules/base.php:277
+#: modules/base.php:294
 msgid "second ago"
 msgstr ""
 
-#: modules/base.php:278
+#: modules/base.php:295
 msgid "seconds ago"
 msgstr ""
 
-#: modules/base.php:279
+#: modules/base.php:296
 msgid "minute ago"
 msgstr ""
 
-#: modules/base.php:280
+#: modules/base.php:297
 msgid "minutes ago"
 msgstr ""
 
-#: modules/base.php:281
+#: modules/base.php:298
 msgid "hour ago"
 msgstr ""
 
-#: modules/base.php:282
+#: modules/base.php:299
 msgid "hours ago"
 msgstr ""
 
-#: modules/base.php:283
+#: modules/base.php:300
 msgid "day ago"
 msgstr ""
 
-#: modules/base.php:284
+#: modules/base.php:301
 msgid "days ago"
 msgstr ""
 
-#: modules/base.php:285
+#: modules/base.php:302
 msgid "week ago"
 msgstr ""
 
-#: modules/base.php:286
+#: modules/base.php:303
 msgid "weeks ago"
 msgstr ""
 
-#: modules/base.php:287
+#: modules/base.php:304
 msgid "month ago"
 msgstr ""
 
-#: modules/base.php:288
+#: modules/base.php:305
 msgid "months ago"
 msgstr ""
 
-#: modules/base.php:289
+#: modules/base.php:306
 msgid "year ago"
 msgstr ""
 
-#: modules/base.php:290
+#: modules/base.php:307
 msgid "years ago"
 msgstr ""
 
@@ -188,364 +188,384 @@ msgstr ""
 msgid "Theme Setting"
 msgstr ""
 
-#: modules/setting.php:106
+#: modules/setting.php:63
+msgid "Documentation"
+msgstr ""
+
+#: modules/setting.php:108
 msgid "Save"
 msgstr ""
 
-#: modules/setting.php:195
+#: modules/setting.php:197
 msgid "Basic Setting"
 msgstr ""
 
-#: modules/setting.php:200
+#: modules/setting.php:202
 msgid "Feature Setting"
 msgstr ""
 
-#: modules/setting.php:206
+#: modules/setting.php:208
 msgid "Singluar Setting"
 msgstr ""
 
-#: modules/setting.php:211
+#: modules/setting.php:213
 msgid "SNS Setting"
 msgstr ""
 
-#: modules/setting.php:216
+#: modules/setting.php:218
 msgid "Custom Setting"
 msgstr ""
 
-#: modules/setting.php:227
+#: modules/setting.php:229
 msgid "Description"
 msgstr ""
 
-#: modules/setting.php:228
+#: modules/setting.php:230
 msgid "Site description"
 msgstr ""
 
-#: modules/setting.php:233
+#: modules/setting.php:235
 msgid "Headcode"
 msgstr ""
 
-#: modules/setting.php:234
+#: modules/setting.php:236
 msgid "You can add content to the head tag, such as site verification tags, and so on."
 msgstr ""
 
-#: modules/setting.php:239
+#: modules/setting.php:241
 msgid "Logo"
 msgstr ""
 
-#: modules/setting.php:240
+#: modules/setting.php:242
 msgid "Logo address, preferably in a square shape."
 msgstr ""
 
-#: modules/setting.php:245
+#: modules/setting.php:247
 msgid "Favicon"
 msgstr ""
 
-#: modules/setting.php:246
+#: modules/setting.php:248
 msgid "Favicon address"
 msgstr ""
 
-#: modules/setting.php:251
+#: modules/setting.php:253
 msgid "Title sep"
 msgstr ""
 
-#: modules/setting.php:252
+#: modules/setting.php:254
 msgid "Default is"
 msgstr ""
 
-#: modules/setting.php:257
+#: modules/setting.php:259
 msgid "Disable block css"
 msgstr ""
 
-#: modules/setting.php:258
+#: modules/setting.php:260
 msgid "Do not load block-style files."
 msgstr ""
 
-#: modules/setting.php:263
+#: modules/setting.php:265
 msgid "Gravatar proxy"
 msgstr ""
 
-#: modules/setting.php:264
+#: modules/setting.php:266
 msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
 msgstr ""
 
-#: modules/setting.php:274
+#: modules/setting.php:276
+msgid "Update notice"
+msgstr ""
+
+#: modules/setting.php:277
+msgid "Get theme update notice."
+msgstr ""
+
+#: modules/setting.php:282
 msgid "Upyun CDN"
 msgstr ""
 
-#: modules/setting.php:275
+#: modules/setting.php:283
 msgid "Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly."
 msgstr ""
 
-#: modules/setting.php:280
+#: modules/setting.php:288
 msgid "Aliyun OSS CDN"
 msgstr ""
 
-#: modules/setting.php:281
+#: modules/setting.php:289
 msgid "Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display properly."
 msgstr ""
 
-#: modules/setting.php:286
+#: modules/setting.php:294
 msgid "Qiniu OSS CDN"
 msgstr ""
 
-#: modules/setting.php:287
+#: modules/setting.php:295
 msgid "Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display properly."
 msgstr ""
 
-#: modules/setting.php:292
+#: modules/setting.php:300
 msgid "Dark Mode"
 msgstr ""
 
-#: modules/setting.php:293
+#: modules/setting.php:301
 msgid "Enable dark mode"
 msgstr ""
 
-#: modules/setting.php:298
+#: modules/setting.php:306
 msgid "Default thumbnail"
 msgstr ""
 
-#: modules/setting.php:299
+#: modules/setting.php:307
 msgid "Default thumbnail address"
 msgstr ""
 
-#: modules/setting.php:304
+#: modules/setting.php:312
 msgid "Back to top"
 msgstr ""
 
-#: modules/setting.php:305
+#: modules/setting.php:313
 msgid "Enable back to top"
 msgstr ""
 
-#: modules/setting.php:310
+#: modules/setting.php:318
 msgid "Load more"
 msgstr ""
 
-#: modules/setting.php:311
+#: modules/setting.php:319
 msgid "Enable load more"
 msgstr ""
 
-#: modules/setting.php:316
+#: modules/setting.php:324
 msgid "Author info"
 msgstr ""
 
-#: modules/setting.php:317
+#: modules/setting.php:325
 msgid "Enable author info in homepage"
 msgstr ""
 
-#: modules/setting.php:322
+#: modules/setting.php:330
 msgid "Category info"
 msgstr ""
 
-#: modules/setting.php:323
+#: modules/setting.php:331
 msgid "Enable category info in homepage"
 msgstr ""
 
-#: modules/setting.php:328
+#: modules/setting.php:336
 msgid "Like info"
 msgstr ""
 
-#: modules/setting.php:329
+#: modules/setting.php:337
 msgid "Enable like info in homepage"
 msgstr ""
 
-#: modules/setting.php:334
-#: modules/setting.php:335
+#: modules/setting.php:342
+#: modules/setting.php:343
 msgid "Hide home cover"
 msgstr ""
 
-#: modules/setting.php:346
+#: modules/setting.php:348
+msgid "Exclude status"
+msgstr ""
+
+#: modules/setting.php:349
+msgid "Exclude post type status in homepage"
+msgstr ""
+
+#: modules/setting.php:360
 msgid "Author bio"
 msgstr ""
 
-#: modules/setting.php:347
+#: modules/setting.php:361
 msgid "Enable author bio"
 msgstr ""
 
-#: modules/setting.php:352
+#: modules/setting.php:366
 msgid "Author sns icons"
 msgstr ""
 
-#: modules/setting.php:353
+#: modules/setting.php:367
 msgid "Show author sns icons, will not show when author bio is off."
 msgstr ""
 
-#: modules/setting.php:358
+#: modules/setting.php:372
 msgid "Related posts"
 msgstr ""
 
-#: modules/setting.php:359
+#: modules/setting.php:373
 msgid "Enable related posts"
 msgstr ""
 
-#: modules/setting.php:364
+#: modules/setting.php:378
 msgid "Post like"
 msgstr ""
 
-#: modules/setting.php:365
+#: modules/setting.php:379
 msgid "Enable post like"
 msgstr ""
 
-#: modules/setting.php:370
+#: modules/setting.php:384
 msgid "Post navigation"
 msgstr ""
 
-#: modules/setting.php:371
+#: modules/setting.php:385
 msgid "Enable post navigation"
 msgstr ""
 
-#: modules/setting.php:376
+#: modules/setting.php:390
 msgid "Copy link"
 msgstr ""
 
-#: modules/setting.php:377
+#: modules/setting.php:391
 msgid "Enable copy link"
 msgstr ""
 
-#: modules/setting.php:382
+#: modules/setting.php:396
 msgid "Category card"
 msgstr ""
 
-#: modules/setting.php:383
+#: modules/setting.php:397
 msgid "Show post category info after post."
 msgstr ""
 
-#: modules/setting.php:388
+#: modules/setting.php:402
 msgid "Show parent comment"
 msgstr ""
 
-#: modules/setting.php:389
+#: modules/setting.php:403
 msgid "Enable show parent comment"
 msgstr ""
 
-#: modules/setting.php:395
+#: modules/setting.php:409
 msgid "Enable table of content"
 msgstr ""
 
-#: modules/setting.php:400
+#: modules/setting.php:414
 msgid "Post Author"
 msgstr ""
 
-#: modules/setting.php:401
+#: modules/setting.php:415
 msgid "Show post author tip in comment"
 msgstr ""
 
-#: modules/setting.php:406
+#: modules/setting.php:420
 msgid "Disable comment link"
 msgstr ""
 
-#: modules/setting.php:407
+#: modules/setting.php:421
 msgid "Disable comment author url"
 msgstr ""
 
-#: modules/setting.php:412
+#: modules/setting.php:426
 msgid "No reply text"
 msgstr ""
 
-#: modules/setting.php:413
+#: modules/setting.php:427
 msgid "Text display when no comment in current post."
 msgstr ""
 
-#: modules/setting.php:418
+#: modules/setting.php:432
 msgid "Friend icon"
 msgstr ""
 
-#: modules/setting.php:419
+#: modules/setting.php:433
 msgid "Show icon when comment author url is in blogroll."
 msgstr ""
 
-#: modules/setting.php:429
+#: modules/setting.php:443
 msgid "Footer SNS Icons"
 msgstr ""
 
-#: modules/setting.php:430
+#: modules/setting.php:444
 msgid "Show sns icons in footer, if this setting is on, the footer menu won',t be displayed."
 msgstr ""
 
-#: modules/setting.php:435
+#: modules/setting.php:449
 msgid "Telegram"
 msgstr ""
 
-#: modules/setting.php:436
+#: modules/setting.php:450
 msgid "Telegram link"
 msgstr ""
 
-#: modules/setting.php:441
+#: modules/setting.php:455
 msgid "Email"
 msgstr ""
 
-#: modules/setting.php:442
+#: modules/setting.php:456
 msgid "Your email address"
 msgstr ""
 
-#: modules/setting.php:447
+#: modules/setting.php:461
 msgid "Instagram"
 msgstr ""
 
-#: modules/setting.php:448
+#: modules/setting.php:462
 msgid "Instagram link"
 msgstr ""
 
-#: modules/setting.php:453
+#: modules/setting.php:467
 msgid "Twitter"
 msgstr ""
 
-#: modules/setting.php:454
+#: modules/setting.php:468
 msgid "Twitter link"
 msgstr ""
 
-#: modules/setting.php:459
+#: modules/setting.php:473
 msgid "RSS"
 msgstr ""
 
-#: modules/setting.php:460
+#: modules/setting.php:474
 msgid "RSS link"
 msgstr ""
 
-#: modules/setting.php:465
+#: modules/setting.php:479
 msgid "Github"
 msgstr ""
 
-#: modules/setting.php:466
+#: modules/setting.php:480
 msgid "Github link"
 msgstr ""
 
-#: modules/setting.php:471
+#: modules/setting.php:485
 msgid "Discord"
 msgstr ""
 
-#: modules/setting.php:472
+#: modules/setting.php:486
 msgid "Discord link"
 msgstr ""
 
-#: modules/setting.php:477
+#: modules/setting.php:491
 msgid "Mastodon"
 msgstr ""
 
-#: modules/setting.php:478
+#: modules/setting.php:492
 msgid "Mastodon link"
 msgstr ""
 
-#: modules/setting.php:488
+#: modules/setting.php:502
 msgid "CSS"
 msgstr ""
 
-#: modules/setting.php:489
+#: modules/setting.php:503
 msgid "Custom CSS"
 msgstr ""
 
-#: modules/setting.php:494
+#: modules/setting.php:508
 msgid "Javascript"
 msgstr ""
 
-#: modules/setting.php:495
+#: modules/setting.php:509
 msgid "Custom Javascript"
 msgstr ""
 
-#: modules/setting.php:500
+#: modules/setting.php:514
 msgid "Copyright"
 msgstr ""
 
-#: modules/setting.php:501
+#: modules/setting.php:515
 msgid "Custom footer content"
 msgstr ""
 
