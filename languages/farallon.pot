@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.6.2\n"
+"Project-Id-Version: Farallon 0.6.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-08T07:06:12+00:00\n"
+"POT-Creation-Date: 2024-05-10T02:54:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: Farallon\n"
@@ -545,27 +545,35 @@ msgstr ""
 msgid "Mastodon link"
 msgstr ""
 
-#: modules/setting.php:502
-msgid "CSS"
+#: modules/setting.php:497
+msgid "Custom"
 msgstr ""
 
-#: modules/setting.php:503
-msgid "Custom CSS"
+#: modules/setting.php:498
+msgid "Custom sns link,use html."
 msgstr ""
 
 #: modules/setting.php:508
-msgid "Javascript"
+msgid "CSS"
 msgstr ""
 
 #: modules/setting.php:509
-msgid "Custom Javascript"
+msgid "Custom CSS"
 msgstr ""
 
 #: modules/setting.php:514
-msgid "Copyright"
+msgid "Javascript"
 msgstr ""
 
 #: modules/setting.php:515
+msgid "Custom Javascript"
+msgstr ""
+
+#: modules/setting.php:520
+msgid "Copyright"
+msgstr ""
+
+#: modules/setting.php:521
 msgid "Custom footer content"
 msgstr ""
 

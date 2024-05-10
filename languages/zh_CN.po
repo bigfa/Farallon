@@ -528,6 +528,14 @@ msgstr "长毛象"
 msgid "Mastodon link"
 msgstr "长毛象地址"
 
+#: modules/setting.php:497
+msgid "Custom"
+msgstr "自定义"
+
+#: modules/setting.php:498
+msgid "Custom sns link,use html."
+msgstr "自定义链接，使用html 格式。"
+
 #: modules/setting.php:434
 msgid "CSS"
 msgstr "CSS"

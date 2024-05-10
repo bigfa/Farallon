@@ -491,6 +491,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Mastodon', 'Farallon'),
                         'description' => __('Mastodon link', 'Farallon')
                     ],
+                    [
+                        'type' => 'textarea',
+                        'name' => 'custom_sns',
+                        'label' => __('Custom', 'Farallon'),
+                        'description' => __('Custom sns link,use html.', 'Farallon')
+                    ],
                 ]
             ],
             [

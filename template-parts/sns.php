@@ -73,3 +73,4 @@ if ($farallonSetting->get_setting('twitter')) :
         </svg>
     </a>
 <?php endif; ?>
+<?php if ($farallonSetting->get_setting('custom_sns')) echo $farallonSetting->get_setting('custom_sns'); ?>
