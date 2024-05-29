@@ -7,7 +7,7 @@ class farallonComment
     {
         global $farallonSetting;
         add_action('rest_api_init', array($this, 'register_routes'));
-        if ($farallonSetting->get_setting('show_author') && is_singular())
+        if ($farallonSetting->get_setting('show_author') &&  !is_admin())
             add_filter('get_comment_author', array($this, 'get_comment_author_hack'), 10, 3);
         if ($farallonSetting->get_setting('show_parent'))
             add_filter('get_comment_text',  array($this, 'hack_get_comment_text'), 0, 2);
