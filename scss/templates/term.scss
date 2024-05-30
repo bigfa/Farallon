@@ -4,6 +4,54 @@
         padding: 0px 0 40px;
         text-align: center;
     }
+    min-height: 60vh;
+}
+
+.tagCard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    padding-top: 20px;
+    &--item {
+        transition: 0.5s;
+        padding: 8px 15px;
+        border: 1px solid var(--farallon-border-color);
+        border-radius: 5px;
+        &:hover {
+            .collectionCard--title {
+                color: var(--farallon-hover-color);
+                text-decoration: underline;
+            }
+            color: var(--farallon-hover-color);
+        }
+        overflow: hidden;
+        position: relative;
+        color: var(--farallon-text-gray);
+        &::after {
+            position: absolute;
+            content: attr(data-count);
+            opacity: 0.15;
+            bottom: -8px;
+            right: -2px;
+            color: var(--farallon-text-gray-lightest);
+            font-size: 40px;
+            font-style: italic;
+            font-weight: bold;
+            line-height: 1;
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .tagCard {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tagCard {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .collectionCard {

@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: Farallon 0.3.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2024-01-30 15:40+0800\n"
+"PO-Revision-Date: 2024-05-30 15:20+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Domain: Farallon\n"
 
 #. Theme Name of the theme
@@ -51,8 +51,7 @@ msgstr "封面缩略图"
 msgid "Category cover url."
 msgstr "分类封面缩略图地址"
 
-#: modules/base.php:78
-#: modules/base.php:82
+#: modules/base.php:78 modules/base.php:82
 msgid "Card Template"
 msgstr "卡片模版"
 
@@ -198,9 +197,7 @@ msgid "Headcode"
 msgstr "头部代码"
 
 #: modules/setting.php:233
-msgid ""
-"You can add content to the head tag, such as site verification tags, and so "
-"on."
+msgid "You can add content to the head tag, such as site verification tags, and so on."
 msgstr "你可以向<head>标签中添加内容，比如站点验证标签等等。"
 
 #: modules/setting.php:238
@@ -257,8 +254,7 @@ msgstr "又拍云CDN"
 
 #: modules/setting.php:274
 msgid ""
-"Make sure all images are uploaded to Upyun, otherwise thumbnails may not "
-"display properly."
+"Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly."
 msgstr "确保所有图片都上传到又拍云，否则缩略图可能无法正确显示。"
 
 #: modules/setting.php:279
@@ -267,8 +263,8 @@ msgstr "阿里云OSS"
 
 #: modules/setting.php:280
 msgid ""
-"Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may "
-"not display properly."
+"Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display "
+"properly."
 msgstr "确保所有图片都上传到阿里云OSS，否则缩略图可能无法正确显示。"
 
 #: modules/setting.php:285
@@ -277,8 +273,8 @@ msgstr "七牛云CDN"
 
 #: modules/setting.php:286
 msgid ""
-"Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not "
-"display properly."
+"Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display "
+"properly."
 msgstr "确保所有图片都上传到七牛云OSS，否则缩略图可能无法正确显示。"
 
 #: modules/setting.php:291
@@ -341,7 +337,6 @@ msgstr "首页展示文章点赞数量"
 msgid "Hide home cover"
 msgstr "隐藏首页缩略图"
 
-
 #: modules/setting.php:346
 msgid "Exclude status"
 msgstr "排除状态"
@@ -353,7 +348,6 @@ msgstr "首页不显示状态格式的文章"
 #: modules/setting.php:345
 msgid "Author bio"
 msgstr "作者信息"
-
 
 #: modules/setting.php:345
 msgid "Author sns icons"
@@ -442,23 +436,22 @@ msgstr "当文章没有评论时评论区展示的我文案"
 #: modules/setting.php:387
 msgid "Friend icon"
 msgstr "友情链接标识"
-	
+
 #: modules/setting.php:387
 msgid "Show icon when comment author url is in blogroll."
 msgstr "当评论者链接是友情链接时展示标识"
 
 #: modules/setting.php:388
 msgid "Show post author tip in comment"
-msgstr "在评论中展示文章作者表示"
+msgstr "在评论中展示文章作者标识"
 
 #: modules/setting.php:411
 msgid "Footer SNS Icons"
 msgstr "底部SNS图标"
 
 #: modules/setting.php:411
-msgid "Show sns icons in footer, if this setting is on, the footer menu won\',t be displayed."
+msgid "Show sns icons in footer, if this setting is on, the footer menu won',t be displayed."
 msgstr "在底部展示SNS图标，开始时底部菜单不会展示"
-
 
 #: modules/setting.php:393
 msgid "Telegram"
@@ -615,3 +608,11 @@ msgstr "友情链接模版"
 #. Template Name of the theme
 msgid "Map"
 msgstr "地图模版"
+
+#. Template Name of the theme
+msgid "Tags"
+msgstr "标签模版"
+
+#. Template Name of the theme
+msgid "Terms"
+msgstr "分类模版"
