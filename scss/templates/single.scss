@@ -55,6 +55,44 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
+
+        &__status {
+            font-size: 14px;
+            background-color: var(--farallon-background-gray);
+            border-radius: 5px;
+            padding: 10px;
+            border: 1px solid var(--farallon-border-color-light);
+            &:hover {
+                background-color: #fafafa;
+                background: linear-gradient(
+                    89.99999999999999deg,
+                    rgba(255, 233, 244, 0.3) 0%,
+                    rgba(234, 243, 255, 0.5) 100%
+                );
+            }
+            a {
+                color: var(--farallon-text-gray);
+                p {
+                    line-height: 1.6;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .meta {
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                margin-top: 2px;
+                svg {
+                    fill: var(--farallon-text-gray);
+                    margin-right: 5px;
+                }
+            }
+        }
+
         &__item {
             padding: 10px;
             border: 1px solid var(--farallon-border-color);
