@@ -12,6 +12,14 @@ get_header();
         'posts_per_page' => -1,
         'post_type' => ['post'],
         'ignore_sticky_posts' => 1,
+        'tax_query' => array(
+            array(  // only show standard post format
+                'taxonomy' => 'post_format',
+                'field' => 'slug',
+                'terms' => array('post-format-aside', 'post-format-audio', 'post-format-chat', 'post-format-gallery', 'post-format-image', 'post-format-link', 'post-format-quote', 'post-format-status', 'post-format-video'),
+                'operator' => 'NOT IN'
+            )
+        )
     ];
     $the_query = new WP_Query($args);
     $arr = [];
