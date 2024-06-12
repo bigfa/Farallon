@@ -116,7 +116,9 @@ class farallonBase
 
     function farallon_toc($content)
     {
-        preg_match_all('/<h([3-6]).*?>(.*?)<\/h[3-6]>/i', $content, $matches, PREG_SET_ORDER);
+        global $farallonSetting;
+        $toc_start = $farallonSetting->get_setting('toc_start') ? $farallonSetting->get_setting('toc_start') : 3;
+        preg_match_all('/<h([' . $toc_start . '-6]).*?>(.*?)<\/h[' . $toc_start . '-6]>/i', $content, $matches, PREG_SET_ORDER);
 
         if ($matches && is_singular()) {
             $toc = '<ul>';

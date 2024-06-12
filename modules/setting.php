@@ -409,6 +409,12 @@ $farallonSetting = new farallonSetting(
                         'description' => __('Enable table of content', 'Farallon')
                     ],
                     [
+                        'type' => 'input',
+                        'name' => 'toc_start',
+                        'label' => __('Start heading', 'Farallon'),
+                        'description' => __('Start heading,default h3', 'Farallon')
+                    ],
+                    [
                         'type' => 'switch',
                         'name' => 'show_author',
                         'label' => __('Post Author', 'Farallon'),
