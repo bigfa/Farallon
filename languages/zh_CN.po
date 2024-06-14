@@ -413,6 +413,14 @@ msgstr "开启展示父级评论"
 msgid "Enable table of content"
 msgstr "开启文章目录"
 
+#: modules/setting.php:414
+msgid "开始层级"
+msgstr ""
+
+#: modules/setting.php:415
+msgid "文章目录标题开始层级,默认为 h3"
+msgstr ""
+
 #: modules/setting.php:387
 msgid "Post Author"
 msgstr "文章作者"

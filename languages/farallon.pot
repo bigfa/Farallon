@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.6.5\n"
+"Project-Id-Version: Farallon 0.6.9\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-05-30T07:18:16+00:00\n"
+"POT-Creation-Date: 2024-06-14T06:06:26+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: Farallon\n"
@@ -72,101 +72,101 @@ msgstr ""
 msgid "Use Card Template"
 msgstr ""
 
-#: modules/base.php:147
+#: modules/base.php:149
 #: modules/setting.php:408
 msgid "Table of content"
 msgstr ""
 
-#: modules/base.php:168
+#: modules/base.php:170
 msgid "author"
 msgstr ""
 
-#: modules/base.php:168
+#: modules/base.php:170
 msgid "published on"
 msgstr ""
 
-#: modules/base.php:190
 #: modules/base.php:192
+#: modules/base.php:194
 msgid "Homepage Top"
 msgstr ""
 
-#: modules/base.php:200
 #: modules/base.php:202
+#: modules/base.php:204
 msgid "Homepage Bottom"
 msgstr ""
 
-#: modules/base.php:210
 #: modules/base.php:212
+#: modules/base.php:214
 msgid "Single Pgae Bottom"
 msgstr ""
 
-#: modules/base.php:253
+#: modules/base.php:255
 #: modules/setting.php:47
 msgid "Setting saved success!"
 msgstr ""
 
-#: modules/base.php:254
+#: modules/base.php:256
 #: modules/setting.php:48
 msgid "Upload Image"
 msgstr ""
 
-#: modules/base.php:255
+#: modules/base.php:257
 msgid "Set Category Image"
 msgstr ""
 
-#: modules/base.php:294
+#: modules/base.php:296
 msgid "second ago"
 msgstr ""
 
-#: modules/base.php:295
+#: modules/base.php:297
 msgid "seconds ago"
 msgstr ""
 
-#: modules/base.php:296
+#: modules/base.php:298
 msgid "minute ago"
 msgstr ""
 
-#: modules/base.php:297
+#: modules/base.php:299
 msgid "minutes ago"
 msgstr ""
 
-#: modules/base.php:298
+#: modules/base.php:300
 msgid "hour ago"
 msgstr ""
 
-#: modules/base.php:299
+#: modules/base.php:301
 msgid "hours ago"
 msgstr ""
 
-#: modules/base.php:300
+#: modules/base.php:302
 msgid "day ago"
 msgstr ""
 
-#: modules/base.php:301
+#: modules/base.php:303
 msgid "days ago"
 msgstr ""
 
-#: modules/base.php:302
+#: modules/base.php:304
 msgid "week ago"
 msgstr ""
 
-#: modules/base.php:303
+#: modules/base.php:305
 msgid "weeks ago"
 msgstr ""
 
-#: modules/base.php:304
+#: modules/base.php:306
 msgid "month ago"
 msgstr ""
 
-#: modules/base.php:305
+#: modules/base.php:307
 msgid "months ago"
 msgstr ""
 
-#: modules/base.php:306
+#: modules/base.php:308
 msgid "year ago"
 msgstr ""
 
-#: modules/base.php:307
+#: modules/base.php:309
 msgid "years ago"
 msgstr ""
 
@@ -442,138 +442,146 @@ msgid "Enable table of content"
 msgstr ""
 
 #: modules/setting.php:414
-msgid "Post Author"
+msgid "Start heading"
 msgstr ""
 
 #: modules/setting.php:415
-msgid "Show post author tip in comment"
+msgid "Start heading,default h3"
 msgstr ""
 
 #: modules/setting.php:420
-msgid "Disable comment link"
+msgid "Post Author"
 msgstr ""
 
 #: modules/setting.php:421
-msgid "Disable comment author url"
+msgid "Show post author tip in comment"
 msgstr ""
 
 #: modules/setting.php:426
-msgid "No reply text"
+msgid "Disable comment link"
 msgstr ""
 
 #: modules/setting.php:427
-msgid "Text display when no comment in current post."
+msgid "Disable comment author url"
 msgstr ""
 
 #: modules/setting.php:432
-msgid "Friend icon"
+msgid "No reply text"
 msgstr ""
 
 #: modules/setting.php:433
+msgid "Text display when no comment in current post."
+msgstr ""
+
+#: modules/setting.php:438
+msgid "Friend icon"
+msgstr ""
+
+#: modules/setting.php:439
 msgid "Show icon when comment author url is in blogroll."
 msgstr ""
 
-#: modules/setting.php:443
+#: modules/setting.php:449
 msgid "Footer SNS Icons"
 msgstr ""
 
-#: modules/setting.php:444
+#: modules/setting.php:450
 msgid "Show sns icons in footer, if this setting is on, the footer menu won',t be displayed."
 msgstr ""
 
-#: modules/setting.php:449
+#: modules/setting.php:455
 msgid "Telegram"
 msgstr ""
 
-#: modules/setting.php:450
+#: modules/setting.php:456
 msgid "Telegram link"
 msgstr ""
 
-#: modules/setting.php:455
+#: modules/setting.php:461
 msgid "Email"
 msgstr ""
 
-#: modules/setting.php:456
+#: modules/setting.php:462
 msgid "Your email address"
 msgstr ""
 
-#: modules/setting.php:461
+#: modules/setting.php:467
 msgid "Instagram"
 msgstr ""
 
-#: modules/setting.php:462
+#: modules/setting.php:468
 msgid "Instagram link"
 msgstr ""
 
-#: modules/setting.php:467
+#: modules/setting.php:473
 msgid "Twitter"
 msgstr ""
 
-#: modules/setting.php:468
+#: modules/setting.php:474
 msgid "Twitter link"
 msgstr ""
 
-#: modules/setting.php:473
+#: modules/setting.php:479
 msgid "RSS"
 msgstr ""
 
-#: modules/setting.php:474
+#: modules/setting.php:480
 msgid "RSS link"
 msgstr ""
 
-#: modules/setting.php:479
+#: modules/setting.php:485
 msgid "Github"
 msgstr ""
 
-#: modules/setting.php:480
+#: modules/setting.php:486
 msgid "Github link"
 msgstr ""
 
-#: modules/setting.php:485
+#: modules/setting.php:491
 msgid "Discord"
 msgstr ""
 
-#: modules/setting.php:486
+#: modules/setting.php:492
 msgid "Discord link"
 msgstr ""
 
-#: modules/setting.php:491
+#: modules/setting.php:497
 msgid "Mastodon"
 msgstr ""
 
-#: modules/setting.php:492
+#: modules/setting.php:498
 msgid "Mastodon link"
 msgstr ""
 
-#: modules/setting.php:497
+#: modules/setting.php:503
 msgid "Custom"
 msgstr ""
 
-#: modules/setting.php:498
+#: modules/setting.php:504
 msgid "Custom sns link,use html."
 msgstr ""
 
-#: modules/setting.php:508
+#: modules/setting.php:514
 msgid "CSS"
 msgstr ""
 
-#: modules/setting.php:509
+#: modules/setting.php:515
 msgid "Custom CSS"
 msgstr ""
 
-#: modules/setting.php:514
+#: modules/setting.php:520
 msgid "Javascript"
 msgstr ""
 
-#: modules/setting.php:515
+#: modules/setting.php:521
 msgid "Custom Javascript"
 msgstr ""
 
-#: modules/setting.php:520
+#: modules/setting.php:526
 msgid "Copyright"
 msgstr ""
 
-#: modules/setting.php:521
+#: modules/setting.php:527
 msgid "Custom footer content"
 msgstr ""
 

@@ -265,13 +265,15 @@
 }
 
 .grap--figure,
-.colonel--figure {
+.colonel--figure,
+.wp-caption {
     margin: 0 -50px 25px;
     position: relative;
     img {
         border-radius: 4px;
     }
-    .imageCaption {
+    .imageCaption,
+    .wp-caption-text {
         font-size: 12px;
         text-align: center;
         position: absolute;
@@ -337,7 +339,8 @@
         }
     }
     .grap--figure,
-    .colonel--figure {
+    .colonel--figure,
+    .wp-caption {
         margin: 0 0 20px;
         margin-left: -3.5%;
         margin-right: -3.5%;
@@ -347,10 +350,8 @@
     }
 }
 
-.wp-caption {
-    &-text {
-        text-align: center;
-        font-size: 12px;
-        color: var(--farallon-text-light);
-    }
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
