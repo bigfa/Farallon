@@ -208,6 +208,14 @@ msgstr "Logo"
 msgid "Logo address, preferably in a square shape."
 msgstr "Logo地址，最好是方形的。"
 
+#: modules/setting.php:247
+msgid "Og default thumb"
+msgstr "默认Open Graph 缩略图"
+
+#: modules/setting.php:248
+msgid "Og meta default thumb address."
+msgstr "默认 Open Graph 缩略图地址"
+
 #: modules/setting.php:244
 msgid "Favicon"
 msgstr "Favicon"
@@ -414,12 +422,12 @@ msgid "Enable table of content"
 msgstr "开启文章目录"
 
 #: modules/setting.php:414
-msgid "开始层级"
-msgstr ""
+msgid "Start heading"
+msgstr "开始层级"
 
 #: modules/setting.php:415
-msgid "文章目录标题开始层级,默认为 h3"
-msgstr ""
+msgid "Start heading,default h3"
+msgstr "文章目录标题开始层级,默认为 h3"
 
 #: modules/setting.php:387
 msgid "Post Author"

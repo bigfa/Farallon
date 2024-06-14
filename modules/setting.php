@@ -243,6 +243,12 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'input',
+                        'name' => 'og_default_thumb',
+                        'label' => __('Og default thumb', 'Farallon'),
+                        'description' => __('Og meta default thumb address.', 'Farallon'),
+                    ],
+                    [
+                        'type' => 'input',
                         'name' => 'favicon',
                         'label' => __('Favicon', 'Farallon'),
                         'description' => __('Favicon address', 'Farallon'),

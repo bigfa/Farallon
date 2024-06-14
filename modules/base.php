@@ -154,12 +154,15 @@ class farallonBase
 
     function head_output()
     {
-        global $s, $post, $farallonSetting;
+        global $wp, $post, $farallonSetting;
+        $current_url = home_url(add_query_arg(array(), $wp->request));
 
         //echo '<link type="image/vnd.microsoft.icon" href="/favicon.png" rel="shortcut icon">';
 
         $description = '';
         $blog_name = get_bloginfo('name');
+        $ogmeta = '<meta property="og:title" content="' . wp_get_document_title() . '">';
+        $ogmeta .= '<meta property="og:url" content="' . $current_url . '">';
         if (is_singular()) {
             $ID = $post->ID;
             $author = $post->post_author;
@@ -170,6 +173,9 @@ class farallonBase
                 $description = $post->post_title . '，' . __('author', 'Farallon') . ':' . get_the_author_meta('nickname', $author) . '，' . __('published on', 'Farallon') . get_the_date('Y-m-d');
                 echo '<meta name="description" content="' . $description . '">';
             }
+            $ogmeta .= '<meta property="og:image" content="' . farallon_get_background_image($ID) . '">';
+            $ogmeta .= '<meta property="og:description" content="' . $description . '">';
+            $ogmeta .= '<meta property="og:type" content="article">';
         } else {
             if (is_home()) {
                 $description = $farallonSetting->get_setting('description');
@@ -181,8 +187,14 @@ class farallonBase
                 $description = $farallonSetting->get_setting('description');
             }
             $description = mb_substr($description, 0, 220, 'utf-8');
-            echo '<meta name="description" content="' . $description . '">';
+            if ($farallonSetting->get_setting('og_default_thumb')) {
+                $ogmeta .= '<meta property="og:image" content="' . $farallonSetting->get_setting('og_default_thumb') . '">';
+            }
+            if ($description) $ogmeta .= '<meta property="og:description" content="' . $description . '">';
+            $ogmeta .= '<meta property="og:type" content="website">';
+            if ($description) echo '<meta name="description" content="' . $description . '">';
         }
+        echo $ogmeta;
     }
 
     function widgets_init()
