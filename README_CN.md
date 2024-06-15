@@ -2,13 +2,17 @@
 
 ![Wordpress 主题 Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
-最新版本: `0.7.0`
+最新版本: `0.7.1`
 
 本主题禁止各种修改作者链接打包重新发布的行为。
 
 [简单的使用文档](https://fatesinger.com/101971)
 
 ## 更新日志
+
+### 0.7,1
+
+- 增加 twiiter 头部标签
 
 ### 0.7.0
 

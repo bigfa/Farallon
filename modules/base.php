@@ -168,14 +168,19 @@ class farallonBase
             $author = $post->post_author;
             if (get_post_meta($ID, "_desription", true)) {
                 $description = get_post_meta($ID, "_desription", true);
-                echo '<meta name="description" content="' . $description . '">';
             } else {
                 $description = $post->post_title . '，' . __('author', 'Farallon') . ':' . get_the_author_meta('nickname', $author) . '，' . __('published on', 'Farallon') . get_the_date('Y-m-d');
-                echo '<meta name="description" content="' . $description . '">';
             }
+            echo '<meta name="description" content="' . $description . '">';
             $ogmeta .= '<meta property="og:image" content="' . farallon_get_background_image($ID) . '">';
             $ogmeta .= '<meta property="og:description" content="' . $description . '">';
             $ogmeta .= '<meta property="og:type" content="article">';
+            $twitter_meta = '<meta name="twitter:card" content="summary_large_image">';
+            $twitter_meta .= '<meta name="twitter:image:src" content="' . farallon_get_background_image($post->ID) . '">';
+            $twitter_meta .= '<meta name="twitter:site" content="@fatesinger">';
+            $twitter_meta .= '<meta name="twitter:title" content="' . $post->post_title . '">';
+            $twitter_meta .= '<meta name="twitter:description" content="' . $description . '">';
+            echo $twitter_meta;
         } else {
             if (is_home()) {
                 $description = $farallonSetting->get_setting('description');
