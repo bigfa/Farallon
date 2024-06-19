@@ -81,6 +81,11 @@ class farallonSetting
                         $class = $id == "basic" ? "div-tab" : "div-tab hidden";
                     ?>
                         <div id="tab-<?php echo $id; ?>" class="<?php echo $class; ?>">
+                            <?php if (isset($val['docs'])) : ?>
+                                <div class="pure-docs">
+                                    <a href="<?php echo $val['docs']; ?>" target="_blank"><?php _e('Documentation', 'Farallon') ?></a>
+                                </div>
+                            <?php endif; ?>
                             <table class="form-table">
                                 <tbody>
                                     <?php
@@ -275,6 +280,7 @@ $farallonSetting = new farallonSetting(
             ],
             [
                 'id' => 'feature',
+                'docs' => 'https://docs.wpista.com/config/feature.html',
                 'content' => [
                     [
                         'type' => 'switch',
@@ -448,6 +454,7 @@ $farallonSetting = new farallonSetting(
             ],
             [
                 'id' => 'meta',
+                'docs' => 'https://docs.wpista.com/config/sns.html',
                 'content' => [
                     [
                         'type' => 'switch',
