@@ -11,7 +11,11 @@ class farallonBase
         add_filter('excerpt_more', array($this, 'excerpt_more'));
         add_filter("the_excerpt", array($this, 'custom_excerpt_length'), 999);
         add_theme_support('html5', array(
-            'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption'
         ));
         add_theme_support('title-tag');
         register_nav_menu('farallon', 'farallon');
@@ -33,6 +37,16 @@ class farallonBase
 
         if ($farallonSetting->get_setting('exclude_status'))
             add_filter('pre_get_posts', array($this, 'exclude_post_format'));
+        if ($farallonSetting->get_setting('image_zoom'))
+            add_filter('the_content', array($this, 'image_zoom'));
+    }
+
+    function image_zoom($content)
+    {
+        $pattern = "/<a(.*?)href=('|\")([^>]*).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>(.*?)<\/a>/i";
+        $replacement = '<a$1href=$2$3.$4$5 data-action="imageZoomIn" $6>$7</a>';
+        $content = preg_replace($pattern, $replacement, $content);
+        return $content;
     }
 
     function exclude_post_format($query)
