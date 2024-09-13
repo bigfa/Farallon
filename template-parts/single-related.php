@@ -7,14 +7,14 @@
         'post__not_in' => array(get_the_ID()),
         'posts_per_page' => 6,
         'category__in' => wp_get_post_categories(get_the_ID()),
-        'tax_query' => array( // same post format
+        'tax_query' => get_post_format(get_the_ID()) ? array( // same post format
             array(
                 'taxonomy' => 'post_format',
                 'field' => 'slug',
                 'terms' => array('post-format-' . get_post_format(get_the_ID())),
                 'operator' => 'IN'
             )
-        )
+        ) : array()
     ));
     while ($the_query->have_posts()) : $the_query->the_post(); ?>
         <?php if (get_post_format(get_the_ID()) == 'status') : ?>
