@@ -15,6 +15,7 @@ latest version : `0.7.5`
 ### 0.7.5
 
 - add image zoom
+- add centered post header option
 
 ### 0.7.4
 
