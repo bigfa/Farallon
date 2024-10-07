@@ -99,16 +99,23 @@ class imgZoom {
         nav?.classList.add('u-hide');
         i.style.display = 'none';
         s.onload = () => {
-            var t = s.width,
-                e = s.height,
-                n = window.innerHeight - 140,
-                a = window.innerWidth - 80;
-            a < t
-                ? ((e *= a / t), (t = a), n < e && ((t *= n / e), (e = n)))
-                : n < e && ((t *= n / e), (e = n), a < t && ((e *= a / t), (t = a)));
+            let imageWidth = s.width,
+                imageHeight = s.height,
+                maxHeight = window.innerHeight - 140,
+                maxWidth = window.innerWidth - 80;
+            maxWidth < imageWidth
+                ? ((imageHeight *= maxWidth / imageWidth),
+                  (imageWidth = maxWidth),
+                  maxHeight < imageHeight &&
+                      ((imageWidth *= maxHeight / imageHeight), (imageHeight = maxHeight)))
+                : maxHeight < imageHeight &&
+                  ((imageWidth *= maxHeight / imageHeight),
+                  (imageHeight = maxHeight),
+                  maxWidth < imageWidth &&
+                      ((imageHeight *= maxWidth / imageWidth), (imageWidth = maxWidth)));
             i.setAttribute('src', o),
-                (i.style.width = t + 'px'),
-                (i.style.height = e + 'px'),
+                (i.style.width = imageWidth + 'px'),
+                (i.style.height = imageHeight + 'px'),
                 (i.style.display = 'block'),
                 nav?.classList.remove('u-hide');
 
@@ -119,16 +126,17 @@ class imgZoom {
     }
 
     overlayRemove() {
-        this._remove(document.querySelector('.overlay'));
+        let overlay = document.querySelector('.overlay') as HTMLElement;
+        if (overlay) this._remove(overlay);
         const body = document.querySelector('body');
         if (body) {
             body.classList.remove('u-overflowYHidden');
         }
     }
 
-    _remove(t: any) {
-        var e: any = t.parentNode;
-        e && e.removeChild(t);
+    _remove(dom: HTMLElement) {
+        const parent: any = dom.parentNode;
+        parent && parent.removeChild(dom);
     }
 }
 

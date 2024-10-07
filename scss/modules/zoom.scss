@@ -13,6 +13,8 @@
         position: relative;
         opacity: 0;
         transition: opacity 0.5s;
+        display: flex;
+        align-items: center;
         &.is-finieshed {
             opacity: 1;
         }
@@ -20,18 +22,22 @@
 }
 
 .zoomImgClose {
-    background-color: transparent;
     border: 0;
     color: var(--farallon-text-light);
-    font-size: 40px;
-    line-height: 1;
+    background-color: var(--farallon-background-gray);
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
     position: absolute;
     right: 10px;
     top: 10px;
     cursor: pointer;
     svg {
         transition: 0.5s transform;
-        fill: currentColor;
+        fill: var(--farallon-text-light);
     }
     &:hover {
         svg {
@@ -66,23 +72,54 @@
     }
 }
 
-.mfp-arrow-right {
-    border: 0;
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--farallon-text-light);
+.mfp-arrow-left {
     position: absolute;
-    opacity: 0.65;
-    right: 0;
+    left: 10px;
     margin: 0;
     top: 50%;
     margin-top: -55px;
     padding: 0;
-    width: 90px;
-    height: 110px;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    height: 44px;
+    background-color: var(--farallon-background-gray);
     cursor: pointer;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border: 0;
+    color: var(--text-gray-light);
     svg {
-        fill: currentColor;
+        transform: rotate(180deg);
+    }
+    &.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+}
+
+.mfp-arrow-right {
+    border: 0;
+    color: var(--farallon-text-light);
+    position: absolute;
+    right: 10px;
+    background-color: var(--farallon-background-gray);
+    cursor: pointer;
+    margin: 0;
+    top: 50%;
+    margin-top: -55px;
+    padding: 0;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &.disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
     }
 }
 
