@@ -323,6 +323,15 @@
         color: var(--farallon-hover-color);
         text-decoration: underline;
     }
+    display: flex;
+    align-items: center;
+    .friend--icon {
+        margin-left: 5px;
+
+        // fill: var(--farallon-main-color);
+        width: 16px;
+        height: 16px;
+    }
 }
 
 .pingback {

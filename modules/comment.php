@@ -171,7 +171,7 @@ class farallonComment
             $parent = get_comment($comment->comment_parent);
             if ($parent) {
                 $parent_link = esc_url(get_comment_link($parent));
-                $name        = get_comment_author($parent);
+                $name        = $parent->comment_author;
 
                 $comment_text =
                     '<a href="' . $parent_link . '" class="comment--parent__link">@' . $name . '</a>'

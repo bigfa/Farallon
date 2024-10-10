@@ -145,3 +145,17 @@
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+.link-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+.link-description {
+    font-size: 14px;
+    color: var(--farallon-text-gray);
+    text-align: center;
+}
