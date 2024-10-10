@@ -15,6 +15,7 @@ latest version : `0.7.6`
 ### 0.7.6
 
 - links template link title style
+- remove friend icon in comemnt content
 
 ### 0.7.5
 
