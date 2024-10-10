@@ -154,6 +154,8 @@ textarea {
 
 @import 'modules/status.scss';
 
+@import 'modules/zoom.scss';
+
 .notice--wrapper {
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
@@ -219,4 +221,8 @@ textarea {
 
 .u-textAlignCenter {
     text-align: center;
+}
+
+.u-overflowYHidden {
+    overflow-y: hidden;
 }

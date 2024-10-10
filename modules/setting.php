@@ -450,6 +450,13 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Friend icon', 'Farallon'),
                         'description' => __('Show icon when comment author url is in blogroll.', 'Farallon')
                     ],
+                    [
+                        'type' => 'switch',
+                        'name' => 'image_zoom',
+                        'label' => __('Post image zoom', 'Farallon'),
+                        'description' => __('Zoom image when a tag link to image url.', 'Farallon')
+                    ],
+
                 ]
             ],
             [

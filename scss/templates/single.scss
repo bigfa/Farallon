@@ -302,3 +302,11 @@
         }
     }
 }
+
+.header--centered {
+    text-align: center;
+    .post--single__title {
+        margin-bottom: 0px;
+    }
+    padding-bottom: 15px;
+}

@@ -6,8 +6,7 @@ global $farallonBase;
 <main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
         <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="post--single__meta"><time class="humane--time" itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y-m-d'); ?></time> / <?php the_category(',') ?> / <?php echo (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true) . __(' views', 'Farallon'); ?></div>
-            <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
+            <?php get_template_part('template-parts/header', 'default'); ?>
             <div class="post--single__content graph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
