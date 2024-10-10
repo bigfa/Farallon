@@ -98,6 +98,19 @@ class farallonComment
             'paged' => $page,
             'posts_per_page' => get_option('posts_per_page'),
         );
+
+        if ($request['category']) {
+            $query_args['category__in'] = $request['category'];
+        }
+
+        if ($request['tag']) {
+            $query_args['tag__in'] = $request['tag'];
+        }
+
+        if ($request['author']) {
+            $query_args['author'] = $request['author'];
+        }
+
         $the_query = new WP_Query($query_args);
         $data = [];
         while ($the_query->have_posts()) {
@@ -110,6 +123,7 @@ class farallonComment
                 'excerpt' => mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 150, "..."),
                 'author' => get_the_author(),
                 'author_avatar_urls' => get_avatar_url(get_the_author_meta('ID'), array('size' => 64)),
+                'author_posts_url' => get_author_posts_url(get_the_author_meta('ID')),
                 'comment_count' => get_comments_number(),
                 'view_count' => (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true),
                 'like_count' => (int)get_post_meta(get_the_ID(), FARALLON_POST_LIKE_KEY, true),
@@ -118,6 +132,8 @@ class farallonComment
                 'categories' => get_the_category(),
                 'tags' => get_the_tags(),
                 'has_image' => farallon_is_has_image(get_the_ID()),
+                'day' => get_the_date('d'),
+                'post_format' => get_post_format(),
             ];
         }
 

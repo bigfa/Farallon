@@ -16,6 +16,7 @@ latest version : `0.7.5`
 
 - add image zoom
 - add centered post header option
+- fixed render error when fetch posts
 
 ### 0.7.4
 
