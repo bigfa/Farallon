@@ -29,7 +29,17 @@ class farallonPost extends farallonBase {
                         : `<a href="${post.permalink}" aria-label="${post.post_title}" class="cover--link">
                 <img src="${post.thumbnail}" class="cover" alt="${post.post_title}">
                         </a>`;
-                return `<article class="post--item" itemtype="http://schema.org/Article" itemscope="itemscope">
+                return post.post_format && post.post_format == 'status'
+                    ? `<article class="post--item post--item__status" itemtype="http://schema.org/Article" itemscope="itemscope">
+    <div class="content">
+        <header>
+            <img alt="" src="${post.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" decoding="async">            <a itemprop="datePublished" datetime="" class="humane--time" href="${post.permalink}" aria-label="${post.post_title}">${post.date}</a>
+        </header>
+                    <div class="description" itemprop="about"><p>${post.excerpt}</p>
+</div>
+            </div>
+</article>`
+                    : `<article class="post--item" itemtype="http://schema.org/Article" itemscope="itemscope">
             <div class="content">
                 <h2 class="post--title" itemprop="headline">
                     <a href="${post.permalink}" aria-label="${post.post_title}">
