@@ -269,6 +269,7 @@
 .wp-caption {
     margin: 0 -50px 25px;
     position: relative;
+    max-width: calc(100% + 100px);
     img {
         border-radius: 4px;
     }
@@ -344,6 +345,7 @@
         margin: 0 0 20px;
         margin-left: -3.5%;
         margin-right: -3.5%;
+        max-width: calc(100% + 7%);
         img {
             border-radius: 0;
         }
