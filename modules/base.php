@@ -39,7 +39,17 @@ class farallonBase
             add_filter('pre_get_posts', array($this, 'exclude_post_format'));
         if ($farallonSetting->get_setting('image_zoom'))
             add_filter('the_content', array($this, 'image_zoom'));
+
+        if ($farallonSetting->get_setting('rss_tag'))
+            add_action('rss2_head', array($this, 'add_rss_tag'));
     }
+
+    function add_rss_tag()
+    {
+        global $farallonSetting;
+        echo $farallonSetting->get_setting('rss_tag');
+    }
+
 
     function image_zoom($content)
     {
