@@ -276,6 +276,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Gravatar proxy', 'Farallon'),
                         'description' => __('Gravatar proxy domain,like <code>cravatar.cn</code>', 'Farallon'),
                     ],
+                    [
+                        'type' => 'textarea',
+                        'name' => 'rss_tag',
+                        'label' => __('RSS Tag', 'Farallon'),
+                        'description' => __('You can add tag in rss to verify follow.', 'Farallon'),
+                    ],
                 ]
             ],
             [
