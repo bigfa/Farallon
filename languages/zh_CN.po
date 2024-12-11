@@ -457,6 +457,22 @@ msgstr "友情链接标识"
 msgid "Show icon when comment author url is in blogroll."
 msgstr "当评论者链接是友情链接时展示标识"
 
+#: modules/setting.php:462
+msgid "Post image zoom"
+msgstr "图片灯箱"
+
+#: modules/setting.php:463
+msgid "Zoom image when a tag link to image url."
+msgstr "当链接指向图片时开启灯箱效果"
+
+#: modules/setting.php:468
+msgid "Post update time"
+msgstr "文章更新时间"
+
+#: modules/setting.php:469
+msgid "Show the last update time of post."
+msgstr "展示文章更新时间"
+
 #: modules/setting.php:388
 msgid "Show post author tip in comment"
 msgstr "在评论中展示文章作者标识"
@@ -580,6 +596,10 @@ msgstr "关于"
 #: single.php:9
 msgid " views"
 msgstr "浏览"
+
+#: single.php:21
+msgid "Updated on"
+msgstr "更新于"
 
 #: single.php:39
 msgid "Copy link."

@@ -462,7 +462,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Post image zoom', 'Farallon'),
                         'description' => __('Zoom image when a tag link to image url.', 'Farallon')
                     ],
-
+                    [
+                        'type' => 'switch',
+                        'name' => 'update_time',
+                        'label' => __('Post update time', 'Farallon'),
+                        'description' => __('Show the last update time of post.', 'Farallon')
+                    ],
                 ]
             ],
             [
