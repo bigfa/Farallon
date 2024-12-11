@@ -16,6 +16,12 @@ global $farallonBase;
                 'pagelink'    => '%',
                 'separator'   => '<span class="screen-reader-text">, </span>',
             )); ?>
+            <?php if ($farallonSetting->get_setting('update_time')) : ?>
+                <div class="post--single__update">
+                    <span class="text"><?php _e('Updated on', 'Farallon') ?></span>
+                    <time datetime="<?php echo get_the_modified_time('c'); ?>" itemprop="dateModified"><?php echo get_the_modified_time('Y-m-d'); ?></time>
+                </div>
+            <?php endif; ?>
             <?php if ($farallonSetting->get_setting('postlike')) : ?>
                 <div class="post--single__action">
                     <button class="button--like like-btn" aria-label="like the post">
