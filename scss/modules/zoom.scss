@@ -9,12 +9,14 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+
     &-img-wrap {
         position: relative;
         opacity: 0;
         transition: opacity 0.5s;
         display: flex;
         align-items: center;
+
         &.is-finieshed {
             opacity: 1;
         }
@@ -35,10 +37,12 @@
     right: 10px;
     top: 10px;
     cursor: pointer;
+
     svg {
         transition: 0.5s transform;
         fill: var(--farallon-text-light);
     }
+
     &:hover {
         svg {
             transform: rotate(90deg);
@@ -66,6 +70,7 @@
     background-color: rgba(0, 0, 0, 0);
     color: var(--farallon-text-light);
     cursor: pointer;
+
     svg {
         transform: rotate(180deg);
         fill: currentColor;
@@ -90,9 +95,11 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     border: 0;
     color: var(--text-gray-light);
+
     svg {
         transform: rotate(180deg);
     }
+
     &.disabled {
         opacity: 0.4;
         cursor: not-allowed;
@@ -117,6 +124,7 @@
     justify-content: center;
     border-radius: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
     &.disabled {
         opacity: 0.4;
         cursor: not-allowed;
@@ -153,6 +161,7 @@
         justify-content: center;
         font-size: 24px;
         margin-top: 30px;
+
         img {
             width: 64px;
         }

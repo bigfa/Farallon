@@ -1,5 +1,6 @@
 .template--map {
     padding: 50px 0 50px;
+
     .hero--title {
         background-clip: text;
         -webkit-background-clip: text;
@@ -43,18 +44,21 @@
 .link-item {
     border-radius: 10px;
     padding: 15px;
+
     .sitename {
-        font-size: 12px;
+        font-size: var(--farallon-text-size-smallest);
         color: var(--farallon-text-gray);
         display: flex;
         flex-direction: column;
         line-height: 1.5;
+
         strong {
-            font-size: 16px;
+            font-size: var(--farallon-text-size-noral);
             color: var(--farallon-text-color);
             margin-bottom: 10px;
         }
     }
+
     &:hover {
         background-color: #fafafa;
         background: linear-gradient(

@@ -1,12 +1,13 @@
 .site--header {
-    //text-align: center;
     padding: 20px 80px;
+
     .svgIcon {
         margin-left: auto;
         fill: var(--farallon-text-gray-lightest);
         position: relative;
         cursor: pointer;
     }
+
     .avatar {
         height: 48px;
         width: 48px;
@@ -15,16 +16,17 @@
         border-radius: 100%;
         transition: 0.5s ease-in-out;
     }
+
     &.is-active {
         .avatar {
-            //height: 40px;
-            //width: 40px;
             box-shadow: 0 2px 4px 0 var(--farallon-border-color);
         }
     }
+
     position: relative;
     display: flex;
     align-items: center;
+
     &__center {
         position: absolute;
         left: 50%;
@@ -39,23 +41,26 @@
         border: 1px solid rgba(255, 255, 255, 0.5);
         border-radius: 999rem;
         overflow: hidden;
+
         ul {
             display: flex;
             align-items: center;
             height: 39px;
             box-sizing: border-box;
             padding: 5px 30px;
-            //border: 1px solid rgba(0, 0, 0, 0.05);
 
             li {
                 padding: 0 15px;
                 flex: 0 0 auto;
+
                 a {
                     &:hover {
                         color: var(--farallon-hover-color);
                     }
                 }
+
                 position: relative;
+
                 &.current-menu-item {
                     a {
                         color: var(--farallon-hover-color);
@@ -66,26 +71,30 @@
         .inner {
             display: flex;
             flex-direction: column;
+
             .search--area {
                 height: 39px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 .search-field {
                     background-color: rgba(0, 0, 0, 0);
                     border: 0;
                     font-size: 14px;
                 }
+
                 .search-submit {
                     background-color: #fff;
                     border: 0;
                     display: none;
                 }
-                // background-color: #f33;
             }
+
             &.search--active {
                 transform: translate(0px, -39px);
             }
+
             transition: 0.5s transform;
         }
     }
@@ -96,6 +105,7 @@
     align-items: center;
     font-size: 18px;
     font-weight: bold;
+
     .avatar {
         margin-right: 10px;
     }
@@ -122,16 +132,18 @@
 
             ul {
                 overflow-x: auto;
+                padding-left: 40px;
+                padding-right: 40px;
+
                 li {
                     flex: 0 0 auto;
                 }
-                padding-left: 40px;
-                padding-right: 40px;
             }
 
             .inner {
                 .search--area {
                     width: 100%;
+
                     .search-field {
                         width: 100%;
                     }
@@ -158,8 +170,6 @@
                 padding-right: 20px;
             }
         }
-
-        //display: none;
     }
 
     .u-xs-show {
@@ -180,6 +190,8 @@
 
 .top--bar {
     padding: 0 40px;
+    padding-bottom: 30px;
+
     .widget-card-content {
         font-size: 24px;
         font-weight: bold;
@@ -188,16 +200,14 @@
 
     .widget-card-description {
         color: var(--farallon-text-gray);
-        // margin-bottom: 15px;
         font-size: 18px;
     }
-
-    padding-bottom: 30px;
 }
 
 @media (max-width: 414px) {
     .top--bar {
         padding: 0 0px;
+
         .widget-card-content {
             font-size: 18px;
         }

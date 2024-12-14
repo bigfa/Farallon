@@ -1,22 +1,27 @@
 .site--footer {
-    font-size: 14px;
+    font-size: var(--farallon-text-size-small);
     padding: 20px 80px;
     border-top: 1px dotted var(--farallon-border-color);
     color: var(--farallon-text-light);
+
     &__content {
         display: flex;
         align-items: center;
     }
+
     &__info {
         display: none;
         text-align: center;
         color: var(--farallon-text-light);
+
         a {
             text-decoration: underline;
+
             &:hover {
                 color: var(--farallon-hover-color);
             }
         }
+
         &.active {
             display: block;
         }
@@ -25,25 +30,26 @@
         margin-left: auto;
         display: flex;
         align-items: center;
+
         svg {
             fill: var(--farallon-text-light);
             margin-left: 8px;
             cursor: pointer;
+
             &:hover {
                 fill: var(--farallon-hover-color);
             }
         }
-        // &::after {
-        //     content: 'a bigfa theme';
-        //     margin-left: 3px;
-        // }
     }
+
     nav {
         ul {
             display: flex;
             align-items: center;
+
             li {
                 margin-right: 10px;
+
                 a {
                     &:hover {
                         text-decoration: underline;
@@ -56,20 +62,25 @@
     &__sns {
         display: flex;
         align-items: center;
+
         a {
             margin: 0 12px 0 0;
             display: flex;
         }
+
         svg {
             fill: var(--farallon-text-color);
+            width: 18px;
+            height: 18px;
+
             &:hover {
                 fill: var(--farallon-hover-color);
             }
-            width: 18px;
-            height: 18px;
+
             &.sns {
                 fill: none;
                 stroke: var(--farallon-text-color);
+
                 &:hover {
                     stroke: var(--farallon-hover-color);
                     fill: none;
@@ -99,16 +110,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        svg {
-            //fill: rgba(0, 0, 0, 0.67);
-        }
         color: var(--farallon-text-gray-lightest);
 
         &:hover {
             color: var(--farallon-text-color);
-            svg {
-                // fill: rgba(0, 0, 0, 0.87);
-            }
         }
 
         &.is-active {
@@ -117,6 +122,7 @@
         }
 
         margin-bottom: 5px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -130,6 +136,7 @@
         align-items: center;
         padding-right: 3.5%;
         padding-left: 3.5%;
+
         .copyright {
             margin-left: 0;
         }
@@ -144,6 +151,7 @@
         bottom: 100px;
     }
 }
+
 @keyframes toTop {
     0% {
         transform: translateY(0);
@@ -152,6 +160,7 @@
         transform: translateY(-50%);
     }
 }
+
 .backToTop {
     .svgIcon {
         width: 17px;
@@ -159,19 +168,23 @@
         fill: var(--farallon-main-color);
         animation: toTop 1s ease-in infinite alternate;
     }
+
     &:hover {
         .svgIcon {
             fill: var(--farallon-hover-color);
             animation-play-state: paused;
         }
     }
+
     position: fixed;
     bottom: 25px;
     right: -25px;
     cursor: pointer;
+
     &.is-active {
         right: 25px;
     }
+
     background-color: var(--border-color);
     z-index: 10;
     transition: all 0.3s ease;
@@ -179,6 +192,8 @@
 
 .footer--bar {
     padding: 0 40px;
+    padding-top: 30px;
+
     .widget-card-content {
         font-size: 24px;
         font-weight: bold;
@@ -187,16 +202,14 @@
 
     .widget-card-description {
         color: var(--farallon-text-gray);
-        // margin-bottom: 15px;
         font-size: 18px;
     }
-
-    padding-top: 30px;
 }
 
 @media (max-width: 414px) {
     .footer--bar {
         padding: 0 0px;
+
         .widget-card-content {
             font-size: 18px;
         }
@@ -213,15 +226,18 @@
 }
 
 .widget_links {
-    font-size: 14px;
+    font-size: var(--farallon-text-size-small);
     color: var(--farallon-text-light);
+
     .blogroll {
         padding: 5px 0;
         display: flex;
         flex-wrap: wrap;
+
         li {
             margin-right: 15px;
             margin-bottom: 15px;
+
             a {
                 &:hover {
                     color: var(--farallon-hover-color);
@@ -237,6 +253,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 12px;
     padding-top: 15px;
+
     &--item {
         display: flex;
         flex-direction: column;
@@ -256,7 +273,6 @@
         font-weight: bold;
         color: #fff;
         position: relative;
-        // margin-top: 10px;
     }
 
     &--meta {
@@ -268,6 +284,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         &::before {
             content: '';
             position: absolute;
@@ -278,6 +295,7 @@
             background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
             border-radius: 5px;
         }
+
         &:hover {
             &::before {
                 background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);

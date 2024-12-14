@@ -19,7 +19,7 @@
         margin-bottom: 20px;
         margin-left: auto;
         margin-right: auto;
-        font-size: 12px;
+        font-size: var(--farallon-text-size-smallest);
         color: var(--farallon-text-light);
         thead {
             tr {
@@ -57,7 +57,7 @@
         background-color: var(--farallon-background-gray);
         padding: 10px;
         border-radius: 5px;
-        font-size: 14px;
+        font-size: var(--farallon-text-size-small);
     }
 
     &--mixtapeEmbed {
@@ -87,7 +87,7 @@
             justify-content: center;
             .markup--em {
                 font-style: normal;
-                font-size: 14px;
+                font-size: var(--farallon-text-size-small);
                 line-height: 1.6;
                 color: var(--farallon-text-light);
             }
@@ -102,7 +102,7 @@
         }
         display: flex;
     }
-    font-size: 16px;
+    font-size: var(--farallon-text-size-normal);
     p {
         margin-bottom: 25px;
         hyphens: auto;
@@ -243,7 +243,7 @@
         & > li:before {
             content: counter(item);
             counter-increment: item;
-            font-size: 12px;
+            font-size: var(--farallon-text-size-smallest);
             font-weight: 700;
             align-items: center;
             background-color: rgba(195, 218, 254, 0.43);
