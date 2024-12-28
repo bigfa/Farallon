@@ -15,6 +15,7 @@ latest version : `0.8.0`
 ### 0.8.0
 
 - style enhancement
+- add a config for showing image count of the post
 
 ### 0.7.9
 

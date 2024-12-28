@@ -20,6 +20,12 @@ include_once('modules/widget.php');
 include_once('modules/shortcode.php');
 include_once('modules/update.php');
 
+function farallon_get_post_image_count($post_id)
+{
+    $content = get_post_field('post_content', $post_id);
+    preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
+    return count($strResult[1]);
+}
 
 function farallon_get_background_image($post_id, $width = null, $height = null)
 {

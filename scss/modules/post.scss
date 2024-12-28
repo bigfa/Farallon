@@ -118,6 +118,22 @@
             right: 8px;
             top: 8px;
         }
+        .cover--count {
+            position: absolute;
+            bottom: 8px;
+            left: 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: rgba(255, 255, 255, 0.95);
+            padding: 0px 5px;
+            border-radius: 5px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            svg {
+                margin-right: 5px;
+            }
+        }
     }
 
     .cover {
