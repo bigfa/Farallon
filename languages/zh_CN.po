@@ -341,6 +341,14 @@ msgstr "文章点赞"
 msgid "Enable like info in homepage"
 msgstr "首页展示文章点赞数量"
 
+#: modules/setting.php:360
+msgid "Image count"
+msgstr "文章图片数"
+
+#: modules/setting.php:361
+msgid "Show image count of the post"
+msgstr "展示文章包含的图片数量"
+
 #: modules/setting.php:333 modules/setting.php:334
 msgid "Hide home cover"
 msgstr "隐藏首页缩略图"

@@ -24,12 +24,11 @@
         margin-bottom: 10px;
     }
     .meta {
-        font-size: 12px;
+        font-size: var(--farallon-text-size-smallest);
         color: var(--farallon-text-gray-lightest);
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        // margin-top: 2px;
         time {
             display: flex;
             align-items: center;

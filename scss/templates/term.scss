@@ -1,10 +1,11 @@
 .template--terms {
     padding: 50px 80px;
+    min-height: 60vh;
+
     .page--header {
         padding: 0px 0 40px;
         text-align: center;
     }
-    min-height: 60vh;
 }
 
 .tagCard {
@@ -12,21 +13,25 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
     padding-top: 20px;
+
     &--item {
         transition: 0.5s;
         padding: 8px 15px;
         border: 1px solid var(--farallon-border-color);
         border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        color: var(--farallon-text-gray);
+
         &:hover {
             .collectionCard--title {
                 color: var(--farallon-hover-color);
                 text-decoration: underline;
             }
+
             color: var(--farallon-hover-color);
         }
-        overflow: hidden;
-        position: relative;
-        color: var(--farallon-text-gray);
+
         &::after {
             position: absolute;
             content: attr(data-count);
@@ -59,19 +64,22 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
     padding-top: 20px;
+    overflow: hidden;
+    position: relative;
+
     &--item {
         transition: 0.5s;
         padding: 8px;
         border: 1px solid var(--farallon-border-color);
         border-radius: 5px;
+
         &:hover {
             .collectionCard--title {
                 color: var(--farallon-hover-color);
                 text-decoration: underline;
             }
         }
-        overflow: hidden;
-        position: relative;
+
         &::after {
             position: absolute;
             content: attr(data-count);
@@ -119,6 +127,7 @@
     .template--terms {
         padding: 50px 20px;
     }
+
     .collectionCard {
         grid-template-columns: repeat(2, 1fr);
     }

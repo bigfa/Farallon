@@ -356,6 +356,12 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
+                        'name' => 'home_image_count',
+                        'label' => __('Image count', 'Farallon'),
+                        'description' => __('Show image count of the post', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'hide_home_cover',
                         'label' => __('Hide home cover', 'Farallon'),
                         'description' => __('Hide home cover', 'Farallon')

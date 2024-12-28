@@ -42,6 +42,12 @@
         <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" class="cover--link">
             <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
             <?php do_action('marker_pro_post_meta'); ?>
+            <?php if ($farallonSetting->get_setting('home_image_count') && farallon_get_post_image_count(get_the_ID()) > 1) : ?>
+                <div class="cover--count"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14">
+                        <rect width="11.976" height="11.944" x="1.362" y="1.276" fill-opacity="0.96" stroke="#ffffff" rx="1.5"></rect>
+                        <path fill="#ffffff" stroke="#ffffff" d="M5.904 10.746 9.67 6.98l2.757 2.758.657 2.382c-.02.178-.135.393-.355.585-.241.21-.536.326-.77.326H2.55c-.206 0-.448-.112-.652-.332a1.17 1.17 0 0 1-.308-.614l.707-1.394 1.421-1.422 1.477 1.478.354.354zM6.192 6.461a.856.856 0 1 1-1.712 0 .856.856 0 0 1 1.712 0Z"></path>
+                    </svg><?php echo farallon_get_post_image_count(get_the_ID()); ?></div>
+            <?php endif; ?>
         </a>
     <?php endif; ?>
 </article>

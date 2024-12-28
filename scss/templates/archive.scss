@@ -35,10 +35,12 @@
         align-items: center;
         justify-content: center;
         padding-bottom: 20px;
+
         .search-form {
             border: 1px solid var(--farallon-border-color);
             border-radius: 999rem;
             padding: 5px;
+
             .search-field {
                 border: 0;
                 background-color: rgba(0, 0, 0, 0);
@@ -46,6 +48,7 @@
                 font-size: 14px;
                 width: 250px;
             }
+
             .search-submit {
                 border-radius: 999rem;
                 border: 0;
@@ -62,6 +65,7 @@
     .archive-header {
         padding-left: 3.5%;
         padding-right: 3.5%;
+
         h1 {
             font-size: 20px;
         }
@@ -92,18 +96,23 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    padding: 20px 0;
+
     .archive--item {
         border: 1px solid var(--farallon-border-color-light);
         padding: 15px;
         border-radius: 10px;
+
         .archive--title {
             line-height: 1.4;
             font-size: 14px;
         }
+
         .archive--meta {
             font-size: 12px;
             color: var(--farallon-text-gray);
         }
+
         &:hover {
             background-color: #fafafa;
             background: linear-gradient(
@@ -116,7 +125,6 @@
             }
         }
     }
-    padding: 20px 0;
 }
 
 @media (max-width: 820px) {
@@ -124,6 +132,7 @@
         padding-left: 40px;
         padding-right: 40px;
     }
+
     .archive--list {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -141,6 +150,7 @@
         padding-left: 3.5%;
         padding-right: 3.5%;
     }
+
     .archive--list {
         grid-template-columns: repeat(1, 1fr);
     }
