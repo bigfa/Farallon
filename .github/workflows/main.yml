@@ -13,6 +13,6 @@ jobs:
     steps:
       - name: Notify theme updates
         run: |
-          curl --fail --request GET --header "Authorization: Bearer $SIGN" --url "https://farallon.4398929.workers.dev/update?version=${{ github.ref }}"
+          curl --fail --request GET --header "Authorization: Bearer $SIGN" --url "https://farallon.4398929.workers.dev/update?theme=farallon&version=${{ github.ref }}"
         env:
           SIGN: ${{ secrets.SIGN }}
