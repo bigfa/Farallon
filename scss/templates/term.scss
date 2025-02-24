@@ -72,6 +72,8 @@
         padding: 8px;
         border: 1px solid var(--farallon-border-color);
         border-radius: 5px;
+        position: relative;
+        overflow: hidden;
 
         &:hover {
             .collectionCard--title {

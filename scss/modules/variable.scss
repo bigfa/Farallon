@@ -25,6 +25,14 @@
     --farallon-text-size-smallest: 12px;
 }
 
+.db--container,
+.doulist-item {
+    --db--text-color: var(--farallon-text-color);
+    --db--text-color-light: var(--farallon-text-light);
+    --db--background-gray: var(--farallon-background-gray);
+    --db-border-color: var(--farallon-border-color);
+}
+
 @media (prefers-color-scheme: dark) {
     .auto {
         --farallon-main-color: rgba(253, 186, 116, 1);
@@ -127,7 +135,15 @@
             input,
             textarea {
                 background-color: rgba(63, 63, 70, 0.15);
-                border-color: rgb(63 63 70/1);
+                border-color: #3f3f46;
+            }
+        }
+
+        .comment-form-cookies-consent {
+            label {
+                &::before {
+                    border-color: #3f3f46;
+                }
             }
         }
     }
@@ -233,7 +249,15 @@
         input,
         textarea {
             background-color: rgba(63, 63, 70, 0.15);
-            border-color: rgb(63 63 70/1);
+            border-color: #3f3f46;
+        }
+    }
+
+    .comment-form-cookies-consent {
+        label {
+            &::before {
+                border-color: #3f3f46;
+            }
         }
     }
 }
