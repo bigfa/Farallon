@@ -157,9 +157,9 @@
         border: 1px solid var(--farallon-border-color);
         cursor: pointer;
         position: relative;
-        padding: 5px 30px;
+        padding: 4px 32px;
         border-radius: 8px;
-        font-size: var(--farallon-text-size-small);
+        font-size: var(--farallon-text-size-smallest);
         color: var(--farallon-text-gray);
         &:hover {
             border-color: var(--farallon-hover-color);

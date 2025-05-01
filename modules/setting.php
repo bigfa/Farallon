@@ -535,6 +535,12 @@ $farallonSetting = new farallonSetting(
                         'description' => __('Mastodon link', 'Farallon')
                     ],
                     [
+                        'type' => 'input',
+                        'name' => 'threads',
+                        'label' => __('Threads', 'Farallon'),
+                        'description' => __('Threads link', 'Farallon')
+                    ],
+                    [
                         'type' => 'textarea',
                         'name' => 'custom_sns',
                         'label' => __('Custom', 'Farallon'),
