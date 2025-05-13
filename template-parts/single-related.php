@@ -1,6 +1,7 @@
 <h3 class="related--posts__title"><?php _e('Related Posts', 'Farallon'); ?></h3>
 <div class="post--single__related">
     <?php
+    global $farallonSetting;
     // get same format related posts
     $the_query = new WP_Query(array(
         'post_type' => 'post',
@@ -35,7 +36,7 @@
             <div class="post--single__related__item">
                 <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                     <div class="post--single__related__item__img">
-                        <?php if (farallon_is_has_image(get_the_ID())) : ?>
+                        <?php if (farallon_is_has_image(get_the_ID()) || $farallonSetting->get_setting('always_home_cover')) : ?>
                             <img src="<?php echo farallon_get_background_image(get_the_ID(), 400, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
                         <?php endif; ?>
                     </div>

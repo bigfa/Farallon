@@ -10,7 +10,12 @@
             </a>
         </h2>
         <div class="description" itemprop="about">
-            <?php echo mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 150, "..."); ?>
+            <?php
+            if (has_excerpt()) {
+                echo get_the_excerpt();
+            } else {
+                echo mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 150, "...");
+            } ?>
         </div>
         <div class="meta">
             <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
@@ -38,7 +43,7 @@
             <?php endif; ?>
         </div>
     </div>
-    <?php if (farallon_is_has_image(get_the_ID()) && !$farallonSetting->get_setting('hide_home_cover')) : ?>
+    <?php if ((farallon_is_has_image(get_the_ID()) && !$farallonSetting->get_setting('hide_home_cover')) || $farallonSetting->get_setting('always_home_cover')) : ?>
         <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" class="cover--link">
             <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
             <?php do_action('marker_pro_post_meta'); ?>

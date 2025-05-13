@@ -262,6 +262,34 @@
             padding: 0;
         }
     }
+
+    .gallery {
+        display: grid;
+        grid-gap: 10px;
+        margin-bottom: 25px;
+        .gallery-item {
+            margin: 0;
+            .gallery-caption {
+                text-align: center;
+                font-size: 12px;
+                color: var(--farallon-text-light);
+            }
+        }
+
+        &-columns-2,
+        &-columns-4,
+        &-columns-5,
+        &-columns-7,
+        &-columns-8 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &-columns-3,
+        &-columns-6,
+        &-columns-9 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
 }
 
 .grap--figure,

@@ -38,13 +38,14 @@ function farallon_get_background_image($post_id, $width = null, $height = null)
         $output = get_post_meta($post_id, '_banner', true);
     } else {
         $content = get_post_field('post_content', $post_id);
-        $defaltthubmnail = $farallonSetting->get_setting('default_thumbnail');
+        $defaltthubmnail = $farallonSetting->get_setting('default_thumbnail') ? $farallonSetting->get_setting('default_thumbnail') : get_template_directory_uri() . '/build/images/default.jpg';
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
         $n = count($strResult[1]);
         if ($n > 0) {
             $output = $strResult[1][0];
         } else {
             $output = $defaltthubmnail;
+            return $output;
         }
     }
     if ($height && $width) {
