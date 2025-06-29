@@ -296,6 +296,12 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
+                        'name' => 'clean_mode',
+                        'label' => __('Clean Mode', 'Farallon'),
+                        'description' => __('Disable gradient effect.', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'upyun',
                         'label' => __('Upyun CDN', 'Farallon'),
                         'description' => __('Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly.', 'Farallon')
@@ -480,6 +486,12 @@ $farallonSetting = new farallonSetting(
                         'label' => __('Post update time', 'Farallon'),
                         'description' => __('Show the last update time of post.', 'Farallon')
                     ],
+                    // [
+                    //     'type' => 'switch',
+                    //     'name' => 'post_views',
+                    //     'label' => __('Post Views', 'Farallon'),
+                    //     'description' => __('Enable theme post views.', 'Farallon')
+                    // ],
                 ]
             ],
             [

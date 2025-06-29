@@ -42,6 +42,17 @@ class farallonBase
 
         if ($farallonSetting->get_setting('rss_tag'))
             add_action('rss2_head', array($this, 'add_rss_tag'));
+
+        add_filter('body_class', array($this, 'add_body_class'));
+    }
+
+    function add_body_class($classes)
+    {
+        global $farallonSetting;
+        if ($farallonSetting->get_setting('clean_mode')) {
+            $classes[] = 'is-cleanMode';
+        }
+        return $classes;
     }
 
     function add_rss_tag()
@@ -332,6 +343,7 @@ class farallonBase
                 'version' => FARALLON_VERSION,
                 'is_archive' => is_archive(),
                 'archive_id' => get_queried_object_id(),
+                'post_views' => true,
                 'hide_home_cover' => !!$farallonSetting->get_setting('hide_home_cover'),
                 'timeFormat' => [
                     'second' => __('second ago', 'Farallon'),

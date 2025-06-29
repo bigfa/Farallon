@@ -104,8 +104,8 @@ class farallonAction extends farallonBase {
                 .querySelector('.site--header__center .inner')!
                 .classList.toggle('search--active');
         });
-
-        if (this.is_single) {
+        // @ts-ignore
+        if (this.is_single && obvInit.post_view) {
             this.trackPostView();
         }
 
