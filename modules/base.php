@@ -343,7 +343,7 @@ class farallonBase
                 'version' => FARALLON_VERSION,
                 'is_archive' => is_archive(),
                 'archive_id' => get_queried_object_id(),
-                'post_views' => true,
+                'post_view' => true,
                 'hide_home_cover' => !!$farallonSetting->get_setting('hide_home_cover'),
                 'timeFormat' => [
                     'second' => __('second ago', 'Farallon'),

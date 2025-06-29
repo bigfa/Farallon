@@ -38,7 +38,7 @@ get_header();
             'title' => get_the_title(),
             'link' => get_permalink(),
             'commentnum' => get_comments_number(),
-            'views' => farallon_post_view($post->ID),
+            'views' => farallon_get_post_views_text(false, false, false, get_the_ID()),
             'date' => get_the_time('m-d'),
         ];
 

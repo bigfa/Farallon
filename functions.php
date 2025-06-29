@@ -115,9 +115,37 @@ function link_to_menu_editor($args)
 }
 
 
-function farallon_post_view()
+function farallon_post_view($post_id)
 {
-    return (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true);
+    $views_number = (int)get_post_meta($post_id, FARALLON_POST_VIEW_KEY, true);
+
+    /**
+     * Filters the returned views for a post.
+     *
+     * @since Hera 0.8.6
+     */
+    return apply_filters('hera_get_post_views', $views_number, $post_id);
+}
+
+/**
+ * Get post views
+ *
+ * @since Farallon 0.8.6
+ *
+ * @param post id
+ * @return post views
+ */
+
+function farallon_get_post_views_text($zero = false, $one = false, $more = false, $post = 0)
+{
+    $views = farallon_post_view($post);
+    if ($views == 0) {
+        return $zero ? $zero : __('No views yet', 'Farallon');
+    } elseif ($views == 1) {
+        return $one ? $one : __('1 View', 'Farallon');
+    } else {
+        return $more ? str_replace('%d', $views, $more) : sprintf(__('%d Views', 'Farallon'), $views);
+    }
 }
 
 /**
