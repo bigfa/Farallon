@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Farallon theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.8.6\n"
+"Project-Id-Version: Farallon 0.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-29T08:30:22+00:00\n"
+"POT-Creation-Date: 2025-07-17T08:28:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Farallon\n"
@@ -47,20 +47,32 @@ msgstr ""
 msgid "Add a menu"
 msgstr ""
 
-#: functions.php:136
+#: functions.php:143
 msgid "No views yet"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:145
 msgid "1 View"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:147
 msgid "%d Views"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:171
 msgid "No links yet"
+msgstr ""
+
+#: functions.php:225
+#: template-parts/content-card.php:29
+#: template-parts/content-error.php:16
+#: template-parts/content-status.php:6
+#: template-parts/content.php:25
+#: template-parts/header-centered.php:3
+#: template-parts/header-default.php:1
+#: template-parts/single-related.php:30
+#: template-parts/single-related.php:48
+msgid "ago"
 msgstr ""
 
 #: modules/base.php:125
@@ -124,62 +136,6 @@ msgstr ""
 
 #: modules/base.php:309
 msgid "Set Category Image"
-msgstr ""
-
-#: modules/base.php:349
-msgid "second ago"
-msgstr ""
-
-#: modules/base.php:350
-msgid "seconds ago"
-msgstr ""
-
-#: modules/base.php:351
-msgid "minute ago"
-msgstr ""
-
-#: modules/base.php:352
-msgid "minutes ago"
-msgstr ""
-
-#: modules/base.php:353
-msgid "hour ago"
-msgstr ""
-
-#: modules/base.php:354
-msgid "hours ago"
-msgstr ""
-
-#: modules/base.php:355
-msgid "day ago"
-msgstr ""
-
-#: modules/base.php:356
-msgid "days ago"
-msgstr ""
-
-#: modules/base.php:357
-msgid "week ago"
-msgstr ""
-
-#: modules/base.php:358
-msgid "weeks ago"
-msgstr ""
-
-#: modules/base.php:359
-msgid "month ago"
-msgstr ""
-
-#: modules/base.php:360
-msgid "months ago"
-msgstr ""
-
-#: modules/base.php:361
-msgid "year ago"
-msgstr ""
-
-#: modules/base.php:362
-msgid "years ago"
 msgstr ""
 
 #: modules/comment.php:85

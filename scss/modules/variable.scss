@@ -1,6 +1,10 @@
 :root {
     --farallon-main-color: #4370f5;
     --farallon-hover-color: #3a5f9a;
+
+    --farallon-dark-main-color: rgba(253, 186, 116, 1);
+    --farallon-dark-hover-color: rgba(255, 237, 213, 1);
+
     --farallon-text-color: rgba(0, 0, 0, 0.84);
     --farallon-text-light: rgba(0, 0, 0, 0.68);
     --farallon-text-gray: rgba(0, 0, 0, 0.6);
@@ -35,8 +39,8 @@
 
 @media (prefers-color-scheme: dark) {
     .auto {
-        --farallon-main-color: rgba(253, 186, 116, 1);
-        --farallon-hover-color: rgba(255, 237, 213, 1);
+        --farallon-main-color: var(--farallon-dark-main-color);
+        --farallon-hover-color: var(--farallon-dark-hover-color);
         --farallon-text-color: #a1a1aa;
         --farallon-text-light: rgba(161, 161, 170, 1);
         --farallon-text-gray: rgba(113, 113, 122, 1);
@@ -150,8 +154,8 @@
 }
 
 .dark {
-    --farallon-main-color: rgba(253, 186, 116, 1);
-    --farallon-hover-color: rgba(255, 237, 213, 1);
+    --farallon-main-color: var(--farallon-dark-main-color);
+    --farallon-hover-color: var(--farallon-dark-hover-color);
     --farallon-text-color: #a1a1aa;
     --farallon-text-light: rgba(161, 161, 170, 1);
     --farallon-text-gray: rgba(113, 113, 122, 1);

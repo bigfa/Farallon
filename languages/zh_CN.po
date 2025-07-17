@@ -2,10 +2,10 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.3.4\n"
+"Project-Id-Version: Farallon 0.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2025-06-29 16:31+0800\n"
+"PO-Revision-Date: 2025-07-17 16:28+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 "X-Domain: Farallon\n"
 
+#
 #. Theme Name of the theme
 msgid "Farallon"
 msgstr "Farallon"
@@ -34,6 +35,10 @@ msgstr "bigfa"
 #. Author URI of the theme
 msgid "https://fatesinger.com"
 msgstr "https://fatesinger.com"
+
+#: comments.php:25
+msgid "This post has no comment yet"
+msgstr "此文章暂无评论"
 
 #: functions.php:88
 msgid "Add a menu"
@@ -94,62 +99,6 @@ msgstr "首页底部"
 #: modules/base.php:130 modules/base.php:132
 msgid "Single Pgae Bottom"
 msgstr "文章详情页底部"
-
-#: modules/base.php:191
-msgid "second ago"
-msgstr "秒前"
-
-#: modules/base.php:192
-msgid "seconds ago"
-msgstr "秒前"
-
-#: modules/base.php:193
-msgid "minute ago"
-msgstr "分钟前"
-
-#: modules/base.php:194
-msgid "minutes ago"
-msgstr "分钟前"
-
-#: modules/base.php:195
-msgid "hour ago"
-msgstr "小时前"
-
-#: modules/base.php:196
-msgid "hours ago"
-msgstr "小时前"
-
-#: modules/base.php:197
-msgid "day ago"
-msgstr "天前"
-
-#: modules/base.php:198
-msgid "days ago"
-msgstr "天前"
-
-#: modules/base.php:199
-msgid "week ago"
-msgstr "周前"
-
-#: modules/base.php:200
-msgid "weeks ago"
-msgstr "周天"
-
-#: modules/base.php:201
-msgid "month ago"
-msgstr "个月前"
-
-#: modules/base.php:202
-msgid "months ago"
-msgstr "个月前"
-
-#: modules/base.php:203
-msgid "year ago"
-msgstr "年前"
-
-#: modules/base.php:204
-msgid "years ago"
-msgstr "年前"
 
 #: modules/comment.php:53
 msgid "Author"
@@ -644,6 +593,10 @@ msgstr "复制链接"
 #: template-parts/content.php:8
 msgid "Sticky"
 msgstr "置顶"
+
+#: template-parts/content.php:25
+msgid "ago"
+msgstr "前"
 
 #: template-parts/pagination.php:9
 msgid "loadmore"

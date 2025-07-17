@@ -1,6 +1,6 @@
 {
     "name": "farallon",
-    "version": "0.0.1",
+    "version": "0.8.7",
     "description": "",
     "main": "gulpfile.js",
     "scripts": {

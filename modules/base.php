@@ -345,22 +345,6 @@ class farallonBase
                 'archive_id' => get_queried_object_id(),
                 'post_view' => true,
                 'hide_home_cover' => !!$farallonSetting->get_setting('hide_home_cover'),
-                'timeFormat' => [
-                    'second' => __('second ago', 'Farallon'),
-                    'seconds' => __('seconds ago', 'Farallon'),
-                    'minute' => __('minute ago', 'Farallon'),
-                    'minutes' => __('minutes ago', 'Farallon'),
-                    'hour' => __('hour ago', 'Farallon'),
-                    'hours' => __('hours ago', 'Farallon'),
-                    'day' => __('day ago', 'Farallon'),
-                    'days' => __('days ago', 'Farallon'),
-                    'week' => __('week ago', 'Farallon'),
-                    'weeks' => __('weeks ago', 'Farallon'),
-                    'month' => __('month ago', 'Farallon'),
-                    'months' => __('months ago', 'Farallon'),
-                    'year' => __('year ago', 'Farallon'),
-                    'years' => __('years ago', 'Farallon'),
-                ]
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {
