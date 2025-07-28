@@ -236,3 +236,28 @@ function farallon_comment($comment, $args, $depth)
             break;
     endswitch;
 }
+
+
+function farallon_get_post_read_time($post_id)
+{
+    $content = get_post_field('post_content', $post_id);
+    $word_count = str_word_count(strip_tags($content));
+    $reading_time = ceil($word_count / 200); // Average reading speed is 200 wpm
+
+    $image_count = farallon_get_post_image_count($post_id);
+    if ($image_count > 0) {
+        $reading_time += ceil($image_count / 10); // Add extra time for images
+    }
+
+    return $reading_time;
+}
+
+function farallon_get_post_read_time_text($post_id)
+{
+    $reading_time = farallon_get_post_read_time($post_id);
+    if ($reading_time <= 1) {
+        return __('1 min read', 'Farallon');
+    } else {
+        return sprintf(__('%d min read', 'Farallon'), $reading_time);
+    }
+}

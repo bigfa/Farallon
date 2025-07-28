@@ -362,6 +362,12 @@ $farallonSetting = new farallonSetting(
                     ],
                     [
                         'type' => 'switch',
+                        'name' => 'home_readtime',
+                        'label' => __('Read time info', 'Farallon'),
+                        'description' => __('Enable read time info in homepage', 'Farallon')
+                    ],
+                    [
+                        'type' => 'switch',
                         'name' => 'home_image_count',
                         'label' => __('Image count', 'Farallon'),
                         'description' => __('Show image count of the post', 'Farallon')

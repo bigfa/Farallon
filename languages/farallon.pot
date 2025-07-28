@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Farallon theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.8.7\n"
+"Project-Id-Version: Farallon 0.8.8\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-17T08:28:28+00:00\n"
+"POT-Creation-Date: 2025-07-28T12:52:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Farallon\n"
@@ -69,10 +69,18 @@ msgstr ""
 #: template-parts/content-status.php:6
 #: template-parts/content.php:25
 #: template-parts/header-centered.php:3
-#: template-parts/header-default.php:1
+#: template-parts/header-default.php:2
 #: template-parts/single-related.php:30
 #: template-parts/single-related.php:48
 msgid "ago"
+msgstr ""
+
+#: functions.php:259
+msgid "1 min read"
+msgstr ""
+
+#: functions.php:261
+msgid "%d min read"
 msgstr ""
 
 #: modules/base.php:125
@@ -97,7 +105,7 @@ msgid "Use Card Template"
 msgstr ""
 
 #: modules/base.php:184
-#: modules/setting.php:444
+#: modules/setting.php:450
 msgid "Table of content"
 msgstr ""
 
@@ -354,267 +362,275 @@ msgid "Enable like info in homepage"
 msgstr ""
 
 #: modules/setting.php:366
-msgid "Image count"
+msgid "Read time info"
 msgstr ""
 
 #: modules/setting.php:367
-msgid "Show image count of the post"
+msgid "Enable read time info in homepage"
 msgstr ""
 
 #: modules/setting.php:372
+msgid "Image count"
+msgstr ""
+
 #: modules/setting.php:373
-msgid "Hide home cover"
+msgid "Show image count of the post"
 msgstr ""
 
 #: modules/setting.php:378
-msgid "Always home cover"
-msgstr ""
-
 #: modules/setting.php:379
-msgid "Always show cover for a post."
+msgid "Hide home cover"
 msgstr ""
 
 #: modules/setting.php:384
-msgid "Exclude status"
+msgid "Always home cover"
 msgstr ""
 
 #: modules/setting.php:385
+msgid "Always show cover for a post."
+msgstr ""
+
+#: modules/setting.php:390
+msgid "Exclude status"
+msgstr ""
+
+#: modules/setting.php:391
 msgid "Exclude post type status in homepage"
 msgstr ""
 
-#: modules/setting.php:396
+#: modules/setting.php:402
 msgid "Author bio"
 msgstr ""
 
-#: modules/setting.php:397
+#: modules/setting.php:403
 msgid "Enable author bio"
 msgstr ""
 
-#: modules/setting.php:402
+#: modules/setting.php:408
 msgid "Author sns icons"
 msgstr ""
 
-#: modules/setting.php:403
+#: modules/setting.php:409
 msgid "Show author sns icons, will not show when author bio is off."
 msgstr ""
 
-#: modules/setting.php:408
+#: modules/setting.php:414
 msgid "Related posts"
 msgstr ""
 
-#: modules/setting.php:409
+#: modules/setting.php:415
 msgid "Enable related posts"
 msgstr ""
 
-#: modules/setting.php:414
+#: modules/setting.php:420
 msgid "Post like"
 msgstr ""
 
-#: modules/setting.php:415
+#: modules/setting.php:421
 msgid "Enable post like"
 msgstr ""
 
-#: modules/setting.php:420
+#: modules/setting.php:426
 msgid "Post navigation"
 msgstr ""
 
-#: modules/setting.php:421
+#: modules/setting.php:427
 msgid "Enable post navigation"
 msgstr ""
 
-#: modules/setting.php:426
+#: modules/setting.php:432
 msgid "Copy link"
 msgstr ""
 
-#: modules/setting.php:427
+#: modules/setting.php:433
 msgid "Enable copy link"
 msgstr ""
 
-#: modules/setting.php:432
+#: modules/setting.php:438
 msgid "Category card"
 msgstr ""
 
-#: modules/setting.php:433
+#: modules/setting.php:439
 msgid "Show post category info after post."
 msgstr ""
 
-#: modules/setting.php:438
+#: modules/setting.php:444
 msgid "Show parent comment"
 msgstr ""
 
-#: modules/setting.php:439
+#: modules/setting.php:445
 msgid "Enable show parent comment"
 msgstr ""
 
-#: modules/setting.php:445
+#: modules/setting.php:451
 msgid "Enable table of content"
 msgstr ""
 
-#: modules/setting.php:450
+#: modules/setting.php:456
 msgid "Start heading"
 msgstr ""
 
-#: modules/setting.php:451
+#: modules/setting.php:457
 msgid "Start heading,default h3"
 msgstr ""
 
-#: modules/setting.php:456
+#: modules/setting.php:462
 msgid "Post Author"
 msgstr ""
 
-#: modules/setting.php:457
+#: modules/setting.php:463
 msgid "Show post author tip in comment"
 msgstr ""
 
-#: modules/setting.php:462
+#: modules/setting.php:468
 msgid "Disable comment link"
 msgstr ""
 
-#: modules/setting.php:463
+#: modules/setting.php:469
 msgid "Disable comment author url"
 msgstr ""
 
-#: modules/setting.php:468
+#: modules/setting.php:474
 msgid "No reply text"
 msgstr ""
 
-#: modules/setting.php:469
+#: modules/setting.php:475
 msgid "Text display when no comment in current post."
 msgstr ""
 
-#: modules/setting.php:474
+#: modules/setting.php:480
 msgid "Friend icon"
 msgstr ""
 
-#: modules/setting.php:475
+#: modules/setting.php:481
 msgid "Show icon when comment author url is in blogroll."
 msgstr ""
 
-#: modules/setting.php:480
+#: modules/setting.php:486
 msgid "Post image zoom"
 msgstr ""
 
-#: modules/setting.php:481
+#: modules/setting.php:487
 msgid "Zoom image when a tag link to image url."
 msgstr ""
 
-#: modules/setting.php:486
+#: modules/setting.php:492
 msgid "Post update time"
 msgstr ""
 
-#: modules/setting.php:487
+#: modules/setting.php:493
 msgid "Show the last update time of post."
 msgstr ""
 
-#: modules/setting.php:504
+#: modules/setting.php:510
 msgid "Footer SNS Icons"
 msgstr ""
 
-#: modules/setting.php:505
+#: modules/setting.php:511
 msgid "Show sns icons in footer, if this setting is on, the footer menu won',t be displayed."
 msgstr ""
 
-#: modules/setting.php:510
+#: modules/setting.php:516
 msgid "Telegram"
 msgstr ""
 
-#: modules/setting.php:511
+#: modules/setting.php:517
 msgid "Telegram link"
 msgstr ""
 
-#: modules/setting.php:516
+#: modules/setting.php:522
 msgid "Email"
 msgstr ""
 
-#: modules/setting.php:517
+#: modules/setting.php:523
 msgid "Your email address"
 msgstr ""
 
-#: modules/setting.php:522
+#: modules/setting.php:528
 msgid "Instagram"
 msgstr ""
 
-#: modules/setting.php:523
+#: modules/setting.php:529
 msgid "Instagram link"
 msgstr ""
 
-#: modules/setting.php:528
+#: modules/setting.php:534
 msgid "Twitter"
 msgstr ""
 
-#: modules/setting.php:529
+#: modules/setting.php:535
 msgid "Twitter link"
 msgstr ""
 
-#: modules/setting.php:534
+#: modules/setting.php:540
 msgid "RSS"
 msgstr ""
 
-#: modules/setting.php:535
+#: modules/setting.php:541
 msgid "RSS link"
 msgstr ""
 
-#: modules/setting.php:540
+#: modules/setting.php:546
 msgid "Github"
 msgstr ""
 
-#: modules/setting.php:541
+#: modules/setting.php:547
 msgid "Github link"
 msgstr ""
 
-#: modules/setting.php:546
+#: modules/setting.php:552
 msgid "Discord"
 msgstr ""
 
-#: modules/setting.php:547
+#: modules/setting.php:553
 msgid "Discord link"
 msgstr ""
 
-#: modules/setting.php:552
+#: modules/setting.php:558
 msgid "Mastodon"
 msgstr ""
 
-#: modules/setting.php:553
+#: modules/setting.php:559
 msgid "Mastodon link"
 msgstr ""
 
-#: modules/setting.php:558
+#: modules/setting.php:564
 msgid "Threads"
 msgstr ""
 
-#: modules/setting.php:559
+#: modules/setting.php:565
 msgid "Threads link"
 msgstr ""
 
-#: modules/setting.php:564
+#: modules/setting.php:570
 msgid "Custom"
 msgstr ""
 
-#: modules/setting.php:565
+#: modules/setting.php:571
 msgid "Custom sns link,use html."
 msgstr ""
 
-#: modules/setting.php:575
+#: modules/setting.php:581
 msgid "CSS"
 msgstr ""
 
-#: modules/setting.php:576
+#: modules/setting.php:582
 msgid "Custom CSS"
 msgstr ""
 
-#: modules/setting.php:581
+#: modules/setting.php:587
 msgid "Javascript"
 msgstr ""
 
-#: modules/setting.php:582
+#: modules/setting.php:588
 msgid "Custom Javascript"
 msgstr ""
 
-#: modules/setting.php:587
+#: modules/setting.php:593
 msgid "Copyright"
 msgstr ""
 
-#: modules/setting.php:588
+#: modules/setting.php:594
 msgid "Custom footer content"
 msgstr ""
 

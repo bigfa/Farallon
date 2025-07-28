@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Farallon 0.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2025-07-17 16:28+0800\n"
+"PO-Revision-Date: 2025-07-28 20:37+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -310,6 +310,14 @@ msgstr "文章点赞"
 msgid "Enable like info in homepage"
 msgstr "首页展示文章点赞数量"
 
+#: modules/setting.php:366
+msgid "Read time info"
+msgstr "阅读时间"
+
+#: modules/setting.php:367
+msgid "Enable read time info in homepage"
+msgstr "首页展示阅读时间"
+
 #: modules/setting.php:360
 msgid "Image count"
 msgstr "文章图片数"
@@ -594,9 +602,20 @@ msgstr "复制链接"
 msgid "Sticky"
 msgstr "置顶"
 
-#: template-parts/content.php:25
+#: functions.php:225 template-parts/content-card.php:29 template-parts/content-error.php:16
+#: template-parts/content-status.php:6 template-parts/content.php:25
+#: template-parts/header-centered.php:3 template-parts/header-default.php:2
+#: template-parts/single-related.php:30 template-parts/single-related.php:48
 msgid "ago"
 msgstr "前"
+
+#: functions.php:259
+msgid "1 min read"
+msgstr "1 分钟阅读"
+
+#: functions.php:261
+msgid "%d min read"
+msgstr "%d 分钟阅读"
 
 #: template-parts/pagination.php:9
 msgid "loadmore"
