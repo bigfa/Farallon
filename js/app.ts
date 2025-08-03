@@ -1,4 +1,5 @@
 interface obvInit {
+    copy_success_text(copy_success_text: any): unknown;
     archive_id: any;
     post_view: boolean;
     no_more_posts_message(no_more_posts_message: any, arg1: string): unknown;

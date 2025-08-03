@@ -86,7 +86,7 @@ class farallonAction extends farallonBase {
         if (document.querySelector('.fArticle--share')) {
             document.querySelector('.fArticle--share')!.addEventListener('click', () => {
                 navigator.clipboard.writeText(document.location.href).then(() => {
-                    this.showNotice('复制成功');
+                    this.showNotice(this.obvInit.copy_success_text);
                 });
             });
         }

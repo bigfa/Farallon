@@ -29,6 +29,8 @@ function farallon_get_background_image($post_id, $width = null, $height = null)
         }
     }
 
+    $output = $thumbnail_src;
+
     if ($height && $width) {
         if ($farallonSetting->get_setting('upyun')) {
             $output = $thumbnail_src . "!/both/{$width}x{$height}";
