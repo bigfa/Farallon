@@ -23,7 +23,7 @@ class farallonAction extends farallonBase {
         }
 
         const theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'auto';
-        const html = `<div class="fixed--theme">
+        const html = `<div class="fThemeSwitcher">
         <span class="${theme == 'dark' ? 'is-active' : ''}" data-action-value="dark">
             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
                 stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"
@@ -56,43 +56,38 @@ class farallonAction extends farallonBase {
             </svg>
         </span>
     </div>`;
+
         if (this.darkmode) {
             document.querySelector('body')!.insertAdjacentHTML('beforeend', html);
         }
 
-        document.querySelectorAll('.fixed--theme span').forEach((item) => {
+        document.querySelectorAll('.fThemeSwitcher span').forEach((item) => {
             item.addEventListener('click', () => {
                 if (item.classList.contains('is-active')) return;
-                document.querySelectorAll('.fixed--theme span').forEach((item) => {
+                document.querySelectorAll('.fThemeSwitcher span').forEach((item) => {
                     item.classList.remove('is-active');
                 });
-                // @ts-ignore
-                if (item.dataset.actionValue == 'dark') {
+                if ((item as HTMLElement).dataset.actionValue == 'dark') {
                     localStorage.setItem('theme', 'dark');
                     document.querySelector('body')!.classList.remove('auto');
                     document.querySelector('body')!.classList.add('dark');
                     item.classList.add('is-active');
-                    //this.showNotice('夜间模式已开启');
-                    // @ts-ignore
-                } else if (item.dataset.actionValue == 'light') {
+                } else if ((item as HTMLElement).dataset.actionValue == 'light') {
                     localStorage.setItem('theme', 'light');
                     document.querySelector('body')!.classList.remove('auto');
                     document.querySelector('body')!.classList.remove('dark');
                     item.classList.add('is-active');
-                    //this.showNotice('夜间模式已关闭');
-                    // @ts-ignore
-                } else if (item.dataset.actionValue == 'auto') {
+                } else if ((item as HTMLElement).dataset.actionValue == 'auto') {
                     localStorage.setItem('theme', 'auto');
                     document.querySelector('body')!.classList.remove('dark');
                     document.querySelector('body')!.classList.add('auto');
                     item.classList.add('is-active');
-                    //this.showNotice('夜间模式已关闭');
                 }
             });
         });
 
-        if (document.querySelector('.post--share')) {
-            document.querySelector('.post--share')!.addEventListener('click', () => {
+        if (document.querySelector('.fArticle--share')) {
+            document.querySelector('.fArticle--share')!.addEventListener('click', () => {
                 navigator.clipboard.writeText(document.location.href).then(() => {
                     this.showNotice('复制成功');
                 });
@@ -100,9 +95,7 @@ class farallonAction extends farallonBase {
         }
 
         document.querySelector('[data-action="show-search"]')!.addEventListener('click', () => {
-            document
-                .querySelector('.site--header__center .inner')!
-                .classList.toggle('search--active');
+            document.querySelector('.fHeader--content .inner')!.classList.toggle('search--active');
         });
         // @ts-ignore
         if (this.is_single && obvInit.post_view) {
@@ -115,14 +108,14 @@ class farallonAction extends farallonBase {
 
         console.log(`theme version: ${this.VERSION} init success!`);
 
-        const copyright = `<div class="site--footer__info">
+        const copyright = `<div class="fFooter--info">
         Theme <a href="https://fatesinger.com/101971" target="_blank">farallon</a> by bigfa / version ${this.VERSION}
     </div>`;
 
-        document.querySelector('.site--footer__content')!.insertAdjacentHTML('afterend', copyright);
+        document.querySelector('.fFooter--content')!.insertAdjacentHTML('afterend', copyright);
 
         document.querySelector('.icon--copryrights')!.addEventListener('click', () => {
-            document.querySelector('.site--footer__info')!.classList.toggle('active');
+            document.querySelector('.fFooter--info')!.classList.toggle('active');
         });
     }
 
@@ -176,7 +169,6 @@ class farallonAction extends farallonBase {
     }
 
     handleLike() {
-        // @ts-ignore
         if (this.getCookie('like_' + this.post_id)) {
             return this.showNotice('You have already liked this post');
         }
@@ -199,7 +191,6 @@ class farallonAction extends farallonBase {
             })
             .then((data) => {
                 this.showNotice('Thanks for your like');
-                // @ts-ignore
                 this.setCookie('like_' + this.post_id, '1', 1);
             });
         this.like_btn.classList.add('is-active');

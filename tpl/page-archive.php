@@ -6,7 +6,7 @@ Template Post Type: page
 get_header();
 ?>
 
-<main class="page--archive">
+<main class="fArchive--main">
     <?php
     $args = [
         'posts_per_page' => -1,
@@ -40,17 +40,18 @@ get_header();
             'commentnum' => get_comments_number(),
             'views' => farallon_get_post_views_text(false, false, false, get_the_ID()),
             'date' => get_the_time('m-d'),
+            'readtime' => farallon_get_post_read_time_text(get_the_ID()),
         ];
 
     endwhile;
     wp_reset_postdata();
     $output = '';
     foreach ($arr as $year => $year_post) {
-        $output .= '<div class="archive--list__year"><h2 class="archive--title__year ">' . $year . '</h2>';
+        $output .= '<div class="archive--list__year"><h2 class="fArchive--heroTitle">' . $year . '</h2>';
         foreach ($year_post as $month => $month_post) {
-            $output .=  '<ul class="archive--list" data-year="' . $year . ' - ' . $month  . '">';
+            $output .=  '<ul class="fArchive--list" data-year="' . $year . ' - ' . $month  . '">';
             foreach ($month_post as $value) {
-                $output .= '<li class="archive--item"><div class="archive--title"><a href="' . $value['link'] . '">' . $value['title'] . '</a></div><div class="archive--meta">' . $value['date'] . '</div></li>';
+                $output .= '<li class="fArchive--item"><div class="fArchive--title"><a href="' . $value['link'] . '">' . $value['title'] . '</a></div><div class="fArchive--meta">' . $value['date'] . '<span class="sep"></span>' . $value['readtime'] . '</div></li>';
             }
             $output .= '</ul>';
         }

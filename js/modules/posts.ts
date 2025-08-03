@@ -26,27 +26,25 @@ class farallonPost extends farallonBase {
                 const thumbnail = //@ts-ignore
                     obvInit.hide_home_cover || !post.has_image
                         ? ''
-                        : `<a href="${post.permalink}" aria-label="${post.post_title}" class="cover--link">
-                <img src="${post.thumbnail}" class="cover" alt="${post.post_title}">
+                        : `<a href="${post.permalink}" aria-label="${post.post_title}" class="fBlock--coverLink">
+                <img src="${post.thumbnail}" class="fBlock--cover" alt="${post.post_title}">
                         </a>`;
                 return post.post_format && post.post_format == 'status'
-                    ? `<article class="post--item post--item__status" itemtype="http://schema.org/Article" itemscope="itemscope">
-    <div class="content">
-        <header>
-            <img alt="" src="${post.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" decoding="async">            <a itemprop="datePublished" datetime="" class="humane--time" href="${post.permalink}" aria-label="${post.post_title}">${post.date}</a>
+                    ? `<article class="fStatus--item" itemtype="http://schema.org/Article" itemscope="itemscope">
+        <header class="fStatus--header">
+            <img alt="" src="${post.author_avatar_urls}" class="avatar avatar-48 photo" height="48" width="48" decoding="async"> <a itemprop="datePublished" datetime="" href="${post.permalink}" aria-label="${post.post_title}">${post.date}</a>
         </header>
-                    <div class="description" itemprop="about"><p>${post.excerpt}</p>
+                    <div class="fStatus--snippet" itemprop="about"><p>${post.excerpt}</p>
 </div>
-            </div>
 </article>`
-                    : `<article class="post--item" itemtype="http://schema.org/Article" itemscope="itemscope">
-            <div class="content">
-                <h2 class="post--title" itemprop="headline">
+                    : `<article class="fBlock--item" itemtype="http://schema.org/Article" itemscope="itemscope">
+            <div class="fBlock--content">
+                <h2 class="fBlock--title" itemprop="headline">
                     <a href="${post.permalink}" aria-label="${post.post_title}">
                         ${post.post_title}</a>
                 </h2>
-                <div class="description" itemprop="about">${post.excerpt}</div>
-                <div class="meta">
+                <div class="fBlock--snippet" itemprop="about">${post.excerpt}</div>
+                <div class="fBlock--meta">
                     <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                         <path d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z"></path>
                     </svg>
@@ -56,26 +54,28 @@ class farallonPost extends farallonBase {
             </article>`;
             })
             .join('');
-        // @ts-ignore
-        document.querySelector('.posts--list')?.innerHTML += html;
+        const postsList = document.querySelector('.js-post-list');
+        if (postsList) {
+            postsList.innerHTML += html;
+        }
     }
 
     randerCardPosts(data: any) {
         let html = data
             .map((post: any) => {
-                return `<article class="post--card" itemtype="http://schema.org/Article" itemscope="itemscope">
-            <a href="${post.permalink}" title="${post.post_title}" aria-label="${post.post_title}" class="cover--link">
-            <img src="${post.thumbnail}" class="cover" alt="${post.post_title}">
+                return `<article class="fCard--item" itemtype="http://schema.org/Article" itemscope="itemscope">
+            <a href="${post.permalink}" title="${post.post_title}" aria-label="${post.post_title}" class="fCard--coverLink">
+            <img src="${post.thumbnail}" class="fCard--cover" alt="${post.post_title}">
         </a>
-        <div class="content">
+        <div class="fCard--content">
         <div class="date">${post.day}</div>
-        <h2 class="post--title" itemprop="headline">
+        <h2 class="fCard--title" itemprop="headline">
             <a href="${post.permalink}" title="${post.post_title}" aria-label="${post.post_title}">${post.post_title}</a>
         </h2>
-                    <div class="description" itemprop="about">
+                    <div class="fCard--snippet" itemprop="about">
                     ${post.excerpt}
             </div>
-                <div class="meta">
+                <div class="fCard--meta">
             <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                 <path d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z"></path>
             </svg>
@@ -89,8 +89,10 @@ class farallonPost extends farallonBase {
 </article>`;
             })
             .join('');
-        // @ts-ignore
-        document.querySelector('.post--cards')?.innerHTML += html;
+        const cardList = document.querySelector('.js-post-list');
+        if (cardList) {
+            cardList.innerHTML += html;
+        }
     }
 
     fetchPosts() {
@@ -136,7 +138,7 @@ class farallonPost extends farallonBase {
                         document.querySelector('.loadmore')?.remove();
                         this.showNotice('没有更多文章了', 'error');
                     } else {
-                        if (document.querySelector('.posts--list')) {
+                        if (document.querySelector('.fBlock--list')) {
                             this.randerPosts(data.data);
                         } else {
                             this.randerCardPosts(data.data);

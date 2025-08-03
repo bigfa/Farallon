@@ -1,0 +1,134 @@
+.fFooter {
+    font-size: var(--farallon-text-size-small);
+    padding: 20px 80px;
+    border-top: 1px dotted var(--farallon-border-color);
+    color: var(--farallon-text-light);
+
+    &--content {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-right: 3.5%;
+            padding-left: 3.5%;
+        }
+    }
+
+    &--info {
+        display: none;
+        text-align: center;
+        color: var(--farallon-text-light);
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                color: var(--farallon-hover-color);
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &--copyright {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 0;
+        }
+
+        svg {
+            fill: var(--farallon-text-light);
+            margin-left: 8px;
+            cursor: pointer;
+
+            &:hover {
+                fill: var(--farallon-hover-color);
+            }
+        }
+    }
+
+    &--icons {
+        @include sns-icons;
+        --farallon-icon-size: 18px;
+    }
+}
+
+.fThemeSwitcher {
+    position: fixed;
+    right: 10px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    box-shadow: 0 0 0 1px var(--farallon-border-color);
+    background-color: var(--farallon-background-white);
+    border-radius: 999rem;
+    width: max-content;
+    padding: 3px;
+
+    @media (max-width: 768px) {
+        top: auto;
+        bottom: 100px;
+    }
+
+    span {
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--farallon-text-gray-lightest);
+        margin-bottom: 5px;
+
+        &:hover {
+            color: var(--farallon-text-color);
+        }
+
+        &.is-active {
+            color: var(--farallon-text-color);
+            background-color: var(--farallon-background-gray);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.fBackTop {
+    background-color: var(--border-color);
+    z-index: 10;
+    transition: all 0.3s ease;
+    position: fixed;
+    bottom: 25px;
+    right: -25px;
+    cursor: pointer;
+
+    .svgIcon {
+        width: 17px;
+        height: 17px;
+        fill: var(--farallon-main-color);
+        animation: toTop 1s ease-in infinite alternate;
+    }
+
+    &:hover {
+        .svgIcon {
+            fill: var(--farallon-hover-color);
+            animation-play-state: paused;
+        }
+    }
+
+    &.is-active {
+        right: 25px;
+    }
+}

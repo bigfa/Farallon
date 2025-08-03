@@ -1,0 +1,112 @@
+.fBlock {
+    &--list {
+        position: relative;
+    }
+
+    &--item {
+        padding: 25px 40px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 820px) {
+            padding: 20px 30px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 15px 20px;
+        }
+
+        @include block-hover-gradient;
+    }
+
+    &--content {
+        flex: 1 1 auto;
+    }
+
+    &--cover {
+        width: 150px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        aspect-ratio: 150/100;
+        transition: 0.5s;
+
+        &Link {
+            position: relative;
+            width: 150px;
+            flex: 0 0 auto;
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+            height: 100px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            &:hover {
+                .fBlock--cover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .marker--tips {
+                left: auto;
+                right: 8px;
+                top: 8px;
+            }
+
+            .cover--count {
+                position: absolute;
+                bottom: 8px;
+                left: 8px;
+                background-color: rgba(0, 0, 0, 0.5);
+                color: rgba(255, 255, 255, 0.95);
+                padding: 0px 5px;
+                border-radius: 5px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    &--title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 5px;
+
+        .sticky--post {
+            font-size: 12px;
+            color: #fff;
+            font-weight: normal;
+            background: linear-gradient(90deg, #8a63d2, #f81ce5);
+            padding: 3px 5px;
+            border-radius: 5px;
+            line-height: 1;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            color: var(--farallon-hover-color);
+        }
+        & + .fBlock--meta {
+            margin-top: 10px;
+        }
+    }
+
+    &--snippet {
+        font-size: 15px;
+        color: var(--farallon-text-light);
+        line-height: 1.6;
+    }
+
+    &--meta {
+        @include block-meta;
+    }
+}

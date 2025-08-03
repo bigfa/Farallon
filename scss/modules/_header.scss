@@ -1,0 +1,172 @@
+.fHeader {
+    padding: 20px 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 820px) {
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 59px;
+    }
+
+    @media (max-width: 768px) {
+        padding-left: 3.5%;
+        padding-right: 3.5%;
+        padding-bottom: 0;
+    }
+
+    &--icon {
+        margin-left: auto;
+        fill: var(--farallon-text-gray-lightest);
+        position: relative;
+        cursor: pointer;
+    }
+
+    .avatar {
+        --farallon-logo-size: 48px;
+        height: var(--farallon-logo-size);
+        width: var(--farallon-logo-size);
+        border: 3px var(--farallon-background-white) solid;
+        box-shadow: 0 2px 4px 0 var(--farallon-border-color);
+        border-radius: 100%;
+        transition: 0.5s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+            --farallon-logo-size: 40px;
+        }
+    }
+
+    &.is-active {
+        .avatar {
+            box-shadow: 0 2px 4px 0 var(--farallon-border-color);
+        }
+    }
+
+    &--content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 39px;
+        top: 25px;
+        z-index: 1;
+        box-shadow: #ffffff 0 0, rgba(244, 244, 245, 0.1) 0 0 0 1px,
+            rgba(39, 39, 42, 5%) 0 10px 15px -3px, rgba(39, 39, 42, 5%) 0 4px 6px -4px;
+        backdrop-filter: blur(12px);
+        background-color: rgb(255 255 255/0.5);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 999rem;
+        overflow: hidden;
+
+        .inner {
+            display: flex;
+            flex-direction: column;
+            min-width: 250px;
+            transition: 0.5s transform;
+
+            .search--area {
+                height: 39px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .search-field {
+                    background-color: rgba(0, 0, 0, 0);
+                    border: 0;
+                    font-size: 14px;
+                }
+
+                .search-submit {
+                    background-color: #fff;
+                    border: 0;
+                    display: none;
+                }
+            }
+
+            &.search--active {
+                transform: translate(0px, -39px);
+            }
+        }
+
+        @media (max-width: 820px) {
+            left: 0;
+            right: 0;
+            transform: translate3d(0, 0, 0);
+            border-radius: 0;
+            top: 0;
+            box-shadow: 0 0 #fff, 0 0 0 1px hsla(240, 5%, 96%, 0.1),
+                3px -8px 15px -3px rgba(39, 39, 42, 0.05), 0 4px 6px -4px rgba(39, 39, 42, 0.05);
+
+            .inner {
+                .search--area {
+                    width: 100%;
+
+                    .search-field {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    &--menu {
+        display: flex;
+        align-items: center;
+        height: 39px;
+        box-sizing: border-box;
+        padding: 5px 30px;
+
+        .menu-item {
+            padding: 0 15px;
+            flex: 0 0 auto;
+            position: relative;
+
+            a {
+                &:hover {
+                    color: var(--farallon-hover-color);
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    color: var(--farallon-hover-color);
+                }
+            }
+        }
+
+        @media (max-width: 820px) {
+            overflow-x: auto;
+            padding-left: 40px;
+            padding-right: 40px;
+
+            li {
+                flex: 0 0 auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @media (max-width: 414px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.site--url {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+
+    .avatar {
+        margin-right: 10px;
+    }
+}
+
+.u-xs-show {
+    display: none;
+}

@@ -2,11 +2,21 @@
 
 ![Wordpress 主题 Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
-最新版本: `0.8.8`
+最新版本: `0.9.0`
 
 [简单的使用文档](https://fatesinger.com/101971)
 
 ## 更新日志
+
+### 0.9.0
+
+> [!IMPORTANT]
+> 类名做了破坏性更新
+
+- 更新翻译
+- 样式改进
+- 增加了一些钩子
+- 修复搜索页面加载错误的问题
 
 ### 0.8.8
 

@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <main class="site--main">
-    <article class="post--single" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <article class="fArticle" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
-            <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
-            <div class="post__single__content graph" itemprop="articleBody">
+            <h2 class="fArticle--headline" itemprop="headline"><?php the_title(); ?></h2>
+            <div class="fArticle--content fGraph" itemprop="articleBody">
                 <?php the_content(); ?>
             </div>
             <?php wp_link_pages(array(
@@ -21,13 +21,11 @@
                     <time datetime="<?php echo get_the_modified_time('c'); ?>" itemprop="dateModified"><?php echo get_the_modified_time('Y-m-d'); ?></time>
                 </div>
             <?php endif; ?>
-            <div class="post__single__comments">
-                <?php
-                if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif;
-                ?>
-            </div>
+            <?php
+            if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif;
+            ?>
         <?php endwhile; ?>
     </article>
 </main>

@@ -1,0 +1,56 @@
+.status--archive {
+    padding: 50px 80px;
+
+    .status--header {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.fStatus {
+    &--list {
+        padding: 0;
+    }
+
+    &--item {
+        padding: 20px 40px;
+    }
+
+    &--header {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            border-radius: 100%;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        font-size: 12px;
+        color: var(--farallon-text-gray);
+
+        a {
+            &:hover {
+                color: var(--farallon-hover-color);
+            }
+        }
+    }
+
+    &--snippet {
+        font-size: 15px;
+        line-height: 1.5;
+        color: var(--farallon-text-gray);
+        margin-top: 10px;
+    }
+}
+
+.status--archiveLink {
+    border-radius: 999rem;
+    font-size: 14px;
+    color: var(--farallon-text-gray);
+
+    &:hover {
+        color: var(--farallon-hover-color);
+    }
+}

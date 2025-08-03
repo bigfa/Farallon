@@ -1,0 +1,55 @@
+// Farallon Theme 404 Page Styles
+// This file contains styles for the 404 error page, including layout and typography.
+
+.fError {
+    &--area {
+        padding: 0 80px 80px;
+    }
+
+    &--text {
+        font-size: 120px;
+        text-align: center;
+        color: var(--farallon-text-gray);
+    }
+
+    &--list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 480px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--item {
+        border: 1px solid var(--farallon-border-color);
+        padding: 15px;
+        border-radius: 10px;
+
+        @include block-hover-gradient;
+    }
+
+    &--cover {
+        border-radius: 9px;
+    }
+
+    &--content {
+        margin-top: 5px;
+    }
+
+    &--title {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    &--meta {
+        @include block-meta;
+    }
+}

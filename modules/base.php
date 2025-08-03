@@ -181,7 +181,7 @@ class farallonBase
             $toc .= str_repeat('</li></ul>', $previous_level - 2);
             $toc .= '</ul>';
 
-            $content = '<details class="farallon--toc" open><summary>' . __('Table of content', 'Farallon') . '</summary>' . $toc . '</details>' . $content;
+            $content = '<details class="fArticle--toc" open><summary>' . __('Table of content', 'Farallon') . '</summary>' . $toc . '</details>' . $content;
         }
 
         return $content;
@@ -191,21 +191,21 @@ class farallonBase
     {
         global $wp, $post, $farallonSetting;
         $current_url = home_url(add_query_arg(array(), $wp->request));
-
-        //echo '<link type="image/vnd.microsoft.icon" href="/favicon.png" rel="shortcut icon">';
-
         $description = '';
-        $blog_name = get_bloginfo('name');
         $ogmeta = '<meta property="og:title" content="' . wp_get_document_title() . '">';
         $ogmeta .= '<meta property="og:url" content="' . $current_url . '">';
         if (is_singular()) {
             $ID = $post->ID;
             $author = $post->post_author;
-            if (get_post_meta($ID, "_desription", true)) {
-                $description = get_post_meta($ID, "_desription", true);
+
+            if (has_excerpt()) {
+                $description = get_the_excerpt();
+            } else if (get_post_meta($ID, "_description", true)) {
+                $description = get_post_meta($ID, "_description", true);
             } else {
                 $description = $post->post_title . '，' . __('author', 'Farallon') . ':' . get_the_author_meta('nickname', $author) . '，' . __('published on', 'Farallon') . get_the_date('Y-m-d');
             }
+
             echo '<meta name="description" content="' . $description . '">';
             $ogmeta .= '<meta property="og:image" content="' . farallon_get_background_image($ID) . '">';
             $ogmeta .= '<meta property="og:description" content="' . $description . '">';
@@ -244,9 +244,9 @@ class farallonBase
             'name'          => __('Homepage Top', 'Farallon'),
             'id'            => 'topbar',
             'description'   => __('Homepage Top', 'Farallon'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'before_widget' => '<aside id="%1$s" class="fWidget--item %2$s">',
             'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
+            'before_title'  => '<h3 class="fWidget--title">',
             'after_title'   => '</h3>',
         ));
 
@@ -254,19 +254,19 @@ class farallonBase
             'name'          => __('Homepage Bottom', 'Farallon'),
             'id'            => 'footerbar',
             'description'   => __('Homepage Bottom', 'Farallon'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'before_widget' => '<aside id="%1$s" class="fWidget--item %2$s">',
             'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
+            'before_title'  => '<h3 class="fWidget--title">',
             'after_title'   => '</h3>',
         ));
 
         register_sidebar(array(
-            'name'          => __('Single Pgae Bottom', 'Farallon'),
+            'name'          => __('Single Page Bottom', 'Farallon'),
             'id'            => 'singlefooterbar',
-            'description'   => __('Single Pgae Bottom', 'Farallon'),
-            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'description'   => __('Single Page Bottom', 'Farallon'),
+            'before_widget' => '<aside id="%1$s" class="fWidget--item %2$s">',
             'after_widget'  => '</aside>',
-            'before_title'  => '<h3 class="heading-title">',
+            'before_title'  => '<h3 class="fWidget--title">',
             'after_title'   => '</h3>',
         ));
     }
@@ -345,6 +345,7 @@ class farallonBase
                 'archive_id' => get_queried_object_id(),
                 'post_view' => true,
                 'hide_home_cover' => !!$farallonSetting->get_setting('hide_home_cover'),
+                'success_message' => __('Loading successful!', 'Farallon'),
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {

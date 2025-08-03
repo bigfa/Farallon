@@ -7,18 +7,16 @@ get_header(); ?>
 
 <main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
-        <article class="post--single__douban">
-            <header class="u-textAlignCenter">
-                <h2 class="post--single__title" itemprop="headline"><?php the_title(); ?></h2>
+        <article class="fArticle" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <header class="fArticle--header">
+                <h2 class="fArticle--headline" itemprop="headline"><?php the_title(); ?></h2>
             </header>
-            <div class="post__single__content">
+            <div class="fArticle--content">
                 <?php the_content(); ?>
             </div>
-            <div class="post__single__comments">
-                <?php if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif; ?>
-            </div>
+            <?php if (comments_open() || get_comments_number()) :
+                comments_template();
+            endif; ?>
         </article>
     <?php endwhile; ?>
 </main>

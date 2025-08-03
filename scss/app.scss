@@ -1,224 +1,45 @@
-@charset "UTF-8";
+@import 'base/variable';
+@import 'base/mixins';
+@import 'base/keyframes';
+@import 'base/normalize';
+@import 'base/reset';
 
-@import 'modules/variable.scss';
+@import 'components/button';
+@import 'components/zoom';
 
-@import 'modules/normalize.scss';
+@import 'layout/layout';
 
-html {
-    scroll-behavior: smooth;
-}
+@import 'modules/header';
 
-body {
-    letter-spacing: 0;
-    font: {
-        weight: 400;
-        style: normal;
-        family: 'Open Sans', PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti,
-            WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
-        size: var(--farallon-text-size-normal);
-    }
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: 'liga' on;
-    color: var(--farallon-text-color);
-    line-height: 1.8;
-    background-color: var(--farallon-background-gray);
-    word-break: break-all;
-}
+// Farallon Theme Components
+@import 'modules/card';
+@import 'modules/block';
+@import 'modules/status';
+@import 'modules/navigation';
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 400;
-}
+@import 'modules/footer';
 
-ol,
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+@import 'modules/widget';
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+// Farallon Theme Term Styles
+@import 'templates/term';
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+// Farallon Theme 404 Page Styles
+@import 'templates/404';
 
-p {
-    margin-top: 0;
-    margin-bottom: 0;
-}
+// Farallon Theme Search Styles
+@import 'templates/search';
 
-button,
-input,
-textarea {
-    appearance: none;
-    outline: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: 'Open Sans', PingFang SC, Hiragino Sans GB, Microsoft YaHei, STHeiti,
-        WenQuanYi Micro Hei, Helvetica, Arial, sans-serif;
-    font-size: var(--farallon-text-size-normal);
-    color: var(--farallon-text-color);
-}
+// Farallon Theme Single Post Styles
+@import 'templates/single';
 
-.main {
-    background-color: var(--farallon-background-white);
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100vh;
-    position: relative;
+// Farallon Theme Archive Page Styles
+@import 'templates/archive';
 
-    body:not(.is-cleanMode) & {
-        &:after {
-            aspect-ratio: 1/3;
-            background-image: linear-gradient(
-                to right,
-                var(--farallon-griedent-start),
-                var(--farallon-griedent-end)
-            );
-            border: 0;
-            border-radius: 9999px;
-            bottom: calc(100% - 100px);
-            filter: blur(44px);
-            opacity: 0.2;
-            position: absolute;
-            right: 0;
-            left: 0;
-            content: '';
-        }
-    }
-}
+// Hack WP-Douban
+@import 'templates/douban';
 
-.site--main {
-    padding: 50px 80px;
-    min-height: 60vh;
+// Hack Marker Pro
+@import 'templates/map';
 
-    &__map {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .markerPro--posts {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 20px;
-    }
-}
-
-@media (max-width: 820px) {
-    .site--main {
-        padding: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .site--main {
-        padding: 3.5%;
-    }
-}
-
-@import 'templates/footer.scss';
-
-@import 'templates/header.scss';
-
-@import 'templates/term.scss';
-
-@import 'modules/post.scss';
-
-@import 'templates/single.scss';
-
-@import 'modules/graph.scss';
-
-@import 'modules/comment.scss';
-
-@import 'templates/archive.scss';
-
-@import 'templates/map.scss';
-
-@import 'templates/about.scss';
-
-@import 'templates/douban.scss';
-
-@import 'templates/404.scss';
-
-@import 'modules/related.scss';
-
-@import 'modules/status.scss';
-
-@import 'modules/zoom.scss';
-
-.notice--wrapper {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: #fff;
-    font-size: var(--farallon-text-size-smallest);
-    max-width: 800px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    position: fixed;
-    z-index: 1000;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.5s transform;
-}
-
-@media (max-width: 768px) {
-    .notice--wrapper {
-        width: 80%;
-    }
-}
-
-.share--action {
-    text-align: center;
-    font-size: var(--farallon-text-size-smallest);
-    color: var(--farallon-text-light);
-    span {
-        text-decoration: underline;
-        cursor: pointer;
-    }
-}
-
-.u-cursorPointer {
-    cursor: pointer;
-}
-
-#cancel-comment-reply-link {
-    font-size: var(--farallon-text-size-smallest);
-    color: var(--farallon-text-light);
-
-    &:hover {
-        color: var(--farallon-text-color);
-    }
-}
-
-.screen-reader-text {
-    position: absolute;
-    left: -9999px;
-    top: -9999px;
-}
-
-.dot {
-    &::before {
-        content: '·';
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-}
-
-.u-textAlignCenter {
-    text-align: center;
-}
-
-.u-overflowYHidden {
-    overflow-y: hidden;
-}
+@import 'utilities/wp';

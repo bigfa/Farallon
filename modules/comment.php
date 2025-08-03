@@ -37,7 +37,11 @@ class farallonComment
         // get domain name
         $comment_author_url = parse_url($comment_author_url, PHP_URL_HOST);
 
-        return $this->is_friend($comment_author_url) ?  $comment_author . '<svg viewBox="0 0 64 64" fill="none" role="presentation" aria-hidden="true" focusable="false" class="friend--icon" title="Friend of author."><path fill-rule="evenodd" clip-rule="evenodd" d="M56.48 38.3C58.13 36.58 60 34.6 60 32c0-2.6-1.88-4.57-3.52-6.3-.95-.97-1.98-2.05-2.3-2.88-.33-.82-.35-2.17-.38-3.49-.02-2.43-.07-5.2-2-7.13-1.92-1.92-4.7-1.97-7.13-2h-.43c-1.17-.02-2.29-.04-3.07-.38-.87-.37-1.9-1.35-2.87-2.3C36.58 5.89 34.6 4 32 4c-2.6 0-4.57 1.88-6.3 3.53-.97.94-2.05 1.97-2.88 2.3-.82.32-2.17.34-3.49.37-2.43.03-5.2.08-7.13 2-1.92 1.93-1.97 4.7-2 7.13v.43c-.02 1.17-.04 2.29-.38 3.06-.37.88-1.35 1.9-2.3 2.88C5.89 27.43 4 29.4 4 32c0 2.6 1.88 4.58 3.53 6.3.94.98 1.97 2.05 2.3 2.88.32.82.34 2.17.37 3.49.03 2.43.08 5.2 2 7.13 1.93 1.93 4.7 1.98 7.13 2h.43c1.17.02 2.29.04 3.06.38.88.37 1.9 1.34 2.88 2.3C27.43 58.13 29.4 60 32 60c2.6 0 4.58-1.88 6.3-3.52.98-.95 2.05-1.98 2.88-2.3.82-.33 2.17-.35 3.49-.38 2.43-.02 5.2-.07 7.13-2 1.93-1.92 1.98-4.7 2-7.13v-.43c.02-1.17.04-2.29.38-3.07.37-.87 1.34-1.9 2.3-2.87zM33.1 45.15c-.66.47-1.55.47-2.22 0C27.57 42.8 18 35.76 18 28.9c0-6.85 6.5-10.25 13.26-4.45.43.37 1.05.37 1.48 0 6.76-5.8 13.27-2.4 13.26 4.45 0 6.56-9.57 13.9-12.89 16.24z" fill="#FFC017"></path></svg>' : $comment_author;
+        $is_friend = $this->is_friend($comment_author_url);
+        // apply filter to allow customization
+        $is_friend = apply_filters('farallon_is_friend', $is_friend, $comment_author_url, $comment_author, $comment_id);
+
+        return $is_friend ?  $comment_author . '<svg viewBox="0 0 64 64" fill="none" role="presentation" aria-hidden="true" focusable="false" class="friend--icon" title="' . __('Friend of author.', 'Farallon') . '"><path fill-rule="evenodd" clip-rule="evenodd" d="M56.48 38.3C58.13 36.58 60 34.6 60 32c0-2.6-1.88-4.57-3.52-6.3-.95-.97-1.98-2.05-2.3-2.88-.33-.82-.35-2.17-.38-3.49-.02-2.43-.07-5.2-2-7.13-1.92-1.92-4.7-1.97-7.13-2h-.43c-1.17-.02-2.29-.04-3.07-.38-.87-.37-1.9-1.35-2.87-2.3C36.58 5.89 34.6 4 32 4c-2.6 0-4.57 1.88-6.3 3.53-.97.94-2.05 1.97-2.88 2.3-.82.32-2.17.34-3.49.37-2.43.03-5.2.08-7.13 2-1.92 1.93-1.97 4.7-2 7.13v.43c-.02 1.17-.04 2.29-.38 3.06-.37.88-1.35 1.9-2.3 2.88C5.89 27.43 4 29.4 4 32c0 2.6 1.88 4.58 3.53 6.3.94.98 1.97 2.05 2.3 2.88.32.82.34 2.17.37 3.49.03 2.43.08 5.2 2 7.13 1.93 1.93 4.7 1.98 7.13 2h.43c1.17.02 2.29.04 3.06.38.88.37 1.9 1.34 2.88 2.3C27.43 58.13 29.4 60 32 60c2.6 0 4.58-1.88 6.3-3.52.98-.95 2.05-1.98 2.88-2.3.82-.33 2.17-.35 3.49-.38 2.43-.02 5.2-.07 7.13-2 1.93-1.92 1.98-4.7 2-7.13v-.43c.02-1.17.04-2.29.38-3.07.37-.87 1.34-1.9 2.3-2.87zM33.1 45.15c-.66.47-1.55.47-2.22 0C27.57 42.8 18 35.76 18 28.9c0-6.85 6.5-10.25 13.26-4.45.43.37 1.05.37 1.48 0 6.76-5.8 13.27-2.4 13.26 4.45 0 6.56-9.57 13.9-12.89 16.24z" fill="#FFC017"></path></svg>' : $comment_author;
     }
 
     function get_comment_author_link_hack($comment_author_link, $comment_author, $comment_id)
@@ -82,7 +86,7 @@ class farallonComment
     {
         $post = get_post($comment->comment_post_ID);
         if ($comment->user_id == $post->post_author) {
-            $comment_author = $comment_author . '<span class="comment--author__tip">' . __('Author', 'Farallon') . '</span>';
+            $comment_author = $comment_author . '<span class="fComment--tag">' . __('Author', 'Farallon') . '</span>';
         }
         return $comment_author;
     }
@@ -111,6 +115,10 @@ class farallonComment
             $query_args['author'] = $request['author'];
         }
 
+        if ($request['search']) {
+            $query_args['s'] = $request['search'];
+        }
+
         $the_query = new WP_Query($query_args);
         $data = [];
         while ($the_query->have_posts()) {
@@ -119,7 +127,7 @@ class farallonComment
             $data[] = [
                 'id' => get_the_ID(),
                 'post_title' => get_the_title(),
-                'date' => get_the_date(),
+                'date' => human_time_diff(get_the_time('U'), current_time('timestamp')) . __(' ago', 'Farallon'),
                 'excerpt' => mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 150, "..."),
                 'author' => get_the_author(),
                 'author_avatar_urls' => get_avatar_url(get_the_author_meta('ID'), array('size' => 64)),
@@ -174,7 +182,7 @@ class farallonComment
                 $name        = $parent->comment_author;
 
                 $comment_text =
-                    '<a href="' . $parent_link . '" class="comment--parent__link">@' . $name . '</a>'
+                    '<a href="' . $parent_link . '" class="fComment--parent">@' . $name . '</a>'
                     . $comment_text;
             }
         }

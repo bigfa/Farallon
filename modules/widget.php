@@ -14,9 +14,9 @@ class Farallon_Widget extends WP_Widget
         echo $before_widget;
         $user = get_user_by('ID', 1);
 ?>
-        <div class="widget-card">
-            <div class="widget-card-content"><?php echo $user->display_name; ?></div>
-            <div class="widget-card-description">
+        <div class="fWidgetAuthor">
+            <div class="fWidgetAuthor--name"><?php echo $user->display_name; ?></div>
+            <div class="fWidgetAuthor--description">
                 <p><?php echo $user->description; ?></p>
             </div>
         </div>
@@ -30,7 +30,7 @@ class Farallon_Widget_Category extends WP_Widget
     function __construct()
     {
         $widget_ops = array('description' => __('show your category card', 'Farallon'));
-        parent::__construct('about', __('Categories', 'Farallon'), $widget_ops);
+        parent::__construct('category', __('Categories', 'Farallon'), $widget_ops);
     }
 
     function widget($args, $instance)
@@ -44,16 +44,19 @@ class Farallon_Widget_Category extends WP_Widget
             'order' => 'DESC',
             // 'meta_key' => '_views',
         ]);
-        echo '<div class="widget--category">';
+        echo '<div class="fWidgetCategory--list">';
         foreach ($categories as $category) {
             $link = get_term_link($category, 'category')
         ?>
-            <a class="widget--category--item" title="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" href="<?php echo $link; ?>" data-count="<?php echo $category->count; ?>">
+            <a class="fWidgetCategory--item" title="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" href="<?php echo $link; ?>" data-count="<?php echo $category->count; ?>">
                 <?php if (get_term_meta($category->term_id, '_thumb', true)) : ?>
-                    <img class="widget--category--image" alt="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" src="<?php echo get_term_meta($category->term_id, '_thumb', true); ?>">
+                    <img class="fWidgetCategory--image" alt="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" src="<?php echo get_term_meta($category->term_id, '_thumb', true); ?>">
+
+                <?php else : ?>
+                    <img class="fWidgetCategory--image" alt="<?php echo $category->name; ?>" aria-label="<?php echo $category->name; ?>" src="<?php echo get_template_directory_uri(); ?>/build/images/default.jpg" />
                 <?php endif ?>
-                <div class="widget--category--meta">
-                    <div class="widget--category--title"><?php echo $category->name; ?></div>
+                <div class="fWidgetCategory--meta">
+                    <div class="fWidgetCategory--title"><?php echo $category->name; ?></div>
                 </div>
             </a>
 <?php }

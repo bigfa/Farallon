@@ -12,6 +12,7 @@
 
     --farallon-background-white: rgba(255, 255, 255, 1);
     --farallon-background-gray: rgba(250, 250, 250, 1);
+    --farallon-background-gray-light: rgba(245, 245, 245, 1);
     --farallon-background-opacity: 0.9;
     --farallon-background-white-opacity: rgba(255, 255, 255, var(--farallon-background-opacity));
 
@@ -27,6 +28,8 @@
     --farallon-text-size-small: 14px;
     --farallon-text-size-normal: 16px;
     --farallon-text-size-smallest: 12px;
+
+    --farallon-main-width: 1000px;
 }
 
 .db--container,
@@ -56,7 +59,7 @@
         --farallon-border-color: rgba(63, 63, 70, 0.6);
         --farallon-border-color-light: rgba(63, 63, 70, 0.4);
 
-        .site--header__center {
+        .fHeader--content {
             background-color: rgba(39, 39, 42, 0.9);
             border-color: rgba(0, 0, 0, 0.5);
             backdrop-filter: saturate(180%) blur(5px);
@@ -69,18 +72,6 @@
             background-color: rgb(63 63 70/1);
             &:hover {
                 background-color: rgb(82 82 91/1);
-            }
-        }
-
-        .tag--list {
-            a {
-                background-color: rgba(39, 39, 42, 1);
-                color: #71717a;
-                --tw-ring-shadow: 0 0 0 calc(1px + 0px) hsla(0, 0%, 100%, 0.1);
-                box-shadow: 0 0 #0000, var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-                &:hover {
-                    --tw-ring-shadow: 0 0 0 calc(1px + 0px) hsla(0, 0%, 100%, 0.2);
-                }
             }
         }
 
@@ -105,25 +96,6 @@
         .graph blockquote,
         .graph ol li::before {
             background: linear-gradient(180deg, #1e1e1e, #121212);
-        }
-
-        .post--single__related__item,
-        .post--single__related__status,
-        .post--item,
-        .link-item,
-        .post--card {
-            position: relative;
-            &:hover {
-                background: linear-gradient(180deg, #1e1e1e, #121212);
-                &::after {
-                    content: '';
-                    pointer-events: none;
-                    position: absolute;
-                    inset: 0;
-                    border-radius: 12px;
-                    border: 1px solid #333;
-                }
-            }
         }
 
         .nav-links .page-numbers.current:after,
@@ -171,7 +143,7 @@
     --farallon-border-color: rgba(63, 63, 70, 0.6);
     --farallon-border-color-light: rgba(63, 63, 70, 0.4);
 
-    .site--header__center {
+    .fHeader--content {
         background-color: rgba(39, 39, 42, 0.9);
         border-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: saturate(180%) blur(5px);
@@ -188,18 +160,6 @@
         background-color: rgb(63 63 70/1);
         &:hover {
             background-color: rgb(82 82 91/1);
-        }
-    }
-
-    .tag--list {
-        a {
-            background-color: rgba(39, 39, 42, 1);
-            color: #71717a;
-            --tw-ring-shadow: 0 0 0 calc(1px + 0px) hsla(0, 0%, 100%, 0.1);
-            box-shadow: 0 0 #0000, var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-            &:hover {
-                --tw-ring-shadow: 0 0 0 calc(1px + 0px) hsla(0, 0%, 100%, 0.2);
-            }
         }
     }
 
@@ -221,27 +181,9 @@
         }
     }
 
-    .graph blockquote,
+    .fGraph blockquote,
     .graph ol li::before {
         background: linear-gradient(180deg, #1e1e1e, #121212);
-    }
-    .post--single__related__item,
-    .post--single__related__status,
-    .post--item,
-    .link-item,
-    .post--card {
-        position: relative;
-        &:hover {
-            background: linear-gradient(180deg, #1e1e1e, #121212);
-            &::after {
-                content: '';
-                pointer-events: none;
-                position: absolute;
-                inset: 0;
-                border-radius: 12px;
-                border: 1px solid #333;
-            }
-        }
     }
 
     .nav-links .page-numbers.current:after,

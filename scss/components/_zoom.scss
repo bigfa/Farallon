@@ -10,6 +10,10 @@
     align-items: center;
     z-index: 100;
 
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
+
     &-img-wrap {
         position: relative;
         opacity: 0;
@@ -144,14 +148,8 @@
     color: var(--farallon-text-light);
     font-style: italic;
     white-space: nowrap;
-}
 
-@media (max-width: 800px) {
-    .overlay {
-        flex-direction: column;
-    }
-
-    .image--nav {
+    @media (max-width: 800px) {
         transform: rotate(0deg) translateX(0);
         width: 100%;
         margin-left: 0;

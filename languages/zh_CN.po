@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Farallon 0.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2025-07-28 20:37+0800\n"
+"PO-Revision-Date: 2025-08-02 14:51+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -606,7 +606,7 @@ msgstr "置顶"
 #: template-parts/content-status.php:6 template-parts/content.php:25
 #: template-parts/header-centered.php:3 template-parts/header-default.php:2
 #: template-parts/single-related.php:30 template-parts/single-related.php:48
-msgid "ago"
+msgid " ago"
 msgstr "前"
 
 #: functions.php:259

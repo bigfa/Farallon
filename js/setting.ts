@@ -1,6 +1,6 @@
-document.querySelectorAll('.leftpanel li').forEach((element, index) => {
+document.querySelectorAll('.fSetting--menu li').forEach((element, index) => {
     element.addEventListener('click', (event) => {
-        document.querySelectorAll('.leftpanel li').forEach((element) => {
+        document.querySelectorAll('.fSetting--menu li').forEach((element) => {
             element.classList.remove('active');
         });
         element.classList.add('active');

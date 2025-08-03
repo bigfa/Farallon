@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Farallon theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.8.8\n"
+"Project-Id-Version: Farallon 0.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-28T12:52:41+00:00\n"
+"POT-Creation-Date: 2025-08-02T08:06:20+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Farallon\n"
@@ -43,43 +43,40 @@ msgstr ""
 msgid "This post has no comment yet"
 msgstr ""
 
-#: functions.php:99
+#: functions.php:98
 msgid "Add a menu"
 msgstr ""
 
-#: functions.php:143
+#: functions.php:142
 msgid "No views yet"
 msgstr ""
 
-#: functions.php:145
+#: functions.php:144
 msgid "1 View"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:146
 msgid "%d Views"
 msgstr ""
 
-#: functions.php:171
+#: functions.php:170
 msgid "No links yet"
 msgstr ""
 
 #: functions.php:225
 #: template-parts/content-card.php:29
-#: template-parts/content-error.php:16
-#: template-parts/content-status.php:6
+#: template-parts/content-status.php:5
 #: template-parts/content.php:25
-#: template-parts/header-centered.php:3
-#: template-parts/header-default.php:2
-#: template-parts/single-related.php:30
-#: template-parts/single-related.php:48
-msgid "ago"
+#: template-parts/single-related.php:28
+#: template-parts/single-related.php:46
+msgid " ago"
 msgstr ""
 
-#: functions.php:259
+#: functions.php:258
 msgid "1 min read"
 msgstr ""
 
-#: functions.php:261
+#: functions.php:260
 msgid "%d min read"
 msgstr ""
 
@@ -146,15 +143,23 @@ msgstr ""
 msgid "Set Category Image"
 msgstr ""
 
-#: modules/comment.php:85
+#: modules/base.php:348
+msgid "Loading successful!"
+msgstr ""
+
+#: modules/comment.php:44
+msgid "Friend of author."
+msgstr ""
+
+#: modules/comment.php:89
 msgid "Author"
 msgstr ""
 
-#: modules/comment.php:143
-#: modules/comment.php:162
-#: modules/comment.php:192
-#: modules/comment.php:205
-#: modules/comment.php:231
+#: modules/comment.php:147
+#: modules/comment.php:166
+#: modules/comment.php:196
+#: modules/comment.php:209
+#: modules/comment.php:235
 #: modules/setting.php:28
 msgid "Success"
 msgstr ""
@@ -657,6 +662,16 @@ msgstr ""
 
 #: single.php:44
 msgid "Copy link."
+msgstr ""
+
+#: single.php:55
+msgid "View all status posts"
+msgstr ""
+
+#: template-parts/content-error.php:16
+#: template-parts/header-centered.php:4
+#: template-parts/header-default.php:2
+msgid "ago"
 msgstr ""
 
 #: template-parts/content.php:8

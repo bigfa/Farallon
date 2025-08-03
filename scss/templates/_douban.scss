@@ -10,8 +10,15 @@
     );
     border-color: var(--farallon-border-color);
     color: var(--farallon-text-gray);
-}
 
-.u-hide {
-    display: none;
+    .doulist-subject {
+        .doulist-title {
+            a {
+                box-shadow: none !important;
+                &:hover {
+                    color: var(--farallon-hover-color);
+                }
+            }
+        }
+    }
 }

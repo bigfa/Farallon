@@ -1,0 +1,62 @@
+.fArchive {
+    &--main {
+        padding-top: 20px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 30px;
+
+        @media screen and (max-width: 820px) {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding-left: 3.5%;
+            padding-right: 3.5%;
+        }
+    }
+
+    &--heroTitle {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &--list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        padding: 20px 0;
+
+        @media screen and (max-width: 820px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 414px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--item {
+        border: 1px solid var(--farallon-border-color-light);
+        padding: 15px;
+        border-radius: 10px;
+
+        @include block-hover-gradient;
+
+        &:hover {
+            .fArchive--title {
+                color: var(--farallon-hover-color);
+            }
+        }
+    }
+
+    &--title {
+        line-height: 1.4;
+        font-size: 14px;
+    }
+
+    &--meta {
+        font-size: 12px;
+        color: var(--farallon-text-gray);
+    }
+}

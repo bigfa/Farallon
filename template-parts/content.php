@@ -1,7 +1,7 @@
 <?php global $farallonSetting; ?>
-<article class="post--item" itemtype="http://schema.org/Article" itemscope="itemscope">
-    <div class="content">
-        <h2 class="post--title" itemprop="headline">
+<article class="fBlock--item" itemtype="http://schema.org/Article" itemscope="itemscope">
+    <div class="fBlock--content">
+        <h2 class="fBlock--title" itemprop="headline">
             <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>">
                 <?php the_title(); ?>
                 <?php if (is_sticky()) : ?>
@@ -9,7 +9,7 @@
                 <?php endif; ?>
             </a>
         </h2>
-        <div class="description" itemprop="about">
+        <div class="fBlock--snippet" itemprop="about">
             <?php
             if (has_excerpt()) {
                 echo get_the_excerpt();
@@ -17,12 +17,12 @@
                 echo mb_strimwidth(strip_shortcodes(strip_tags(apply_filters('the_content', $post->post_content))), 0, 150, "...");
             } ?>
         </div>
-        <div class="meta">
+        <div class="fBlock--meta">
             <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
                 <path d="M512 97.52381c228.912762 0 414.47619 185.563429 414.47619 414.47619s-185.563429 414.47619-414.47619 414.47619S97.52381 740.912762 97.52381 512 283.087238 97.52381 512 97.52381z m0 73.142857C323.486476 170.666667 170.666667 323.486476 170.666667 512s152.81981 341.333333 341.333333 341.333333 341.333333-152.81981 341.333333-341.333333S700.513524 170.666667 512 170.666667z m36.571429 89.697523v229.86362h160.865523v73.142857H512a36.571429 36.571429 0 0 1-36.571429-36.571429V260.388571h73.142858z"></path>
             </svg>
             <time itemprop="datePublished" datetime="<?php echo get_the_date('c'); ?>">
-                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __('ago', 'Farallon'); ?>
+                <?php echo human_time_diff(get_the_time('U'), current_time('timestamp')) .  __(' ago', 'Farallon'); ?>
             </time>
             <?php if ($farallonSetting->get_setting('home_author')) : ?>
                 <svg class="icon" viewBox="0 0 1024 1024" width="16" height="16">
@@ -50,8 +50,8 @@
         </div>
     </div>
     <?php if ((farallon_is_has_image(get_the_ID()) && !$farallonSetting->get_setting('hide_home_cover')) || $farallonSetting->get_setting('always_home_cover')) : ?>
-        <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" class="cover--link">
-            <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="cover" alt="<?php the_title(); ?>" />
+        <a href="<?php the_permalink(); ?>" aria-label="<?php the_title(); ?>" class="fBlock--coverLink">
+            <img src="<?php echo farallon_get_background_image(get_the_ID(), 300, 200); ?>" class="fBlock--cover" alt="<?php the_title(); ?>" />
             <?php do_action('marker_pro_post_meta'); ?>
             <?php if ($farallonSetting->get_setting('home_image_count') && farallon_get_post_image_count(get_the_ID()) > 1) : ?>
                 <div class="cover--count"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 14 14">

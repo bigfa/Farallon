@@ -1,0 +1,114 @@
+.post-navigation {
+    overflow: hidden;
+    padding-top: 20px;
+
+    &.is-active {
+        .nav-links {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .nav-links {
+        position: relative;
+        transform: translate3d(0, 150%, 0);
+        display: flex;
+        justify-content: space-between;
+        transition: 0.5s;
+
+        & > div {
+            &:only-child {
+                text-align: center !important;
+                width: 100%;
+            }
+        }
+    }
+
+    .nav-previous,
+    .nav-next {
+        padding: 15px;
+        background-color: var(--farallon-background-white);
+        width: 48%;
+        box-sizing: border-box;
+        text-align: right;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        border: 1px solid transparent;
+        a {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .nav-previous {
+        text-align: left;
+    }
+
+    .meta-nav {
+        font-size: var(--farallon-text-size-smallest);
+        text-transform: uppercase;
+        color: var(--farallon-text-gray);
+    }
+
+    .post-title {
+        font-size: 14px;
+        min-height: 3em;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        &:hover {
+            color: var(--farallon-hover-color);
+        }
+    }
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    //mask-image: linear-gradient(90deg, transparent, #fff 90px, #fff calc(100% - 90px), transparent);
+    .loadmore {
+        cursor: pointer;
+        position: relative;
+        padding: 4px 32px;
+        border-radius: 999rem;
+        font-size: var(--farallon-text-size-smallest);
+        background-color: #000;
+        color: #fff;
+
+        &:hover {
+            background-color: var(--farallon-text-light);
+        }
+    }
+    .page-numbers,
+    .post-page-numbers {
+        //border-radius: 999rem;
+        @include navigation;
+    }
+
+    &__comment {
+        .page-numbers,
+        .post-page-numbers {
+            padding: 10px;
+            line-height: 1;
+            --farallon-navigation-font-size: 16px;
+            &.current {
+                font-size: var(--farallon-navigation-font-size);
+                &:after {
+                    border: 6px solid transparent;
+                    background-clip: padding-box;
+                    content: '';
+                    filter: blur(10px);
+                    height: 50%;
+                    opacity: 0.8;
+                    position: absolute;
+                    width: 50%;
+                    background-image: linear-gradient(165deg, #007cf0, #00dfd8);
+                    left: 0;
+                }
+            }
+        }
+    }
+}

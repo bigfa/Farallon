@@ -1,0 +1,91 @@
+.fCard {
+    &--list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding-bottom: 20px;
+
+        @media (max-width: 414px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &--item {
+        border: 1px solid var(--farallon-border-color);
+        padding: 20px;
+        border-radius: 18px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 768px) {
+            padding: 15px;
+        }
+
+        @include block-hover-gradient;
+    }
+
+    &--cover {
+        border-radius: 10px;
+        margin-bottom: 12px;
+        object-fit: cover;
+        aspect-ratio: 60/36;
+
+        &Link {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+    &--title {
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 5px;
+
+        &:hover {
+            color: var(--farallon-hover-color);
+        }
+
+        & + .fCard--meta {
+            margin-top: 10px;
+        }
+    }
+
+    &--content {
+        position: relative;
+
+        .date {
+            height: 36px;
+            width: 36px;
+            background-color: var(--farallon-background-white);
+            border-radius: 100%;
+            position: absolute;
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 36px;
+            text-align: center;
+            color: var(--farallon-text-gray);
+            right: 15px;
+            top: -30px;
+            box-shadow: 0 0 0 5px var(--farallon-border-color-light);
+        }
+    }
+
+    &--snippet {
+        font-size: 15px;
+        color: var(--farallon-text-light);
+        line-height: 1.6;
+        max-height: 3.2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    &--meta {
+        @include block-meta;
+    }
+}

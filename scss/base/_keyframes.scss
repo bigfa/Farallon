@@ -1,0 +1,28 @@
+@keyframes fadeOut-headings {
+    0% {
+        background: var(--block-separator-color);
+        box-shadow: 0 0 0 7px var(--block-separator-color);
+    }
+    100% {
+        background: var(--article-target-color);
+        box-shadow: 0 0 0 7px var(--article-target-color);
+    }
+}
+
+@keyframes toTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes comment--fresh {
+    0% {
+        background-color: #fff;
+    }
+    100% {
+        background-color: rgba(255, 254, 224, 1);
+    }
+}

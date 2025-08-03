@@ -1,0 +1,27 @@
+.button--like {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+
+    &.is-active {
+        svg {
+            fill: var(--farallon-main-color);
+        }
+
+        .icon--active {
+            display: block;
+        }
+
+        .icon--default {
+            display: none;
+        }
+    }
+
+    .icon--active {
+        display: none;
+    }
+
+    .icon--block {
+        display: none;
+    }
+}

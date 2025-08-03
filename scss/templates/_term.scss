@@ -1,6 +1,51 @@
+.fTerm {
+    &--header {
+        padding-top: 30px;
+        padding-left: 120px;
+        padding-right: 120px;
+        display: flex;
+        align-items: center;
+
+        & + .site--main {
+            padding-top: 30px;
+        }
+    }
+
+    &--cover {
+        height: 72px;
+        width: 72px;
+        object-fit: cover;
+        border-radius: 4px;
+        margin-right: 15px;
+        flex: 0 0 auto;
+    }
+
+    &--content {
+        flex: 1 1 auto;
+    }
+
+    &--title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+
+    &--description {
+        font-size: 14px;
+        color: var(--farallon-text-gray);
+        line-height: 1.5;
+    }
+}
+
 .template--terms {
     padding: 50px 80px;
     min-height: 60vh;
+
+    @media (max-width: 920px) {
+        padding: 50px 20px;
+    }
 
     .page--header {
         padding: 0px 0 40px;
@@ -45,16 +90,12 @@
             line-height: 1;
         }
     }
-}
 
-@media (max-width: 920px) {
-    .tagCard {
+    @media screen and (max-width: 920px) {
         grid-template-columns: repeat(4, 1fr);
     }
-}
 
-@media (max-width: 480px) {
-    .tagCard {
+    @media screen and (max-width: 480px) {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -62,7 +103,7 @@
 .collectionCard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
+    grid-gap: 12px;
     padding-top: 20px;
     overflow: hidden;
     position: relative;
@@ -71,7 +112,7 @@
         transition: 0.5s;
         padding: 8px;
         border: 1px solid var(--farallon-border-color);
-        border-radius: 5px;
+        border-radius: 8px;
         position: relative;
         overflow: hidden;
 
@@ -97,10 +138,10 @@
     }
 
     &--image {
-        height: 150px;
+        height: 100px;
         width: 100%;
         object-fit: cover;
-        border-radius: 3px;
+        border-radius: 6px;
     }
 
     &--meta {
@@ -117,26 +158,78 @@
         font-size: 12px;
         color: var(--farallon-text-gray);
         line-height: 1.2;
+        height: 2.4em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
     }
 
     &--count {
         font-size: 12px;
         color: var(--farallon-text-gray);
     }
-}
 
-@media (max-width: 920px) {
-    .template--terms {
-        padding: 50px 20px;
-    }
-
-    .collectionCard {
+    @media (max-width: 920px) {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
-@media (max-width: 480px) {
-    .collectionCard {
+    @media (max-width: 480px) {
         grid-template-columns: repeat(1, 1fr);
     }
+}
+
+.template--linksWrap {
+    padding: 50px;
+}
+
+.link-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+    padding-top: 15px;
+}
+
+.link-item {
+    border-radius: 10px;
+    padding: 15px;
+
+    .sitename {
+        font-size: var(--farallon-text-size-smallest);
+        color: var(--farallon-text-gray);
+        display: flex;
+        flex-direction: column;
+        line-height: 1.5;
+
+        strong {
+            font-size: var(--farallon-text-size-noral);
+            color: var(--farallon-text-color);
+            margin-bottom: 10px;
+        }
+    }
+
+    &:hover {
+        background-color: #fafafa;
+        background: linear-gradient(
+            89.99999999999999deg,
+            rgba(255, 233, 244, 0.3) 0%,
+            rgba(234, 243, 255, 0.5) 100%
+        );
+    }
+}
+
+.link-title {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 30px;
+}
+
+.link-description {
+    font-size: 14px;
+    color: var(--farallon-text-gray);
+    text-align: center;
 }

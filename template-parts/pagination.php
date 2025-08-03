@@ -18,6 +18,10 @@ if ($farallonSetting->get_setting('loadmore')) {
             $data .= 'data-author="' . get_queried_object()->ID . '"';
         }
 
+        if (is_search()) {
+            $data .= 'data-search="' . get_search_query() . '"';
+        }
+
         echo '<div class="nav-links">
         <span class="loadmore"' . $data . '>' . __('loadmore', 'Farallon') . '</span>
         </div>';

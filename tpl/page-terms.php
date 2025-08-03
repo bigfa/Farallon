@@ -6,9 +6,9 @@ get_header(); ?>
 
 <div class="template--terms">
     <?php while (have_posts()) : the_post(); ?>
-        <article class="post--single__douban">
-            <header class="u-textAlignCenter">
-                <h2 class="post--single__title"><?php the_title(); ?></h2>
+        <article class="fArticle" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <header class="fArticle--header">
+                <h2 class="fArticle--headline"><?php the_title(); ?></h2>
             </header>
             <div class="collectionCard">
                 <?php $categories = get_terms([

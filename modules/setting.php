@@ -62,8 +62,8 @@ class farallonSetting
             <h2><?php _e('Theme Setting', 'Farallon') ?>
                 <a href="https://docs.wpista.com/" target="_blank" class="page-title-action"><?php _e('Documentation', 'Farallon') ?></a>
             </h2>
-            <div class="pure-wrap">
-                <div class="leftpanel">
+            <div class="fSetting--wrap">
+                <div class="fSetting--menu">
                     <ul class="nav">
                         <?php foreach ($this->config['header'] as $val) {
                             $id = $val['id'];
@@ -74,7 +74,7 @@ class farallonSetting
                         } ?>
                     </ul>
                 </div>
-                <form id="pure-form" method="POST" action="options.php">
+                <form id="pure-form" method="POST" action="options.php" class="fSetting--form">
                     <?php
                     foreach ($this->config['body'] as $val) {
                         $id = $val['id'];

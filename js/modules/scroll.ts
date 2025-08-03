@@ -5,8 +5,8 @@ class farallonScroll {
         this.is_single = obvInit.is_single;
         this.init();
 
-        if (document.querySelector('.backToTop')) {
-            const backToTop = document.querySelector('.backToTop') as HTMLElement;
+        if (document.querySelector('.fBackTop')) {
+            const backToTop = document.querySelector('.fBackTop') as HTMLElement;
             window.addEventListener('scroll', () => {
                 const t = window.scrollY || window.pageYOffset;
                 // console.log(t);
