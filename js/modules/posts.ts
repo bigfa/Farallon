@@ -23,8 +23,8 @@ class farallonPost extends farallonBase {
     randerPosts(data: any) {
         let html = data
             .map((post: any) => {
-                const thumbnail = //@ts-ignore
-                    obvInit.hide_home_cover || !post.has_image
+                const thumbnail =
+                    this.obvInit.hide_home_cover || !post.has_image
                         ? ''
                         : `<a href="${post.permalink}" aria-label="${post.post_title}" class="fBlock--coverLink">
                 <img src="${post.thumbnail}" class="fBlock--cover" alt="${post.post_title}">
@@ -96,6 +96,8 @@ class farallonPost extends farallonBase {
     }
 
     fetchPosts() {
+        const obvInit = (window as any).obvInit as obvInit;
+
         this.button.innerHTML = '加载中...';
         let params: any = {
             page: this.page,
@@ -117,11 +119,9 @@ class farallonPost extends farallonBase {
 
         const fecthParmas = new URLSearchParams(params).toString();
 
-        // @ts-ignore
         fetch(obvInit.restfulBase + 'farallon/v1/posts?' + fecthParmas, {
             method: 'get',
             headers: {
-                // @ts-ignore
                 'X-WP-Nonce': obvInit.nonce,
                 'Content-Type': 'application/json',
             },
@@ -136,14 +136,14 @@ class farallonPost extends farallonBase {
                 } else {
                     if (data.data.length == 0) {
                         document.querySelector('.loadmore')?.remove();
-                        this.showNotice('没有更多文章了', 'error');
+                        this.showNotice(this.obvInit.no_more_posts_message, 'error');
                     } else {
                         if (document.querySelector('.fBlock--list')) {
                             this.randerPosts(data.data);
                         } else {
                             this.randerCardPosts(data.data);
                         }
-                        this.showNotice('加载成功', 'error');
+                        this.showNotice(this.obvInit.success_message, 'success');
                     }
                     this.button.innerHTML = '加载更多';
                 }

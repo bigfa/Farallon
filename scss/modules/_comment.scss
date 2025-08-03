@@ -106,6 +106,13 @@
         align-items: center;
         flex: 1 1 auto;
 
+        .dot {
+            &::before {
+                content: '·';
+                margin: 0 6px;
+            }
+        }
+
         a {
             color: var(--farallon-main-color);
 

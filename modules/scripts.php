@@ -23,11 +23,12 @@ function farallon_get_background_image($post_id, $width = null, $height = null)
         preg_match_all('/<img.*?(?: |\\t|\\r|\\n)?src=[\'"]?(.+?)[\'"]?(?:(?: |\\t|\\r|\\n)+.*?)?>/sim', $content, $strResult, PREG_PATTERN_ORDER);
         $n = count($strResult[1]);
         if ($n > 0) {
-            $output = $strResult[1][0];
+            $thumbnail_src = $strResult[1][0];
         } else {
-            $output = $defaltthubmnail;
+            $thumbnail_src = $defaltthubmnail;
         }
     }
+
     if ($height && $width) {
         if ($farallonSetting->get_setting('upyun')) {
             $output = $thumbnail_src . "!/both/{$width}x{$height}";

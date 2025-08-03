@@ -346,6 +346,8 @@ class farallonBase
                 'post_view' => true,
                 'hide_home_cover' => !!$farallonSetting->get_setting('hide_home_cover'),
                 'success_message' => __('Loading successful!', 'Farallon'),
+                'comment_submit_success_text' => __('Comment submitted successfully!', 'Farallon'),
+                'no_more_posts_message' => __('No more posts available.', 'Farallon'),
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {

@@ -1,4 +1,12 @@
 interface obvInit {
+    archive_id: any;
+    post_view: boolean;
+    no_more_posts_message(no_more_posts_message: any, arg1: string): unknown;
+    success_message(success_message: any, arg1: string): unknown;
+    hide_home_cover: boolean;
+    restfulBase: string;
+    nonce: string;
+    comment_submit_success_text(comment_submit_success_text: any, arg1: string): unknown;
     is_single: boolean;
     post_id: number;
     is_archive: boolean;
@@ -12,6 +20,7 @@ class farallonBase {
     is_archive: boolean = false;
     darkmode: any = false;
     VERSION: string;
+    obvInit: obvInit;
 
     constructor() {
         const obvInit = (window as any).obvInit as obvInit;
@@ -20,6 +29,7 @@ class farallonBase {
         this.is_archive = obvInit.is_archive;
         this.darkmode = obvInit.darkmode;
         this.VERSION = obvInit.version;
+        this.obvInit = obvInit;
     }
 
     getCookie(t: any) {

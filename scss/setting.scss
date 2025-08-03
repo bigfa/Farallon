@@ -172,8 +172,8 @@ textarea.code {
             width: 12px;
             height: 12px;
             border-radius: 12px;
-            border: 1px solid #0074a2;
-            background-color: #0074a2;
+            border: 1px solid #cfd6e5;
+            background-color: #cfd6e5;
             left: -1px;
             top: -1px;
             animation: loader-spinner 400ms linear 1;
@@ -183,6 +183,10 @@ textarea.code {
     &.active {
         i {
             left: 26px;
+            &:after {
+                border: 1px solid #0074a2;
+                background-color: #0074a2;
+            }
         }
     }
 }

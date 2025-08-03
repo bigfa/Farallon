@@ -15,13 +15,11 @@ class farallonComment extends farallonBase {
                 const formDataObj: { [index: string]: any } = {};
                 formData.forEach((value, key: any) => (formDataObj[key] = value));
                 this.loading = true;
-                // @ts-ignore
-                fetch(obvInit.restfulBase + 'farallon/v1/comment', {
+                fetch(this.obvInit.restfulBase + 'farallon/v1/comment', {
                     method: 'POST',
                     body: JSON.stringify(formDataObj),
                     headers: {
-                        // @ts-ignore
-                        'X-WP-Nonce': obvInit.nonce,
+                        'X-WP-Nonce': this.obvInit.nonce,
                         'Content-Type': 'application/json',
                     },
                 })
@@ -99,8 +97,7 @@ class farallonComment extends farallonBase {
                         if (newComment) {
                             newComment.scrollIntoView({ behavior: 'smooth' });
                         }
-
-                        this.showNotice('评论成功');
+                        this.showNotice(this.obvInit.comment_submit_success_text, 'success');
                     });
             });
         }
