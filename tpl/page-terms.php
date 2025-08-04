@@ -4,9 +4,9 @@ Template Name: Terms
 */
 get_header(); ?>
 
-<div class="template--terms">
+<main class="site--main">
     <?php while (have_posts()) : the_post(); ?>
-        <article class="fArticle" itemscope="itemscope" itemtype="http://schema.org/Article">
+        <article class="fArticle fArticle--wide" itemscope="itemscope" itemtype="http://schema.org/Article">
             <header class="fArticle--header">
                 <h2 class="fArticle--headline"><?php the_title(); ?></h2>
             </header>
@@ -34,6 +34,6 @@ get_header(); ?>
             </div>
         </article>
     <?php endwhile; ?>
-</div>
+</main>
 
 <?php get_footer(); ?>

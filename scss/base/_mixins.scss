@@ -25,6 +25,10 @@
             text-decoration: underline;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        font-size: 12px;
+    }
 }
 
 @mixin centered {
@@ -70,7 +74,6 @@
 
     padding: 20px;
     --farallon-navigation-font-size: 20px;
-    font-size: var(--farallon-navigation-font-size);
     color: var(--farallon-text-light);
 
     &:hover {
@@ -78,6 +81,7 @@
     }
     // border: 1px solid #eee;
     &.current {
+        font-size: var(--farallon-navigation-font-size);
         font-weight: bold;
         cursor: not-allowed;
         body:not(.is-cleanMode) & {

@@ -8,7 +8,7 @@ get_header();
 
 
 <main class="site--main">
-    <article class="fArticle" itemscope="itemscope" itemtype="http://schema.org/Article">
+    <article class="fArticle fArticle--wide" itemscope="itemscope" itemtype="http://schema.org/Article">
         <?php while (have_posts()) : the_post(); ?>
             <header class="fArticle--header">
                 <h2 class="fArticle--headline" itemprop="headline"><?php the_title(); ?></h2>

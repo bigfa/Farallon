@@ -14,6 +14,10 @@
 
     &--item {
         padding: 20px 40px;
+
+        @media (max-width: 768px) {
+            padding: 15px 0px;
+        }
     }
 
     &--header {
@@ -42,6 +46,10 @@
         line-height: 1.5;
         color: var(--farallon-text-gray);
         margin-top: 10px;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+        }
     }
 }
 

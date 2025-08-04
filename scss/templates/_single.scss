@@ -2,6 +2,14 @@
     @include centered;
     max-width: var(--farallon-article-width, 678px);
 
+    &--wide {
+        --farallon-article-width: 800px;
+    }
+
+    &--full {
+        --farallon-article-width: 100%;
+    }
+
     &--header {
         text-align: center;
         padding-bottom: 15px;
