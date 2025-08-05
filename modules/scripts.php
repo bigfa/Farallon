@@ -121,15 +121,15 @@ function farallon_post_view($post_id)
  * @return post views
  */
 
-function farallon_get_post_views_text($zero = false, $one = false, $more = false, $post = 0)
+function farallon_get_post_views_text($zero = false, $one = false, $more = false, $post = 0, $before = '', $after = '')
 {
     $views = farallon_post_view($post);
     if ($views == 0) {
-        return $zero ? $zero : __('No views yet', 'Farallon');
+        return $before . ($zero ? $zero : __('No views yet', 'Farallon')) . $after;
     } elseif ($views == 1) {
-        return $one ? $one : __('1 View', 'Farallon');
+        return $before . ($one ? $one : __('1 View', 'Farallon')) . $after;
     } else {
-        return $more ? str_replace('%d', $views, $more) : sprintf(__('%d Views', 'Farallon'), $views);
+        return $before . ($more ? str_replace('%d', $views, $more) : sprintf(__('%d Views', 'Farallon'), $views)) . $after;
     }
 }
 
@@ -237,12 +237,12 @@ function farallon_get_post_read_time($post_id)
     return $reading_time;
 }
 
-function farallon_get_post_read_time_text($post_id)
+function farallon_get_post_read_time_text($post_id, $before = '', $after = '')
 {
     $reading_time = farallon_get_post_read_time($post_id);
     if ($reading_time <= 1) {
-        return __('1 min read', 'Farallon');
+        return $before . __('1 min read', 'Farallon') . $after;
     } else {
-        return sprintf(__('%d min read', 'Farallon'), $reading_time);
+        return $before . sprintf(__('%d min read', 'Farallon'), $reading_time) . $after;
     }
 }
