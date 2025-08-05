@@ -9,21 +9,35 @@
 
     @media screen and (max-width: 768px) {
         padding: 20px 0;
+        margin-top: 10px;
     }
 
     .avatar {
         border-radius: 100%;
+
+        @media (max-width: 768px) {
+            width: 48px;
+            height: 48px;
+        }
     }
 
     &--name {
         font-weight: bold;
         margin-top: 10px;
         font-size: 18px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     &--description {
         font-size: 14px;
         color: var(--farallon-text-gray);
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     &--icons {

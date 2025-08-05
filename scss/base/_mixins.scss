@@ -144,3 +144,20 @@
         }
     }
 }
+
+@mixin dark-variables {
+    --farallon-main-color: var(--farallon-dark-main-color);
+    --farallon-hover-color: var(--farallon-dark-hover-color);
+    --farallon-text-color: #a1a1aa;
+    --farallon-text-light: rgba(161, 161, 170, 1);
+    --farallon-text-gray: rgba(113, 113, 122, 1);
+    --farallon-text-gray-lightest: rgba(113, 113, 122, 0.95);
+
+    --farallon-background-white: #1e1e1e;
+    --farallon-background-gray: #000;
+    --farallon-background-gray-light: #1e1e1e;
+    --farallon-background-white-opacity: rgba(30, 30, 30, var(--farallon-background-opacity));
+
+    --farallon-border-color: rgba(63, 63, 70, 0.6);
+    --farallon-border-color-light: rgba(63, 63, 70, 0.4);
+}

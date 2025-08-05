@@ -15,6 +15,7 @@ latest version : `0.9.3`
 ### 0.9.3
 
 - add Japanese support
+- style enhancement
 
 ### 0.9.2
 

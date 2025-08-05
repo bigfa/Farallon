@@ -9,6 +9,11 @@
         padding-left: 120px;
         padding-right: 120px;
 
+        @media screen and (max-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
         .search-form {
             border: 1px solid var(--farallon-border-color);
             border-radius: 999rem;
@@ -25,16 +30,12 @@
             .search-submit {
                 border-radius: 999rem;
                 border: 0;
-                background: gredient(to right, #007cf0, #00dfd8);
+                background: var(--farallon-background-gray);
                 font-size: 14px;
                 color: var(--farallon-text-gray);
-                padding: 8px 18px;
+                padding: 8px 22px;
                 cursor: pointer;
             }
         }
     }
-}
-
-.search {
-    font-size: var(--farallon-text-size-small);
 }

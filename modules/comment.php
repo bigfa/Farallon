@@ -135,13 +135,14 @@ class farallonComment
                 'comment_count' => get_comments_number(),
                 'view_count' => (int)get_post_meta(get_the_ID(), FARALLON_POST_VIEW_KEY, true),
                 'like_count' => (int)get_post_meta(get_the_ID(), FARALLON_POST_LIKE_KEY, true),
-                'thumbnail' => farallon_get_background_image(get_the_ID(), 300, 200),
+                'thumbnail' => farallon_get_background_image(get_the_ID(), 600, 360),
                 'permalink' => get_permalink(),
-                'categories' => get_the_category(),
+                'categories' => get_the_category_list(','),
                 'tags' => get_the_tags(),
                 'has_image' => farallon_is_has_image(get_the_ID()),
                 'day' => get_the_date('d'),
                 'post_format' => get_post_format(),
+                'read_time' => farallon_get_post_read_time_text(get_the_ID()),
             ];
         }
 

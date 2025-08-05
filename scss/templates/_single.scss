@@ -26,7 +26,7 @@
         margin-bottom: 20px;
 
         @media screen and (max-width: 768px) {
-            font-size: 28px;
+            font-size: 24px;
             margin-bottom: 10px;
         }
     }
@@ -38,7 +38,7 @@
     }
 
     &--toc {
-        background-color: var(--farallon-background-gray);
+        background-color: var(--farallon-background-gray-light);
         padding: 12px 15px;
         border-radius: 10px;
         font-size: var(--farallon-text-size-small);
@@ -86,9 +86,9 @@
             margin-right: 10px;
             margin-bottom: 10px;
             background: var(--farallon-background-gray);
-            font-size: 14px;
-            padding: 2px 12px;
-            border-radius: 5px;
+            font-size: 12px;
+            padding: 3px 15px;
+            border-radius: 6px;
             color: var(--farallon-text-gray);
 
             &:hover {
@@ -138,6 +138,10 @@
         justify-content: center;
         padding: 20px 0;
 
+        @media screen and (max-width: 768px) {
+            padding: 10px 0;
+        }
+
         .button--like {
             svg {
                 fill: var(--farallon-text-gray);
@@ -161,6 +165,19 @@
         color: var(--farallon-text-gray);
         margin-bottom: 10px;
         margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: var(--farallon-text-gray);
+            margin-right: 5px;
+        }
+
+        .text {
+            margin-right: 5px;
+        }
     }
 }
 

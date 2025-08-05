@@ -90,6 +90,10 @@
         line-height: 1.4;
         margin-bottom: 5px;
 
+        @media screen and (max-width: 768px) {
+            font-size: 18px;
+        }
+
         .sticky--post {
             font-size: 12px;
             color: #fff;

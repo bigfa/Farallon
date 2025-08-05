@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Farallon 0.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2025-08-05 13:23+0800\n"
+"PO-Revision-Date: 2025-08-05 16:32+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -116,6 +116,14 @@ msgstr "加载成功"
 #: modules/base.php:349
 msgid "Comment submitted successfully!"
 msgstr "评论提交成功"
+
+#: modules/base.php:350
+msgid "No more posts available."
+msgstr "没有更多文章了"
+
+#: modules/base.php:351
+msgid "Copy success."
+msgstr "复制成功"
 
 #: modules/setting.php:47
 msgid "Setting saved success!"
@@ -593,6 +601,14 @@ msgstr "展示作者信息"
 #: modules/widget.php:8
 msgid "About"
 msgstr "关于"
+
+#: modules/widget.php:32
+msgid "show your category card"
+msgstr "展示你的分类卡片"
+
+#: modules/widget.php:33
+msgid "Categories"
+msgstr "分类"
 
 #: single.php:9
 msgid " views"

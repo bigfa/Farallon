@@ -117,8 +117,13 @@
                 .search--area {
                     width: 100%;
 
+                    .search-form {
+                        width: 90%;
+                    }
+
                     .search-field {
                         width: 100%;
+                        font-size: 12px;
                     }
                 }
             }
@@ -131,6 +136,7 @@
         height: 39px;
         box-sizing: border-box;
         padding: 5px 30px;
+        // color: var(--farallon-text-light);
 
         .menu-item {
             padding: 0 15px;
@@ -148,26 +154,28 @@
                     color: var(--farallon-hover-color);
                 }
             }
+
+            @media (max-width: 820px) {
+                padding: 0 10px;
+            }
         }
 
         @media (max-width: 820px) {
             overflow-x: auto;
             padding-left: 40px;
             padding-right: 40px;
-
-            li {
-                flex: 0 0 auto;
-            }
         }
 
         @media screen and (max-width: 768px) {
             padding-left: 20px;
             padding-right: 20px;
+            font-size: 14px;
         }
 
         @media (max-width: 414px) {
-            padding-left: 0;
-            padding-right: 0;
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 12px;
         }
     }
 }
