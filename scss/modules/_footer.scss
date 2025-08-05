@@ -4,6 +4,10 @@
     border-top: 1px dotted var(--farallon-border-color);
     color: var(--farallon-text-light);
 
+    @media screen and (max-width: 768px) {
+        padding: 20px 3.5%;
+    }
+
     &--content {
         display: flex;
         align-items: center;

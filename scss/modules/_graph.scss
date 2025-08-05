@@ -82,6 +82,11 @@
         );
         padding: 30px;
         border-radius: 10px;
+
+        @media screen and (max-width: 768px) {
+            padding: 15px;
+        }
+
         p {
             &:last-child {
                 margin-bottom: 0;

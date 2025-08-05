@@ -24,8 +24,12 @@
         .comment-respond {
             margin-top: 20px;
             padding: 20px;
-            background-color: var(--farallon-background-gray);
+            background-color: var(--farallon-background-gray-light);
             border-radius: 5px;
+
+            @media screen and (max-width: 768px) {
+                padding: 10px;
+            }
         }
     }
 
@@ -43,11 +47,19 @@
             }
         }
         --farallon-comment-avatar-size: 42px;
+
+        @media screen and (max-width: 768px) {
+            --farallon-comment-avatar-size: 32px;
+        }
     }
 
     &--body {
         padding: 25px 0;
         border-bottom: 1px solid var(--farallon-border-color-light);
+
+        @media screen and (max-width: 768px) {
+            padding: 15px 0;
+        }
 
         &__fresh {
             animation: comment--fresh 1.5s ease-in-out infinite alternate;
@@ -70,6 +82,11 @@
         font-size: 14px;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
 
         .comment-reply-link {
             margin-left: auto;
@@ -167,7 +184,7 @@
         margin-right: 5px;
         color: var(--farallon-main-color);
         text-decoration: none !important;
-        display: flex;
+        display: inline-flex;
         align-items: center;
 
         &:hover {
@@ -188,6 +205,10 @@
     .depth-1 > & {
         margin-left: 50px;
         padding-top: 5px;
+
+        @media screen and (max-width: 768px) {
+            margin-left: 20px;
+        }
     }
 
     .avatar {
@@ -197,6 +218,10 @@
 
     .fComment--body {
         padding: 15px 0;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 0;
+        }
     }
 
     .fComment--content {
@@ -284,6 +309,7 @@
     .logged-in-as {
         font-size: 12px;
         color: var(--farallon-text-gray);
+        line-height: 1.5;
     }
 }
 
