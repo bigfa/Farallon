@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-08-05T06:26:53+00:00\n"
+"POT-Creation-Date: 2025-08-05T13:54:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: Farallon\n"
@@ -135,6 +135,10 @@ msgstr ""
 msgid "Just now"
 msgstr ""
 
+#: modules/base.php:355
+msgid "You liked this post!"
+msgstr ""
+
 #: modules/comment.php:44
 msgid "Friend of author."
 msgstr ""
@@ -156,11 +160,11 @@ msgstr ""
 msgid " ago"
 msgstr ""
 
-#: modules/comment.php:151
-#: modules/comment.php:170
-#: modules/comment.php:200
-#: modules/comment.php:213
-#: modules/comment.php:239
+#: modules/comment.php:152
+#: modules/comment.php:171
+#: modules/comment.php:201
+#: modules/comment.php:214
+#: modules/comment.php:240
 #: modules/setting.php:28
 msgid "Success"
 msgstr ""
@@ -684,16 +688,16 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: page.php:20
-#: single.php:21
+#: page.php:24
+#: single.php:25
 msgid "Updated on"
 msgstr ""
 
-#: single.php:44
+#: single.php:48
 msgid "Copy link."
 msgstr ""
 
-#: single.php:55
+#: single.php:61
 msgid "View all status posts"
 msgstr ""
 

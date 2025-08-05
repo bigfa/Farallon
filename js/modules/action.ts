@@ -172,7 +172,7 @@ class farallonAction extends farallonBase {
                 return response.json();
             })
             .then(() => {
-                this.showNotice(this.obvInit.success_message, 'success');
+                this.showNotice(this.obvInit.like_success_message, 'success');
                 this.setCookie('like_' + this.post_id, '1', 1);
             });
         this.like_btn.classList.add('is-active');

@@ -62,8 +62,22 @@
         }
 
         &__fresh {
+            --farallon-comment-fresh-start-color: #fff;
+            --farallon-comment-fresh-end-color: rgba(255, 254, 224, 1);
             animation: comment--fresh 1.5s ease-in-out infinite alternate;
             border-radius: 5px;
+
+            @media screen and (prefers-color-scheme: dark) {
+                .auto & {
+                    --farallon-comment-fresh-start-color: #1a1a1a;
+                    --farallon-comment-fresh-end-color: rgba(56, 53, 36, 1);
+                }
+            }
+
+            .dark & {
+                --farallon-comment-fresh-start-color: #1a1a1a;
+                --farallon-comment-fresh-end-color: rgba(56, 53, 36, 1);
+            }
         }
 
         .avatar {

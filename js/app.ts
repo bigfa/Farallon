@@ -2,6 +2,7 @@ interface obvInit {
     more_text: any;
     loading_text: any;
     now_text: any;
+    like_success_message: any;
     copy_success_text(copy_success_text: any): unknown;
     archive_id: any;
     post_view: boolean;

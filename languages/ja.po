@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Farallon 0.9.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2025-08-05T05:22:31+00:00\n"
-"PO-Revision-Date: 2025-08-05 14:19+0800\n"
+"PO-Revision-Date: 2025-08-05 21:55+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -127,6 +127,10 @@ msgstr "もっと読み込む"
 #: modules/base.php:354
 msgid "Just now"
 msgstr "たった今"
+
+#: modules/base.php:355
+msgid "You liked this post!"
+msgstr "あなたはこの投稿が好きです！"
 
 #: modules/comment.php:44
 msgid "Friend of author."

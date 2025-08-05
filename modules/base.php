@@ -352,6 +352,7 @@ class farallonBase
                 'loading_text' => __('Loading...', 'Farallon'),
                 'more_text' => __('Loadmore', 'Farallon'),
                 'now_text' => __('Just now', 'Farallon'),
+                'like_success_message' => __('You liked this post!', 'Farallon'),
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {

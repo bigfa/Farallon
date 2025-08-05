@@ -20,9 +20,9 @@
 
 @keyframes comment--fresh {
     0% {
-        background-color: #fff;
+        background-color: var(--farallon-comment-fresh-start-color);
     }
     100% {
-        background-color: rgba(255, 254, 224, 1);
+        background-color: var(--farallon-comment-fresh-end-color);
     }
 }
