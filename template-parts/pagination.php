@@ -23,7 +23,7 @@ if ($farallonSetting->get_setting('loadmore')) {
         }
 
         echo '<div class="nav-links">
-        <span class="loadmore"' . $data . '>' . __('loadmore', 'Farallon') . '</span>
+        <span class="loadmore"' . $data . '>' . __('Loadmore', 'Farallon') . '</span>
         </div>';
     }
 } else {

@@ -43,7 +43,7 @@ class farallonComment extends farallonBase {
                                 </div>
                                 <div class="fComment--meta">
                                     ${comment.comment_author}<span class="dot"></span>
-                                    <time>Just now</time>
+                                    <time class="fComment--time">${this.obvInit.now_text}</time>
                                 </div>
                             </header>
                             <div class="fComment--content">

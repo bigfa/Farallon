@@ -1,4 +1,7 @@
 interface obvInit {
+    more_text: any;
+    loading_text: any;
+    now_text: any;
     copy_success_text(copy_success_text: any): unknown;
     archive_id: any;
     post_view: boolean;
@@ -36,6 +39,7 @@ class farallonBase {
     getCookie(t: any) {
         if (0 < document.cookie.length) {
             var e = document.cookie.indexOf(t + '=');
+
             if (-1 != e) {
                 e = e + t.length + 1;
                 var n = document.cookie.indexOf(';', e);

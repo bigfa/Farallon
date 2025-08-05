@@ -4,22 +4,26 @@ class farallonAction extends farallonBase {
     is_single: boolean = false;
     post_id: number = 0;
     is_archive: boolean = false;
+
     constructor() {
         super();
         this.is_single = this.obvInit.is_single;
         this.post_id = this.obvInit.post_id;
         this.is_archive = this.obvInit.is_archive;
         this.like_btn = document.querySelector(this.selctor);
+
         if (this.like_btn) {
             this.like_btn.addEventListener('click', () => {
                 this.handleLike();
             });
+
             if (this.getCookie('like_' + this.post_id)) {
                 this.like_btn.classList.add('is-active');
             }
         }
 
         const theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'auto';
+
         const html = `<div class="fThemeSwitcher">
         <span class="${theme == 'dark' ? 'is-active' : ''}" data-action-value="dark">
             <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
@@ -61,9 +65,11 @@ class farallonAction extends farallonBase {
         document.querySelectorAll('.fThemeSwitcher span').forEach((item) => {
             item.addEventListener('click', () => {
                 if (item.classList.contains('is-active')) return;
+
                 document.querySelectorAll('.fThemeSwitcher span').forEach((item) => {
                     item.classList.remove('is-active');
                 });
+
                 if ((item as HTMLElement).dataset.actionValue == 'dark') {
                     localStorage.setItem('theme', 'dark');
                     document.querySelector('body')!.classList.remove('auto');

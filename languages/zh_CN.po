@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Farallon 0.8.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
 "POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2025-08-03 19:55+0800\n"
+"PO-Revision-Date: 2025-08-05 13:23+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh\n"
@@ -625,8 +625,12 @@ msgstr "1 分钟阅读"
 msgid "%d min read"
 msgstr "%d 分钟阅读"
 
-#: template-parts/pagination.php:9
-msgid "loadmore"
+#: modules/base.php:352
+msgid "Loading..."
+msgstr "加载中..."
+
+#: modules/base.php:353 template-parts/pagination.php:26
+msgid "Loadmore"
 msgstr "加载更多"
 
 #: template-parts/post-navigation.php:5

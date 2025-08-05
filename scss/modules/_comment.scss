@@ -37,7 +37,7 @@
     }
 
     &--item {
-        &:last-child {
+        &.depth-1:last-child {
             & > .fComment--body {
                 // border-bottom: 0;
             }
@@ -185,9 +185,9 @@
 
 .children {
     margin-left: 0px;
-
     .depth-1 > & {
         margin-left: 50px;
+        padding-top: 5px;
     }
 
     .avatar {
@@ -196,7 +196,6 @@
     }
 
     .fComment--body {
-        border-bottom: 0;
         padding: 15px 0;
     }
 

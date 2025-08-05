@@ -348,7 +348,10 @@ class farallonBase
                 'success_message' => __('Loading successful!', 'Farallon'),
                 'comment_submit_success_text' => __('Comment submitted successfully!', 'Farallon'),
                 'no_more_posts_message' => __('No more posts available.', 'Farallon'),
-                'copy_success_text' => __('Copy success.', 'Farallon')
+                'copy_success_text' => __('Copy success.', 'Farallon'),
+                'loading_text' => __('Loading...', 'Farallon'),
+                'more_text' => __('Loadmore', 'Farallon'),
+                'now_text' => __('Just now', 'Farallon'),
             ]
         );
         if ($farallonSetting->get_setting('javascript')) {

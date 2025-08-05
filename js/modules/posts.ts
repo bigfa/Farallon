@@ -98,7 +98,7 @@ class farallonPost extends farallonBase {
     fetchPosts() {
         const obvInit = (window as any).obvInit as obvInit;
 
-        this.button.innerHTML = '加载中...';
+        this.button.innerHTML = this.obvInit.loading_text;
         let params: any = {
             page: this.page,
             category: '',
@@ -145,7 +145,7 @@ class farallonPost extends farallonBase {
                         }
                         this.showNotice(this.obvInit.success_message, 'success');
                     }
-                    this.button.innerHTML = '加载更多';
+                    this.button.innerHTML = this.obvInit.more_text;
                 }
             });
     }
