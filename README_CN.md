@@ -2,11 +2,15 @@
 
 ![Wordpress 主题 Farallon](https://static.fatesinger.com/2023/06/u1ak8xgmyn9ec24r.png)
 
-最新版本: `0.9.1`
+最新版本: `0.9.2`
 
 [简单的使用文档](https://fatesinger.com/101971)
 
 ## 更新日志
+
+### 0.9.2
+
+- 样式改进
 
 ### 0.9.1
 

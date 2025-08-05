@@ -72,11 +72,19 @@ function scripts() {
 // Watch files
 function watchFiles() {
     gulp.watch(['./js/modules/*', './js/extensions/*', './js/app.ts'], gulp.series(scripts));
-    gulp.watch(['./scss/app.scss', './scss/modules/*', './scss/templates/*'], gulp.series(css));
     gulp.watch(
-        ['./scss/setting.scss', './scss/modules/*', './scss/templates/*'],
-        gulp.series(settingCss)
+        [
+            './scss/app.scss',
+            './scss/modules/*',
+            './scss/templates/*',
+            './scss/base/*',
+            './scss/components/*',
+            './scss/layout/*',
+            './scss/utilities/*',
+        ],
+        gulp.series(css)
     );
+    gulp.watch(['./scss/setting.scss'], gulp.series(settingCss));
     gulp.watch(['./js/setting.ts'], gulp.series(setting));
 }
 

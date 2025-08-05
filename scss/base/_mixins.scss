@@ -99,6 +99,20 @@
                 left: 0;
             }
         }
+
+        body.dark:not(.is-cleanMode) & {
+            &:after {
+                background-image: linear-gradient(180deg, #1e1e1e, #121212);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body.auto:not(.is-cleanMode) & {
+                &:after {
+                    background-image: linear-gradient(180deg, #1e1e1e, #121212);
+                }
+            }
+        }
     }
 
     &.dots {
@@ -119,6 +133,14 @@
     .dark & {
         &:hover {
             background: linear-gradient(180deg, #1e1e1e, #121212);
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .auto & {
+            &:hover {
+                background: linear-gradient(180deg, #1e1e1e, #121212);
+            }
         }
     }
 }

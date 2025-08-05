@@ -1,5 +1,9 @@
-.template--douban {
-    padding: 50px 75px;
+.db--container,
+.doulist-item {
+    --db--text-color: var(--farallon-text-color);
+    --db--text-color-light: var(--farallon-text-light);
+    --db--background-gray: var(--farallon-background-gray);
+    --db-border-color: var(--farallon-border-color);
 }
 
 .doulist-item {
@@ -20,5 +24,13 @@
                 }
             }
         }
+    }
+
+    .dark & {
+        background: rgba(63, 63, 70, 0.15);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background: rgba(63, 63, 70, 0.15);
     }
 }

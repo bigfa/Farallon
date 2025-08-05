@@ -58,6 +58,22 @@
         border-radius: 999rem;
         overflow: hidden;
 
+        .dark & {
+            background-color: rgba(39, 39, 42, 0.9);
+            border-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: saturate(180%) blur(5px);
+            box-shadow: 0 0 #0000, 0 0 0 calc(1px + 0px) hsla(0, 0%, 100%, 0.1), 0 0 #0000;
+            color: rgba(228, 228, 231, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background-color: rgba(39, 39, 42, 0.9);
+            border-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: saturate(180%) blur(5px);
+            box-shadow: 0 0 #0000, 0 0 0 calc(1px + 0px) hsla(0, 0%, 100%, 0.1), 0 0 #0000;
+            color: rgba(228, 228, 231, 1);
+        }
+
         .inner {
             display: flex;
             flex-direction: column;

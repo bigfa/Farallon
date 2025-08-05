@@ -87,6 +87,16 @@
                 margin-bottom: 0;
             }
         }
+
+        .dark & {
+            background: linear-gradient(180deg, #1e1e1e, #121212);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .auto & {
+                background: linear-gradient(180deg, #1e1e1e, #121212);
+            }
+        }
     }
 
     a {
@@ -201,7 +211,7 @@
         counter-reset: item;
 
         & > li {
-            &::before {
+            &:before {
                 content: counter(item);
                 counter-increment: item;
                 font-size: var(--farallon-text-size-smallest);

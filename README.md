@@ -6,11 +6,15 @@ Farallon is a simple single column wordpress theme with perfect performace and e
 
 [中文说明](https://github.com/bigfa/Farallon/blob/develop/README_CN.md)
 
-latest version : `0.9.1`
+latest version : `0.9.2`
 
 [Simple User Guide(Chinese)](https://fatesinger.com/101971)
 
 ## Changelog
+
+### 0.9.2
+
+- style enhancement
 
 ### 0.9.1
 

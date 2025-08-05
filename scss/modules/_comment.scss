@@ -228,6 +228,16 @@
         padding: 8px 15px;
         font-size: 14px;
         color: var(--farallon-text-light);
+
+        .dark & {
+            background-color: rgba(63, 63, 70, 0.15);
+            border-color: #3f3f46;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background-color: rgba(63, 63, 70, 0.15);
+            border-color: #3f3f46;
+        }
     }
 
     textarea {
@@ -246,6 +256,20 @@
 
         &:hover {
             background-color: var(--farallon-text-light);
+        }
+
+        .dark & {
+            background-color: rgba(63, 63, 70, 1);
+            &:hover {
+                background-color: rgba(82, 82, 91, 1);
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background-color: rgba(63, 63, 70, 1);
+            &:hover {
+                background-color: rgba(82, 82, 91, 1);
+            }
         }
     }
 
