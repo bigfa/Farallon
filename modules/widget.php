@@ -4,7 +4,7 @@ class Farallon_Widget extends WP_Widget
 {
     function __construct()
     {
-        $widget_ops = array('description' => __('show auhor info', 'Farallon'));
+        $widget_ops = array('description' => __('Show author info', 'Farallon'));
         parent::__construct('about', __('About', 'Farallon'), $widget_ops);
     }
 
@@ -29,7 +29,7 @@ class Farallon_Widget_Category extends WP_Widget
 {
     function __construct()
     {
-        $widget_ops = array('description' => __('show your category card', 'Farallon'));
+        $widget_ops = array('description' => __('Show your category card', 'Farallon'));
         parent::__construct('category', __('Categories', 'Farallon'), $widget_ops);
     }
 

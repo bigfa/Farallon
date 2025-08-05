@@ -1,645 +1,120 @@
-# Copyright (C) 2023 bigfa
-# This file is distributed under the .
+# Copyright (C) 2025 bigfa
+# This file is distributed under the same license as the Farallon theme.
 msgid ""
 msgstr ""
-"Project-Id-Version: Farallon 0.8.7\n"
+"Project-Id-Version: Farallon 0.9.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/Farallon\n"
-"POT-Creation-Date: 2023-11-15T06:00:01+00:00\n"
-"PO-Revision-Date: 2025-08-05 21:55+0800\n"
+"POT-Creation-Date: 2025-08-05T15:37:24+00:00\n"
+"PO-Revision-Date: 2025-08-05 23:43+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: zh\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.6\n"
 "X-Domain: Farallon\n"
 
-#
 #. Theme Name of the theme
+#: style.css
 msgid "Farallon"
-msgstr "Farallon"
+msgstr ""
 
 #. Theme URI of the theme
-msgid "https://fatesinger.com/101971"
-msgstr "https://fatesinger.com/101971"
+#: style.css
+msgid "https://github.com/bigfa/Farallon"
+msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid "theme 2024"
-msgstr "2024 主题"
+msgstr ""
 
 #. Author of the theme
+#: style.css
 msgid "bigfa"
-msgstr "bigfa"
+msgstr ""
 
 #. Author URI of the theme
-msgid "https://fatesinger.com"
-msgstr "https://fatesinger.com"
+#: style.css
+msgid "https://github.com/bigfa"
+msgstr ""
 
 #: comments.php:25
 msgid "This post has no comment yet"
-msgstr "此文章暂无评论"
+msgstr "此文章尚无评论"
 
-#: functions.php:88
-msgid "Add a menu"
-msgstr "增加菜单"
-
-#: functions.php:136
-msgid "No views yet"
-msgstr "暂无浏览"
-
-#: functions.php:138
-msgid "1 View"
-msgstr "1 浏览"
-
-#: functions.php:140
-msgid "%d Views"
-msgstr "%d 浏览"
-
-#: functions.php:132
-msgid "No links yet"
-msgstr "尚无链接"
-
-#: modules/base.php:72
+#: modules/base.php:125
 msgid "Cover"
-msgstr "封面缩略图"
+msgstr "封面"
 
-#: modules/base.php:74
+#: modules/base.php:127
+msgid "Upload"
+msgstr "上传"
+
+#: modules/base.php:128
 msgid "Category cover url."
-msgstr "分类封面缩略图地址"
+msgstr "分类封面网址"
 
-#: modules/base.php:78 modules/base.php:82
+#: modules/base.php:132 modules/base.php:136
 msgid "Card Template"
-msgstr "卡片模版"
+msgstr "卡片模板"
 
-#: modules/base.php:84
+#: modules/base.php:138
 msgid "Use Card Template"
-msgstr "使用卡片模版"
+msgstr "使用卡片模板"
 
-#: modules/base.php:67 modules/setting.php:381
+#: modules/base.php:184 modules/setting.php:450
 msgid "Table of content"
-msgstr "文章目录"
+msgstr "目录"
 
-#: modules/base.php:88
+#: modules/base.php:206
 msgid "author"
 msgstr "作者"
 
-#: modules/base.php:88
+#: modules/base.php:206
 msgid "published on"
-msgstr "发表于"
+msgstr "发布于"
 
-#: modules/base.php:110 modules/base.php:112
+#: modules/base.php:244 modules/base.php:246
 msgid "Homepage Top"
 msgstr "首页顶部"
 
-#: modules/base.php:120 modules/base.php:122
+#: modules/base.php:254 modules/base.php:256
 msgid "Homepage Bottom"
 msgstr "首页底部"
 
-#: modules/base.php:130 modules/base.php:132
-msgid "Single Pgae Bottom"
-msgstr "文章详情页底部"
+#: modules/base.php:264 modules/base.php:266
+msgid "Single Page Bottom"
+msgstr "单页底部"
 
-#: modules/comment.php:53
-msgid "Author"
-msgstr "作者"
+#: modules/base.php:307 modules/setting.php:47
+msgid "Setting saved success!"
+msgstr "设置保存成功！"
 
-#: modules/comment.php:84 modules/comment.php:103 modules/comment.php:133
-#: modules/comment.php:146 modules/comment.php:172 modules/setting.php:28
-msgid "Success"
-msgstr "成功"
+#: modules/base.php:308 modules/setting.php:48
+msgid "Upload Image"
+msgstr "上传图片"
+
+#: modules/base.php:309
+msgid "Set Category Image"
+msgstr "设置分类图片"
 
 #: modules/base.php:348
 msgid "Loading successful!"
-msgstr "加载成功"
+msgstr "加载成功！"
 
 #: modules/base.php:349
 msgid "Comment submitted successfully!"
-msgstr "评论提交成功"
+msgstr "评论提交成功！"
 
 #: modules/base.php:350
 msgid "No more posts available."
-msgstr "没有更多文章了"
+msgstr "没有更多文章。"
 
 #: modules/base.php:351
 msgid "Copy success."
-msgstr "复制成功"
-
-#: modules/setting.php:47
-msgid "Setting saved success!"
-msgstr "设置保存成功"
-
-#: modules/setting.php:55 modules/setting.php:61
-msgid "Theme Setting"
-msgstr "主题设置"
-
-#: modules/setting.php:63
-msgid "Documentation"
-msgstr "文档"
-
-#: modules/setting.php:105
-msgid "Save"
-msgstr "保存"
-
-#: modules/setting.php:194
-msgid "Basic Setting"
-msgstr "基础设置"
-
-#: modules/setting.php:199
-msgid "Feature Setting"
-msgstr "功能设置"
-
-#: modules/setting.php:205
-msgid "Singluar Setting"
-msgstr "文章设置"
-
-#: modules/setting.php:210
-msgid "SNS Setting"
-msgstr "社会化设置"
-
-#: modules/setting.php:215
-msgid "Custom Setting"
-msgstr "自定义设置"
-
-#: modules/setting.php:226
-msgid "Description"
-msgstr "站点描述"
-
-#: modules/setting.php:227
-msgid "Site description"
-msgstr "站点描述"
-
-#: modules/setting.php:232
-msgid "Headcode"
-msgstr "头部代码"
-
-#: modules/setting.php:233
-msgid "You can add content to the head tag, such as site verification tags, and so on."
-msgstr "你可以向<head>标签中添加内容，比如站点验证标签等等。"
-
-#: modules/setting.php:238
-msgid "Logo"
-msgstr "Logo"
-
-#: modules/setting.php:239
-msgid "Logo address, preferably in a square shape."
-msgstr "Logo地址，最好是方形的。"
-
-#: modules/setting.php:247
-msgid "Og default thumb"
-msgstr "默认Open Graph 缩略图"
-
-#: modules/setting.php:248
-msgid "Og meta default thumb address."
-msgstr "默认 Open Graph 缩略图地址"
-
-#: modules/setting.php:244
-msgid "Favicon"
-msgstr "Favicon"
-
-#: modules/setting.php:245
-msgid "Favicon address"
-msgstr "Favicon 地址"
-
-#: modules/setting.php:250
-msgid "Title sep"
-msgstr "标题分隔符"
-
-#: modules/setting.php:251
-msgid "Default is"
-msgstr "默认是"
-
-#: modules/setting.php:256
-msgid "Disable block css"
-msgstr "禁用区块样式"
-
-#: modules/setting.php:257
-msgid "Do not load block-style files."
-msgstr "不加载默认区块样式文件"
-
-#: modules/setting.php:262
-msgid "Gravatar proxy"
-msgstr "头像代理"
-
-#: modules/setting.php:263
-msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
-msgstr "头像代理域名，比如<code>cravatar.cn</code>"
-
-#: modules/setting.php:274
-msgid "Update notice"
-msgstr "更新提示"
-
-#: modules/setting.php:275
-msgid "Get theme update notice."
-msgstr "自动获取主题更新"
-
-#: modules/setting.php:300
-msgid "Clean Mode"
-msgstr "清爽模式"
-
-#: modules/setting.php:301
-msgid "Disable gradient effect."
-msgstr "禁用渐变效果"
-
-#: modules/setting.php:273
-msgid "Upyun CDN"
-msgstr "又拍云CDN"
-
-#: modules/setting.php:274
-msgid ""
-"Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly."
-msgstr "确保所有图片都上传到又拍云，否则缩略图可能无法正确显示。"
-
-#: modules/setting.php:279
-msgid "Aliyun OSS CDN"
-msgstr "阿里云OSS"
-
-#: modules/setting.php:280
-msgid ""
-"Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display "
-"properly."
-msgstr "确保所有图片都上传到阿里云OSS，否则缩略图可能无法正确显示。"
-
-#: modules/setting.php:285
-msgid "Qiniu OSS CDN"
-msgstr "七牛云CDN"
-
-#: modules/setting.php:286
-msgid ""
-"Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display "
-"properly."
-msgstr "确保所有图片都上传到七牛云OSS，否则缩略图可能无法正确显示。"
-
-#: modules/setting.php:291
-msgid "Dark Mode"
-msgstr "暗黑模式"
-
-#: modules/setting.php:292
-msgid "Enable dark mode"
-msgstr "开启暗黑模式"
-
-#: modules/setting.php:297
-msgid "Default thumbnail"
-msgstr "缺省缩略图"
-
-#: modules/setting.php:298
-msgid "Default thumbnail address"
-msgstr "缺省缩略图地址"
-
-#: modules/setting.php:303
-msgid "Back to top"
-msgstr "返回顶部"
-
-#: modules/setting.php:304
-msgid "Enable back to top"
-msgstr "开启返回顶部"
-
-#: modules/setting.php:309
-msgid "Load more"
-msgstr "加载更多"
-
-#: modules/setting.php:310
-msgid "Enable load more"
-msgstr "开启加载更多"
-
-#: modules/setting.php:315
-msgid "Author info"
-msgstr "作者信息"
-
-#: modules/setting.php:316
-msgid "Enable author info in homepage"
-msgstr "首页展示作者信息"
-
-#: modules/setting.php:321
-msgid "Category info"
-msgstr "分类信息"
-
-#: modules/setting.php:322
-msgid "Enable category info in homepage"
-msgstr "首页展示分类信息"
-
-#: modules/setting.php:327
-msgid "Like info"
-msgstr "文章点赞"
-
-#: modules/setting.php:328
-msgid "Enable like info in homepage"
-msgstr "首页展示文章点赞数量"
-
-#: modules/setting.php:366
-msgid "Read time info"
-msgstr "阅读时间"
-
-#: modules/setting.php:367
-msgid "Enable read time info in homepage"
-msgstr "首页展示阅读时间"
-
-#: modules/setting.php:360
-msgid "Image count"
-msgstr "文章图片数"
-
-#: modules/setting.php:361
-msgid "Show image count of the post"
-msgstr "展示文章包含的图片数量"
-
-#: modules/setting.php:333 modules/setting.php:334
-msgid "Hide home cover"
-msgstr "隐藏首页缩略图"
-
-#: modules/setting.php:372
-msgid "Always home cover"
-msgstr "缩略图常显"
-
-#: modules/setting.php:373
-msgid "Always show cover for a post."
-msgstr "无论文章是否包含图片均显示缩略图"
-
-#: modules/setting.php:346
-msgid "Exclude status"
-msgstr "排除状态"
-
-#: modules/setting.php:347
-msgid "Exclude post type status in homepage"
-msgstr "首页不显示状态格式的文章"
-
-#: modules/setting.php:345
-msgid "Author bio"
-msgstr "作者信息"
-
-#: modules/setting.php:345
-msgid "Author sns icons"
-msgstr "作者SNS图标"
-
-#: modules/setting.php:345
-msgid "Show author sns icons, will not show when author bio is off."
-msgstr "展示作者SNS图标，作者信息关闭时不会展示。"
-
-#: modules/setting.php:346
-msgid "Enable author bio"
-msgstr "开启作者信息"
-
-#: modules/setting.php:351
-msgid "Related posts"
-msgstr "相关文章"
-
-#: modules/setting.php:352
-msgid "Enable related posts"
-msgstr "开启相关文章"
-
-#: modules/setting.php:357
-msgid "Post like"
-msgstr "文章点赞"
-
-#: modules/setting.php:358
-msgid "Enable post like"
-msgstr "开启文章点赞"
-
-#: modules/setting.php:363
-msgid "Post navigation"
-msgstr "文章导航"
-
-#: modules/setting.php:364
-msgid "Enable post navigation"
-msgstr "开启文章导航"
-
-#: modules/setting.php:369
-msgid "Copy link"
-msgstr "复制文章链接"
-
-#: modules/setting.php:370
-msgid "Enable copy link"
-msgstr "开启复制文章链接"
-
-#: modules/setting.php:382
-msgid "Category card"
-msgstr "分类卡片"
-
-#: modules/setting.php:383
-msgid "Show post category info after post."
-msgstr "在文章结尾展示卡片信息"
-
-#: modules/setting.php:375
-msgid "Show parent comment"
-msgstr "展示父级评论"
-
-#: modules/setting.php:376
-msgid "Enable show parent comment"
-msgstr "开启展示父级评论"
-
-#: modules/setting.php:382
-msgid "Enable table of content"
-msgstr "开启文章目录"
-
-#: modules/setting.php:414
-msgid "Start heading"
-msgstr "开始层级"
-
-#: modules/setting.php:415
-msgid "Start heading,default h3"
-msgstr "文章目录标题开始层级,默认为 h3"
-
-#: modules/setting.php:387
-msgid "Post Author"
-msgstr "文章作者"
-
-#: modules/setting.php:387
-msgid "Disable comment link"
-msgstr "禁用评论链接"
-
-#: modules/setting.php:387
-msgid "Disable comment author url"
-msgstr "禁用评论者的网站链接"
-
-#: modules/setting.php:387
-msgid "No reply text"
-msgstr "无评论文案"
-
-#: modules/setting.php:387
-msgid "Text display when no comment in current post."
-msgstr "当文章没有评论时评论区展示的我文案"
-
-#: modules/setting.php:387
-msgid "Friend icon"
-msgstr "友情链接标识"
-
-#: modules/setting.php:387
-msgid "Show icon when comment author url is in blogroll."
-msgstr "当评论者链接是友情链接时展示标识"
-
-#: modules/setting.php:462
-msgid "Post image zoom"
-msgstr "图片灯箱"
-
-#: modules/setting.php:463
-msgid "Zoom image when a tag link to image url."
-msgstr "当链接指向图片时开启灯箱效果"
-
-#: modules/setting.php:468
-msgid "Post update time"
-msgstr "文章更新时间"
-
-#: modules/setting.php:469
-msgid "Show the last update time of post."
-msgstr "展示文章更新时间"
-
-#: modules/setting.php:388
-msgid "Show post author tip in comment"
-msgstr "在评论中展示文章作者标识"
-
-#: modules/setting.php:411
-msgid "Footer SNS Icons"
-msgstr "底部SNS图标"
-
-#: modules/setting.php:411
-msgid "Show sns icons in footer, if this setting is on, the footer menu won',t be displayed."
-msgstr "在底部展示SNS图标，开始时底部菜单不会展示"
-
-#: modules/setting.php:393
-msgid "Telegram"
-msgstr "电报"
-
-#: modules/setting.php:394
-msgid "Telegram link"
-msgstr "电报链接"
-
-#: modules/setting.php:399
-msgid "Telegram group"
-msgstr "电报组群"
-
-#: modules/setting.php:400
-msgid "Telegram group link"
-msgstr "电报组群链接"
-
-#: modules/setting.php:423
-msgid "Email"
-msgstr "电子邮箱"
-
-#: modules/setting.php:406
-msgid "Your email address"
-msgstr "你的电子邮箱地址"
-
-#: modules/setting.php:411
-msgid "Instagram"
-msgstr "Instagram"
-
-#: modules/setting.php:412
-msgid "Instagram link"
-msgstr "Instagram 链接"
-
-#: modules/setting.php:417
-msgid "Twitter"
-msgstr "推特"
-
-#: modules/setting.php:418
-msgid "Twitter link"
-msgstr "推特链接"
-
-#: modules/setting.php:423
-msgid "RSS"
-msgstr "RSS"
-
-#: modules/setting.php:424
-msgid "RSS link"
-msgstr "RSS 地址"
-
-#: modules/setting.php:424
-msgid "Github link"
-msgstr "Github 地址"
-
-#: modules/setting.php:471
-msgid "Discord"
-msgstr "Discord"
-
-#: modules/setting.php:472
-msgid "Discord link"
-msgstr "Discord 地址"
-
-#: modules/setting.php:477
-msgid "Mastodon"
-msgstr "长毛象"
-
-#: modules/setting.php:478
-msgid "Mastodon link"
-msgstr "长毛象地址"
-
-#: modules/setting.php:497
-msgid "Custom"
-msgstr "自定义"
-
-#: modules/setting.php:498
-msgid "Custom sns link,use html."
-msgstr "自定义链接，使用html 格式。"
-
-#: modules/setting.php:434
-msgid "CSS"
-msgstr "CSS"
-
-#: modules/setting.php:435
-msgid "Custom CSS"
-msgstr "自定义CSS"
-
-#: modules/setting.php:440
-msgid "Javascript"
-msgstr "Javascript"
-
-#: modules/setting.php:441
-msgid "Custom Javascript"
-msgstr "自定义 Javascript"
-
-#: modules/setting.php:446
-msgid "Copyright"
-msgstr "版权信息"
-
-#: modules/setting.php:447
-msgid "Custom footer content"
-msgstr "自定义底部信息"
-
-#: modules/widget.php:7
-msgid "show auhor info"
-msgstr "展示作者信息"
-
-#: modules/widget.php:8
-msgid "About"
-msgstr "关于"
-
-#: modules/widget.php:32
-msgid "show your category card"
-msgstr "展示你的分类卡片"
-
-#: modules/widget.php:33
-msgid "Categories"
-msgstr "分类"
-
-#: single.php:9
-msgid " views"
-msgstr "浏览"
-
-#: single.php:21
-msgid "Updated on"
-msgstr "更新于"
-
-#: single.php:39
-msgid "Copy link."
-msgstr "复制链接"
-
-#: template-parts/content.php:8
-msgid "Sticky"
-msgstr "置顶"
-
-#: functions.php:225 template-parts/content-card.php:29 template-parts/content-error.php:16
-#: template-parts/content-status.php:6 template-parts/content.php:25
-#: template-parts/header-centered.php:3 template-parts/header-default.php:2
-#: template-parts/single-related.php:30 template-parts/single-related.php:48
-msgid " ago"
-msgstr "前"
-
-#: functions.php:259
-msgid "1 min read"
-msgstr "1 分钟阅读"
-
-#: functions.php:261
-msgid "%d min read"
-msgstr "%d 分钟阅读"
+msgstr "复制成功。"
 
 #: modules/base.php:352
 msgid "Loading..."
@@ -661,6 +136,555 @@ msgstr "你喜欢这篇文章！"
 msgid "Friend of author."
 msgstr "作者的朋友"
 
+#: modules/comment.php:89
+msgid "Author"
+msgstr "作者"
+
+#: modules/comment.php:130 modules/scripts.php:211
+#: template-parts/content-card.php:29 template-parts/content-error.php:16
+#: template-parts/content-status.php:5 template-parts/content.php:25
+#: template-parts/header-centered.php:4 template-parts/header-default.php:2
+#: template-parts/single-related.php:28 template-parts/single-related.php:46
+msgid " ago"
+msgstr "前"
+
+#: modules/comment.php:152 modules/comment.php:171 modules/comment.php:201
+#: modules/comment.php:214 modules/comment.php:240 modules/setting.php:28
+msgid "Success"
+msgstr "成功"
+
+#: modules/scripts.php:84
+msgid "Add a menu"
+msgstr "添加菜单"
+
+#: modules/scripts.php:128
+msgid "No views yet"
+msgstr "尚无浏览"
+
+#: modules/scripts.php:130
+msgid "1 View"
+msgstr "1 次浏览"
+
+#: modules/scripts.php:132
+msgid "%d Views"
+msgstr "%d 次浏览"
+
+#: modules/scripts.php:156
+msgid "No links yet"
+msgstr "尚无链接"
+
+#: modules/scripts.php:244
+msgid "1 min read"
+msgstr "1 分钟阅读"
+
+#: modules/scripts.php:246
+msgid "%d min read"
+msgstr "%d 分钟阅读"
+
+#: modules/setting.php:56 modules/setting.php:62
+msgid "Theme Setting"
+msgstr "主题设置"
+
+#: modules/setting.php:63 modules/setting.php:86
+msgid "Documentation"
+msgstr "文档"
+
+#: modules/setting.php:113
+msgid "Save"
+msgstr "保存"
+
+#: modules/setting.php:202
+msgid "Basic Setting"
+msgstr "基本设置"
+
+#: modules/setting.php:207
+msgid "Feature Setting"
+msgstr "功能设置"
+
+#: modules/setting.php:213
+msgid "Singluar Setting"
+msgstr "单一设置"
+
+#: modules/setting.php:218
+msgid "SNS Setting"
+msgstr "社交网络设置"
+
+#: modules/setting.php:223
+msgid "Custom Setting"
+msgstr "自定义设置"
+
+#: modules/setting.php:234
+msgid "Description"
+msgstr "描述"
+
+#: modules/setting.php:235
+msgid "Site description"
+msgstr "站点描述"
+
+#: modules/setting.php:240
+msgid "Headcode"
+msgstr "头部代码"
+
+#: modules/setting.php:241
+msgid "You can add content to the head tag, such as site verification tags, and so on."
+msgstr "您可以向头部标签添加内容，例如站点验证标签等。"
+
+#: modules/setting.php:246
+msgid "Logo"
+msgstr "Logo"
+
+#: modules/setting.php:247
+msgid "Logo address, preferably in a square shape."
+msgstr "Logo 地址，最好是正方形。"
+
+#: modules/setting.php:252
+msgid "Og default thumb"
+msgstr "Og 默认缩略图"
+
+#: modules/setting.php:253
+msgid "Og meta default thumb address."
+msgstr "Og meta 默认缩略图地址。"
+
+#: modules/setting.php:258
+msgid "Favicon"
+msgstr "网站图标"
+
+#: modules/setting.php:259
+msgid "Favicon address"
+msgstr "网站图标地址"
+
+#: modules/setting.php:264
+msgid "Title sep"
+msgstr "标题分隔符"
+
+#: modules/setting.php:265
+msgid "Default is"
+msgstr "默认是"
+
+#: modules/setting.php:270
+msgid "Disable block css"
+msgstr "禁用区块样式"
+
+#: modules/setting.php:271
+msgid "Do not load block-style files."
+msgstr "不加载区块样式文件。"
+
+#: modules/setting.php:276
+msgid "Gravatar proxy"
+msgstr "Gravatar 代理"
+
+#: modules/setting.php:277
+msgid "Gravatar proxy domain,like <code>cravatar.cn</code>"
+msgstr "Gravatar 代理域名，例如 <code>cravatar.cn</code>"
+
+#: modules/setting.php:282
+msgid "RSS Tag"
+msgstr "RSS 标签"
+
+#: modules/setting.php:283
+msgid "You can add tag in rss to verify follow."
+msgstr "您可以在 RSS 中添加标签以验证关注。"
+
+#: modules/setting.php:294
+msgid "Update notice"
+msgstr "更新通知"
+
+#: modules/setting.php:295
+msgid "Get theme update notice."
+msgstr "获取主题更新通知。"
+
+#: modules/setting.php:300
+msgid "Clean Mode"
+msgstr "简洁模式"
+
+#: modules/setting.php:301
+msgid "Disable gradient effect."
+msgstr "禁用渐变效果。"
+
+#: modules/setting.php:306
+msgid "Upyun CDN"
+msgstr "又拍云 CDN"
+
+#: modules/setting.php:307
+msgid "Make sure all images are uploaded to Upyun, otherwise thumbnails may not display properly."
+msgstr "确保所有图像都已上传到又拍云，否则缩略图可能无法正确显示。"
+
+#: modules/setting.php:312
+msgid "Aliyun OSS CDN"
+msgstr "阿里云 OSS CDN"
+
+#: modules/setting.php:313
+msgid "Make sure all images are uploaded to Aliyun OSS, otherwise thumbnails may not display properly."
+msgstr "确保所有图像都已上传到阿里云 OSS，否则缩略图可能无法正确显示。"
+
+#: modules/setting.php:318
+msgid "Qiniu OSS CDN"
+msgstr "七牛 OSS CDN"
+
+#: modules/setting.php:319
+msgid "Make sure all images are uploaded to Qiniu OSS, otherwise thumbnails may not display properly."
+msgstr "确保所有图像都已上传到七牛 OSS，否则缩略图可能无法正确显示。"
+
+#: modules/setting.php:324
+msgid "Dark Mode"
+msgstr "黑暗模式"
+
+#: modules/setting.php:325
+msgid "Enable dark mode"
+msgstr "启用黑暗模式"
+
+#: modules/setting.php:330
+msgid "Default thumbnail"
+msgstr "默认缩略图"
+
+#: modules/setting.php:331
+msgid "Default thumbnail address"
+msgstr "默认缩略图地址"
+
+#: modules/setting.php:336
+msgid "Back to top"
+msgstr "返回顶部"
+
+#: modules/setting.php:337
+msgid "Enable back to top"
+msgstr "启用返回顶部"
+
+#: modules/setting.php:342
+msgid "Load more"
+msgstr "加载更多"
+
+#: modules/setting.php:343
+msgid "Enable load more"
+msgstr "启用加载更多"
+
+#: modules/setting.php:348
+msgid "Author info"
+msgstr "作者信息"
+
+#: modules/setting.php:349
+msgid "Enable author info in homepage"
+msgstr "启用首页作者信息"
+
+#: modules/setting.php:354
+msgid "Category info"
+msgstr "分类信息"
+
+#: modules/setting.php:355
+msgid "Enable category info in homepage"
+msgstr "启用首页分类信息"
+
+#: modules/setting.php:360
+msgid "Like info"
+msgstr "点赞信息"
+
+#: modules/setting.php:361
+msgid "Enable like info in homepage"
+msgstr "启用首页点赞信息"
+
+#: modules/setting.php:366
+msgid "Read time info"
+msgstr "阅读时间信息"
+
+#: modules/setting.php:367
+msgid "Enable read time info in homepage"
+msgstr "启用首页阅读时间信息"
+
+#: modules/setting.php:372
+msgid "Image count"
+msgstr "图片数量"
+
+#: modules/setting.php:373
+msgid "Show image count of the post"
+msgstr "显示文章的图片数量"
+
+#: modules/setting.php:378 modules/setting.php:379
+msgid "Hide home cover"
+msgstr "隐藏首页封面"
+
+#: modules/setting.php:384
+msgid "Always home cover"
+msgstr "始终显示首页封面"
+
+#: modules/setting.php:385
+msgid "Always show cover for a post."
+msgstr "始终为文章显示封面。"
+
+#: modules/setting.php:390
+msgid "Exclude status"
+msgstr "排除状态"
+
+#: modules/setting.php:391
+msgid "Exclude post type status in homepage"
+msgstr "在首页排除文章类型状态"
+
+#: modules/setting.php:402
+msgid "Author bio"
+msgstr "作者简介"
+
+#: modules/setting.php:403
+msgid "Enable author bio"
+msgstr "启用作者简介"
+
+#: modules/setting.php:408
+msgid "Author sns icons"
+msgstr "作者社交媒体图标"
+
+#: modules/setting.php:409
+msgid "Show author sns icons, will not show when author bio is off."
+msgstr "显示作者社交媒体图标，当作者简介关闭时将不显示。"
+
+#: modules/setting.php:414
+msgid "Related posts"
+msgstr "相关文章"
+
+#: modules/setting.php:415
+msgid "Enable related posts"
+msgstr "启用相关文章"
+
+#: modules/setting.php:420
+msgid "Post like"
+msgstr "点赞"
+
+#: modules/setting.php:421
+msgid "Enable post like"
+msgstr "启用文章点赞"
+
+#: modules/setting.php:426
+msgid "Post navigation"
+msgstr "文章导航"
+
+#: modules/setting.php:427
+msgid "Enable post navigation"
+msgstr "启用文章导航"
+
+#: modules/setting.php:432
+msgid "Copy link"
+msgstr "复制链接"
+
+#: modules/setting.php:433
+msgid "Enable copy link"
+msgstr "启用复制链接"
+
+#: modules/setting.php:438
+msgid "Category card"
+msgstr "分类卡片"
+
+#: modules/setting.php:439
+msgid "Show post category info after post."
+msgstr "在文章后显示分类信息。"
+
+#: modules/setting.php:444
+msgid "Show parent comment"
+msgstr "显示父级评论"
+
+#: modules/setting.php:445
+msgid "Enable show parent comment"
+msgstr "启用显示父级评论"
+
+#: modules/setting.php:451
+msgid "Enable table of content"
+msgstr "启用目录"
+
+#: modules/setting.php:456
+msgid "Start heading"
+msgstr "起始标题"
+
+#: modules/setting.php:457
+msgid "Start heading,default h3"
+msgstr "起始标题，默认 h3"
+
+#: modules/setting.php:462
+msgid "Post Author"
+msgstr "文章作者"
+
+#: modules/setting.php:463
+msgid "Show post author tip in comment"
+msgstr "在评论中显示文章作者提示"
+
+#: modules/setting.php:468
+msgid "Disable comment link"
+msgstr "禁用评论链接"
+
+#: modules/setting.php:469
+msgid "Disable comment author url"
+msgstr "禁用评论作者链接"
+
+#: modules/setting.php:474
+msgid "No reply text"
+msgstr "没有回复时的文本"
+
+#: modules/setting.php:475
+msgid "Text display when no comment in current post."
+msgstr "当前文章没有评论时显示的文本。"
+
+#: modules/setting.php:480
+msgid "Friend icon"
+msgstr "好友图标"
+
+#: modules/setting.php:481
+msgid "Show icon when comment author url is in blogroll."
+msgstr "当评论作者链接在博客列表中时显示图标。"
+
+#: modules/setting.php:486
+msgid "Post image zoom"
+msgstr "文章图片缩放"
+
+#: modules/setting.php:487
+msgid "Zoom image when a tag link to image url."
+msgstr "当标签链接到图片 URL 时缩放图片。"
+
+#: modules/setting.php:492
+msgid "Post update time"
+msgstr "文章更新时间"
+
+#: modules/setting.php:493
+msgid "Show the last update time of post."
+msgstr "显示文章的最后更新时间。"
+
+#: modules/setting.php:510
+msgid "Footer SNS Icons"
+msgstr "页脚社交媒体图标"
+
+#: modules/setting.php:511
+msgid "Show sns icons in footer, if this setting is on, the footer menu won't be displayed."
+msgstr "在页脚显示社交媒体图标，如果此设置开启，页脚菜单将不显示。"
+
+#: modules/setting.php:516
+msgid "Telegram"
+msgstr "电报"
+
+#: modules/setting.php:517
+msgid "Telegram link"
+msgstr "电报链接"
+
+#: modules/setting.php:522
+msgid "Email"
+msgstr "电子邮件"
+
+#: modules/setting.php:523
+msgid "Your email address"
+msgstr "您的电子邮件地址"
+
+#: modules/setting.php:528
+msgid "Instagram"
+msgstr "Instagram"
+
+#: modules/setting.php:529
+msgid "Instagram link"
+msgstr "Instagram链接"
+
+#: modules/setting.php:534
+msgid "Twitter"
+msgstr "Twitter"
+
+#: modules/setting.php:535
+msgid "Twitter link"
+msgstr "Twitter链接"
+
+#: modules/setting.php:540
+msgid "RSS"
+msgstr "RSS"
+
+#: modules/setting.php:541
+msgid "RSS link"
+msgstr "RSS链接"
+
+#: modules/setting.php:546
+msgid "Github"
+msgstr "Github"
+
+#: modules/setting.php:547
+msgid "Github link"
+msgstr "Github链接"
+
+#: modules/setting.php:552
+msgid "Discord"
+msgstr "Discord"
+
+#: modules/setting.php:553
+msgid "Discord link"
+msgstr "Discord链接"
+
+#: modules/setting.php:558
+msgid "Mastodon"
+msgstr "Mastodon"
+
+#: modules/setting.php:559
+msgid "Mastodon link"
+msgstr "Mastodon链接"
+
+#: modules/setting.php:564
+msgid "Threads"
+msgstr "Threads"
+
+#: modules/setting.php:565
+msgid "Threads link"
+msgstr "Threads链接"
+
+#: modules/setting.php:570
+msgid "Custom"
+msgstr "自定义"
+
+#: modules/setting.php:571
+msgid "Custom sns link,use html."
+msgstr "自定义社交媒体链接，使用 HTML。"
+
+#: modules/setting.php:581
+msgid "CSS"
+msgstr "CSS"
+
+#: modules/setting.php:582
+msgid "Custom CSS"
+msgstr "自定义 CSS"
+
+#: modules/setting.php:587
+msgid "Javascript"
+msgstr "JavaScript"
+
+#: modules/setting.php:588
+msgid "Custom Javascript"
+msgstr "自定义 JavaScript"
+
+#: modules/setting.php:593
+msgid "Copyright"
+msgstr "版权"
+
+#: modules/setting.php:594
+msgid "Custom footer content"
+msgstr "自定义页脚内容"
+
+#: modules/widget.php:7
+msgid "Show author info"
+msgstr "显示作者信息"
+
+#: modules/widget.php:8
+msgid "About"
+msgstr "关于"
+
+#: modules/widget.php:32
+msgid "Show your category card"
+msgstr "显示您的分类卡片"
+
+#: modules/widget.php:33
+msgid "Categories"
+msgstr "分类"
+
+#: page.php:24 single.php:25
+msgid "Updated on"
+msgstr "更新于"
+
+#: single.php:48
+msgid "Copy link."
+msgstr "复制链接。"
+
+#: single.php:61
+msgid "View all status posts"
+msgstr "查看所有状态帖子"
+
+#: template-parts/content.php:8
+msgid "Sticky"
+msgstr "置顶"
+
 #: template-parts/post-navigation.php:5
 msgid "Post"
 msgstr "文章"
@@ -679,24 +703,24 @@ msgstr "相关文章"
 
 #. Template Name of the theme
 msgid "Archive"
-msgstr "归档模版"
+msgstr "归档"
 
 #. Template Name of the theme
 msgid "Douban"
-msgstr "豆瓣模版"
+msgstr "豆瓣"
 
 #. Template Name of the theme
 msgid "Links"
-msgstr "友情链接模版"
+msgstr "链接"
 
 #. Template Name of the theme
 msgid "Map"
-msgstr "地图模版"
+msgstr "地图"
 
 #. Template Name of the theme
 msgid "Tags"
-msgstr "标签模版"
+msgstr "标签"
 
 #. Template Name of the theme
 msgid "Terms"
-msgstr "分类模版"
+msgstr "分类"

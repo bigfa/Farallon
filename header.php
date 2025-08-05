@@ -26,8 +26,13 @@
     <?php endif; ?>
     <div class="main">
         <header class="fHeader">
-            <a href="<?php echo home_url(); ?>" class="site--url" aria-label="<?php bloginfo('sitename'); ?>"><img src="<?php echo ($farallonSetting->get_setting('logo') ? $farallonSetting->get_setting('logo') : get_template_directory_uri() . '/build/images/avatar.jpeg'); ?>" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
-                <span class="u-xs-show"><?php bloginfo('sitename'); ?></span>
+            <a href="<?php echo home_url(); ?>" class="site--url" aria-label="<?php bloginfo('sitename'); ?>">
+                <?php if ($farallonSetting->get_setting('logo')) : ?>
+                    <img src="<?php echo $farallonSetting->get_setting('logo'); ?>" class="avatar" alt="<?php bloginfo('sitename'); ?>" />
+                    <span class="u-xs-show"><?php bloginfo('sitename'); ?></span>
+                <?php else : ?>
+                    <?php bloginfo('sitename'); ?>
+                <?php endif; ?>
             </a>
             <div class="fHeader--content">
                 <div class="inner">
